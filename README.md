@@ -1,12 +1,14 @@
-<h1><b>Barrel CREA Edition</b><img src="https://raw.githubusercontent.com/Trollhunters501/Barrel-CREA-Edition/main/_fae2ed51-1be3-4750-b95b-de9fd286b4df.jpeg" height="64" width="64" align="left" alt=""></h1><br>
+# Barrel CREA Edition
 
-<b>A proxy to connect to Minecraft: Bedrock Edition servers with Minecraft: Java Edition.</b><br>
+![Barrel CREA Edition Logo](https://raw.githubusercontent.com/Trollhunters501/Barrel-CREA-Edition/main/_fae2ed51-1be3-4750-b95b-de9fd286b4df.jpeg)
+
+**A proxy to connect to Minecraft: Bedrock Edition servers with Minecraft: Java Edition.**
 
 ## Requirements
 
 - Java 11
-- Minecraft: Java Edition v1.20.1 Or mod [ViaForge](https://www.modrinth.com/mod/viaforge) Or mod [viaFabric](https://github.com/ViaVersion/ViaFabric) Or proxy Or Mod that integrates multiversion to the client
-- Bedrock Edition server v1.20.70 Or [NukkitPM1E](https://github.com/PetteriM1/NukkitPetteriM1Edition) Or a multiversion server
+- Minecraft: Java Edition v1.20.1 Or proxy [VIAaaS](https://github.com/ViaVersion/VIAaaS) Or proxy Or Mod that integrates multiversion to the client java
+- Bedrock Edition server v1.20.70 Or [NukkitPM1E](https://github.com/PetteriM1/NukkitPetteriM1Edition) Or [NukkitMOT](https://github.com/MemoriesOfTime/Nukkit-MOT) Or a multiversion server that supports v1.20.70 of Minecraft Bedrock
 
 ## Need implemented
 
