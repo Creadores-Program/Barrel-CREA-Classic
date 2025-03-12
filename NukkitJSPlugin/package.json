@@ -1,0 +1,8 @@
+{
+  "name": "Barrel CREA Edition NK",
+  "version": "1.1.1",
+  "description": "Geyser plugin for Nukkit!",
+  "author": "Creadores Program, BarrelMC & DavyCraft648",
+  "homepage": "https://github.com/Creadores-Program/Barrel-CREA-Edition",
+  "main": "org/CreadoresProgram/BarrelCREAEdition/main.js"
+}
