@@ -1,0 +1,7 @@
+name: Barrel CREA Edition NK
+api: "1.0.0"
+main: org.barrelmc.barrel.NukkitMain
+version: "1.1.2"
+description: "Geyser plugin for Nukkit!"
+authors: [BarrelMC, DavyCraft648, Creadores Program]
+website: "https://github.com/Creadores-Program/Barrel-CREA-Edition"
