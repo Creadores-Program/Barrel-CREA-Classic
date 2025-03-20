@@ -48,6 +48,12 @@
             <version>1.18.34</version>
             <scope>compile</scope>
         </dependency>
+         <dependency>
+                  <groupId>cn.nukkit</groupId>
+                  <artifactId>nukkit</artifactId>
+                  <version>1.0-SNAPSHOT</version>
+                  <scope>provided</scope>
+         </dependency>
     </dependencies>
 
     <build>
@@ -63,6 +69,14 @@
                             <mainClass>org.barrelmc.barrel.Barrel</mainClass>
                         </transformer>
                     </transformers>
+                         <filters>
+                                  <filter>
+                                           <artifact>cn.nukkit:nukkit</artifact>
+                                           <excludes>
+                                             <exclude>**</exclude>
+                                           </excludes>
+                                  </filter>
+                         </filters>
                 </configuration>
                 <executions>
                     <execution>
