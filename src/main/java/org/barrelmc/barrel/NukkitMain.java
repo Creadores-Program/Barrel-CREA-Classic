@@ -60,7 +60,7 @@ public class NukkitMain extends PluginBase implements Listener{
     event.setCancelled(true);
     TextPacket pk = new TextPacket();
     pk.type = TextPacket.TYPE_RAW;
-    pk.message = getServer().getLanguaje().translateString(packet.message, packet.parameters);
+    pk.message = getServer().getLanguage().translateString(packet.message, packet.parameters);
     player.dataPacket(pk);
   }
 }
