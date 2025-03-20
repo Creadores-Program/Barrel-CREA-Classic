@@ -18,7 +18,7 @@ public class NukkitMain extends PluginBase{
     getDataFolder().mkdir();
     this.data_pathJava = getDataFolder().getAbsolutePath();
     File fileR = new File(getDataFolder(), "config.yml");
-    if(!fileR.exist()){
+    if(!fileR.exists()){
       saveResource("config.yml");
     }
     this.javaServer = new ProxyServer(this.data_pathJava);
