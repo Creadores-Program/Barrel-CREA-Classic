@@ -19,20 +19,24 @@ public class NukkitMain extends PluginBase implements Listener{
   private ProxyServer javaServer;
   @Getter
   private static NukkitMain instance;
+  
+  private Thread threadJavaServer;
   @Override
   public void onEnable(){
     this.getLogger().info("§eLoading...");
     this.getLogger().info("Starting Barrel Proxy CREA Edition software");
     this.getLogger().info("Barrel CREA Edition is distributed under the MIT License");
-    BlockConverter.init();
-    ItemsConverter.init();
     getDataFolder().mkdir();
     this.data_pathJava = getDataFolder().getAbsolutePath();
     File fileR = new File(getDataFolder(), "config.yml");
     if(!fileR.exists()){
       saveResource("config.yml");
     }
-    this.javaServer = new ProxyServer(this.data_pathJava);
+    this.threadJavaServer = new Thread(()->{
+      BlockConverter.init();
+      ItemsConverter.init();
+      this.javaServer = new ProxyServer(data_pathJava);
+    });
     NukkitMain.instance = this;
   }
   public boolean isJavaPlayer(Player player){
