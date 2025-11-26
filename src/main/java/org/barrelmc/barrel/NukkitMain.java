@@ -37,6 +37,7 @@ public class NukkitMain extends PluginBase implements Listener{
       ItemsConverter.init();
       this.javaServer = new ProxyServer(data_pathJava);
     });
+    this.threadJavaServer.start();
     NukkitMain.instance = this;
   }
   public boolean isJavaPlayer(Player player){
