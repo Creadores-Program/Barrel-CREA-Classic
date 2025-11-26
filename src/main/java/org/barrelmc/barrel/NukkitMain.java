@@ -33,6 +33,7 @@ public class NukkitMain extends PluginBase implements Listener{
       saveResource("config.yml");
     }
     this.threadJavaServer = new Thread(()->{
+      Thread.currentThread().setContextClassLoader(this.getClass().getClassLoader());
       BlockConverter.init();
       ItemsConverter.init();
       this.javaServer = new ProxyServer(data_pathJava);
