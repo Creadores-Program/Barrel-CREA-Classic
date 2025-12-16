@@ -1,4 +1,7 @@
 # Barrel CREA Edition
+# [Discontinued]
+
+Use the [ViaFabricPlus](https://github.com/ViaVersion/ViaFabricPlus) mod or the [ViaProxy](https://github.com/ViaVersion/ViaProxy) core with Via Bedrock, as it has better crossplay implementation.
 
 ![Barrel CREA Edition Logo](https://raw.githubusercontent.com/Trollhunters501/Barrel-CREA-Edition/main/_fae2ed51-1be3-4750-b95b-de9fd286b4df.jpeg)
 
