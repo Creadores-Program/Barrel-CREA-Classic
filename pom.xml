@@ -18,8 +18,8 @@
             <url>https://repo.opencollab.dev/maven-snapshots/</url>
         </repository>
         <repository>
-	   <id>jitpack.io</id>
-	   <url>https://jitpack.io</url>
+	        <id>jitpack.io</id>
+	        <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -31,9 +31,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.steveice10</groupId>
-            <artifactId>mcprotocollib</artifactId>
-            <version>1.20-2-SNAPSHOT</version>
+            <groupId>com.github.Creadores-Program</groupId>
+            <artifactId>ClassicProtocolLib</artifactId>
+            <version>-SNAPSHOT</version>
         </dependency>
 
         <dependency>
