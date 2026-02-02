@@ -6,7 +6,6 @@ import cn.nukkit.event.server.DataPacketSendEvent;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.network.protocol.TextPacket;
 import org.barrelmc.barrel.network.converter.BlockConverter;
-import org.barrelmc.barrel.network.converter.ItemsConverter;
 import org.barrelmc.barrel.server.ProxyServer;
 import java.io.File;
 import lombok.Getter;
@@ -14,49 +13,48 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class NukkitMain extends PluginBase implements Listener{
-  private String data_pathJava;
+  private String data_pathClassic;
   @Getter
-  private ProxyServer javaServer;
+  private ProxyServer classicServer;
   @Getter
   private static NukkitMain instance;
   
-  private Thread threadJavaServer;
+  private Thread threadClassicServer;
   @Override
   public void onEnable(){
     this.getLogger().info("§eLoading...");
-    this.getLogger().info("Starting Barrel Proxy CREA Edition software");
+    this.getLogger().info("Starting Barrel Proxy CREA Classic software");
     this.getLogger().info("Barrel CREA Edition is distributed under the MIT License");
     getDataFolder().mkdir();
-    this.data_pathJava = getDataFolder().getAbsolutePath();
+    this.data_pathClassic = getDataFolder().getAbsolutePath();
     File fileR = new File(getDataFolder(), "config.yml");
     if(!fileR.exists()){
       saveResource("config.yml");
     }
-    this.threadJavaServer = new Thread(()->{
+    this.threadClassicServer = new Thread(()->{
       Thread.currentThread().setContextClassLoader(this.getClass().getClassLoader());
       BlockConverter.init();
-      ItemsConverter.init();
-      this.javaServer = new ProxyServer(data_pathJava);
+      this.classicServer = new ProxyServer(data_pathClassic);
     });
-    this.threadJavaServer.start();
+    this.threadClassicServer.start();
     NukkitMain.instance = this;
   }
-  public boolean isJavaPlayer(Player player){
-    return player.getLoginChainData().getDeviceModel() == "Barrel CREA Edition" && player.getLoginChainData().getDeviceOS() == 7;
+  public boolean isClassicPlayer(Player player){
+    return player.getLoginChainData().getDeviceModel() == "Barrel CREA Classic" && player.getLoginChainData().getDeviceOS() == 7;
   }
-  public List<Player> getJavaPlayers(){
-    List<Player> javaPlayers = new ArrayList<>();
+  public List<Player> getClassicPlayers(){
+    List<Player> classicPlayers = new ArrayList<>();
     for(Player player : this.getServer().getOnlinePlayers().values()){
-      if(this.isJavaPlayer(player)){
-        javaPlayers.add(player);
+      if(this.isClassicPlayer(player)){
+        classicPlayers.add(player);
       }
     }
-    return javaPlayers;
+    return classicPlayers;
   }
   @EventHandler
   public void onDataPacketSendEvent(DataPacketSendEvent event){
     Player player = event.getPlayer();
-    if(getServer().isLanguageForced() || player == null || !(event.getPacket() instanceof TextPacket) || !this.isJavaPlayer(player) || event.isCancelled()){
+    if(getServer().isLanguageForced() || player == null || !(event.getPacket() instanceof TextPacket) || !this.isClassicPlayer(player) || event.isCancelled()){
       return;
     }
     TextPacket packet = (TextPacket) event.getPacket();
