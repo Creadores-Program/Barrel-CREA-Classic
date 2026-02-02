@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.barrelmc.barrel</groupId>
-    <artifactId>Barrel-CREA-Edition</artifactId>
+    <artifactId>Barrel-CREA-Classic</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <repositories>
@@ -16,6 +16,10 @@
         <repository>
             <id>opencollab-repo-snapshot</id>
             <url>https://repo.opencollab.dev/maven-snapshots/</url>
+        </repository>
+        <repository>
+	   <id>jitpack.io</id>
+	   <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
