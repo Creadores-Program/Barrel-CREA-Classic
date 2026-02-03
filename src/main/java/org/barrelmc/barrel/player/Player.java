@@ -57,7 +57,7 @@ import java.util.concurrent.TimeUnit;
 public class Player extends Vector3 {
 
     @Getter
-    private final Session javaSession;
+    private final Session classicSession;
     @Getter
     private BedrockClientSession bedrockClientSession;
     @Getter
@@ -77,7 +77,7 @@ public class Player extends Vector3 {
     @Getter
     private String username;
     @Getter
-    private String javaUsername;
+    private String classicUsername;
     @Getter
     private String xuid;
     @Getter
@@ -150,9 +150,9 @@ public class Player extends Vector3 {
     @Setter
     private String language = "en-US";
 
-    public Player(ServerboundHelloPacket loginPacket, Session javaSession) {
+    public Player(ServerboundHelloPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
-        this.javaSession = javaSession;
+        this.classicSession = classicSession;
 
         if (ProxyServer.getInstance().getConfig().getAuth().equals("offline")) {
             this.offlineLogin(loginPacket);
@@ -174,7 +174,7 @@ public class Player extends Vector3 {
         }
     }
 
-    private void onlineLogin(ServerboundHelloPacket javaLoginPacket) {
+    private void onlineLogin(ServerboundHelloPacket classicLoginPacket) {
         Config config = ProxyServer.getInstance().getConfig();
         InetSocketAddress bedrockAddress = new InetSocketAddress(config.getBedrockAddress(), config.getBedrockPort());
         try {
@@ -195,7 +195,7 @@ public class Player extends Vector3 {
                     })
                     .connect(bedrockAddress)
                     .awaitUninterruptibly().channel();
-            this.javaUsername = javaLoginPacket.getUsername();
+            this.classicUsername = classicLoginPacket.getUsername();
             ProxyServer.getInstance().addBedrockPlayer(this);
         } catch (Exception exception){
             javaSession.disconnect("Failed to connect: " + exception);
@@ -269,14 +269,10 @@ public class Player extends Vector3 {
         return loginPacket;
     }
 
-    private void offlineLogin(ServerboundHelloPacket javaLoginPacket) {
+    private void offlineLogin(ServerboundHelloPacket classicLoginPacket) {
         this.xuid = "";
-        this.username = this.javaUsername = javaLoginPacket.getUsername();
-        if(ProxyServer.getInstance().getConfig().getUseJavaId() && javaLoginPacket.getProfileId() != null){
-            this.UUID = javaLoginPacket.getProfileId().toString();
-        }else{
-            this.UUID = java.util.UUID.randomUUID().toString();
-        }
+        this.username = this.classicUsername = classicLoginPacket.getUsername();
+        this.UUID = java.util.UUID.randomUUID().toString();
         Config config = ProxyServer.getInstance().getConfig();
         InetSocketAddress bedrockAddress = new InetSocketAddress(config.getBedrockAddress(), config.getBedrockPort());
         try {
@@ -299,7 +295,7 @@ public class Player extends Vector3 {
                     .awaitUninterruptibly().channel();
             ProxyServer.getInstance().addBedrockPlayer(this);
         } catch (Exception exception) {
-            javaSession.disconnect("Failed to connect: " + exception);
+            classicSession.disconnect("Failed to connect: " + exception);
         }
     }
 
@@ -414,11 +410,11 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message) {
-        this.javaSession.send(new ClientboundSystemChatPacket(Component.text(message), false));
+        this.classicSession.send(new ClientboundSystemChatPacket(Component.text(message), false));
     }
 
     public void sendTip(String message) {
-        this.javaSession.send(new ClientboundSystemChatPacket(Component.text(message), true));
+        this.classicSession.send(new ClientboundSystemChatPacket(Component.text(message), true));
     }
 
     public void disconnect(String reason) {
@@ -431,15 +427,15 @@ public class Player extends Vector3 {
             this.channel.disconnect();
             this.channel.parent().disconnect();
         }
-        this.javaSession.disconnect(reason);
-        ProxyServer.getInstance().removeBedrockPlayer(javaUsername);
-        ProxyServer.getInstance().getLogger().info(javaUsername + " disconnected: " + reason);
+        this.classicSession.disconnect(reason);
+        ProxyServer.getInstance().removeBedrockPlayer(classicUsername);
+        ProxyServer.getInstance().getLogger().info(classicUsername + " disconnected: " + reason);
     }
 
     @Override
     public void setPosition(Vector3f vector3f) {
         if (this.getFloorX() >> 4 != vector3f.getFloorX() >> 4 || this.getFloorZ() >> 4 != vector3f.getFloorZ() >> 4) {
-            this.javaSession.send(new ClientboundSetChunkCacheCenterPacket(vector3f.getFloorX() >> 4, vector3f.getFloorZ() >> 4));
+            this.classicSession.send(new ClientboundSetChunkCacheCenterPacket(vector3f.getFloorX() >> 4, vector3f.getFloorZ() >> 4));
         }
         super.setPosition(vector3f);
     }
@@ -447,7 +443,7 @@ public class Player extends Vector3 {
     @Override
     public void setPosition(double x, double y, double z) {
         if (this.getFloorX() >> 4 != (int) x >> 4 || this.getFloorZ() >> 4 != (int) z >> 4) {
-            this.javaSession.send(new ClientboundSetChunkCacheCenterPacket((int) x >> 4, (int) z >> 4));
+            this.classicSession.send(new ClientboundSetChunkCacheCenterPacket((int) x >> 4, (int) z >> 4));
         }
         super.setPosition(x, y, z);
     }
