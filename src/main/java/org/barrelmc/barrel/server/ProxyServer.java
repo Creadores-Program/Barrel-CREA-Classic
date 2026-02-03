@@ -84,7 +84,7 @@ public class ProxyServer {
     public ProxyServer(String dataPath) {
         instance = this;
         this.logger = new Logger(TextFormat.GOLD.getAnsiCode()+"BarrelMC");
-        this.getLogger().info("Barrel 1.2.0 Starting...");
+        this.getLogger().info("Barrel Classic 0.1.0 Starting...");
         this.dataPath = Paths.get(dataPath);
         if (!initConfig()) {
             this.getLogger().emergency("Config file not found! Terminating...");
@@ -205,7 +205,7 @@ public class ProxyServer {
 
         consol.info("Binding to " + this.config.getBindAddress() + " on port " + this.config.getPort());
         server.bind();
-        consol.info("BarrelProxy "+TextFormat.GREEN.getAnsiCode()+"CREA "+TextFormat.AQUA.getAnsiCode()+"Edition"+TextFormat.RESET.getAnsiCode()+" is running on [" + this.config.getBindAddress() + "::" + this.config.getPort() + "]");
+        consol.info("BarrelProxy "+TextFormat.GREEN.getAnsiCode()+"CREA "+TextFormat.AQUA.getAnsiCode()+"Classic"+TextFormat.RESET.getAnsiCode()+" is running on [" + this.config.getBindAddress() + "::" + this.config.getPort() + "]");
         consol.info("Done!");
     }
 
@@ -214,54 +214,14 @@ public class ProxyServer {
     }
 
     public void addBedrockPlayer(Player player) {
-        this.bedrockPlayers.put(player.getJavaUsername(), player);
+        this.bedrockPlayers.put(player.getClassicUsername(), player);
     }
 
-    public void removeBedrockPlayer(String javaUsername) {
-        this.bedrockPlayers.remove(javaUsername);
+    public void removeBedrockPlayer(String classicUsername) {
+        this.bedrockPlayers.remove(classicUsername);
     }
 
     public boolean isBedrockPlayer(String username) {
         return this.bedrockPlayers.containsKey(username);
-    }
-    private byte[] getIconFileToBytes(String pathPng){
-        try{
-        Path IconF = Path.of(this.dataPath.toFile().getAbsolutePath()+"/"+pathPng);
-        return Files.readAllBytes(IconF);
-        }catch(Exception e){
-            e.printStackTrace();
-            this.getLogger().warn("No load Icon! Use default Icon...");
-            return null;
-        }
-    }
-    private byte[] getIconUrlToBytes(String url){
-        try{
-        URL urlIcon = new URL(url);
-        try (InputStream inputStream = urlIcon.openStream();
-             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()) {
-            byte[] buffer = new byte[1024];
-            int bytesRead;
-            while ((bytesRead = inputStream.read(buffer)) != -1) {
-                byteArrayOutputStream.write(buffer, 0, bytesRead);
-            }
-            return byteArrayOutputStream.toByteArray();
-        }
-        }catch(Exception e){
-            e.printStackTrace();
-            this.getLogger().warn("No load Icon! Use default Icon...");
-            return null;
-        }
-    }
-    public byte[] getIcon(){
-        byte[] Icon;
-        if(this.config.getIcon() == null || this.config.getIcon().trim() == ""){
-            return null;
-        }
-        if(this.config.getIcon().startsWith("https://") || this.config.getIcon().startsWith("http://")){
-            Icon = this.getIconUrlToBytes(this.config.getIcon());
-        }else{
-            Icon = this.getIconFileToBytes(this.config.getIcon());
-        }
-        return Icon;
     }
 }
