@@ -5,18 +5,11 @@
 
 package org.barrelmc.barrel.server;
 
-import com.github.steveice10.mc.auth.data.GameProfile;
-import com.github.steveice10.mc.auth.service.SessionService;
-import com.github.steveice10.mc.protocol.MinecraftConstants;
-import com.github.steveice10.mc.protocol.MinecraftProtocol;
-import com.github.steveice10.mc.protocol.ServerLoginHandler;
-import com.github.steveice10.mc.protocol.codec.MinecraftCodec;
-import com.github.steveice10.mc.protocol.data.status.PlayerInfo;
-import com.github.steveice10.mc.protocol.data.status.ServerStatusInfo;
-import com.github.steveice10.mc.protocol.data.status.VersionInfo;
-import com.github.steveice10.mc.protocol.data.status.handler.ServerInfoBuilder;
-import com.github.steveice10.opennbt.NBTIO;
-import com.github.steveice10.opennbt.tag.builtin.CompoundTag;
+import com.github.steveice10.mc.classic.protocol.data.heartbeat.ServerInfo;
+import com.github.steveice10.mc.classic.protocol.data.heartbeat.ServerInfoBuilder;
+import com.github.steveice10.mc.classic.protocol.ClassicConstants;
+import com.github.steveice10.mc.classic.protocol.ClassicProtocol;
+import com.github.steveice10.mc.classic.protocol.VerifyUsersListener;
 import com.github.steveice10.packetlib.Server;
 import com.github.steveice10.packetlib.event.server.ServerAdapter;
 import com.github.steveice10.packetlib.event.server.ServerClosedEvent;
@@ -151,62 +144,43 @@ public class ProxyServer {
     }
 
     private void startServer() {
-        SessionService sessionService = new SessionService();
-        Logger consol = this.getLogger();
-        Server server = new TcpServer(this.config.getBindAddress(), this.config.getPort(), MinecraftProtocol::new);
-        server.setGlobalFlag(MinecraftConstants.SESSION_SERVICE_KEY, sessionService);
-        server.setGlobalFlag(MinecraftConstants.VERIFY_USERS_KEY, this.config.getPremiumPlayerJava());
-        server.setGlobalFlag(MinecraftConstants.SERVER_INFO_BUILDER_KEY, (ServerInfoBuilder) session -> new ServerStatusInfo(new VersionInfo(MinecraftCodec.CODEC.getMinecraftVersion(), MinecraftCodec.CODEC.getProtocolVersion()), new PlayerInfo(this.config.getMaxplayers(), 0, new ArrayList<>()), Component.text(this.config.getMotd()), this.getIcon(), false));
-        server.setGlobalFlag(MinecraftConstants.SERVER_LOGIN_HANDLER_KEY, (ServerLoginHandler) session -> {
-            GameProfile profile = session.getFlag(MinecraftConstants.PROFILE_KEY);
-            consol.info(profile.getName() + " logged in");
-            if (!AuthManager.getInstance().getLoginPlayers().containsKey(profile.getName()) && this.getPlayerByName(profile.getName()) == null) {
-                session.addListener(new AuthServer(session, profile.getName()));
-            }
-        });
-        server.setGlobalFlag(MinecraftConstants.SERVER_COMPRESSION_THRESHOLD, 100);
+        Server server = new TcpServer(this.config.getBindAddress(), this.config.getPort(), ClassicProtocol::new);
+        if (this.config.getPremiumPlayerClassic()) {
+            server.addListener(new VerifyUsersListener());
+            server.setGlobalFlag(ClassicConstants.SERVER_INFO_BUILDER_KEY, (ServerInfoBuilder) s -> new ServerInfo(this.config.getMotd(), server.getPort(), true, 0, this.config.getMaxplayers()));
+        }
         String StopMSG = this.config.getShutdownMessage();
         server.addListener(new ServerAdapter() {
             @Override
             public void serverClosed(ServerClosedEvent event) {
-                for (var entry : ProxyServer.getInstance().getBedrockPlayers().entrySet()) {
-                    Player player = entry.getValue();
-
+                for (Player player : getAllPlayers()) {
                     player.disconnect(StopMSG);
                 }
-                consol.info("Server closed.");
+                getLogger().info("Server closed.");
             }
-
             @Override
             public void sessionAdded(SessionAddedEvent event) {
-                event.getSession().addListener(new JavaPacketHandler());
+                event.getSession().addListener(new ClassicPacketHandler());
             }
-
             @Override
             public void sessionRemoved(SessionRemovedEvent event) {
-                GameProfile profile = event.getSession().getFlag(MinecraftConstants.PROFILE_KEY);
-                if (profile == null) {
-                    return;
-                }
-                String username = profile.getName();
-                if (isBedrockPlayer(username)) {
-                    getPlayerByName(username).disconnect("logged out");
-                }
-                if (AuthManager.getInstance().getLoginPlayers().get(username) != null) {
+                String username = event.getSession().getFlag(ClassicConstants.USERNAME_KEY);
+                if (username == null) return;
+                    if(isBedrockPlayer(username)){
+                        getPlayerByName(username).disconnect("logged out");
+                    }
                     AuthManager.getInstance().getLoginPlayers().remove(username);
-                }
-                if (AuthManager.getInstance().getTimers().get(username) != null) {
-                    AuthManager.getInstance().getTimers().get(username).cancel();
-                    AuthManager.getInstance().getTimers().remove(username);
-                }
-                consol.info(username + " logged out");
+                    if (AuthManager.getInstance().getTimers().containsKey(username)) {
+                        AuthManager.getInstance().getTimers().get(username).cancel();
+                        AuthManager.getInstance().getTimers().remove(username);
+                    }
+                    getLogger().info(username + " logged out");
             }
         });
-
-        consol.info("Binding to " + this.config.getBindAddress() + " on port " + this.config.getPort());
+        getLogger().info("Binding to " + this.config.getBindAddress() + " on port " + this.config.getPort());
         server.bind();
-        consol.info("BarrelProxy "+TextFormat.GREEN.getAnsiCode()+"CREA "+TextFormat.AQUA.getAnsiCode()+"Classic"+TextFormat.RESET.getAnsiCode()+" is running on [" + this.config.getBindAddress() + "::" + this.config.getPort() + "]");
-        consol.info("Done!");
+        getLogger().info("BarrelProxy " + TextFormat.GREEN.getAnsiCode() + "CREA " + TextFormat.AQUA.getAnsiCode() + "Classic" + TextFormat.RESET.getAnsiCode() + " is running on [" + this.config.getBindAddress() + ":" + this.config.getPort() + "]");
+        getLogger().info("Done!");
     }
 
     public Player getPlayerByName(String username) {
