@@ -1,9 +1,5 @@
 package org.barrelmc.barrel.utils;
 
-import com.github.steveice10.mc.protocol.data.game.chunk.BitStorage;
-import com.github.steveice10.mc.protocol.data.game.chunk.DataPalette;
-import com.github.steveice10.mc.protocol.data.game.chunk.palette.SingletonPalette;
-
 import java.security.SignatureException;
 
 public class Utils {
@@ -27,18 +23,6 @@ public class Utils {
             return bedrockName.substring(0, length);
         } else {
             return bedrockName;
-        }
-    }
-
-    public static void fillPalette(DataPalette dataPalette) {
-        fillPalette(dataPalette, 0);
-    }
-
-    public static void fillPalette(DataPalette dataPalette, int state) {
-        BitStorage bitStorage = dataPalette.getStorage();
-        dataPalette.setPalette(new SingletonPalette(0));
-        for (int i = 0; i < bitStorage.getSize(); i++) {
-            bitStorage.set(i, state);
         }
     }
 
