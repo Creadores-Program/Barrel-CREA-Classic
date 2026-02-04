@@ -37,10 +37,6 @@ public class Config {
     @Setter
     @Getter
     public Integer maxplayers;
-
-    @Setter
-    @Getter
-    public String icon;
     
     @Setter
     @Getter
