@@ -26,6 +26,49 @@ public class Utils {
         }
     }
 
+    public static boolean equalsExt(ServerExtEntryPacket extS, ClientExtEntryPacket extC){
+        return Utils.equalsExtIgnoreVersion(extS, extC) && extS.getVersion() <= extC.getVersion();
+    }
+
+    public static boolean equalsExtIgnoreVersion(ServerExtEntryPacket extS, ClientExtEntryPacket extC){
+        return extS.getExtName().equals(extC.getExtName());
+    }
+
+    public static boolean containsExt(ServerExtEntryPacket extS, List<ClientExtEntryPacket> extsC){
+        for(ClientExtEntryPacket extC : extsC){
+            if(Utils.equalsExt(extS, extC)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean containsExt(ClientExtEntryPacket extC, List<ServerExtEntryPacket> extsS){
+        for(ServerExtEntryPacket extS : extsS){
+            if(Utils.equalsExtIgnoreVersion(extS, extC)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static ClientExtEntryPacket getExt(ServerExtEntryPacket extS, List<ClientExtEntryPacket> extsC){
+        for(ClientExtEntryPacket extC : extsC){
+            if(Utils.equalsExtIgnoreVersion(extS, extC)){
+                return extC;
+            }
+        }
+        return null;
+    }
+
+    public static ServerExtEntryPacket getExt(ClientExtEntryPacket extC, List<ServerExtEntryPacket> extsS){
+        for(ServerExtEntryPacket extS : extsS){
+            if(Utils.equalsExtIgnoreVersion(extS, extC)){
+                return extS;
+            }
+        }
+        return null;
+    }
+
     public static String[] splitStringL(String str, int size){
         return String.split("(?<=\\G.{" + size + "})");
     }
