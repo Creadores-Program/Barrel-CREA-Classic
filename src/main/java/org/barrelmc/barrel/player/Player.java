@@ -7,7 +7,8 @@ package org.barrelmc.barrel.player;
 
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
-import com.github.steveice10.mc.protocol.data.game.entity.object.Direction;
+import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
+import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.mc.protocol.packet.login.serverbound.ServerboundHelloPacket;
@@ -413,7 +414,7 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message) {
-        if(this.extensionsClassic.contains("MessageTypes")){
+        if(this.extensionsClassic.contains(ExtNames.MESSAGETYPES)){
             this.sendMessage(message, PlayerIds.CHAT);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
@@ -421,16 +422,22 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message, int playerId){
-        String[] messagesClassic = Utils.splitStringL(message, 63);
-        if(messagesClassic.size() < 2){
-            this.classicSession.send(new ServerChatPacket(playerId, messagesClassic.replace("§", "&")));
+        if(this.extensionsClassic.contains(ExtNames.LONGERMESSAGES)){
+            this.classicSession.send(new ServerChatPacket(playerId, message.replace("§", "&")));
             return;
         }
-        for (int i = 0; i < messagesClassic.length; i++) {}
+        String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), 63);
+        if(messagesClassic.size() < 2){
+            this.classicSession.send(new ServerChatPacket(playerId, messagesClassic));
+            return;
+        }
+        for (String msg : messagesClassic) {
+            this.classicSession.send(new ServerChatPacket(playerId, msg));
+        }
     }
     
     public void sendTip(String message) {
-        if(this.extensionsClassic.contains("MessageTypes")){
+        if(this.extensionsClassic.contains(ExtNames.MESSAGETYPES)){
             this.sendMessage(message, PlayerIds.ANNOUNCEMENT);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
