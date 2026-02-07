@@ -1,6 +1,9 @@
 package org.barrelmc.barrel.utils;
 
 import java.security.SignatureException;
+import java.util.List;
+import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 
 public class Utils {
 
