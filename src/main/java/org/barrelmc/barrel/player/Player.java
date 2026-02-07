@@ -8,7 +8,7 @@ package org.barrelmc.barrel.player;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import com.github.steveice10.mc.protocol.data.game.entity.object.Direction;
-import com.github.steveice10.mc.protocol.packet.ingame.clientbound.ClientboundSystemChatPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.mc.protocol.packet.login.serverbound.ServerboundHelloPacket;
 import com.github.steveice10.packetlib.Session;
@@ -149,6 +149,9 @@ public class Player extends Vector3 {
     @Getter
     @Setter
     private String language = "en-US";
+
+    @Getter
+    private List<String> extensionsClassic = new ObjectArrayList<>();
 
     public Player(ServerboundHelloPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
@@ -410,11 +413,28 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message) {
-        this.classicSession.send(new ClientboundSystemChatPacket(Component.text(message), false));
+        if(this.extensionsClassic.contains("MessageTypes")){
+            this.sendMessage(message, PlayerIds.CHAT);
+        }else{
+            this.sendMessage(message, PlayerIds.CONSOLE);
+        }
     }
 
+    public void sendMessage(String message, int playerId){
+        String[] messagesClassic = Utils.splitStringL(message, 63);
+        if(messagesClassic.size() < 2){
+            this.classicSession.send(new ServerChatPacket(playerId, messagesClassic.replace("§", "&")));
+            return;
+        }
+        for (int i = 0; i < messagesClassic.length; i++) {}
+    }
+    
     public void sendTip(String message) {
-        this.classicSession.send(new ClientboundSystemChatPacket(Component.text(message), true));
+        if(this.extensionsClassic.contains("MessageTypes")){
+            this.sendMessage(message, PlayerIds.ANNOUNCEMENT);
+        }else{
+            this.sendMessage(message, PlayerIds.CONSOLE);
+        }
     }
 
     public void disconnect(String reason) {
@@ -427,7 +447,7 @@ public class Player extends Vector3 {
             this.channel.disconnect();
             this.channel.parent().disconnect();
         }
-        this.classicSession.disconnect(reason);
+        this.classicSession.disconnect(reason.replace("§", "&"));
         ProxyServer.getInstance().removeBedrockPlayer(classicUsername);
         ProxyServer.getInstance().getLogger().info(classicUsername + " disconnected: " + reason);
     }
