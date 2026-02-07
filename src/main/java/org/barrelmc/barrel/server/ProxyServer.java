@@ -10,6 +10,8 @@ import com.github.steveice10.mc.classic.protocol.data.heartbeat.ServerInfoBuilde
 import com.github.steveice10.mc.classic.protocol.ClassicConstants;
 import com.github.steveice10.mc.classic.protocol.ClassicProtocol;
 import com.github.steveice10.mc.classic.protocol.VerifyUsersListener;
+import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 import com.github.steveice10.packetlib.Server;
 import com.github.steveice10.packetlib.event.server.ServerAdapter;
 import com.github.steveice10.packetlib.event.server.ServerClosedEvent;
@@ -25,6 +27,7 @@ import org.barrelmc.barrel.network.JavaPacketHandler;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.utils.FileManager;
 import org.barrelmc.barrel.utils.NbtBlockDefinitionRegistry;
+import org.cloudburstmc.protocol.bedrock.data.
 import org.cloudburstmc.nbt.NBTInputStream;
 import org.cloudburstmc.nbt.NbtMap;
 import org.cloudburstmc.nbt.NbtType;
@@ -73,6 +76,26 @@ public class ProxyServer {
 
     @Getter
     private Logger logger;
+
+    @Getter
+    private List<String> extDatapacks = new ObjectArrayList<>(){{
+        add(new ServerExtEntryPacket(1, ExtNames.CLICKDISTANCE));
+        add(new ServerExtEntryPacket(1, ExtNames.CUSTOMBLOCKS));
+        add(new ServerExtEntryPacket(1, ExtNames.EXTPLAYERLIST));
+        add(new ServerExtEntryPacket(1, ExtNames.ENVCOLORS));
+        add(new ServerExtEntryPacket(1, ExtNames.CHANGEMODEL));
+        add(new ServerExtEntryPacket(1, ExtNames.ENVWEATHERTYPE));
+        add(new ServerExtEntryPacket(1, ExtNames.HACKCONTROL));
+        add(new ServerExtEntryPacket(1, ExtNames.EMOTEFIX));
+        add(new ServerExtEntryPacket(2, ExtNames.MESSAGETYPES));
+        add(new ServerExtEntryPacket(1, ExtNames.LONGERMESSAGES));
+        add(new ServerExtEntryPacket(1, ExtNames.BULKBLOCKUPDATE));
+        add(new ServerExtEntryPacket(1, ExtNames.PLAYERCLICK));
+        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYPOSITIONS));
+        add(new ServerExtEntryPacket(1, ExtNames.INSTANTMOTD));
+        add(new ServerExtEntryPacket(1, ExtNames.SETSPAWNPOINT));
+        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYTELEPORT));
+    }};
 
     public ProxyServer(String dataPath) {
         instance = this;
