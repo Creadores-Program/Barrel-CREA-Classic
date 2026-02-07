@@ -26,6 +26,10 @@ public class Utils {
         }
     }
 
+    public static String[] splitStringL(String str, int size){
+        return String.split("(?<=\\G.{" + size + "})");
+    }
+
     public static byte[] DERToJOSE(byte[] derSignature, Utils.AlgorithmType algorithmType) throws SignatureException {
         // DER Structure: http://crypto.stackexchange.com/a/1797
         boolean derEncoded = derSignature[0] == 0x30 && derSignature.length != algorithmType.ecNumberSize * 2;
