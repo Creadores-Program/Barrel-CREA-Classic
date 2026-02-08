@@ -415,7 +415,7 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message) {
-        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
+        if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic) != null){
             this.sendMessage(message, PlayerIds.CHAT);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
