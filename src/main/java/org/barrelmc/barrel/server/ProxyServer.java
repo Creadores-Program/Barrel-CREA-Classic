@@ -81,7 +81,7 @@ public class ProxyServer {
     private List<String> extDatapacks = new ObjectArrayList<>(){{
         add(new ServerExtEntryPacket(1, ExtNames.CLICKDISTANCE));
         add(new ServerExtEntryPacket(1, ExtNames.CUSTOMBLOCKS));
-        add(new ServerExtEntryPacket(1, ExtNames.EXTPLAYERLIST));
+        add(new ServerExtEntryPacket(2, ExtNames.EXTPLAYERLIST));
         add(new ServerExtEntryPacket(1, ExtNames.ENVCOLORS));
         add(new ServerExtEntryPacket(1, ExtNames.CHANGEMODEL));
         add(new ServerExtEntryPacket(1, ExtNames.ENVWEATHERTYPE));
