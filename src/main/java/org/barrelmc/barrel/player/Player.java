@@ -9,6 +9,7 @@ import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
+import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.mc.protocol.packet.login.serverbound.ServerboundHelloPacket;
@@ -152,7 +153,7 @@ public class Player extends Vector3 {
     private String language = "en-US";
 
     @Getter
-    private List<String> extensionsClassic = new ObjectArrayList<>();
+    private List<ClientExtEntryPacket> extensionsClassic = new ObjectArrayList<>();
 
     public Player(ServerboundHelloPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
@@ -414,7 +415,7 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message) {
-        if(this.extensionsClassic.contains(ExtNames.MESSAGETYPES)){
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
             this.sendMessage(message, PlayerIds.CHAT);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
@@ -422,7 +423,7 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message, int playerId){
-        if(this.extensionsClassic.contains(ExtNames.LONGERMESSAGES)){
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(9), this.extensionsClassic)){
             this.classicSession.send(new ServerChatPacket(playerId, message.replace("§", "&")));
             return;
         }
@@ -437,7 +438,9 @@ public class Player extends Vector3 {
     }
     
     public void sendTip(String message) {
-        if(this.extensionsClassic.contains(ExtNames.MESSAGETYPES)){
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
+            this.sendMessage(message, PlayerIds.SMALLANNOUNCEMENT);
+        }else if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic) != null){
             this.sendMessage(message, PlayerIds.ANNOUNCEMENT);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
