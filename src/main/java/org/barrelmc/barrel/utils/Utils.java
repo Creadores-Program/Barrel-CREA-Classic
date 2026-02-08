@@ -25,7 +25,22 @@ public class Utils {
     }
 
     public static String usernameToSkinData(String username){
-        String url = "https://"+username+"";
+        String url = "https://cdn.classicube.net/skin/"+username+".png";
+        Request request = new Request.Builder()
+            .url(url)
+            .build();
+        try (Response response = CLIENT.newCall(request).execute()) {
+            if (response.isSuccessful()) {
+                ResponseBody body = response.body();
+                if (body != null) {
+                    byte[] imageBytes = body.bytes();
+                    return Base64.getEncoder().encodeToString(imageBytes);
+                }
+            }
+            return ProxyServer.getInstance().getDefaultSkinData();
+        } catch (IOException | IllegalArgumentException e) {
+            return ProxyServer.getInstance().getDefaultSkinData();
+        }
     }
 
     public static String lengthCutter(String bedrockName, int length) {
