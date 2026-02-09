@@ -12,7 +12,7 @@ import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
+//import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.packetlib.Session;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -475,7 +475,7 @@ public class Player extends Vector3 {
     @Override
     public void setPosition(Vector3f vector3f) {
         if (this.getFloorX() >> 4 != vector3f.getFloorX() >> 4 || this.getFloorZ() >> 4 != vector3f.getFloorZ() >> 4) {
-            this.classicSession.send(new ClientboundSetChunkCacheCenterPacket(vector3f.getFloorX() >> 4, vector3f.getFloorZ() >> 4));
+            //this.classicSession.send(new ClientboundSetChunkCacheCenterPacket(vector3f.getFloorX() >> 4, vector3f.getFloorZ() >> 4));
         }
         super.setPosition(vector3f);
     }
@@ -483,7 +483,7 @@ public class Player extends Vector3 {
     @Override
     public void setPosition(double x, double y, double z) {
         if (this.getFloorX() >> 4 != (int) x >> 4 || this.getFloorZ() >> 4 != (int) z >> 4) {
-            this.classicSession.send(new ClientboundSetChunkCacheCenterPacket((int) x >> 4, (int) z >> 4));
+            //this.classicSession.send(new ClientboundSetChunkCacheCenterPacket((int) x >> 4, (int) z >> 4));
         }
         super.setPosition(x, y, z);
     }
