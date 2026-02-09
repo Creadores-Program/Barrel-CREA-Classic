@@ -1,12 +1,5 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 
-import com.github.steveice10.mc.protocol.codec.MinecraftCodec;
-import com.github.steveice10.mc.protocol.data.game.chunk.ChunkSection;
-import com.github.steveice10.mc.protocol.data.game.level.LightUpdateData;
-import com.github.steveice10.mc.protocol.data.game.level.block.BlockEntityInfo;
-import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundLevelChunkWithLightPacket;
-import com.github.steveice10.opennbt.tag.builtin.CompoundTag;
-import com.github.steveice10.opennbt.tag.builtin.LongArrayTag;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufInputStream;
 import io.netty.buffer.Unpooled;
@@ -44,14 +37,12 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
         org.cloudburstmc.protocol.bedrock.packet.LevelChunkPacket packet = (org.cloudburstmc.protocol.bedrock.packet.LevelChunkPacket) pk;
 
         int subChunksLength = packet.getSubChunksLength();
-        ChunkSection[] chunkSections = new ChunkSection[subChunksLength];
 
         ByteBuf byteBuf = Unpooled.buffer();
         byteBuf.writeBytes(packet.getData());
 
         ByteBuf chunkByteBuf = Unpooled.buffer();
         for (int sectionIndex = 0; sectionIndex < subChunksLength; sectionIndex++) {
-            chunkSections[sectionIndex] = new ChunkSection();
             int chunkVersion = byteBuf.readByte();
 
             if (chunkVersion != 1 && chunkVersion != 8 && chunkVersion != 9) {
@@ -60,49 +51,29 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
             }
 
             if (chunkVersion == 1) {
-                networkDecodeVersionOne(byteBuf, chunkSections[sectionIndex]);
+                networkDecodeVersionOne(byteBuf);
                 continue;
             }
 
             if (chunkVersion == 9) {
-                networkDecodeVersionNine(byteBuf, chunkSections, sectionIndex);
+                networkDecodeVersionNine(byteBuf, sectionIndex);
                 continue;
             }
 
-            networkDecodeVersionEight(byteBuf, chunkSections, sectionIndex, byteBuf.readByte());
-            Utils.fillPalette(chunkSections[sectionIndex].getBiomeData()); //TODO: Read biome
+            networkDecodeVersionEight(byteBuf, sectionIndex, byteBuf.readByte());
         }
 
-        CompoundTag heightMap = new CompoundTag("");
-        heightMap.put(new LongArrayTag("MOTION_BLOCKING", new long[37]));
-
-        for (int i = 0; i < subChunksLength; i++) {
-            MinecraftCodec.CODEC.getHelperFactory().get().writeChunkSection(chunkByteBuf, chunkSections[i]);
-        }
-
-        BitSet lightMask = new BitSet();
-        lightMask.set(0, 18);
-        ArrayList<byte[]> skyUpdateList = new ArrayList<>();
-        for (int i = 0; i < 18; i++){
-            skyUpdateList.add(FULL_LIGHT);
-        }
-        ClientboundLevelChunkWithLightPacket chunkPacket = new ClientboundLevelChunkWithLightPacket(
-                packet.getChunkX(), packet.getChunkZ(),
-                chunkByteBuf.array(), heightMap, new BlockEntityInfo[0],
-                new LightUpdateData(lightMask, new BitSet(), new BitSet(), lightMask, skyUpdateList, Collections.emptyList())
-        );
-        player.getJavaSession().send(chunkPacket);
         byteBuf.release();
         chunkByteBuf.release();
     }
 
-    public void networkDecodeVersionNine(ByteBuf byteBuf, ChunkSection[] chunkSections, int sectionIndex) {
+    public void networkDecodeVersionNine(ByteBuf byteBuf, int sectionIndex) {
         byte storageSize = byteBuf.readByte();
         byteBuf.readByte(); // height
-        networkDecodeVersionEight(byteBuf, chunkSections, sectionIndex, storageSize);
+        networkDecodeVersionEight(byteBuf, sectionIndex, storageSize);
     }
 
-    public void networkDecodeVersionEight(ByteBuf byteBuf, ChunkSection[] chunkSections, int sectionIndex, byte storageSize) {
+    public void networkDecodeVersionEight(ByteBuf byteBuf, int sectionIndex, byte storageSize) {
         for (int storageReadIndex = 0; storageReadIndex < storageSize; storageReadIndex++) {
             if (storageReadIndex > 1) {
                 return;
@@ -147,20 +118,17 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                     for (int y = 0; y < 16; y++) {
                         int paletteIndex = bitArray.get(index);
                         int mcbeBlockId = sectionPalette[paletteIndex];
-                        int javaStateId = BlockConverter.bedrockRuntimeToJavaStateId(mcbeBlockId);
+                        int classicStateId = BlockConverter.bedrockRuntimeToClassicStateId(mcbeBlockId);
 
                         if (storageReadIndex == 0) {
-                            chunkSections[sectionIndex].setBlock(x, y, z, javaStateId);
+                            player.getMapBedrock().put(new Vector3i(x, y, z), classicStateId);
                         } else {
-                            if (javaStateId == 34 || javaStateId == 35) { // water
-                                int layer0 = chunkSections[sectionIndex].getBlock(x, y, z);
+                            if (classicStateId == 34 || classicStateId == 35) { // water
+                                int layer0 = player.getMapBedrock().get(new Vector3i(x, y, z));
                                 if (layer0 != 0) {
-                                    int waterlogged = BlockConverter.javaBlockToWaterlogged(layer0);
-                                    if (waterlogged != 1) {
-                                        chunkSections[sectionIndex].setBlock(x, y, z, waterlogged);
-                                    }
+                                    continue;
                                 } else {
-                                    chunkSections[sectionIndex].setBlock(x, y, z, javaStateId);
+                                    player.getMapBedrock().put(new Vector3i(x, y, z), classicStateId);
                                 }
                             }
                         }
@@ -172,8 +140,8 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
         }
     }
 
-    public void networkDecodeVersionOne(ByteBuf byteBuf, ChunkSection chunkSection) {
-        networkDecodeVersionEight(byteBuf, new ChunkSection[]{chunkSection}, 0, (byte) 1);
+    public void networkDecodeVersionOne(ByteBuf byteBuf) {
+        networkDecodeVersionEight(byteBuf, 0, (byte) 1);
     }
 
     @Override
