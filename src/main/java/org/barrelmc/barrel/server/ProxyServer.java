@@ -23,7 +23,7 @@ import net.kyori.adventure.text.Component;
 import org.barrelmc.barrel.auth.AuthManager;
 import org.barrelmc.barrel.auth.server.AuthServer;
 import org.barrelmc.barrel.config.Config;
-import org.barrelmc.barrel.network.JavaPacketHandler;
+import org.barrelmc.barrel.network.ClassicPacketHandler;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.utils.FileManager;
 import org.barrelmc.barrel.utils.NbtBlockDefinitionRegistry;
