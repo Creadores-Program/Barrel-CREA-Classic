@@ -11,8 +11,8 @@ import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
+import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
-import com.github.steveice10.mc.protocol.packet.login.serverbound.ServerboundHelloPacket;
 import com.github.steveice10.packetlib.Session;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -55,6 +55,7 @@ import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Player extends Vector3 {
 
@@ -155,7 +156,16 @@ public class Player extends Vector3 {
     @Getter
     private List<ClientExtEntryPacket> extensionsClassic = new ObjectArrayList<>();
 
-    public Player(ServerboundHelloPacket loginPacket, Session classicSession) {
+    @Getter
+    private Map<Vector3i, Integer> mapBedrock = new ConcurrentHashMap<>();
+
+    @Getter
+    private Vector3i minPosClassic = new Vector3i(-250, 0, -250);
+
+    @Getter
+    private Vector3i maxPosClassic = new Vector3i(250, 250, 250);
+
+    public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
         this.classicSession = classicSession;
 
@@ -179,7 +189,7 @@ public class Player extends Vector3 {
         }
     }
 
-    private void onlineLogin(ServerboundHelloPacket classicLoginPacket) {
+    private void onlineLogin(ClientIdentificationPacket classicLoginPacket) {
         Config config = ProxyServer.getInstance().getConfig();
         InetSocketAddress bedrockAddress = new InetSocketAddress(config.getBedrockAddress(), config.getBedrockPort());
         try {
@@ -203,7 +213,7 @@ public class Player extends Vector3 {
             this.classicUsername = classicLoginPacket.getUsername();
             ProxyServer.getInstance().addBedrockPlayer(this);
         } catch (Exception exception){
-            javaSession.disconnect("Failed to connect: " + exception);
+            classicSession.disconnect("Failed to connect: " + exception);
         }
     }
 
@@ -274,7 +284,7 @@ public class Player extends Vector3 {
         return loginPacket;
     }
 
-    private void offlineLogin(ServerboundHelloPacket classicLoginPacket) {
+    private void offlineLogin(ClientIdentificationPacket classicLoginPacket) {
         this.xuid = "";
         this.username = this.classicUsername = classicLoginPacket.getUsername();
         this.UUID = java.util.UUID.randomUUID().toString();
@@ -379,7 +389,7 @@ public class Player extends Vector3 {
         skinData.put("ServerAddress", ProxyServer.getInstance().getConfig().getBedrockAddress() + ":" + ProxyServer.getInstance().getConfig().getBedrockPort());
         skinData.put("SkinAnimationData", "");
         skinData.put("SkinColor", "#0");
-        skinData.put("SkinData", ProxyServer.getInstance().getDefaultSkinData());
+        skinData.put("SkinData", Utils.usernameToSkinData(this.classicUsername));
         skinData.put("SkinGeometryData", Base64.getEncoder().encodeToString(ProxyServer.getInstance().getDefaultSkinGeometry().getBytes()));
         skinData.put("SkinId", this.UUID + ".Custom");
         skinData.put("SkinImageHeight", 64);
