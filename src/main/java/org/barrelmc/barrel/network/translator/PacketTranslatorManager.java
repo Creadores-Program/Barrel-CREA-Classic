@@ -1,6 +1,5 @@
 package org.barrelmc.barrel.network.translator;
 
-import com.github.steveice10.mc.protocol.codec.MinecraftPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundClientCommandPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundClientInformationPacket;
@@ -11,9 +10,8 @@ import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundCh
 import com.github.steveice10.packetlib.packet.Packet;
 import lombok.Getter;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
-import org.barrelmc.barrel.network.translator.interfaces.JavaPacketTranslator;
-import org.barrelmc.barrel.network.translator.java.*;
-import org.barrelmc.barrel.network.translator.java.PlayerActionPacket;
+import org.barrelmc.barrel.network.translator.interfaces.ClassicPacketTranslator;
+import org.barrelmc.barrel.network.translator.classic.*;
 import org.barrelmc.barrel.player.Player;
 import org.cloudburstmc.protocol.bedrock.packet.*;
 
@@ -35,7 +33,7 @@ public class PacketTranslatorManager {
     );
 
     @Getter
-    private final Map<Class<? extends Packet>, JavaPacketTranslator> javaTranslators = new HashMap<>();
+    private final Map<Class<? extends Packet>, ClassicPacketTranslator> classicTranslators = new HashMap<>();
     @Getter
     private final Map<Class<? extends BedrockPacket>, BedrockPacketTranslator> bedrockTranslators = new HashMap<>();
 
@@ -58,8 +56,8 @@ public class PacketTranslatorManager {
         }
     }
 
-    public void translate(MinecraftPacket pk) {
-        JavaPacketTranslator translator = javaTranslators.get(pk.getClass());
+    public void translate(Packet pk) {
+        ClassicPacketTranslator translator = classicTranslators.get(pk.getClass());
 
         if (translator != null) {
             threadPoolExecutor.execute(() -> translator.translate(pk, player));
@@ -99,7 +97,7 @@ public class PacketTranslatorManager {
         bedrockTranslators.put(SetTitlePacket.class, new org.barrelmc.barrel.network.translator.bedrock.SetTitlePacket());
         bedrockTranslators.put(ToastRequestPacket.class, new org.barrelmc.barrel.network.translator.bedrock.ToastRequestPacket());
         
-        // Java packets
+        // Classic packets
         javaTranslators.put(ServerboundChatPacket.class, new ChatPacket());
         javaTranslators.put(ServerboundSetCarriedItemPacket.class, new SetCarriedItemPacket());
         javaTranslators.put(ServerboundMovePlayerPosPacket.class, new MovePlayerPosPacket());
