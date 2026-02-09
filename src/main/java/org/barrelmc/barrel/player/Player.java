@@ -156,14 +156,23 @@ public class Player extends Vector3 {
     @Getter
     private List<ClientExtEntryPacket> extensionsClassic = new ObjectArrayList<>();
 
-    @Getter
-    private Map<Vector3i, Integer> mapBedrock = new ConcurrentHashMap<>();
+    public byte[] mapClassic = new byte[250 * 250 * 250];
 
     @Getter
-    private Vector3i minPosClassic = new Vector3i(-250, 0, -250);
+    @Setter
+    private Vector3i minPosClassic = new Vector3i(0, 0, 0);
 
     @Getter
-    private Vector3i maxPosClassic = new Vector3i(250, 250, 250);
+    @Setter
+    private Vector3i maxPosClassic = new Vector3i(249, 249, 249);
+
+    @Getter
+    @Setter
+    private Vector3i maxPosBedrock = new Vector3i(124, 249, 124);
+
+    @Getter
+    @Setter
+    private Vector3i minPosBedrock = new Vector3i(-125, 0, -125);
 
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
