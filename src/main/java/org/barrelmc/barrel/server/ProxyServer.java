@@ -79,22 +79,22 @@ public class ProxyServer {
 
     @Getter
     private List<String> extDatapacks = new ObjectArrayList<>(){{
-        add(new ServerExtEntryPacket(1, ExtNames.CLICKDISTANCE));
-        add(new ServerExtEntryPacket(1, ExtNames.CUSTOMBLOCKS));
-        add(new ServerExtEntryPacket(2, ExtNames.EXTPLAYERLIST));
-        add(new ServerExtEntryPacket(1, ExtNames.ENVCOLORS));
-        add(new ServerExtEntryPacket(1, ExtNames.CHANGEMODEL));
-        add(new ServerExtEntryPacket(1, ExtNames.ENVWEATHERTYPE));
-        add(new ServerExtEntryPacket(1, ExtNames.HACKCONTROL));
-        add(new ServerExtEntryPacket(1, ExtNames.EMOTEFIX));
-        add(new ServerExtEntryPacket(2, ExtNames.MESSAGETYPES));
-        add(new ServerExtEntryPacket(1, ExtNames.LONGERMESSAGES));
-        add(new ServerExtEntryPacket(1, ExtNames.BULKBLOCKUPDATE));
-        add(new ServerExtEntryPacket(1, ExtNames.PLAYERCLICK));
-        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYPOSITIONS));
-        add(new ServerExtEntryPacket(1, ExtNames.INSTANTMOTD));
-        add(new ServerExtEntryPacket(1, ExtNames.SETSPAWNPOINT));
-        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYTELEPORT));
+        add(new ServerExtEntryPacket(1, ExtNames.CLICKDISTANCE));//0
+        add(new ServerExtEntryPacket(1, ExtNames.CUSTOMBLOCKS));//1
+        add(new ServerExtEntryPacket(2, ExtNames.EXTPLAYERLIST));//2
+        add(new ServerExtEntryPacket(1, ExtNames.ENVCOLORS));//3
+        add(new ServerExtEntryPacket(1, ExtNames.CHANGEMODEL));//4
+        add(new ServerExtEntryPacket(1, ExtNames.ENVWEATHERTYPE));//5
+        add(new ServerExtEntryPacket(1, ExtNames.HACKCONTROL));//6
+        add(new ServerExtEntryPacket(1, ExtNames.EMOTEFIX));//7
+        add(new ServerExtEntryPacket(2, ExtNames.MESSAGETYPES));//8
+        add(new ServerExtEntryPacket(1, ExtNames.LONGERMESSAGES));//9
+        add(new ServerExtEntryPacket(1, ExtNames.BULKBLOCKUPDATE));//10
+        add(new ServerExtEntryPacket(1, ExtNames.PLAYERCLICK));//11
+        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYPOSITIONS));//12
+        add(new ServerExtEntryPacket(1, ExtNames.INSTANTMOTD));//13
+        add(new ServerExtEntryPacket(1, ExtNames.SETSPAWNPOINT));//14
+        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYTELEPORT));//15
     }};
 
     public ProxyServer(String dataPath) {
