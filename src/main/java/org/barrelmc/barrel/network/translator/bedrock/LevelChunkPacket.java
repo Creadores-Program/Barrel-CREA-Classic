@@ -37,6 +37,8 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
         org.cloudburstmc.protocol.bedrock.packet.LevelChunkPacket packet = (org.cloudburstmc.protocol.bedrock.packet.LevelChunkPacket) pk;
 
         int subChunksLength = packet.getSubChunksLength();
+        int chunkX = packet.getChunkX();
+        int chunkZ = packet.getChunkZ();
 
         ByteBuf byteBuf = Unpooled.buffer();
         byteBuf.writeBytes(packet.getData());
@@ -51,29 +53,29 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
             }
 
             if (chunkVersion == 1) {
-                networkDecodeVersionOne(byteBuf);
+                networkDecodeVersionOne(byteBuf, chunkX, chunkZ);
                 continue;
             }
 
             if (chunkVersion == 9) {
-                networkDecodeVersionNine(byteBuf, sectionIndex);
+                networkDecodeVersionNine(byteBuf, chunkX, chunkZ, sectionIndex);
                 continue;
             }
 
-            networkDecodeVersionEight(byteBuf, sectionIndex, byteBuf.readByte());
+            networkDecodeVersionEight(byteBuf, chunkX, chunkZ, sectionIndex, byteBuf.readByte());
         }
 
         byteBuf.release();
         chunkByteBuf.release();
     }
 
-    public void networkDecodeVersionNine(ByteBuf byteBuf, int sectionIndex) {
+    public void networkDecodeVersionNine(ByteBuf byteBuf, int chunkX, int chunkZ, int sectionIndex) {
         byte storageSize = byteBuf.readByte();
         byteBuf.readByte(); // height
-        networkDecodeVersionEight(byteBuf, sectionIndex, storageSize);
+        networkDecodeVersionEight(byteBuf, chunkX, chunkZ, sectionIndex, storageSize);
     }
 
-    public void networkDecodeVersionEight(ByteBuf byteBuf, int sectionIndex, byte storageSize) {
+    public void networkDecodeVersionEight(ByteBuf byteBuf, int chunkX, int chunkZ, int sectionIndex, byte storageSize) {
         for (int storageReadIndex = 0; storageReadIndex < storageSize; storageReadIndex++) {
             if (storageReadIndex > 1) {
                 return;
@@ -114,21 +116,33 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
 
             int index = 0;
             for (int x = 0; x < 16; x++) {
+                int worldX = (chunkX << 4) + x;
+                if(player.getMaxPosBedrock().getX() < worldX || player.getMinPosBedrock().getX() > worldX){
+                    continue;
+                }
                 for (int z = 0; z < 16; z++) {
+                    int worldZ = (chunkZ << 4) + z;
+                    if(player.getMaxPosBedrock().getZ() < worldZ || player.getMinPosBedrock().getZ() > worldZ){
+                        continue;
+                    }
                     for (int y = 0; y < 16; y++) {
+                        int worldY = (sectionIndex << 4) + y;
+                        if(player.getMaxPosBedrock().getY() < worldY || player.getMinPosBedrock().getY() > worldY){
+                            continue;
+                        }
                         int paletteIndex = bitArray.get(index);
                         int mcbeBlockId = sectionPalette[paletteIndex];
                         int classicStateId = BlockConverter.bedrockRuntimeToClassicStateId(mcbeBlockId);
 
                         if (storageReadIndex == 0) {
-                            player.getMapBedrock().put(new Vector3i(x, y, z), classicStateId);
+                            //player.getMapBedrock().put(new Vector3i(x, y, z), classicStateId);
                         } else {
                             if (classicStateId == 34 || classicStateId == 35) { // water
-                                int layer0 = player.getMapBedrock().get(new Vector3i(x, y, z));
+                                //int layer0 = player.getMapBedrock().get(new Vector3i(x, y, z));
                                 if (layer0 != 0) {
                                     continue;
                                 } else {
-                                    player.getMapBedrock().put(new Vector3i(x, y, z), classicStateId);
+                                    //player.getMapBedrock().put(new Vector3i(x, y, z), classicStateId);
                                 }
                             }
                         }
@@ -140,8 +154,8 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
         }
     }
 
-    public void networkDecodeVersionOne(ByteBuf byteBuf) {
-        networkDecodeVersionEight(byteBuf, 0, (byte) 1);
+    public void networkDecodeVersionOne(ByteBuf byteBuf, int chunkX, int chunkZ) {
+        networkDecodeVersionEight(byteBuf, chunkX, chunkZ, 0, (byte) 1);
     }
 
     @Override
