@@ -43,6 +43,25 @@ public class Utils {
         }
     }
 
+    public static int mapCoords(int val, int minOrig, int maxOrig, int minDest, int maxDest){
+        if(minOrig == minDest){
+            return val;
+        }
+        return (int) Math.round((double) (minDest + ((double) (val - minOrig)) * (maxDest - minDest) / (maxOrig - minOrig)));
+    }
+    public static float mapCoords(float val, float minOrig, float maxOrig, float minDest, float maxDest) {
+        if(minOrig == minDest){
+            return val;
+        }
+        return minDest + (val - minOrig) * (maxDest - minDest) / (maxOrig - minOrig);
+    }
+    public static double mapCoords(double val, double minOrig, double maxOrig, double minDest, double maxDest) {
+        if(minOrig == minDest){
+            return val;
+        }
+        return minDest + (val - minOrig) * (maxDest - minDest) / (maxOrig - minOrig);
+    }
+
     public static String lengthCutter(String bedrockName, int length) {
         if (bedrockName == null) {
             return "null";
