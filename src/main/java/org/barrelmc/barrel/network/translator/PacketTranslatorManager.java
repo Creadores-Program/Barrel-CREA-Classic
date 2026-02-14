@@ -1,12 +1,6 @@
 package org.barrelmc.barrel.network.translator;
 
-import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundChatPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundClientCommandPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundClientInformationPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.serverbound.inventory.ServerboundSeenAdvancementsPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.serverbound.player.*;
-import com.github.steveice10.mc.protocol.packet.ingame.clientbound.inventory.ClientboundContainerClosePacket;
-import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundChatCommandPacket;
+import com.github.steveice10.mc.classic.protocol.packet.client.*;
 import com.github.steveice10.packetlib.packet.Packet;
 import lombok.Getter;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
@@ -98,7 +92,7 @@ public class PacketTranslatorManager {
         bedrockTranslators.put(ToastRequestPacket.class, new org.barrelmc.barrel.network.translator.bedrock.ToastRequestPacket());
         
         // Classic packets
-        javaTranslators.put(ServerboundChatPacket.class, new ChatPacket());
+        javaTranslators.put(ClientChatPacket.class, new ChatPacket());
         javaTranslators.put(ServerboundSetCarriedItemPacket.class, new SetCarriedItemPacket());
         javaTranslators.put(ServerboundMovePlayerPosPacket.class, new MovePlayerPosPacket());
         javaTranslators.put(ServerboundMovePlayerPosRotPacket.class, new MovePlayerPosRotPacket());
@@ -110,6 +104,5 @@ public class PacketTranslatorManager {
         javaTranslators.put(ServerboundPlayerActionPacket.class, new PlayerActionPacket());
         javaTranslators.put(ServerboundSeenAdvancementsPacket.class, new SeenAdvancementsPacket());
         javaTranslators.put(ServerboundPlayerAbilitiesPacket.class, new PlayerAbilitiesPacket());
-        javaTranslators.put(ServerboundChatCommandPacket.class, new ChatCommandPacket());
     }
 }
