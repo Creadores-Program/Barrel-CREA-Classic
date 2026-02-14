@@ -174,6 +174,8 @@ public class Player extends Vector3 {
     @Setter
     private Vector3i minPosBedrock = new Vector3i(-125, 0, -125);
 
+    public String msgPlayer = "";
+
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
         this.classicSession = classicSession;
