@@ -92,11 +92,9 @@ public class PacketTranslatorManager {
         bedrockTranslators.put(ToastRequestPacket.class, new org.barrelmc.barrel.network.translator.bedrock.ToastRequestPacket());
         
         // Classic packets
-        javaTranslators.put(ClientChatPacket.class, new ChatPacket());
+        classicTranslators.put(ClientChatPacket.class, new ChatPacket());
         javaTranslators.put(ServerboundSetCarriedItemPacket.class, new SetCarriedItemPacket());
-        javaTranslators.put(ServerboundMovePlayerPosPacket.class, new MovePlayerPosPacket());
-        javaTranslators.put(ServerboundMovePlayerPosRotPacket.class, new MovePlayerPosRotPacket());
-        javaTranslators.put(ServerboundMovePlayerRotPacket.class, new MovePlayerRotPacket());
+        classicTranslators.put(ClientPositionRotationPacket.class, new PositionRotationPacket());
         javaTranslators.put(ServerboundPlayerCommandPacket.class, new PlayerCommandPacket());
         javaTranslators.put(ServerboundSwingPacket.class, new SwingPacket());
         javaTranslators.put(ServerboundClientCommandPacket.class, new ClientCommandPacket());
