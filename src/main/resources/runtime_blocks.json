@@ -1,331 +1,327 @@
 {
   "11892": {
     "bedrock_name": "minecraft:air",
-    "java_default_state": 0
+    "classic_default_state": 0
   },
   "1791": {
     "bedrock_name": "minecraft:stone",
-    "java_default_state": 1
+    "classic_default_state": 1
   },
   "86": {
     "bedrock_name": "minecraft:granite",
-    "java_default_state": 2
+    "classic_default_state": 4
   },
   "1164": {
     "bedrock_name": "minecraft:polished_granite",
-    "java_default_state": 3
+    "classic_default_state": 4
   },
   "152": {
     "bedrock_name": "minecraft:diorite",
-    "java_default_state": 4
+    "classic_default_state": 4
   },
   "10045": {
     "bedrock_name": "minecraft:polished_diorite",
-    "java_default_state": 5
+    "classic_default_state": 4
   },
   "1789": {
     "bedrock_name": "minecraft:andesite",
-    "java_default_state": 6
+    "classic_default_state": 4
   },
   "13249": {
     "bedrock_name": "minecraft:polished_andesite",
-    "java_default_state": 7
+    "classic_default_state": 4
   },
   "10617": {
     "bedrock_name": "minecraft:grass_block",
-    "java_default_state": 9
+    "classic_default_state": 2
   },
   "9578": {
     "bedrock_name": "minecraft:dirt",
-    "java_default_state": 10
+    "classic_default_state": 3
   },
   "9579": {
     "bedrock_name": "minecraft:dirt",
-    "java_default_state": 11
+    "classic_default_state": 3
   },
   "7966": {
     "bedrock_name": "minecraft:podzol",
-    "java_default_state": 13
+    "classic_default_state": 2
   },
   "5997": {
     "bedrock_name": "minecraft:cobblestone",
-    "java_default_state": 14
+    "classic_default_state": 4
   },
   "13245": {
     "bedrock_name": "minecraft:oak_planks",
-    "java_default_state": 15
+    "classic_default_state": 5
   },
   "13607": {
     "bedrock_name": "minecraft:spruce_planks",
-    "java_default_state": 16
+    "classic_default_state": 5
   },
   "9112": {
     "bedrock_name": "minecraft:birch_planks",
-    "java_default_state": 17
+    "classic_default_state": 5
   },
   "11827": {
     "bedrock_name": "minecraft:jungle_planks",
-    "java_default_state": 18
+    "classic_default_state": 5
   },
   "7303": {
     "bedrock_name": "minecraft:acacia_planks",
-    "java_default_state": 19
+    "classic_default_state": 5
   },
   "13475": {
     "bedrock_name": "minecraft:cherry_planks",
-    "java_default_state": 20
+    "classic_default_state": 5
   },
   "5933": {
     "bedrock_name": "minecraft:dark_oak_planks",
-    "java_default_state": 21
+    "classic_default_state": 5
   },
   "2432": {
     "bedrock_name": "minecraft:mangrove_planks",
-    "java_default_state": 22
+    "classic_default_state": 5
   },
   "9443": {
     "bedrock_name": "minecraft:bamboo_planks",
-    "java_default_state": 23
+    "classic_default_state": 5
   },
   "14084": {
     "bedrock_name": "minecraft:bamboo_mosaic",
-    "java_default_state": 24
+    "classic_default_state": 5
   },
   "2171": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 25
+    "classic_default_state": 6
   },
   "2177": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 26
+    "classic_default_state": 6
   },
   "2172": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 27
+    "classic_default_state": 6
   },
   "2178": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 28
+    "classic_default_state": 6
   },
   "2173": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 29
+    "classic_default_state": 6
   },
   "2179": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 30
+    "classic_default_state": 6
   },
   "2174": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 31
+    "classic_default_state": 6
   },
   "2180": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 32
+    "classic_default_state": 6
   },
   "2175": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 33
+    "classic_default_state": 6
   },
   "2181": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 34
+    "classic_default_state": 6
   },
   "12947": {
     "bedrock_name": "minecraft:cherry_sapling",
-    "java_default_state": 35
+    "classic_default_state": 6
   },
   "12948": {
     "bedrock_name": "minecraft:cherry_sapling",
-    "java_default_state": 36
+    "classic_default_state": 6
   },
   "2176": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 37
+    "classic_default_state": 6
   },
   "2182": {
     "bedrock_name": "minecraft:sapling",
-    "java_default_state": 38
+    "classic_default_state": 6
   },
   "12200": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 39
+    "classic_default_state": 6
   },
   "12201": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 39
+    "classic_default_state": 6
   },
   "12202": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 39
+    "classic_default_state": 6
   },
   "12205": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 39
+    "classic_default_state": 6
   },
   "12206": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 39
+    "classic_default_state": 6
   },
   "12207": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 39
+    "classic_default_state": 6
   },
   "12203": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 40,
-    "java_waterlogged_state": 39
+    "classic_default_state": 6
   },
   "12204": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 42,
-    "java_waterlogged_state": 41
+    "classic_default_state": 6
   },
   "12198": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 44,
-    "java_waterlogged_state": 43
+    "classic_default_state": 6
   },
   "12199": {
     "bedrock_name": "minecraft:mangrove_propagule",
-    "java_default_state": 46,
-    "java_waterlogged_state": 45
+    "classic_default_state": 6
   },
   "12243": {
     "bedrock_name": "minecraft:bedrock",
-    "java_default_state": 79
+    "classic_default_state": 7
   },
   "12244": {
     "bedrock_name": "minecraft:bedrock",
-    "java_default_state": 79
+    "classic_default_state": 7
   },
   "9330": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9331": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9332": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9333": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9334": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9335": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9336": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9337": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9338": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9339": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9340": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9341": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9342": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9343": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9344": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "9345": {
     "bedrock_name": "minecraft:water",
-    "java_default_state": 80
+    "classic_default_state": 9
   },
   "8106": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 81
+    "classic_default_state": 8
   },
   "8105": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 81
+    "classic_default_state": 8
   },
   "8107": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 82
+    "classic_default_state": 8
   },
   "8108": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 83
+    "classic_default_state": 8
   },
   "8109": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 84
+    "classic_default_state": 8
   },
   "8110": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 85
+    "classic_default_state": 8
   },
   "8111": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 86
+    "classic_default_state": 8
   },
   "8112": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 87
+    "classic_default_state": 8
   },
   "8113": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 88
+    "classic_default_state": 8
   },
   "8114": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 89
+    "classic_default_state": 8
   },
   "8115": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 90
+    "classic_default_state": 8
   },
   "8116": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 91
+    "classic_default_state": 8
   },
   "8117": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 92
+    "classic_default_state": 8
   },
   "8118": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 93
+    "classic_default_state": 8
   },
   "8119": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 94
+    "classic_default_state": 8
   },
   "8120": {
     "bedrock_name": "minecraft:flowing_water",
-    "java_default_state": 95
+    "classic_default_state": 8
   },
   "6209": {
     "bedrock_name": "minecraft:lava",
