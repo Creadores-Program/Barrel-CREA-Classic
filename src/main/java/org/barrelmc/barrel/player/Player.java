@@ -156,7 +156,7 @@ public class Player extends Vector3 {
     @Getter
     private List<ClientExtEntryPacket> extensionsClassic = new ObjectArrayList<>();
 
-    public byte[] mapClassic = new byte[250 * 250 * 250];
+    public byte[] mapClassic = new byte[256 * 256 * 256];
 
     @Getter
     @Setter
@@ -164,15 +164,15 @@ public class Player extends Vector3 {
 
     @Getter
     @Setter
-    private Vector3i maxPosClassic = new Vector3i(249, 249, 249);
+    private Vector3i maxPosClassic = new Vector3i(255, 255, 255);
 
     @Getter
     @Setter
-    private Vector3i maxPosBedrock = new Vector3i(124, 249, 124);
+    private Vector3i maxPosBedrock = new Vector3i(127, 255, 127);
 
     @Getter
     @Setter
-    private Vector3i minPosBedrock = new Vector3i(-125, 0, -125);
+    private Vector3i minPosBedrock = new Vector3i(-128, 0, -128);
 
     public String msgPlayer = "";
 
