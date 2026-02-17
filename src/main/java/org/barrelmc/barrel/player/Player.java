@@ -128,9 +128,6 @@ public class Player extends Vector3 {
     @Setter
     @Getter
     private Vector3i diggingPosition;
-    @Setter
-    @Getter
-    private Direction diggingFace;
 
     @Setter
     @Getter
@@ -532,7 +529,7 @@ class PlayerAuthInputThread implements Runnable {
                 if (player.isSprinting()) {
                     pk.getInputData().add(PlayerAuthInputData.SPRINTING);
                 }
-                if (player.getDiggingStatus() == PlayerActionType.START_BREAK) {
+                /*if (player.getDiggingStatus() == PlayerActionType.START_BREAK) {
                     pk.getInputData().add(PlayerAuthInputData.PERFORM_BLOCK_ACTIONS);
 
                     PlayerBlockActionData blockActionData = new PlayerBlockActionData();
@@ -540,7 +537,7 @@ class PlayerAuthInputThread implements Runnable {
                     blockActionData.setBlockPosition(player.getDiggingPosition());
                     blockActionData.setFace(player.getDiggingFace().ordinal());
                     pk.getPlayerActions().add(blockActionData);
-                }
+                }*/
 
                 player.getBedrockClientSession().sendPacketImmediately(pk);
 
