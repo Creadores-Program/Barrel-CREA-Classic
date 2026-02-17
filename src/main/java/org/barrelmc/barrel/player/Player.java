@@ -21,7 +21,6 @@ import io.netty.channel.socket.nio.NioDatagramChannel;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import lombok.Getter;
 import lombok.Setter;
-import net.kyori.adventure.text.Component;
 import org.barrelmc.barrel.auth.AuthManager;
 import org.barrelmc.barrel.auth.Xbox;
 import org.barrelmc.barrel.config.Config;
