@@ -138,11 +138,11 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         int classicZ = Utils.mapCoords(worldZ, player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ());
 
                         if (storageReadIndex == 0) {
-                            player.mapClassic[(classicY * 250 + classicZ) * 250 + classicX] = (byte) classicStateId;
+                            player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) classicStateId;
                         } else if (classicStateId == 8 || classicStateId == 9) { // water
-                            int layer0 = (int) player.mapClassic[(classicY * 250 + classicZ) * 250 + classicX];
+                            int layer0 = (int) player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX];
                             if (layer0 == 0) {
-                                player.mapClassic[(classicY * 250 + classicZ) * 250 + classicX] = (byte) classicStateId;
+                                player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) classicStateId;
                             }
                             
                         }
