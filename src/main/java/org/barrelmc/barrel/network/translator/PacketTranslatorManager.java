@@ -90,6 +90,7 @@ public class PacketTranslatorManager {
         bedrockTranslators.put(NetworkSettingsPacket.class, new org.barrelmc.barrel.network.translator.bedrock.NetworkSettingsPacket());
         bedrockTranslators.put(SetTitlePacket.class, new org.barrelmc.barrel.network.translator.bedrock.SetTitlePacket());
         bedrockTranslators.put(ToastRequestPacket.class, new org.barrelmc.barrel.network.translator.bedrock.ToastRequestPacket());
+        bedrockTranslators.put(BiomeDefinitionListPacket.class, new org.barrelmc.barrel.network.translator.bedrock.BiomeDefinitionListPacket());
         
         // Classic packets
         classicTranslators.put(ClientChatPacket.class, new ChatPacket());
