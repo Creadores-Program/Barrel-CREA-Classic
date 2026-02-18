@@ -13,11 +13,11 @@ import com.github.steveice10.mc.classic.protocol.VerifyUsersListener;
 import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 import com.github.steveice10.packetlib.Server;
+import com.github.steveice10.packetlib.tcp.TcpSessionFactory;
 import com.github.steveice10.packetlib.event.server.ServerAdapter;
 import com.github.steveice10.packetlib.event.server.ServerClosedEvent;
 import com.github.steveice10.packetlib.event.server.SessionAddedEvent;
 import com.github.steveice10.packetlib.event.server.SessionRemovedEvent;
-import com.github.steveice10.packetlib.tcp.TcpServer;
 import lombok.Getter;
 import net.kyori.adventure.text.Component;
 import org.barrelmc.barrel.auth.AuthManager;
@@ -167,7 +167,7 @@ public class ProxyServer {
     }
 
     private void startServer() {
-        Server server = new TcpServer(this.config.getBindAddress(), this.config.getPort(), ClassicProtocol::new);
+        Server server = new Server(this.config.getBindAddress(), this.config.getPort(), ClassicProtocol.class, new TcpSessionFactory());
         if (this.config.getPremiumPlayerClassic()) {
             server.addListener(new VerifyUsersListener());
             server.setGlobalFlag(ClassicConstants.SERVER_INFO_BUILDER_KEY, (ServerInfoBuilder) s -> new ServerInfo(this.config.getMotd(), server.getPort(), true, 0, this.config.getMaxplayers()));
