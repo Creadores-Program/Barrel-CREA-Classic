@@ -31,7 +31,7 @@ public class BlockConverter {
     }
 
     // Convert mc bedrock runtime block id to classic block state id
-    public static int bedrockRuntimeToJavaStateId(int bedrockBlockId) {
+    public static int bedrockRuntimeToClassicStateId(int bedrockBlockId) {
         return BEDROCK_BLOCK_RUNTIME_TO_CLASSIC_BLOCK_STATE.getOrDefault(bedrockBlockId, 1);
     }
 }
