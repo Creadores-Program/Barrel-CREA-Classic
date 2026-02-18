@@ -69,9 +69,6 @@ public class ProxyServer {
     private String defaultSkinGeometry;
 
     @Getter
-    private CompoundTag registryCodec;
-
-    @Getter
     private NbtBlockDefinitionRegistry blockDefinitions;
 
     @Getter
@@ -106,7 +103,6 @@ public class ProxyServer {
             this.getLogger().emergency("Config file not found! Terminating...");
             System.exit(1);
         }
-        loadRegistryCodec();
         loadBlockDefinitions();
         loadDefaultSkin();
         startServer();
@@ -131,15 +127,6 @@ public class ProxyServer {
             return false;
         }
         return true;
-    }
-
-    private void loadRegistryCodec() {
-        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("registry-codec.nbt");
-             DataInputStream dataInputStream = new DataInputStream(new GZIPInputStream(Objects.requireNonNull(inputStream)))) {
-            registryCodec = (CompoundTag) NBTIO.readTag((InputStream) dataInputStream);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load registry codec", e);
-        }
     }
 
     private void loadBlockDefinitions() {
