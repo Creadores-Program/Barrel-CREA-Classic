@@ -325,235 +325,235 @@
   },
   "6209": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6210": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6211": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6212": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6213": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6214": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6215": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6216": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6217": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6218": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6219": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6220": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6221": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6222": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6223": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "6224": {
     "bedrock_name": "minecraft:lava",
-    "java_default_state": 96
+    "classic_default_state": 11
   },
   "12895": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 97
+    "classic_default_state": 10
   },
   "12894": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 97
+    "classic_default_state": 10
   },
   "12896": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 98
+    "classic_default_state": 10
   },
   "12897": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 99
+    "classic_default_state": 10
   },
   "12898": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 100
+    "classic_default_state": 10
   },
   "12899": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 101
+    "classic_default_state": 10
   },
   "12900": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 102
+    "classic_default_state": 10
   },
   "12901": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 103
+    "classic_default_state": 10
   },
   "12902": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 104
+    "classic_default_state": 10
   },
   "12903": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 105
+    "classic_default_state": 10
   },
   "12904": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 106
+    "classic_default_state": 10
   },
   "12905": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 107
+    "classic_default_state": 10
   },
   "12906": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 108
+    "classic_default_state": 10
   },
   "12907": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 109
+    "classic_default_state": 10
   },
   "12908": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 110
+    "classic_default_state": 10
   },
   "12909": {
     "bedrock_name": "minecraft:flowing_lava",
-    "java_default_state": 111
+    "classic_default_state": 10
   },
   "6998": {
     "bedrock_name": "minecraft:sand",
-    "java_default_state": 112
+    "classic_default_state": 12
   },
   "2621": {
     "bedrock_name": "minecraft:suspicious_sand",
-    "java_default_state": 113
+    "classic_default_state": 12
   },
   "2622": {
     "bedrock_name": "minecraft:suspicious_sand",
-    "java_default_state": 113
+    "classic_default_state": 12
   },
   "2624": {
     "bedrock_name": "minecraft:suspicious_sand",
-    "java_default_state": 113
+    "classic_default_state": 12
   },
   "2626": {
     "bedrock_name": "minecraft:suspicious_sand",
-    "java_default_state": 113
+    "classic_default_state": 12
   },
   "2628": {
     "bedrock_name": "minecraft:suspicious_sand",
-    "java_default_state": 113
+    "classic_default_state": 12
   },
   "2623": {
     "bedrock_name": "minecraft:suspicious_sand",
-    "java_default_state": 114
+    "classic_default_state": 12
   },
   "2625": {
     "bedrock_name": "minecraft:suspicious_sand",
-    "java_default_state": 115
+    "classic_default_state": 12
   },
   "2627": {
     "bedrock_name": "minecraft:suspicious_sand",
-    "java_default_state": 116
+    "classic_default_state": 12
   },
   "6999": {
     "bedrock_name": "minecraft:sand",
-    "java_default_state": 117
+    "classic_default_state": 12
   },
   "14115": {
     "bedrock_name": "minecraft:gravel",
-    "java_default_state": 118
+    "classic_default_state": 13
   },
   "8081": {
     "bedrock_name": "minecraft:suspicious_gravel",
-    "java_default_state": 119
+    "classic_default_state": 13
   },
   "8082": {
     "bedrock_name": "minecraft:suspicious_gravel",
-    "java_default_state": 119
+    "classic_default_state": 13
   },
   "8084": {
     "bedrock_name": "minecraft:suspicious_gravel",
-    "java_default_state": 119
+    "classic_default_state": 13
   },
   "8086": {
     "bedrock_name": "minecraft:suspicious_gravel",
-    "java_default_state": 119
+    "classic_default_state": 13
   },
   "8088": {
     "bedrock_name": "minecraft:suspicious_gravel",
-    "java_default_state": 119
+    "classic_default_state": 13
   },
   "8083": {
     "bedrock_name": "minecraft:suspicious_gravel",
-    "java_default_state": 120
+    "classic_default_state": 13
   },
   "8085": {
     "bedrock_name": "minecraft:suspicious_gravel",
-    "java_default_state": 121
+    "classic_default_state": 13
   },
   "8087": {
     "bedrock_name": "minecraft:suspicious_gravel",
-    "java_default_state": 122
+    "classic_default_state": 13
   },
   "2395": {
     "bedrock_name": "minecraft:gold_ore",
-    "java_default_state": 123
+    "classic_default_state": 14
   },
   "11256": {
     "bedrock_name": "minecraft:deepslate_gold_ore",
-    "java_default_state": 124
+    "classic_default_state": 14
   },
   "8006": {
     "bedrock_name": "minecraft:iron_ore",
-    "java_default_state": 125
+    "classic_default_state": 15
   },
   "12973": {
     "bedrock_name": "minecraft:deepslate_iron_ore",
-    "java_default_state": 126
+    "classic_default_state": 15
   },
   "7093": {
     "bedrock_name": "minecraft:coal_ore",
-    "java_default_state": 127
+    "classic_default_state": 16
   },
   "12859": {
     "bedrock_name": "minecraft:deepslate_coal_ore",
-    "java_default_state": 128
+    "classic_default_state": 16
   },
   "32": {
     "bedrock_name": "minecraft:nether_gold_ore",
-    "java_default_state": 129
+    "classic_default_state": 14
   },
   "738": {
     "bedrock_name": "minecraft:oak_log",
