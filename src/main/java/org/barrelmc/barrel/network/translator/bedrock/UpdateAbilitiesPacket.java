@@ -1,11 +1,10 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 
-import com.github.steveice10.mc.protocol.data.game.level.notify.GameEvent;
-import com.github.steveice10.mc.protocol.packet.ingame.clientbound.entity.player.ClientboundPlayerAbilitiesPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundGameEventPacket;
-import org.barrelmc.barrel.network.translator.TranslatorUtils;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerHackControlPacket;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.utils.Utils;
+import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.protocol.bedrock.data.Ability;
 import org.cloudburstmc.protocol.bedrock.data.AbilityLayer;
 import org.cloudburstmc.protocol.bedrock.data.GameType;
@@ -22,11 +21,9 @@ public class UpdateAbilitiesPacket implements BedrockPacketTranslator {
             for (AbilityLayer abilityLayer : packet.getAbilityLayers().toArray(new AbilityLayer[0])) {
                 if (abilityLayer.getLayerType() == AbilityLayer.Type.BASE) {
                     Set<Ability> abilityValues = abilityLayer.getAbilityValues();
-                    if (abilityValues.contains(Ability.NO_CLIP) && player.getGameMode() == GameType.CREATIVE) {
-                        player.setGameMode(GameType.SURVIVAL_VIEWER);
-                        player.getJavaSession().send(new ClientboundGameEventPacket(GameEvent.CHANGE_GAMEMODE, TranslatorUtils.translateGamemodeToJE(GameType.SURVIVAL_VIEWER)));
+                    if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(6), player.getExtensionsClassic())){
+                        player.getClassicSession().send(new ServerHackControlPacket(abilityValues.contains(Ability.FLYING), abilityValues.contains(Ability.NO_CLIP), abilityValues.contains(Ability.WALK_SPEED), false, true, 40f));
                     }
-                    player.getJavaSession().send(new ClientboundPlayerAbilitiesPacket(abilityValues.contains(Ability.INVULNERABLE), abilityValues.contains(Ability.MAY_FLY), abilityValues.contains(Ability.FLYING), abilityValues.contains(Ability.INSTABUILD), 0.05f, 0.1f));
                 }
             }
         }
