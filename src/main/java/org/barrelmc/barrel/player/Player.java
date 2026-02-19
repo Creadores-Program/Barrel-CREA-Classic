@@ -455,10 +455,8 @@ public class Player extends Vector3 {
     }
     
     public void sendTip(String message) {
-        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
-            this.sendMessage(message, PlayerIds.SMALLANNOUNCEMENT);
-        }else if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic) != null){
-            this.sendMessage(message, PlayerIds.ANNOUNCEMENT);
+        if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic) != null){
+            this.sendMessage(message, PlayerIds.BOTTOMRIGHT3);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
         }
