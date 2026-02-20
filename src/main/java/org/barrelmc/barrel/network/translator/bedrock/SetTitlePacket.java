@@ -32,8 +32,9 @@ public class SetTitlePacket implements BedrockPacketTranslator {
         }
         case ACTIONBAR_JSON:
         case ACTIONBAR: {
-          //aquí 
-          player.getJavaSession().send(new ClientboundSetActionBarTextPacket(Component.text(packet.getText())));
+          if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic()) != null){
+            idMsg = PlayerIds.BOTTOMRIGHT3;
+          }
           break;
         }
         default:
