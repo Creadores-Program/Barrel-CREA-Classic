@@ -1,7 +1,6 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 
-import com.github.steveice10.mc.protocol.data.game.level.block.BlockChangeEntry;
-import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundBlockUpdatePacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetBlockPacket;
 import org.barrelmc.barrel.network.converter.BlockConverter;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
@@ -16,10 +15,8 @@ public class UpdateBlockPacket implements BedrockPacketTranslator {
 
         if (packet.getDataLayer() == 0) {
             Vector3i pos = packet.getBlockPosition();
-            int blockState = BlockConverter.bedrockRuntimeToJavaStateId(packet.getDefinition().getRuntimeId());
-
-            BlockChangeEntry blockChangeRecord = new BlockChangeEntry(pos, blockState);
-            player.getJavaSession().send(new ClientboundBlockUpdatePacket(blockChangeRecord));
+            int blockState = BlockConverter.bedrockRuntimeToClassicStateId(packet.getDefinition().getRuntimeId());
+            player.getClassicSession().send(new ServerSetBlockPacket(pos.getX(), pos.getY(), pos.getZ(), blockState));
         }
     }
 }
