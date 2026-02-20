@@ -20,8 +20,6 @@ import com.github.steveice10.packetlib.event.server.SessionAddedEvent;
 import com.github.steveice10.packetlib.event.server.SessionRemovedEvent;
 import lombok.Getter;
 import net.kyori.adventure.text.Component;
-import org.barrelmc.barrel.auth.AuthManager;
-import org.barrelmc.barrel.auth.server.AuthServer;
 import org.barrelmc.barrel.config.Config;
 import org.barrelmc.barrel.network.ClassicPacketHandler;
 import org.barrelmc.barrel.player.Player;
@@ -178,11 +176,6 @@ public class ProxyServer {
                 if (username == null) return;
                     if(isBedrockPlayer(username)){
                         getPlayerByName(username).disconnect("logged out");
-                    }
-                    AuthManager.getInstance().getLoginPlayers().remove(username);
-                    if (AuthManager.getInstance().getTimers().containsKey(username)) {
-                        AuthManager.getInstance().getTimers().get(username).cancel();
-                        AuthManager.getInstance().getTimers().remove(username);
                     }
                     getLogger().info(username + " logged out");
             }
