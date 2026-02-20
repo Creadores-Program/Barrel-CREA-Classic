@@ -19,7 +19,6 @@ import com.github.steveice10.packetlib.event.server.ServerClosedEvent;
 import com.github.steveice10.packetlib.event.server.SessionAddedEvent;
 import com.github.steveice10.packetlib.event.server.SessionRemovedEvent;
 import lombok.Getter;
-import net.kyori.adventure.text.Component;
 import org.barrelmc.barrel.config.Config;
 import org.barrelmc.barrel.network.ClassicPacketHandler;
 import org.barrelmc.barrel.player.Player;
