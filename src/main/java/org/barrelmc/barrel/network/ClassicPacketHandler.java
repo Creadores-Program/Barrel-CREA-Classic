@@ -9,7 +9,6 @@ import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificat
 import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.SessionAdapter;
 import com.github.steveice10.packetlib.packet.Packet;
-import org.barrelmc.barrel.auth.AuthManager;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
 
@@ -30,12 +29,8 @@ public class ClassicPacketHandler extends SessionAdapter {
         if (this.player == null) {
             if (packet instanceof ClientIdentificationPacket) {
                 ClientIdentificationPacket loginPacket = (ClientIdentificationPacket) packet;
-
-                if (ProxyServer.getInstance().getConfig().getAuth().equals("offline") || AuthManager.getInstance().getAccessTokens().containsKey(loginPacket.getUsername())) {
-                    new Player(loginPacket, session);
-
-                    this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
-                }
+                new Player(loginPacket, session);
+                this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
             }
         } else {
             player.getPacketTranslatorManager().translate(packet);
