@@ -13,7 +13,7 @@ public class LevelEventPacket implements BedrockPacketTranslator {
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
-        if(player.getDimension() != 0 || (!Utils.containsExt(ProxyServer.getExtDatapacks().get(5), player.getExtensionsClassic()))){
+        if(player.getDimension() != 0 || (!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(5), player.getExtensionsClassic()))){
             return;
         }
         org.cloudburstmc.protocol.bedrock.packet.LevelEventPacket packet = (org.cloudburstmc.protocol.bedrock.packet.LevelEventPacket) pk;
