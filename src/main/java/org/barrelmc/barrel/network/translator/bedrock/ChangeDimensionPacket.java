@@ -8,6 +8,7 @@ import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.math.vector.Vector3i;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvSetWeatherTypePacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 //import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 //import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
@@ -56,6 +57,7 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
                 }
                 break;
         }
+        player.getClassicSession().send(new ServerLevelInitializePacket());
         /*
         PlayerActionPacket playerActionPacket = new PlayerActionPacket();
         playerActionPacket.setAction(PlayerActionType.DIMENSION_CHANGE_SUCCESS);
