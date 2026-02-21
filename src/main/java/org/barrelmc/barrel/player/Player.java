@@ -174,6 +174,10 @@ public class Player extends Vector3 {
 
     public String msgPlayer = "";
 
+    @Getter
+    @Setter
+    private int dimension = 0;
+
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
         this.classicSession = classicSession;
