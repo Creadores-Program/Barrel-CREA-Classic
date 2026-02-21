@@ -13,18 +13,19 @@ public class LevelEventPacket implements BedrockPacketTranslator {
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
-        org.cloudburstmc.protocol.bedrock.packet.LevelEventPacket packet = (org.cloudburstmc.protocol.bedrock.packet.LevelEventPacket) pk;
-
-        if(!Utils.containsExt(ProxyServer.getExtDatapacks().get(5), player.getExtensionsClassic())){
+        if(player.getDimension() != 0 || (!Utils.containsExt(ProxyServer.getExtDatapacks().get(5), player.getExtensionsClassic()))){
             return;
         }
+        org.cloudburstmc.protocol.bedrock.packet.LevelEventPacket packet = (org.cloudburstmc.protocol.bedrock.packet.LevelEventPacket) pk;
 
         switch(packet.getType()){
             case LevelEvent.START_RAINING:
             case LevelEvent.START_THUNDERSTORM:
+                player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(1));
                 break;
             case LevelEvent.STOP_RAINING:
             case LevelEvent.STOP_THUNDERSTORM:
+                player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(0));
                 break;
         }
     }
