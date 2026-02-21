@@ -7,6 +7,7 @@ import org.barrelmc.barrel.utils.Utils;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.math.vector.Vector3i;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvSetWeatherTypePacket;
 //import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 //import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
@@ -17,8 +18,28 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
     public void translate(BedrockPacket pk, Player player) {
         player.setStatusWorld(StatusWorld.CHANGE_DIMENSION);
         org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket packet = (org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket) pk;
-        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
-            player.getClassicSession().send(new ServerEnvColorsPacket(/*aqui*/));
+        switch(packet.getDimension()){
+            case 0://Overworld
+                if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
+                    player.getClassicSession().send(new ServerEnvColorsPacket(/*aqui*/));
+                }
+                break;
+            case 1://Nether
+                if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
+                    player.getClassicSession().send(new ServerEnvColorsPacket(/*aqui*/));
+                }
+                if(Utils.containsExt(ProxyServer.getExtDatapacks().get(5), player.getExtensionsClassic())){
+                    player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(0));
+                }
+                break;
+            case 2://End
+                if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
+                    player.getClassicSession().send(new ServerEnvColorsPacket(/*aqui*/));
+                }
+                if(Utils.containsExt(ProxyServer.getExtDatapacks().get(5), player.getExtensionsClassic())){
+                    player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(0));
+                }
+                break;
         }
         /*
         PlayerActionPacket playerActionPacket = new PlayerActionPacket();
