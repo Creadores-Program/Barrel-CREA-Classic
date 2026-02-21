@@ -28,7 +28,7 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
                     player.getClassicSession().send(new ServerEnvColorsPacket(/*aqui*/));
                 }
-                if(Utils.containsExt(ProxyServer.getExtDatapacks().get(5), player.getExtensionsClassic())){
+                if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(5), player.getExtensionsClassic())){
                     player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(0));
                 }
                 break;
@@ -36,7 +36,7 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
                     player.getClassicSession().send(new ServerEnvColorsPacket(/*aqui*/));
                 }
-                if(Utils.containsExt(ProxyServer.getExtDatapacks().get(5), player.getExtensionsClassic())){
+                if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(5), player.getExtensionsClassic())){
                     player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(0));
                 }
                 break;
