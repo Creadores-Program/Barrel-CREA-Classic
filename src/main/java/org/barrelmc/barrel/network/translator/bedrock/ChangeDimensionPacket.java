@@ -2,21 +2,31 @@ package org.barrelmc.barrel.network.translator.bedrock;
 
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.player.StatusWorld;
+import org.barrelmc.barrel.utils.Utils;
+import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.math.vector.Vector3i;
-import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
+//import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
-import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
+//import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
 
 public class ChangeDimensionPacket implements BedrockPacketTranslator {
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
+        player.setStatusWorld(StatusWorld.CHANGE_DIMENSION);
+        org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket packet = (org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket) pk;
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
+            player.getClassicSession().send(new ServerEnvColorsPacket(/*aqui*/));
+        }
+        /*
         PlayerActionPacket playerActionPacket = new PlayerActionPacket();
         playerActionPacket.setAction(PlayerActionType.DIMENSION_CHANGE_SUCCESS);
         playerActionPacket.setBlockPosition(Vector3i.ZERO);
         playerActionPacket.setResultPosition(Vector3i.ZERO);
         playerActionPacket.setFace(0);
         playerActionPacket.setRuntimeEntityId(player.getRuntimeEntityId());
-        player.getBedrockClientSession().sendPacket(playerActionPacket);
+        player.getBedrockClientSession().sendPacket(playerActionPacket);*/
     }
 }
