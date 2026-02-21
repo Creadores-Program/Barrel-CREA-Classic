@@ -168,6 +168,10 @@ public class Player extends Vector3 {
     @Setter
     private Vector3i minPosBedrock = new Vector3i(-128, 0, -128);
 
+    @Getter
+    @Setter
+    private StatusWorld statusWorld = StatusWorld.LOGIN;
+
     public String msgPlayer = "";
 
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
