@@ -15,8 +15,15 @@ public class UpdateBlockPacket implements BedrockPacketTranslator {
 
         if (packet.getDataLayer() == 0) {
             Vector3i pos = packet.getBlockPosition();
+            if(player.getMaxPosBedrock().getX() < pos.getX() || player.getMinPosBedrock().getX() > pos.getX() || player.getMaxPosBedrock().getZ() < pos.getZ() || player.getMinPosBedrock().getZ() > pos.getZ() || player.getMaxPosBedrock().getY() < pos.getY() || player.getMinPosBedrock().getY() > pos.getY()){
+                return;
+            }
             int blockState = BlockConverter.bedrockRuntimeToClassicStateId(packet.getDefinition().getRuntimeId());
-            player.getClassicSession().send(new ServerSetBlockPacket(pos.getX(), pos.getY(), pos.getZ(), blockState));
+            int classicX = Utils.mapCoords(pos.getX(), player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX());
+            int classicY = pos.getY();
+            int classicZ = Utils.mapCoords(pos.getZ(), player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ());
+            player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) blockState;
+            player.getClassicSession().send(new ServerSetBlockPacket(classicX, classicY, classicZ, blockState));
         }
     }
 }
