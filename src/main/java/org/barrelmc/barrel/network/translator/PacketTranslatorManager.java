@@ -61,19 +61,15 @@ public class PacketTranslatorManager {
     private void registerDefaultPackets() {
         // Bedrock packets
         bedrockTranslators.put(AddPlayerPacket.class, new org.barrelmc.barrel.network.translator.bedrock.AddPlayerPacket());
-        bedrockTranslators.put(AnimatePacket.class, new org.barrelmc.barrel.network.translator.bedrock.AnimatePacket());
-        bedrockTranslators.put(BlockEventPacket.class, new org.barrelmc.barrel.network.translator.bedrock.BlockEventPacket());
         bedrockTranslators.put(LevelChunkPacket.class, new org.barrelmc.barrel.network.translator.bedrock.LevelChunkPacket());
         bedrockTranslators.put(LevelEventPacket.class, new org.barrelmc.barrel.network.translator.bedrock.LevelEventPacket());
         bedrockTranslators.put(MoveEntityAbsolutePacket.class, new org.barrelmc.barrel.network.translator.bedrock.MoveEntityAbsolutePacket());
         bedrockTranslators.put(MovePlayerPacket.class, new org.barrelmc.barrel.network.translator.bedrock.MovePlayerPacket());
         bedrockTranslators.put(PlayerListPacket.class, new org.barrelmc.barrel.network.translator.bedrock.PlayerListPacket());
         bedrockTranslators.put(RemoveEntityPacket.class, new org.barrelmc.barrel.network.translator.bedrock.RemoveEntityPacket());
-        bedrockTranslators.put(RemoveObjectivePacket.class, new org.barrelmc.barrel.network.translator.bedrock.RemoveObjectivePacket());
         bedrockTranslators.put(ResourcePacksInfoPacket.class, new org.barrelmc.barrel.network.translator.bedrock.ResourcePacksInfoPacket());
         bedrockTranslators.put(ResourcePackStackPacket.class, new org.barrelmc.barrel.network.translator.bedrock.ResourcePackStackPacket());
         bedrockTranslators.put(ServerToClientHandshakePacket.class, new org.barrelmc.barrel.network.translator.bedrock.ServerToClientHandshakePacket());
-        bedrockTranslators.put(SetDisplayObjectivePacket.class, new org.barrelmc.barrel.network.translator.bedrock.SetDisplayObjectivePacket());
         bedrockTranslators.put(SetScorePacket.class, new org.barrelmc.barrel.network.translator.bedrock.SetScorePacket());
         bedrockTranslators.put(StartGamePacket.class, new org.barrelmc.barrel.network.translator.bedrock.StartGamePacket());
         bedrockTranslators.put(TextPacket.class, new org.barrelmc.barrel.network.translator.bedrock.TextPacket());
@@ -89,17 +85,13 @@ public class PacketTranslatorManager {
         bedrockTranslators.put(SetTitlePacket.class, new org.barrelmc.barrel.network.translator.bedrock.SetTitlePacket());
         bedrockTranslators.put(ToastRequestPacket.class, new org.barrelmc.barrel.network.translator.bedrock.ToastRequestPacket());
         bedrockTranslators.put(BiomeDefinitionListPacket.class, new org.barrelmc.barrel.network.translator.bedrock.BiomeDefinitionListPacket());
+        bedrockTranslators.put(SetTimePacket.class, new org.barrelmc.barrel.network.translator.bedrock.SetTimePacket());
         
         // Classic packets
         classicTranslators.put(ClientChatPacket.class, new ChatPacket());
-        javaTranslators.put(ServerboundSetCarriedItemPacket.class, new SetCarriedItemPacket());
         classicTranslators.put(ClientPositionRotationPacket.class, new PositionRotationPacket());
-        javaTranslators.put(ServerboundPlayerCommandPacket.class, new PlayerCommandPacket());
-        javaTranslators.put(ServerboundSwingPacket.class, new SwingPacket());
-        javaTranslators.put(ServerboundClientCommandPacket.class, new ClientCommandPacket());
-        javaTranslators.put(ServerboundClientInformationPacket.class, new ClientInformationPacket());
+        classicTranslators.put(ClientSetBlockPacket.class, new SetBlockPacket());;
         javaTranslators.put(ServerboundPlayerActionPacket.class, new PlayerActionPacket());
-        javaTranslators.put(ServerboundSeenAdvancementsPacket.class, new SeenAdvancementsPacket());
         javaTranslators.put(ServerboundPlayerAbilitiesPacket.class, new PlayerAbilitiesPacket());
     }
 }
