@@ -90,8 +90,6 @@ public class PacketTranslatorManager {
         // Classic packets
         classicTranslators.put(ClientChatPacket.class, new ChatPacket());
         classicTranslators.put(ClientPositionRotationPacket.class, new PositionRotationPacket());
-        classicTranslators.put(ClientSetBlockPacket.class, new SetBlockPacket());;
-        javaTranslators.put(ServerboundPlayerActionPacket.class, new PlayerActionPacket());
-        javaTranslators.put(ServerboundPlayerAbilitiesPacket.class, new PlayerAbilitiesPacket());
+        classicTranslators.put(ClientSetBlockPacket.class, new SetBlockPacket());
     }
 }
