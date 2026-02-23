@@ -6,6 +6,7 @@ import io.netty.buffer.Unpooled;
 import org.barrelmc.barrel.network.converter.BlockConverter;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.player.StatusWorld;
 import org.barrelmc.barrel.utils.Utils;
 import org.barrelmc.barrel.utils.nukkit.BitArray;
 import org.barrelmc.barrel.utils.nukkit.BitArrayVersion;
@@ -138,11 +139,21 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         int classicZ = Utils.mapCoords(worldZ, player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ());
 
                         if (storageReadIndex == 0) {
+                            if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX]) != classicStateId){
+                                player.setStatusWorld(StatusWorld.BUILD_WORLD);
+                                player.getClassicSession().send(new ServerLevelInitializePacket());
+                            }
                             player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) classicStateId;
+                            if(player.getStatusWorld() == StatusWorld.BUILD_WORLD){}
                         } else if (classicStateId == 8 || classicStateId == 9) { // water
                             int layer0 = (int) player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX];
                             if (layer0 == 0) {
+                                if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX]) != classicStateId){
+                                    player.setStatusWorld(StatusWorld.BUILD_WORLD);
+                                    player.getClassicSession().send(new ServerLevelInitializePacket());
+                                }
                                 player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) classicStateId;
+                                if(player.getStatusWorld() == StatusWorld.BUILD_WORLD){}
                             }
                             
                         }
