@@ -6,6 +6,7 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRot
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.player.StatusWorld;
 import org.cloudburstmc.math.vector.Vector2f;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.protocol.bedrock.data.AuthoritativeMovementMode;
@@ -49,6 +50,7 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
                 player.getClassicSession().send(new ServerLevelDataPacket(chunk, percent));
             }
             player.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
+            player.setStatusWorld(StatusWorld.PLAYING);
             SetLocalPlayerAsInitializedPacket setLocalPlayerAsInitializedPacket = new SetLocalPlayerAsInitializedPacket();
             setLocalPlayerAsInitializedPacket.setRuntimeEntityId(player.getRuntimeEntityId());
             player.getBedrockClientSession().sendPacket(setLocalPlayerAsInitializedPacket);
