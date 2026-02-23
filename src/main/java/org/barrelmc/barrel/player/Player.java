@@ -178,6 +178,24 @@ public class Player extends Vector3 {
     @Setter
     private int dimension = 0;
 
+    @Getter
+    @Setter
+    private int extSize = 0;
+
+    public int extCount = 0;
+
+    @Getter
+    private List<org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket> playersUnspawn = new ObjectArrayList<>();
+
+    @Getter
+    private List<org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket> playersSpawned = new ObjectArrayList<>();
+
+    @Getter
+    private List<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entitysUnspawn = new ObjectArrayList<>();
+
+    @Getter
+    private List<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entitysSpawned = new ObjectArrayList<>();
+
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
         this.classicSession = classicSession;
