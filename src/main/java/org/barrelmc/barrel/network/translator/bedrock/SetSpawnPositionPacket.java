@@ -3,12 +3,17 @@ package org.barrelmc.barrel.network.translator.bedrock;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetSpawnpointPacket;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.utils.Utils;
+import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.math.vector.Vector3i;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
 public class SetSpawnPositionPacket implements BedrockPacketTranslator {
     @Override
     public void translate(BedrockPacket pk, Player player) {
+        if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(14), player.getExtensionsClassic())){
+          return;
+        }
         org.cloudburstmc.protocol.bedrock.packet.SetSpawnPositionPacket packet = (org.cloudburstmc.protocol.bedrock.packet.SetSpawnPositionPacket) pk;
         Vector3i pos = packet.getSpawnPosition();
         int classicX = Utils.mapCoords(pos.getX(), player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX());
