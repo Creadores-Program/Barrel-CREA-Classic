@@ -22,7 +22,7 @@ public class UpdateAbilitiesPacket implements BedrockPacketTranslator {
                 if (abilityLayer.getLayerType() == AbilityLayer.Type.BASE) {
                     Set<Ability> abilityValues = abilityLayer.getAbilityValues();
                     if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(6), player.getExtensionsClassic())){
-                        player.getClassicSession().send(new ServerHackControlPacket(abilityValues.contains(Ability.FLYING), abilityValues.contains(Ability.NO_CLIP), abilityValues.contains(Ability.WALK_SPEED), false, true, 40f));
+                        player.getClassicSession().send(new ServerHackControlPacket(abilityValues.contains(Ability.MAY_FLY), abilityValues.contains(Ability.NO_CLIP), abilityValues.contains(Ability.WALK_SPEED), false, true, 40f));
                     }
                 }
             }
