@@ -42,6 +42,7 @@ public class ClassicPacketHandler extends SessionAdapter {
                     }
                 }else{
                     player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
+                    player.startSendingPing();
                 }
             }
         } else {
