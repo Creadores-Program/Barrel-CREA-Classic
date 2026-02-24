@@ -72,7 +72,7 @@ public class ProxyServer {
     private Logger logger;
 
     @Getter
-    private List<String> extDatapacks = new ObjectArrayList<>(){{
+    private List<ServerExtEntryPacket> extDatapacks = new ObjectArrayList<>(){{
         add(new ServerExtEntryPacket(1, ExtNames.CLICKDISTANCE));//0
         add(new ServerExtEntryPacket(1, ExtNames.CUSTOMBLOCKS));//1
         add(new ServerExtEntryPacket(2, ExtNames.EXTPLAYERLIST));//2
