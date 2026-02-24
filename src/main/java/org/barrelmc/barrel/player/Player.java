@@ -11,6 +11,7 @@ import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerPingPacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 //import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.packetlib.Session;
@@ -96,7 +97,7 @@ public class Player extends Vector3 {
     private String traslateAd = "false";
 
     private boolean tickPlayerInputStarted = false;
-    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(1);
+    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(2);
 
     @Setter
     @Getter
@@ -198,6 +199,12 @@ public class Player extends Vector3 {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
         this.classicSession = classicSession;
         this.offlineLogin(loginPacket);
+    }
+
+    public void startSendingPing(){
+        PlayerPingThread playerPingThread = new PlayerPingThread();
+        playerPingThread.player = this;
+        playerInputExecutor.scheduleAtFixedRate(playerPingThread, 0, 2, TimeUnit.SECONDS);
     }
 
     public void startSendingPlayerInput() {
@@ -410,6 +417,14 @@ public class Player extends Vector3 {
     }
 }
 
+class PlayerPingThread implements Runnable{
+    public Player player;
+    public void run(){
+        if(player.getClassicSession().isConnected()){
+            player.getClassicSession().send(new ServerPingPacket());
+        }
+    }
+}
 class PlayerAuthInputThread implements Runnable {
     public Player player;
     public long tick;
