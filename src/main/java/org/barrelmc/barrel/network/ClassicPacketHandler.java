@@ -6,6 +6,10 @@
 package org.barrelmc.barrel.network;
 
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtInfoPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
+import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.SessionAdapter;
 import com.github.steveice10.packetlib.packet.Packet;
@@ -31,6 +35,14 @@ public class ClassicPacketHandler extends SessionAdapter {
                 ClientIdentificationPacket loginPacket = (ClientIdentificationPacket) packet;
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
+                if(loginPacket.isCPE()){
+                    player.getClassicSession().send(new ServerExtInfoPacket("Barrel Crea Classic", ProxyServer.getInstance().getExtDatapacks().size()));
+                    for(ServerExtEntryPacket extS : ProxyServer.getInstance().getExtDatapacks()){
+                        player.getClassicSession().send(extS);
+                    }
+                }else{
+                    player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
+                }
             }
         } else {
             player.getPacketTranslatorManager().translate(packet);
