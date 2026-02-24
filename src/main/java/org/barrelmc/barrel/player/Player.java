@@ -182,8 +182,6 @@ public class Player extends Vector3 {
     @Setter
     private int extSize = 0;
 
-    public int extCount = 0;
-
     @Getter
     private List<org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket> playersUnspawn = new ObjectArrayList<>();
 
