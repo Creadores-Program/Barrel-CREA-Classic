@@ -91,5 +91,7 @@ public class PacketTranslatorManager {
         classicTranslators.put(ClientChatPacket.class, new ChatPacket());
         classicTranslators.put(ClientPositionRotationPacket.class, new PositionRotationPacket());
         classicTranslators.put(ClientSetBlockPacket.class, new SetBlockPacket());
+        classicTranslators.put(ClientExtEntryPacket.class, new ExtEntryPacket());
+        classicTranslators.put(ClientExtInfoPacket.class, new ExtInfoPacket());
     }
 }

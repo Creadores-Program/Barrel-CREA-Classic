@@ -181,6 +181,10 @@ public class Player extends Vector3 {
 
     @Getter
     @Setter
+    private int customBlocksLevel = 0;
+
+    @Getter
+    @Setter
     private int extSize = 0;
 
     @Getter
