@@ -16,7 +16,7 @@ public class ExtEntryPacket implements ClassicPacketTranslator {
     public void translate(Packet pk, Player player) {
         ClientExtEntryPacket packet = (ClientExtEntryPacket) pk;
         player.getExtensionsClassic().add(packet);
-        if(player.getExtSize() < player.getExtensionsClassic().size()){
+        if(player.getExtSize() > player.getExtensionsClassic().size()){
             return;
         }
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(1), player.getExtensionsClassic())){
