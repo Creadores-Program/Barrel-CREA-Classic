@@ -24,5 +24,6 @@ public class ExtEntryPacket implements ClassicPacketTranslator {
             return;
         }
         player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
+        player.startSendingPing();
     }
 }
