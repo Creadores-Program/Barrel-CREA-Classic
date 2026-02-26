@@ -11,31 +11,22 @@ public class RemoveEntityPacket implements BedrockPacketTranslator {
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
-        org.cloudburstmc.protocol.bedrock.packet.RemoveEntityPacket packet = (org.cloudburstmc.protocol.bedrock.packet.RemoveEntityPacket) pk;
-        for(AddEntityPacket entity : player.getEntitysUnspawn()){
-            if(entity.getUniqueEntityId() == packet.getUniqueEntityId()){
-                player.getEntitysUnspawn().remove(entity);
-                break;
-            }
-        }
-        for(AddEntityPacket entity : player.getEntitysSpawned()){
-            if(entity.getUniqueEntityId() == packet.getUniqueEntityId()){
-                player.getEntitysSpawned().remove(entity);
-                break;
-            }
-        }
-        for(AddPlayerPacket entity : player.getPlayersUnspawn()){
-            if(entity.getUniqueEntityId() == packet.getUniqueEntityId()){
-                player.getPlayersUnspawn().remove(entity);
-                break;
-            }
-        }
-        for(AddPlayerPacket entity : player.getPlayersSpawned()){
-            if(entity.getUniqueEntityId() == packet.getUniqueEntityId()){
-                player.getPlayersSpawned().remove(entity);
-                break;
-            }
-        }
+        Optional<AddEntityPacket> entity1 = player.getEntitysUnspawn().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
+        entity1.ifPresent(entity -> {
+            player.getEntitysUnspawn().remove(entity);
+        });
+        Optional<AddEntityPacket> entity2 = player.getEntitysSpawned().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
+        entity2.ifPresent(entity -> {
+            player.getEntitysSpawned().remove(entity);
+        });
+        Optional<AddPlayerPacket> entity3 = player.getPlayersUnspawn().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
+        entity3.ifPresent(entity -> {
+            player.getPlayersUnspawn().remove(entity);
+        });
+        Optional<AddPlayerPacket> entity4 = player.getPlayersSpawned().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
+        entity4.ifPresent(entity -> {
+            player.getPlayersSpawned().remove(entity);
+        });
         player.getClassicSession().send(new ServerDespawnPlayerPacket((int) packet.getUniqueEntityId()));
     }
 }
