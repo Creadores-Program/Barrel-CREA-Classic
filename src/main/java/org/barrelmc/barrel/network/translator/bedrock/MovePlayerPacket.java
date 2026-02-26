@@ -4,6 +4,7 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerDespawnPlay
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtAddEntity2Packet;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerSpawnPlayerPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
+import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
@@ -21,7 +22,13 @@ public class MovePlayerPacket implements BedrockPacketTranslator {
         Vector3f position = packet.getPosition(), rotation = packet.getRotation();
 
         if (packet.getRuntimeEntityId() == player.getRuntimeEntityId()) {
-            player.getJavaSession().send(new ClientboundPlayerPositionPacket(position.getX(), position.getY() - 1.62, position.getZ(), rotation.getY(), rotation.getX(), 1));
+            if(position.getX() > player.getMaxPosBedrock().getX() || position.getX() < player.getMinPosBedrock().getX() || position.getZ() > player.getMaxPosBedrock().getZ() || position.getZ() < player.getMinPosBedrock().getZ()){
+                player.getClassicSession().send(new ServerLevelInitializePacket());
+                player.setMaxPosBedrock(new Vector3i(((int) Math.round(packet.getPlayerPosition().getX() + player.getMaxPosClassic().getX())), 255, ((int) Math.round(packet.getPlayerPosition().getZ() + player.getMaxPosBedrock().getZ()))));
+                player.setMinPosBedrock(new Vector3i(((int) Math.round(packet.getPlayerPosition().getX() + player.getMinPosBedrock().getX())), 0, ((int) Math.round(packet.getPlayerPosition().getZ() + player.getMinPosBedrock().getZ()))));
+                return:
+            }
+            player.getClassicSession().send(new ServerPositionRotationPacket(((int) packet.getUniqueEntityId()), entity.getUsername(), Utils.mapCoords(position.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX())), pos.getY(), Utils.mapCoords(position.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ())), rotation.getX(), rotation.getY()));
             player.setPosition(position.getX(), position.getY() - 1.62, position.getZ());
             player.setLastServerPosition(position);
             player.setLastServerRotation(rotation.toVector2());
