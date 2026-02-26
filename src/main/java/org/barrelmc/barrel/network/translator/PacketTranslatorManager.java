@@ -93,5 +93,7 @@ public class PacketTranslatorManager {
         classicTranslators.put(ClientSetBlockPacket.class, new SetBlockPacket());
         classicTranslators.put(ClientExtEntryPacket.class, new ExtEntryPacket());
         classicTranslators.put(ClientExtInfoPacket.class, new ExtInfoPacket());
+        classicTranslators.put(ClientCustomBlockSupportLevelPacket.class, new CustomBlockSupportLevelPacket());
+        classicTranslators.put(ClientPlayerClickPacket.class, new PlayerClickPacket());
     }
 }

@@ -61,6 +61,9 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
             float classicY = pos.getY();
             float classicZ = Utils.mapCoords(pos.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()));
             player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, rotation.getX(), rotation.getY()));
+            if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
+                player.sendMessage("GameMod: " + player.getGameMode().substring(0, 1).toUpperCase() + player.getGameMode().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
+            }
         }
     }
     public byte[] compressMap(byte[] mapData) throws IOException {

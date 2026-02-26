@@ -55,6 +55,12 @@ public class Utils {
         }
         return minDest + (val - minOrig) * (maxDest - minDest) / (maxOrig - minOrig);
     }
+    public static short mapCoords(short val, short minOrig, short maxOrig, short minDest, short maxDest) {
+        if(minOrig == minDest){
+            return val;
+        }
+        return minDest + (val - minOrig) * (maxDest - minDest) / (maxOrig - minOrig);
+    }
     public static double mapCoords(double val, double minOrig, double maxOrig, double minDest, double maxDest) {
         if(minOrig == minDest){
             return val;
