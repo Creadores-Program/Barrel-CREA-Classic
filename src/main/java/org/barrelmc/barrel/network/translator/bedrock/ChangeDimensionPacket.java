@@ -58,13 +58,5 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
                 break;
         }
         player.getClassicSession().send(new ServerLevelInitializePacket());
-        /*
-        PlayerActionPacket playerActionPacket = new PlayerActionPacket();
-        playerActionPacket.setAction(PlayerActionType.DIMENSION_CHANGE_SUCCESS);
-        playerActionPacket.setBlockPosition(Vector3i.ZERO);
-        playerActionPacket.setResultPosition(Vector3i.ZERO);
-        playerActionPacket.setFace(0);
-        playerActionPacket.setRuntimeEntityId(player.getRuntimeEntityId());
-        player.getBedrockClientSession().sendPacket(playerActionPacket);*/
     }
 }
