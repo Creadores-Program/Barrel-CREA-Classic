@@ -27,6 +27,6 @@ public class RemoveEntityPacket implements BedrockPacketTranslator {
         entity4.ifPresent(entity -> {
             player.getPlayersSpawned().remove(entity);
         });
-        player.getClassicSession().send(new ServerDespawnPlayerPacket((int) packet.getUniqueEntityId()));
+        player.getClassicSession().send(new ServerDespawnPlayerPacket((int) packet.getRuntimeEntityId()));
     }
 }

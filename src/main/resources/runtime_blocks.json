@@ -557,524 +557,515 @@
   },
   "738": {
     "bedrock_name": "minecraft:oak_log",
-    "java_default_state": 130
+    "classic_default_state": 17
   },
   "737": {
     "bedrock_name": "minecraft:oak_log",
-    "java_default_state": 131
+    "classic_default_state": 17
   },
   "739": {
     "bedrock_name": "minecraft:oak_log",
-    "java_default_state": 132
+    "classic_default_state": 17
   },
   "7074": {
     "bedrock_name": "minecraft:spruce_log",
-    "java_default_state": 133
+    "classic_default_state": 17
   },
   "7073": {
     "bedrock_name": "minecraft:spruce_log",
-    "java_default_state": 134
+    "classic_default_state": 17
   },
   "7075": {
     "bedrock_name": "minecraft:spruce_log",
-    "java_default_state": 135
+    "classic_default_state": 17
   },
   "1793": {
     "bedrock_name": "minecraft:birch_log",
-    "java_default_state": 136
+    "classic_default_state": 17
   },
   "1792": {
     "bedrock_name": "minecraft:birch_log",
-    "java_default_state": 137
+    "classic_default_state": 17
   },
   "1794": {
     "bedrock_name": "minecraft:birch_log",
-    "java_default_state": 138
+    "classic_default_state": 17
   },
   "643": {
     "bedrock_name": "minecraft:jungle_log",
-    "java_default_state": 139
+    "classic_default_state": 17
   },
   "642": {
     "bedrock_name": "minecraft:jungle_log",
-    "java_default_state": 140
+    "classic_default_state": 17
   },
   "644": {
     "bedrock_name": "minecraft:jungle_log",
-    "java_default_state": 141
+    "classic_default_state": 17
   },
   "7181": {
     "bedrock_name": "minecraft:acacia_log",
-    "java_default_state": 142
+    "classic_default_state": 17
   },
   "7180": {
     "bedrock_name": "minecraft:acacia_log",
-    "java_default_state": 143
+    "classic_default_state": 17
   },
   "7182": {
     "bedrock_name": "minecraft:acacia_log",
-    "java_default_state": 144
+    "classic_default_state": 17
   },
   "12950": {
     "bedrock_name": "minecraft:cherry_log",
-    "java_default_state": 145
+    "classic_default_state": 17
   },
   "12949": {
     "bedrock_name": "minecraft:cherry_log",
-    "java_default_state": 146
+    "classic_default_state": 17
   },
   "12951": {
     "bedrock_name": "minecraft:cherry_log",
-    "java_default_state": 147
+    "classic_default_state": 17
   },
   "4938": {
     "bedrock_name": "minecraft:dark_oak_log",
-    "java_default_state": 148
+    "classic_default_state": 17
   },
   "4937": {
     "bedrock_name": "minecraft:dark_oak_log",
-    "java_default_state": 149
+    "classic_default_state": 17
   },
   "4939": {
     "bedrock_name": "minecraft:dark_oak_log",
-    "java_default_state": 150
+    "classic_default_state": 17
   },
   "1105": {
     "bedrock_name": "minecraft:mangrove_log",
-    "java_default_state": 151
+    "classic_default_state": 17
   },
   "1104": {
     "bedrock_name": "minecraft:mangrove_log",
-    "java_default_state": 152
+    "classic_default_state": 17
   },
   "1106": {
     "bedrock_name": "minecraft:mangrove_log",
-    "java_default_state": 153
+    "classic_default_state": 17
   },
   "11342": {
     "bedrock_name": "minecraft:mangrove_roots",
-    "java_default_state": 155,
-    "java_waterlogged_state": 154
+    "classic_default_state": 17
   },
   "1097": {
     "bedrock_name": "minecraft:muddy_mangrove_roots",
-    "java_default_state": 156
+    "classic_default_state": 17
   },
   "1096": {
     "bedrock_name": "minecraft:muddy_mangrove_roots",
-    "java_default_state": 157
+    "classic_default_state": 17
   },
   "1098": {
     "bedrock_name": "minecraft:muddy_mangrove_roots",
-    "java_default_state": 158
+    "classic_default_state": 17
   },
   "67": {
     "bedrock_name": "minecraft:bamboo_block",
-    "java_default_state": 159
+    "classic_default_state": 17
   },
   "66": {
     "bedrock_name": "minecraft:bamboo_block",
-    "java_default_state": 160
+    "classic_default_state": 17
   },
   "68": {
     "bedrock_name": "minecraft:bamboo_block",
-    "java_default_state": 161
+    "classic_default_state": 17
   },
   "11435": {
     "bedrock_name": "minecraft:stripped_spruce_log",
-    "java_default_state": 162
+    "classic_default_state": 17
   },
   "11434": {
     "bedrock_name": "minecraft:stripped_spruce_log",
-    "java_default_state": 163
+    "classic_default_state": 17
   },
   "11436": {
     "bedrock_name": "minecraft:stripped_spruce_log",
-    "java_default_state": 164
+    "classic_default_state": 17
   },
   "10710": {
     "bedrock_name": "minecraft:stripped_birch_log",
-    "java_default_state": 165
+    "classic_default_state": 17
   },
   "10709": {
     "bedrock_name": "minecraft:stripped_birch_log",
-    "java_default_state": 166
+    "classic_default_state": 17
   },
   "10711": {
     "bedrock_name": "minecraft:stripped_birch_log",
-    "java_default_state": 167
+    "classic_default_state": 17
   },
   "1779": {
     "bedrock_name": "minecraft:stripped_jungle_log",
-    "java_default_state": 168
+    "classic_default_state": 17
   },
   "1778": {
     "bedrock_name": "minecraft:stripped_jungle_log",
-    "java_default_state": 169
+    "classic_default_state": 17
   },
   "1780": {
     "bedrock_name": "minecraft:stripped_jungle_log",
-    "java_default_state": 170
+    "classic_default_state": 17
   },
   "10099": {
     "bedrock_name": "minecraft:stripped_acacia_log",
-    "java_default_state": 171
+    "classic_default_state": 17
   },
   "10098": {
     "bedrock_name": "minecraft:stripped_acacia_log",
-    "java_default_state": 172
+    "classic_default_state": 17
   },
   "10100": {
     "bedrock_name": "minecraft:stripped_acacia_log",
-    "java_default_state": 173
+    "classic_default_state": 17
   },
   "7289": {
     "bedrock_name": "minecraft:stripped_cherry_log",
-    "java_default_state": 174
+    "classic_default_state": 17
   },
   "7288": {
     "bedrock_name": "minecraft:stripped_cherry_log",
-    "java_default_state": 175
+    "classic_default_state": 17
   },
   "7290": {
     "bedrock_name": "minecraft:stripped_cherry_log",
-    "java_default_state": 176
+    "classic_default_state": 17
   },
   "639": {
     "bedrock_name": "minecraft:stripped_dark_oak_log",
-    "java_default_state": 177
+    "classic_default_state": 17
   },
   "638": {
     "bedrock_name": "minecraft:stripped_dark_oak_log",
-    "java_default_state": 178
+    "classic_default_state": 17
   },
   "640": {
     "bedrock_name": "minecraft:stripped_dark_oak_log",
-    "java_default_state": 179
+    "classic_default_state": 17
   },
   "13247": {
     "bedrock_name": "minecraft:stripped_oak_log",
-    "java_default_state": 180
+    "classic_default_state": 17
   },
   "13246": {
     "bedrock_name": "minecraft:stripped_oak_log",
-    "java_default_state": 181
+    "classic_default_state": 17
   },
   "13248": {
     "bedrock_name": "minecraft:stripped_oak_log",
-    "java_default_state": 182
+    "classic_default_state": 17
   },
   "14113": {
     "bedrock_name": "minecraft:stripped_mangrove_log",
-    "java_default_state": 183
+    "classic_default_state": 17
   },
   "14112": {
     "bedrock_name": "minecraft:stripped_mangrove_log",
-    "java_default_state": 184
+    "classic_default_state": 17
   },
   "14114": {
     "bedrock_name": "minecraft:stripped_mangrove_log",
-    "java_default_state": 185
+    "classic_default_state": 17
   },
   "5977": {
     "bedrock_name": "minecraft:stripped_bamboo_block",
-    "java_default_state": 186
+    "classic_default_state": 17
   },
   "5976": {
     "bedrock_name": "minecraft:stripped_bamboo_block",
-    "java_default_state": 187
+    "classic_default_state": 17
   },
   "5978": {
     "bedrock_name": "minecraft:stripped_bamboo_block",
-    "java_default_state": 188
+    "classic_default_state": 17
   },
   "8620": {
     "bedrock_name": "minecraft:oak_wood",
-    "java_default_state": 189
+    "classic_default_state": 17
   },
   "8619": {
     "bedrock_name": "minecraft:oak_wood",
-    "java_default_state": 190
+    "classic_default_state": 17
   },
   "8621": {
     "bedrock_name": "minecraft:oak_wood",
-    "java_default_state": 191
+    "classic_default_state": 17
   },
   "13297": {
     "bedrock_name": "minecraft:spruce_wood",
-    "java_default_state": 192
+    "classic_default_state": 17
   },
   "13296": {
     "bedrock_name": "minecraft:spruce_wood",
-    "java_default_state": 193
+    "classic_default_state": 17
   },
   "13298": {
     "bedrock_name": "minecraft:spruce_wood",
-    "java_default_state": 194
+    "classic_default_state": 17
   },
   "1983": {
     "bedrock_name": "minecraft:birch_wood",
-    "java_default_state": 195
+    "classic_default_state": 17
   },
   "1982": {
     "bedrock_name": "minecraft:birch_wood",
-    "java_default_state": 196
+    "classic_default_state": 17
   },
   "1984": {
     "bedrock_name": "minecraft:birch_wood",
-    "java_default_state": 197
+    "classic_default_state": 17
   },
   "1998": {
     "bedrock_name": "minecraft:jungle_wood",
-    "java_default_state": 198
+    "classic_default_state": 17
   },
   "1997": {
     "bedrock_name": "minecraft:jungle_wood",
-    "java_default_state": 199
+    "classic_default_state": 17
   },
   "1999": {
     "bedrock_name": "minecraft:jungle_wood",
-    "java_default_state": 200
+    "classic_default_state": 17
   },
   "12114": {
     "bedrock_name": "minecraft:acacia_wood",
-    "java_default_state": 201
+    "classic_default_state": 17
   },
   "12113": {
     "bedrock_name": "minecraft:acacia_wood",
-    "java_default_state": 202
+    "classic_default_state": 17
   },
   "12115": {
     "bedrock_name": "minecraft:acacia_wood",
-    "java_default_state": 203
+    "classic_default_state": 17
   },
   "12387": {
     "bedrock_name": "minecraft:cherry_wood",
-    "java_default_state": 204
+    "classic_default_state": 17
   },
   "12386": {
     "bedrock_name": "minecraft:cherry_wood",
-    "java_default_state": 204
+    "classic_default_state": 17
   },
   "12388": {
     "bedrock_name": "minecraft:cherry_wood",
-    "java_default_state": 204
+    "classic_default_state": 17
   },
   "12390": {
     "bedrock_name": "minecraft:cherry_wood",
-    "java_default_state": 204
+    "classic_default_state": 17
   },
   "12385": {
     "bedrock_name": "minecraft:cherry_wood",
-    "java_default_state": 205
+    "classic_default_state": 17
   },
   "12389": {
     "bedrock_name": "minecraft:cherry_wood",
-    "java_default_state": 206
+    "classic_default_state": 17
   },
   "11": {
     "bedrock_name": "minecraft:dark_oak_wood",
-    "java_default_state": 207
+    "classic_default_state": 17
   },
   "10": {
     "bedrock_name": "minecraft:dark_oak_wood",
-    "java_default_state": 208
+    "classic_default_state": 17
   },
   "12": {
     "bedrock_name": "minecraft:dark_oak_wood",
-    "java_default_state": 209
+    "classic_default_state": 17
   },
   "6957": {
     "bedrock_name": "minecraft:mangrove_wood",
-    "java_default_state": 210
+    "classic_default_state": 17
   },
   "6956": {
     "bedrock_name": "minecraft:mangrove_wood",
-    "java_default_state": 210
+    "classic_default_state": 17
   },
   "6958": {
     "bedrock_name": "minecraft:mangrove_wood",
-    "java_default_state": 210
+    "classic_default_state": 17
   },
   "6960": {
     "bedrock_name": "minecraft:mangrove_wood",
-    "java_default_state": 210
+    "classic_default_state": 17
   },
   "6955": {
     "bedrock_name": "minecraft:mangrove_wood",
-    "java_default_state": 211
+    "classic_default_state": 17
   },
   "6959": {
     "bedrock_name": "minecraft:mangrove_wood",
-    "java_default_state": 212
+    "classic_default_state": 17
   },
   "8177": {
     "bedrock_name": "minecraft:stripped_oak_wood",
-    "java_default_state": 213
+    "classic_default_state": 17
   },
   "8176": {
     "bedrock_name": "minecraft:stripped_oak_wood",
-    "java_default_state": 214
+    "classic_default_state": 17
   },
   "8178": {
     "bedrock_name": "minecraft:stripped_oak_wood",
-    "java_default_state": 215
+    "classic_default_state": 17
   },
   "1960": {
     "bedrock_name": "minecraft:stripped_spruce_wood",
-    "java_default_state": 216
+    "classic_default_state": 17
   },
   "1959": {
     "bedrock_name": "minecraft:stripped_spruce_wood",
-    "java_default_state": 217
+    "classic_default_state": 17
   },
   "1961": {
     "bedrock_name": "minecraft:stripped_spruce_wood",
-    "java_default_state": 218
+    "classic_default_state": 17
   },
   "7416": {
     "bedrock_name": "minecraft:stripped_birch_wood",
-    "java_default_state": 219
+    "classic_default_state": 17
   },
   "7415": {
     "bedrock_name": "minecraft:stripped_birch_wood",
-    "java_default_state": 220
+    "classic_default_state": 17
   },
   "7417": {
     "bedrock_name": "minecraft:stripped_birch_wood",
-    "java_default_state": 221
+    "classic_default_state": 17
   },
   "1100": {
     "bedrock_name": "minecraft:stripped_jungle_wood",
-    "java_default_state": 222
+    "classic_default_state": 17
   },
   "1099": {
     "bedrock_name": "minecraft:stripped_jungle_wood",
-    "java_default_state": 223
+    "classic_default_state": 17
   },
   "1101": {
     "bedrock_name": "minecraft:stripped_jungle_wood",
-    "java_default_state": 224
+    "classic_default_state": 17
   },
   "725": {
     "bedrock_name": "minecraft:stripped_acacia_wood",
-    "java_default_state": 225
+    "classic_default_state": 17
   },
   "724": {
     "bedrock_name": "minecraft:stripped_acacia_wood",
-    "java_default_state": 226
+    "classic_default_state": 17
   },
   "726": {
     "bedrock_name": "minecraft:stripped_acacia_wood",
-    "java_default_state": 227
+    "classic_default_state": 17
   },
   "8647": {
     "bedrock_name": "minecraft:stripped_cherry_wood",
-    "java_default_state": 228
+    "classic_default_state": 17
   },
   "8646": {
     "bedrock_name": "minecraft:stripped_cherry_wood",
-    "java_default_state": 229
+    "classic_default_state": 17
   },
   "8648": {
     "bedrock_name": "minecraft:stripped_cherry_wood",
-    "java_default_state": 230
+    "classic_default_state": 17
   },
   "8615": {
     "bedrock_name": "minecraft:stripped_dark_oak_wood",
-    "java_default_state": 231
+    "classic_default_state": 17
   },
   "8614": {
     "bedrock_name": "minecraft:stripped_dark_oak_wood",
-    "java_default_state": 232
+    "classic_default_state": 17
   },
   "8616": {
     "bedrock_name": "minecraft:stripped_dark_oak_wood",
-    "java_default_state": 233
+    "classic_default_state": 17
   },
   "7033": {
     "bedrock_name": "minecraft:stripped_mangrove_wood",
-    "java_default_state": 234
+    "classic_default_state": 17
   },
   "7032": {
     "bedrock_name": "minecraft:stripped_mangrove_wood",
-    "java_default_state": 235
+    "classic_default_state": 17
   },
   "7034": {
     "bedrock_name": "minecraft:stripped_mangrove_wood",
-    "java_default_state": 236
+    "classic_default_state": 17
   },
   "2004": {
     "bedrock_name": "minecraft:oak_leaves",
-    "java_default_state": 237
+    "classic_default_state": 18
   },
   "2006": {
     "bedrock_name": "minecraft:oak_leaves",
-    "java_default_state": 237
+    "classic_default_state": 18
   },
   "2005": {
     "bedrock_name": "minecraft:oak_leaves",
-    "java_default_state": 238,
-    "java_waterlogged_state": 237
+    "classic_default_state": 18
   },
   "2003": {
     "bedrock_name": "minecraft:oak_leaves",
-    "java_default_state": 240,
-    "java_waterlogged_state": 239
+    "classic_default_state": 18
   },
   "7251": {
     "bedrock_name": "minecraft:spruce_leaves",
-    "java_default_state": 265
+    "classic_default_state": 18
   },
   "7253": {
     "bedrock_name": "minecraft:spruce_leaves",
-    "java_default_state": 265
+    "classic_default_state": 18
   },
   "7252": {
     "bedrock_name": "minecraft:spruce_leaves",
-    "java_default_state": 266,
-    "java_waterlogged_state": 265
+    "classic_default_state": 18
   },
   "7250": {
     "bedrock_name": "minecraft:spruce_leaves",
-    "java_default_state": 268,
-    "java_waterlogged_state": 267
+    "classic_default_state": 18
   },
   "6946": {
     "bedrock_name": "minecraft:birch_leaves",
-    "java_default_state": 293
+    "classic_default_state": 18
   },
   "6948": {
     "bedrock_name": "minecraft:birch_leaves",
-    "java_default_state": 293
+    "classic_default_state": 18
   },
   "6947": {
     "bedrock_name": "minecraft:birch_leaves",
-    "java_default_state": 294,
-    "java_waterlogged_state": 293
+    "classic_default_state": 18
   },
   "6945": {
     "bedrock_name": "minecraft:birch_leaves",
-    "java_default_state": 296,
-    "java_waterlogged_state": 295
+    "classic_default_state": 18
   },
   "9133": {
     "bedrock_name": "minecraft:jungle_leaves",
-    "java_default_state": 321
+    "classic_default_state": 18
   },
   "9135": {
     "bedrock_name": "minecraft:jungle_leaves",
-    "java_default_state": 321
+    "classic_default_state": 18
   },
   "9134": {
     "bedrock_name": "minecraft:jungle_leaves",
-    "java_default_state": 322,
-    "java_waterlogged_state": 321
+    "classic_default_state": 18
   },
   "9132": {
     "bedrock_name": "minecraft:jungle_leaves",
-    "java_default_state": 324,
-    "java_waterlogged_state": 323
+    "classic_default_state": 18
   },
   "2653": {
     "bedrock_name": "minecraft:acacia_leaves",

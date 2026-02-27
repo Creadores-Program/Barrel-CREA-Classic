@@ -18,7 +18,7 @@ public class UpdateBlockPacket implements BedrockPacketTranslator {
             if(player.getMaxPosBedrock().getX() < pos.getX() || player.getMinPosBedrock().getX() > pos.getX() || player.getMaxPosBedrock().getZ() < pos.getZ() || player.getMinPosBedrock().getZ() > pos.getZ() || player.getMaxPosBedrock().getY() < pos.getY() || player.getMinPosBedrock().getY() > pos.getY()){
                 return;
             }
-            int blockState = BlockConverter.bedrockRuntimeToClassicStateId(packet.getDefinition().getRuntimeId());
+            int blockState = BlockConverter.bedrockRuntimeToClassicStateId(packet.getDefinition().getRuntimeId(), player.getCustomBlocksLevel());
             int classicX = Utils.mapCoords(pos.getX(), player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX());
             int classicY = pos.getY();
             int classicZ = Utils.mapCoords(pos.getZ(), player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ());

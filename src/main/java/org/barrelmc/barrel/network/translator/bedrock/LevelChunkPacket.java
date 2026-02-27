@@ -133,7 +133,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         }
                         int paletteIndex = bitArray.get(index);
                         int mcbeBlockId = sectionPalette[paletteIndex];
-                        int classicStateId = BlockConverter.bedrockRuntimeToClassicStateId(mcbeBlockId);
+                        int classicStateId = BlockConverter.bedrockRuntimeToClassicStateId(mcbeBlockId, player.getCustomBlocksLevel());
                         int classicX = Utils.mapCoords(worldX, player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX());
                         int classicY = worldY;
                         int classicZ = Utils.mapCoords(worldZ, player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ());
@@ -153,9 +153,10 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                                 if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX]) != classicStateId){
                                     player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                     player.getClassicSession().send(new ServerLevelInitializePacket());
+                                }else if(player.getPlayerForceSpawnThread().forceSpawn){
+                                    player.getPlayerForceSpawnThread().forceSpawn = false;
                                 }
                                 player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) classicStateId;
-                                if(player.getStatusWorld() == StatusWorld.BUILD_WORLD){}
                             }
                             
                         }
