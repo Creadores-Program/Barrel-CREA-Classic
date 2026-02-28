@@ -11,7 +11,7 @@ import org.barrelmc.barrel.network.converter.EntityConverter;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
-public class MoveEntityAbsolutePacket implements BedrockPacketTranslator{
+public class AddEntityPacket implements BedrockPacketTranslator{
     @Override
     public void translate(BedrockPacket pk, Player player) {
         org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket packet = (org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket) pk;
