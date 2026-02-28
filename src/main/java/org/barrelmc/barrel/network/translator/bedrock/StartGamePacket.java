@@ -23,8 +23,8 @@ public class StartGamePacket implements BedrockPacketTranslator {
         player.setPosition(packet.getPlayerPosition());
         player.setLastServerPosition(packet.getPlayerPosition());
         player.setLastServerRotation(packet.getRotation());
-        player.setMaxPosBedrock(new Vector3i(((int) Math.round(packet.getPlayerPosition().getX() + 127)), 255, ((int) Math.round(packet.getPlayerPosition().getZ() + 127))));
-        player.setMinPosBedrock(new Vector3i(((int) Math.round(packet.getPlayerPosition().getX() + -128)), 0, ((int) Math.round(packet.getPlayerPosition().getZ() + -128))));
+        player.setMaxPosBedrock(Vector3i.from(((int) Math.round(packet.getPlayerPosition().getX() + 127)), 255, ((int) Math.round(packet.getPlayerPosition().getZ() + 127))));
+        player.setMinPosBedrock(Vector3i.from(((int) Math.round(packet.getPlayerPosition().getX() + -128)), 0, ((int) Math.round(packet.getPlayerPosition().getZ() + -128))));
 
         player.setStartGamePacketCache(packet);
 
