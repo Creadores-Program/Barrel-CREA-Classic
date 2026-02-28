@@ -13,27 +13,27 @@ public class RemoveEntityPacket implements BedrockPacketTranslator {
     @Override
     public void translate(BedrockPacket pk, Player player) {
         org.cloudburstmc.protocol.bedrock.packet.RemoveEntityPacket packet = (org.cloudburstmc.protocol.bedrock.packet.RemoveEntityPacket) pk;
-        int runtimeEntityId = -1;
+        int[] runtimeEntityId = {-1};
         Optional<AddEntityPacket> entity1 = player.getEntitysUnspawn().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
         entity1.ifPresent(entity -> {
-            runtimeEntityId = (int) entity.getRuntimeEntityId();
+            runtimeEntityId[0] = (int) entity.getRuntimeEntityId();
             player.getEntitysUnspawn().remove(entity);
         });
         Optional<AddEntityPacket> entity2 = player.getEntitysSpawned().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
         entity2.ifPresent(entity -> {
-            runtimeEntityId = (int) entity.getRuntimeEntityId();
+            runtimeEntityId[0] = (int) entity.getRuntimeEntityId();
             player.getEntitysSpawned().remove(entity);
         });
         Optional<AddPlayerPacket> entity3 = player.getPlayersUnspawn().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
         entity3.ifPresent(entity -> {
-            runtimeEntityId = (int) entity.getRuntimeEntityId();
+            runtimeEntityId[0] = (int) entity.getRuntimeEntityId();
             player.getPlayersUnspawn().remove(entity);
         });
         Optional<AddPlayerPacket> entity4 = player.getPlayersSpawned().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
         entity4.ifPresent(entity -> {
-            runtimeEntityId = (int) entity.getRuntimeEntityId();
+            runtimeEntityId[0] = (int) entity.getRuntimeEntityId();
             player.getPlayersSpawned().remove(entity);
         });
-        player.getClassicSession().send(new ServerDespawnPlayerPacket(runtimeEntityId));
+        player.getClassicSession().send(new ServerDespawnPlayerPacket(runtimeEntityId[0]));
     }
 }
