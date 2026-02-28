@@ -7,6 +7,7 @@ import java.io.IOException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 import org.barrelmc.barrel.server.ProxyServer;
