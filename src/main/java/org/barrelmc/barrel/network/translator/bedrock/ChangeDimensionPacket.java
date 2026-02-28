@@ -9,15 +9,15 @@ import org.cloudburstmc.math.vector.Vector3i;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvSetWeatherTypePacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
-//import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
-//import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
 
 public class ChangeDimensionPacket implements BedrockPacketTranslator {
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
         player.setStatusWorld(StatusWorld.CHANGE_DIMENSION);
+        player.setMaxPosBedrock(Vector3i.from(((int) Math.round(packet.getPosition().getX() + 127)), 255, ((int) Math.round(packet.getPosition().getZ() + 127))));
+        player.setMinPosBedrock(Vector3i.from(((int) Math.round(packet.getPosition().getX() + -128)), 0, ((int) Math.round(packet.getPosition().getZ() + -128))));
         org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket packet = (org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket) pk;
         switch(packet.getDimension()){
             case 0://Overworld
@@ -58,5 +58,9 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
                 break;
         }
         player.getClassicSession().send(new ServerLevelInitializePacket());
+        player.setOldPosition(player.getVector3f());
+        player.setPosition(packet.getPosition());
+        player.setLastServerPosition(packet.getPosition());
+        player.setLastServerRotation(player.getRotation());
     }
 }

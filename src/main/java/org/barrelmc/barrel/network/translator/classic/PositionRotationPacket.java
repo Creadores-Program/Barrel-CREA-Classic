@@ -14,7 +14,7 @@ public class PositionRotationPacket implements ClassicPacketTranslator{
     public void translate(Packet pk, Player player) {
       ClientPositionRotationPacket packet = (ClientPositionRotationPacket) pk;
       if (player.isImmobile()) {
-          player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, player.x, player.y, player.z, player.yaw, player.pitch));
+          player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, ((float) player.x), ((float) player.y), ((float) player.z), ((float) player.yaw), ((float) player.pitch)));
           return;
       }
       player.setOldPosition(player.getVector3f());

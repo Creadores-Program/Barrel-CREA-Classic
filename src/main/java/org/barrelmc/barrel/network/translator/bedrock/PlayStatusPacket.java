@@ -71,6 +71,7 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
             if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
                 player.sendMessage("GameMod: " + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
             }
+            player.startForceSpawn();
         }
     }
     public byte[] compressMap(byte[] mapData) throws IOException {

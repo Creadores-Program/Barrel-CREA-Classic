@@ -18,6 +18,7 @@ import org.cloudburstmc.nbt.NbtMapBuilder;
 import org.cloudburstmc.nbt.util.stream.NetworkDataInputStream;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 import org.cloudburstmc.protocol.common.util.VarInts;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 
 import java.io.IOException;
 import java.util.ArrayList;
