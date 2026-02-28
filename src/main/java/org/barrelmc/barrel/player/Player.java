@@ -446,7 +446,7 @@ class PlayerPingThread implements Runnable{
         }
     }
 }
-public class PlayerForceSpawnThread implements Runnable{
+class PlayerForceSpawnThread implements Runnable{
     public Player player;
     public boolean forceSpawn = false;
     public void run(){
