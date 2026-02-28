@@ -35,16 +35,16 @@ public class MovePlayerPacket implements BedrockPacketTranslator {
             player.setLastServerRotation(rotation.toVector2());
         } else {
             if(position.getX() > player.getMaxPosBedrock().getX() || position.getX() < player.getMinPosBedrock().getX() || position.getZ() > player.getMaxPosBedrock().getZ() || position.getZ() < player.getMinPosBedrock().getZ()){
-                Optional<AddPlayerPacket> entity = player.getPlayersSpawned().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
-                entity.ifPresent(entity -> {
+                Optional<AddPlayerPacket> entityop = player.getPlayersSpawned().stream().filter(entity -> entity.getRuntimeEntityId() == packet.getRuntimeEntityId()).findFirst();
+                entityop.ifPresent(entity -> {
                     player.getClassicSession().send(new ServerDespawnPlayerPacket((int) packet.getRuntimeEntityId()));
                     player.getPlayersSpawned().remove(entity);
                     player.getPlayersUnspawn().add(entity);
                 });
                 return;
             }
-            Optional<AddPlayerPacket> entity = player.getPlayersUnspawn().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
-            entity.ifPresent(entity -> {
+            Optional<AddPlayerPacket> entityop1 = player.getPlayersUnspawn().stream().filter(entity -> entity.getRuntimeEntityId() == packet.getRuntimeEntityId()).findFirst();
+            entityop1.ifPresent(entity -> {
                 player.getPlayersUnspawn().remove(entity);
                 player.getPlayersSpawned().add(entity);
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(2), player.getExtensionsClassic())){
