@@ -6,6 +6,7 @@ import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
 import org.cloudburstmc.protocol.bedrock.data.GameType;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
+import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 
 public class SetPlayerGameTypePacket implements BedrockPacketTranslator {
 
