@@ -163,19 +163,19 @@ public class Player extends Vector3 {
 
     @Getter
     @Setter
-    private Vector3i minPosClassic = new Vector3i(0, 0, 0);
+    private Vector3i minPosClassic = Vector3i.from(0, 0, 0);
 
     @Getter
     @Setter
-    private Vector3i maxPosClassic = new Vector3i(255, 255, 255);
+    private Vector3i maxPosClassic = Vector3i.from(255, 255, 255);
 
     @Getter
     @Setter
-    private Vector3i maxPosBedrock = new Vector3i(127, 255, 127);
+    private Vector3i maxPosBedrock = Vector3i.from(127, 255, 127);
 
     @Getter
     @Setter
-    private Vector3i minPosBedrock = new Vector3i(-128, 0, -128);
+    private Vector3i minPosBedrock = Vector3i.from(-128, 0, -128);
 
     @Getter
     @Setter
@@ -395,7 +395,7 @@ public class Player extends Vector3 {
             return;
         }
         String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), 63);
-        if(messagesClassic.size() < 2){
+        if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic));
             return;
         }
