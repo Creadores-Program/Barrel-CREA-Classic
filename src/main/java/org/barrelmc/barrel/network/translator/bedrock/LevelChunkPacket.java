@@ -54,29 +54,29 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
             }
 
             if (chunkVersion == 1) {
-                networkDecodeVersionOne(byteBuf, chunkX, chunkZ);
+                networkDecodeVersionOne(byteBuf, chunkX, chunkZ, player);
                 continue;
             }
 
             if (chunkVersion == 9) {
-                networkDecodeVersionNine(byteBuf, chunkX, chunkZ, sectionIndex);
+                networkDecodeVersionNine(byteBuf, chunkX, chunkZ, sectionIndex, player);
                 continue;
             }
 
-            networkDecodeVersionEight(byteBuf, chunkX, chunkZ, sectionIndex, byteBuf.readByte());
+            networkDecodeVersionEight(byteBuf, chunkX, chunkZ, sectionIndex, byteBuf.readByte(), player);
         }
 
         byteBuf.release();
         chunkByteBuf.release();
     }
 
-    public void networkDecodeVersionNine(ByteBuf byteBuf, int chunkX, int chunkZ, int sectionIndex) {
+    public void networkDecodeVersionNine(ByteBuf byteBuf, int chunkX, int chunkZ, int sectionIndex, Player player) {
         byte storageSize = byteBuf.readByte();
         byteBuf.readByte(); // height
-        networkDecodeVersionEight(byteBuf, chunkX, chunkZ, sectionIndex, storageSize);
+        networkDecodeVersionEight(byteBuf, chunkX, chunkZ, sectionIndex, storageSize, player);
     }
 
-    public void networkDecodeVersionEight(ByteBuf byteBuf, int chunkX, int chunkZ, int sectionIndex, byte storageSize) {
+    public void networkDecodeVersionEight(ByteBuf byteBuf, int chunkX, int chunkZ, int sectionIndex, byte storageSize, Player player) {
         for (int storageReadIndex = 0; storageReadIndex < storageSize; storageReadIndex++) {
             if (storageReadIndex > 1) {
                 return;
@@ -168,8 +168,8 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
         }
     }
 
-    public void networkDecodeVersionOne(ByteBuf byteBuf, int chunkX, int chunkZ) {
-        networkDecodeVersionEight(byteBuf, chunkX, chunkZ, 0, (byte) 1);
+    public void networkDecodeVersionOne(ByteBuf byteBuf, int chunkX, int chunkZ, Player player) {
+        networkDecodeVersionEight(byteBuf, chunkX, chunkZ, 0, ((byte) 1), player);
     }
 
     @Override
