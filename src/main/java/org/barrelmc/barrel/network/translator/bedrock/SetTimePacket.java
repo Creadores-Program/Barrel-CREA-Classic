@@ -1,5 +1,6 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.utils.Utils;
