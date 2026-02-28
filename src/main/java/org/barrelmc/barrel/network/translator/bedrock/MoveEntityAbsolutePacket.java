@@ -25,15 +25,15 @@ public class MoveEntityAbsolutePacket implements BedrockPacketTranslator {
             Optional<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entityop = player.getEntitysSpawned().stream().filter(entity -> entity.getRuntimeEntityId() == packet.getRuntimeEntityId()).findFirst();
             entityop.ifPresent(entity -> {
                 player.getClassicSession().send(new ServerDespawnPlayerPacket((int) packet.getRuntimeEntityId()));
-                player.getPlayersSpawned().remove(entity);
-                player.getPlayersUnspawn().add(entity);
+                player.getEntitysSpawned().remove(entity);
+                player.getEntitysUnspawn().add(entity);
             });
             return;
         }
         Optional<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entityop1 = player.getEntitysUnspawn().stream().filter(entity -> entity.getRuntimeEntityId() == packet.getRuntimeEntityId()).findFirst();
         entityop1.ifPresent(entity -> {
-            player.getPlayersUnspawn().remove(entity);
-            player.getPlayersSpawned().add(entity);
+            player.getEntitysUnspawn().remove(entity);
+            player.getEntitysSpawned().add(entity);
             if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(2), player.getExtensionsClassic())){
                 player.getClassicSession().send(new ServerExtAddEntity2Packet(((int) packet.getRuntimeEntityId()), "", "", Utils.mapCoords(((short) position.getX()), ((short) player.getMinPosBedrock().getX()), ((short) player.getMaxPosBedrock().getX()), ((short) player.getMinPosClassic().getX()), ((short) player.getMaxPosClassic().getX())), ((short) pos.getY()), Utils.mapCoords(((short) position.getZ()), ((short) player.getMinPosBedrock().getZ()), ((short) player.getMaxPosBedrock().getZ()), ((short) player.getMinPosClassic().getZ()), ((short) player.getMaxPosClassic().getZ())), ((int) rotation.getX()), ((int) rotation.getY())));
             }else{
