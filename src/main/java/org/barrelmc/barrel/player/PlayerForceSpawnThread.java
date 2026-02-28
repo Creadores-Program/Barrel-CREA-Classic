@@ -26,7 +26,7 @@ public class PlayerForceSpawnThread implements Runnable{
             forceSpawn = true;
             return;
         }
-        byte[] compressedMap;
+        byte[] compressedMap = new byte[0];
         try{
             compressedMap = compressMap(player.mapClassic);
         }catch(IOException ex){

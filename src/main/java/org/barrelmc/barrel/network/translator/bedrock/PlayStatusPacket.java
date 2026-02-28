@@ -41,7 +41,7 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
                 player.startSendingPlayerInput();
             }
 
-            byte[] compressedMap;
+            byte[] compressedMap = new byte[0];
             try{
                 compressedMap = compressMap(player.mapClassic);
             }catch(IOException ex){
