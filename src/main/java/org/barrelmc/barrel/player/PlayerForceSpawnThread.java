@@ -10,6 +10,7 @@ import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
