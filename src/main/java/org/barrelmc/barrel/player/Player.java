@@ -396,7 +396,7 @@ public class Player extends Vector3 {
         }
         String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), 63);
         if(messagesClassic.length < 2){
-            this.classicSession.send(new ServerChatPacket(playerId, messagesClassic));
+            this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;
         }
         for (String msg : messagesClassic) {
@@ -491,7 +491,7 @@ class PlayerForceSpawnThread implements Runnable{
         float classicZ = Utils.mapCoords(pos.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()));
         player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, rotation.getX(), rotation.getY()));
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
-            player.sendMessage("GameMod: " + player.getGameMode().substring(0, 1).toUpperCase() + player.getGameMode().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
+            player.sendMessage("GameMod: " + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
         }
     }
     private byte[] compressMap(byte[] mapData) throws IOException {
