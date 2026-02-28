@@ -24,7 +24,7 @@ public class SetBlockPacket implements ClassicPacketTranslator{
     int bedrockX = Utils.mapCoords(packet.getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX(), player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX());
     int bedrockY = packet.getY();
     int bedrockZ = Utils.mapCoords(packet.getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ(), player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ());
-    Vector3i pos = new Vector3i(bedrockX, bedrockY, bedrockZ);
+    Vector3i pos = Vector3i.from(bedrockX, bedrockY, bedrockZ);
     playerActionPacket.setBlockPosition(pos);
     playerActionPacket.setResultPosition(pos);
     playerActionPacket.setFace(1);
