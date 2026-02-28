@@ -22,7 +22,7 @@ public class PlayerClickPacket implements ClassicPacketTranslator{
                 bedrockpacket.setAction(InteractPacket.Action.INTERACT);
                 break;
         }
-        bedrockpacket.setMausePosition(Vector3f.ZERO);
+        bedrockpacket.setMousePosition(Vector3f.ZERO);
         player.getBedrockClientSession().sendPacket(bedrockpacket);
     }
 }
