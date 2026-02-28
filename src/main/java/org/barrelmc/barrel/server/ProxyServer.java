@@ -160,7 +160,8 @@ public class ProxyServer {
         server.addListener(new ServerAdapter() {
             @Override
             public void serverClosed(ServerClosedEvent event) {
-                for (Player player : getAllPlayers()) {
+                for(var entry : ProxyServer.getInstance().getBedrockPlayers().entrySet()){
+                    Player player = entry.getValue();
                     player.disconnect(StopMSG);
                 }
                 getLogger().info("Server closed.");
@@ -173,10 +174,10 @@ public class ProxyServer {
             public void sessionRemoved(SessionRemovedEvent event) {
                 String username = event.getSession().getFlag(ClassicConstants.USERNAME_KEY);
                 if (username == null) return;
-                    if(isBedrockPlayer(username)){
-                        getPlayerByName(username).disconnect("logged out");
-                    }
-                    getLogger().info(username + " logged out");
+                if(isBedrockPlayer(username)){
+                    getPlayerByName(username).disconnect("logged out");
+                }
+                getLogger().info(username + " logged out");
             }
         });
         getLogger().info("Binding to " + this.config.getBindAddress() + " on port " + this.config.getPort());
