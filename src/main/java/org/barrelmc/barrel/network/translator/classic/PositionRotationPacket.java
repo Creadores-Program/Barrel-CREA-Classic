@@ -7,7 +7,7 @@ import org.cloudburstmc.protocol.bedrock.data.AuthoritativeMovementMode;
 import org.cloudburstmc.protocol.bedrock.packet.MovePlayerPacket;
 import com.github.steveice10.packetlib.packet.Packet;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientPositionRotationPacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntityTeleportPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 public class PositionRotationPacket implements ClassicPacketTranslator{
   @Override
@@ -25,7 +25,7 @@ public class PositionRotationPacket implements ClassicPacketTranslator{
         movePlayerPacket.setPosition(player.getVector3f());
         movePlayerPacket.setRotation(Vector3f.from(player.getPitch(), player.getYaw(), player.getYaw()));
         movePlayerPacket.setMode(MovePlayerPacket.Mode.NORMAL);
-        movePlayerPacket.setOnGround(packet.isOnGround());
+        movePlayerPacket.setOnGround(player.getOldPosition().getY() == player.getVector3f().getY());
         movePlayerPacket.setRidingRuntimeEntityId(0);
         movePlayerPacket.setTeleportationCause(MovePlayerPacket.TeleportationCause.UNKNOWN);
         movePlayerPacket.setEntityType(0);

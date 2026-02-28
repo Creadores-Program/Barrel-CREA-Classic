@@ -7,6 +7,8 @@ import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.player.StatusWorld;
+import org.barrelmc.barrel.server.ProxyServer;
+import org.barrelmc.barrel.utils.Utils;
 import org.cloudburstmc.math.vector.Vector2f;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.protocol.bedrock.data.AuthoritativeMovementMode;
@@ -41,7 +43,7 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
 
             byte[] compressedMap;
             try{
-                compessedMap = compressMap(player.mapClassic);
+                compressedMap = compressMap(player.mapClassic);
             }catch(IOException ex){
                 ex.printStackTrace();
             }
@@ -67,7 +69,7 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
             float classicZ = Utils.mapCoords(pos.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()));
             player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, rotation.getX(), rotation.getY()));
             if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
-                player.sendMessage("GameMod: " + player.getGameMode().substring(0, 1).toUpperCase() + player.getGameMode().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
+                player.sendMessage("GameMod: " + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
             }
         }
     }

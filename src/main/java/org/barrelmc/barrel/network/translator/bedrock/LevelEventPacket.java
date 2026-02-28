@@ -18,7 +18,7 @@ public class LevelEventPacket implements BedrockPacketTranslator {
         }
         org.cloudburstmc.protocol.bedrock.packet.LevelEventPacket packet = (org.cloudburstmc.protocol.bedrock.packet.LevelEventPacket) pk;
 
-        switch(packet.getType()){
+        switch((LevelEvent) packet.getType()){
             case LevelEvent.START_RAINING:
             case LevelEvent.START_THUNDERSTORM:
                 player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(1));

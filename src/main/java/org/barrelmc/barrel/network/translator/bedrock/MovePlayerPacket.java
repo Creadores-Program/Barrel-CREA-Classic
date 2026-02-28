@@ -31,7 +31,7 @@ public class MovePlayerPacket implements BedrockPacketTranslator {
                 player.setMaxPosBedrock(Vector3i.from(((int) Math.round(position.getX() + 127)), 255, ((int) Math.round(position.getZ() + 127))));
                 player.setMinPosBedrock(Vector3i.from(((int) Math.round(position.getX() + -128)), 0, ((int) Math.round(position.getZ() + -128))));
             }
-            player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, Utils.mapCoords(position.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX())), pos.getY(), Utils.mapCoords(position.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ())), rotation.getX(), rotation.getY()));
+            player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, Utils.mapCoords(position.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX())), position.getY(), Utils.mapCoords(position.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ())), rotation.getX(), rotation.getY()));
             player.setPosition(position.getX(), position.getY() - 1.62, position.getZ());
             player.setLastServerPosition(position);
             player.setLastServerRotation(rotation.toVector2());

@@ -11,6 +11,8 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPac
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 import com.github.steveice10.packetlib.Session;
+import com.github.steveice10.packetlib.event.session.PacketReceivedEvent;
+import com.github.steveice10.packetlib.event.session.PacketSentEvent;
 import com.github.steveice10.packetlib.event.session.SessionAdapter;
 import com.github.steveice10.packetlib.packet.Packet;
 import org.barrelmc.barrel.player.Player;
@@ -23,12 +25,14 @@ public class ClassicPacketHandler extends SessionAdapter {
     private Player player = null;
 
     @Override
-    public void packetSent(Session session, Packet packet) {
-        //System.out.println("Sent Java " + packet.toString());
+    public void packetSent(PacketSentEvent event) {
+        //System.out.println("Sent Java " + event.getPacket().toString());
     }
 
     @Override
-    public void packetReceived(Session session, Packet packet) {
+    public void packetReceived(PacketReceivedEvent event) {
+        Session session = event.getSession();
+        Packet packet = event.getPacket();
         //System.out.println("Received Java " + packet.toString());
         if (this.player == null) {
             if (packet instanceof ClientIdentificationPacket) {
@@ -36,7 +40,7 @@ public class ClassicPacketHandler extends SessionAdapter {
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
                 if(loginPacket.isCPE()){
-                    player.getClassicSession().send(new ServerExtInfoPacket("Barrel Crea Classic", ProxyServer.getInstance().getExtDatapacks().size()));
+                    player.getClassicSession().send(new ServerExtInfoPacket("Barrel Crea Classic", ((short) ProxyServer.getInstance().getExtDatapacks().size())));
                     for(ServerExtEntryPacket extS : ProxyServer.getInstance().getExtDatapacks()){
                         player.getClassicSession().send(extS);
                     }

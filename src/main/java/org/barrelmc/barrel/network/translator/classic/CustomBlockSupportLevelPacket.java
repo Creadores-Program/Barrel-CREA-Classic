@@ -1,6 +1,7 @@
 package org.barrelmc.barrel.network.translator.classic;
 import org.barrelmc.barrel.network.translator.interfaces.ClassicPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.server.ProxyServer;
 import com.github.steveice10.packetlib.packet.Packet;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientCustomBlockSupportLevelPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;

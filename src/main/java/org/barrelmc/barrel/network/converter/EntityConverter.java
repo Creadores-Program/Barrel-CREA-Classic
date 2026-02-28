@@ -3,6 +3,11 @@ package org.barrelmc.barrel.network.converter;
 import com.github.steveice10.mc.classic.protocol.data.game.EntityIds;
 public class EntityConverter{
   public static String bedrockRuntimeToClassicStateId(int entityType, String identifier){
+    String name = identifier;
+    if (identifier.contains(":")) {
+      name = identifier.substring(identifier.indexOf(":") + 1);
+    }
+
     switch(entityType){
       case 10:
       case 122:
@@ -40,11 +45,11 @@ public class EntityConverter{
       case 134:
         return EntityIds.CHIBI;
       case 63:
-        return identifier.replace("minecraft:");
+        return name;
       case 65:
         return "46";
       case 66:
-        if(identifier.contains("gravel")){
+        if(name.contains("gravel")){
           return "13";
         }else{
           return "12";
@@ -53,24 +58,24 @@ public class EntityConverter{
       case 89:
         return EntityIds.HEAD;
     }
-    if(identifier.contains(EntityIds.CHICKEN)){
+    if(name.contains(EntityIds.CHICKEN)){
       return EntityIds.CHICKEN;
-    }else if(identifier.contains(EntityIds.CREEPER)){
+    }else if(name.contains(EntityIds.CREEPER)){
       return EntityIds.CREEPER;
-    }else if(identifier.contains(EntityIds.SHEEP)){
+    }else if(name.contains(EntityIds.SHEEP)){
       return EntityIds.SHEEP;
-    }else if(identifier.contains(EntityIds.SKELETON)){
+    }else if(name.contains(EntityIds.SKELETON)){
       return EntityIds.SKELETON;
-    }else if(identifier.contains(EntityIds.SPIDER)){
+    }else if(name.contains(EntityIds.SPIDER)){
       return EntityIds.SPIDER;
-    }else if(identifier.contains(EntityIds.ZOMBIE)){
+    }else if(name.contains(EntityIds.ZOMBIE)){
       return EntityIds.ZOMBIE;
-    }else if(identifier.contains(EntityIds.PIG)){
+    }else if(name.contains(EntityIds.PIG)){
       return EntityIds.PIG;
-    }else if(identifier.contains(EntityIds.CROCODILE)){
+    }else if(name.contains(EntityIds.CROCODILE)){
       return EntityIds.CROCODILE;
     }else{
-      return identifier.replace("minecraft:");
+      return name;
     }
   }
 }
