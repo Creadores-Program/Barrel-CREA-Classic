@@ -60,7 +60,7 @@ public class Utils {
         if(minOrig == minDest){
             return val;
         }
-        return minDest + (val - minOrig) * (maxDest - minDest) / (maxOrig - minOrig);
+        return (short) (minDest + (val - minOrig) * (maxDest - minDest) / (maxOrig - minOrig));
     }
     public static double mapCoords(double val, double minOrig, double maxOrig, double minDest, double maxDest) {
         if(minOrig == minDest){
@@ -125,7 +125,7 @@ public class Utils {
     }
 
     public static String[] splitStringL(String str, int size){
-        return String.split("(?<=\\G.{" + size + "})");
+        return str.split("(?<=\\G.{" + size + "})");
     }
 
     public static byte[] DERToJOSE(byte[] derSignature, Utils.AlgorithmType algorithmType) throws SignatureException {
