@@ -142,7 +142,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                             if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX]) != classicStateId){
                                 player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                 player.getClassicSession().send(new ServerLevelInitializePacket());
-                            }else if(player.getPlayerForceSpawnThread().forceSpawn){
+                            }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
                                 player.getPlayerForceSpawnThread().forceSpawn = false;
                             }
                             player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) classicStateId;
@@ -153,7 +153,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                                 if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX]) != classicStateId){
                                     player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                     player.getClassicSession().send(new ServerLevelInitializePacket());
-                                }else if(player.getPlayerForceSpawnThread().forceSpawn){
+                                }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
                                     player.getPlayerForceSpawnThread().forceSpawn = false;
                                 }
                                 player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) classicStateId;

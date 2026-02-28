@@ -61,6 +61,7 @@ public class PacketTranslatorManager {
     private void registerDefaultPackets() {
         // Bedrock packets
         bedrockTranslators.put(AddPlayerPacket.class, new org.barrelmc.barrel.network.translator.bedrock.AddPlayerPacket());
+        bedrockTranslators.put(AddEntityPacket.class, new org.barrelmc.barrel.network.translator.bedrock.AddEntityPacket());
         bedrockTranslators.put(LevelChunkPacket.class, new org.barrelmc.barrel.network.translator.bedrock.LevelChunkPacket());
         bedrockTranslators.put(LevelEventPacket.class, new org.barrelmc.barrel.network.translator.bedrock.LevelEventPacket());
         bedrockTranslators.put(MoveEntityAbsolutePacket.class, new org.barrelmc.barrel.network.translator.bedrock.MoveEntityAbsolutePacket());
