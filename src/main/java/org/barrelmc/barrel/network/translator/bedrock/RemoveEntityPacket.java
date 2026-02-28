@@ -6,11 +6,13 @@ import org.barrelmc.barrel.player.Player;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 import org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket;
 import org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket;
+import java.util.Optional;
 
 public class RemoveEntityPacket implements BedrockPacketTranslator {
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
+        org.cloudburstmc.protocol.bedrock.packet.RemoveEntityPacket packet = (org.cloudburstmc.protocol.bedrock.packet.RemoveEntityPacket) pk;
         Optional<AddEntityPacket> entity1 = player.getEntitysUnspawn().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
         entity1.ifPresent(entity -> {
             player.getEntitysUnspawn().remove(entity);
