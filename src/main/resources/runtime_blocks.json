@@ -1069,187 +1069,179 @@
   },
   "2653": {
     "bedrock_name": "minecraft:acacia_leaves",
-    "java_default_state": 349
+    "classic_default_state": 18
   },
   "2655": {
     "bedrock_name": "minecraft:acacia_leaves",
-    "java_default_state": 349
+    "classic_default_state": 18
   },
   "2654": {
     "bedrock_name": "minecraft:acacia_leaves",
-    "java_default_state": 350,
-    "java_waterlogged_state": 349
+    "classic_default_state": 18
   },
   "2652": {
     "bedrock_name": "minecraft:acacia_leaves",
-    "java_default_state": 352,
-    "java_waterlogged_state": 351
+    "classic_default_state": 18
   },
   "10049": {
     "bedrock_name": "minecraft:cherry_leaves",
-    "java_default_state": 377
+    "classic_default_state": 18
   },
   "10051": {
     "bedrock_name": "minecraft:cherry_leaves",
-    "java_default_state": 377
+    "classic_default_state": 18
   },
   "10050": {
     "bedrock_name": "minecraft:cherry_leaves",
-    "java_default_state": 378,
-    "java_waterlogged_state": 377
+    "classic_default_state": 18
   },
   "10048": {
     "bedrock_name": "minecraft:cherry_leaves",
-    "java_default_state": 380,
-    "java_waterlogged_state": 379
+    "classic_default_state": 18
   },
   "11190": {
     "bedrock_name": "minecraft:dark_oak_leaves",
-    "java_default_state": 405
+    "classic_default_state": 18
   },
   "11192": {
     "bedrock_name": "minecraft:dark_oak_leaves",
-    "java_default_state": 405
+    "classic_default_state": 18
   },
   "11191": {
     "bedrock_name": "minecraft:dark_oak_leaves",
-    "java_default_state": 406,
-    "java_waterlogged_state": 405
+    "classic_default_state": 18
   },
   "11189": {
     "bedrock_name": "minecraft:dark_oak_leaves",
-    "java_default_state": 408,
-    "java_waterlogged_state": 407
+    "classic_default_state": 18
   },
   "11881": {
     "bedrock_name": "minecraft:mangrove_leaves",
-    "java_default_state": 433
+    "classic_default_state": 18
   },
   "11883": {
     "bedrock_name": "minecraft:mangrove_leaves",
-    "java_default_state": 433
+    "classic_default_state": 18
   },
   "11882": {
     "bedrock_name": "minecraft:mangrove_leaves",
-    "java_default_state": 434,
-    "java_waterlogged_state": 433
+    "classic_default_state": 18
   },
   "11880": {
     "bedrock_name": "minecraft:mangrove_leaves",
-    "java_default_state": 436,
-    "java_waterlogged_state": 435
+    "classic_default_state": 18
   },
   "13425": {
     "bedrock_name": "minecraft:azalea_leaves",
-    "java_default_state": 461
+    "classic_default_state": 18
   },
   "13427": {
     "bedrock_name": "minecraft:azalea_leaves",
-    "java_default_state": 461
+    "classic_default_state": 18
   },
   "13426": {
     "bedrock_name": "minecraft:azalea_leaves",
-    "java_default_state": 462,
-    "java_waterlogged_state": 461
+    "classic_default_state": 18
   },
   "13424": {
     "bedrock_name": "minecraft:azalea_leaves",
-    "java_default_state": 464,
-    "java_waterlogged_state": 463
+    "classic_default_state": 18
   },
   "11490": {
     "bedrock_name": "minecraft:azalea_leaves_flowered",
-    "java_default_state": 489
+    "classic_default_state": 18
   },
   "11492": {
     "bedrock_name": "minecraft:azalea_leaves_flowered",
-    "java_default_state": 489
+    "classic_default_state": 18
   },
   "11491": {
     "bedrock_name": "minecraft:azalea_leaves_flowered",
-    "java_default_state": 490,
-    "java_waterlogged_state": 489
+    "classic_default_state": 18
   },
   "11489": {
     "bedrock_name": "minecraft:azalea_leaves_flowered",
-    "java_default_state": 492,
-    "java_waterlogged_state": 491
+    "classic_default_state": 18
   },
   "1380": {
     "bedrock_name": "minecraft:sponge",
-    "java_default_state": 517
+    "classic_default_state": 19
   },
   "1381": {
     "bedrock_name": "minecraft:sponge",
-    "java_default_state": 518
+    "classic_default_state": 19
   },
   "11331": {
     "bedrock_name": "minecraft:glass",
-    "java_default_state": 519
+    "classic_default_state": 20
   },
   "13411": {
     "bedrock_name": "minecraft:lapis_ore",
-    "java_default_state": 520
+    "classic_default_state": 27,
+    "classic_default_state1": 28
   },
   "12945": {
     "bedrock_name": "minecraft:deepslate_lapis_ore",
-    "java_default_state": 521
+    "classic_default_state": 27,
+    "classic_default_state1": 28
   },
   "7092": {
     "bedrock_name": "minecraft:lapis_block",
-    "java_default_state": 522
+    "classic_default_state": 27,
+    "classic_default_state1": 58
   },
   "13826": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 523
+    "classic_default_state": 4
   },
   "13820": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 524
+    "classic_default_state": 4
   },
   "13829": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 525
+    "classic_default_state": 4
   },
   "13823": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 526
+    "classic_default_state": 4
   },
   "13827": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 527
+    "classic_default_state": 4
   },
   "13821": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 528
+    "classic_default_state": 4
   },
   "13828": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 529
+    "classic_default_state": 4
   },
   "13822": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 530
+    "classic_default_state": 4
   },
   "13825": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 531
+    "classic_default_state": 4
   },
   "13819": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 532
+    "classic_default_state": 4
   },
   "13824": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 533
+    "classic_default_state": 4
   },
   "13818": {
     "bedrock_name": "minecraft:dispenser",
-    "java_default_state": 534
+    "classic_default_state": 4
   },
   "6041": {
     "bedrock_name": "minecraft:sandstone",
-    "java_default_state": 535
+    "classic_default_state": 12,
+    "classic_default_state1": 52
   },
   "6042": {
     "bedrock_name": "minecraft:sandstone",

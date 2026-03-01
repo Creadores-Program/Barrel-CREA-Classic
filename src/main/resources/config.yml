@@ -12,5 +12,5 @@ premiumPlayerClassic: false
 # Downstream server (bedrock)
 bedrockAddress: "join.servermc.xyz"
 bedrockPort: 10171
-# Use xbox login? (offline|online)
+# Use xbox login? (offline|online) (no implemented)
 auth: online
