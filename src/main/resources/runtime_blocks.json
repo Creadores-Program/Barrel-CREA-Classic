@@ -3192,1533 +3192,1327 @@
   },
   "9435": {
     "bedrock_name": "minecraft:standing_sign",
-    "java_default_state": 4319,
-    "java_waterlogged_state": 4318
+    "classic_default_state": 5
   },
   "9436": {
     "bedrock_name": "minecraft:standing_sign",
-    "java_default_state": 4321,
-    "java_waterlogged_state": 4320
+    "classic_default_state": 5
   },
   "9437": {
     "bedrock_name": "minecraft:standing_sign",
-    "java_default_state": 4323,
-    "java_waterlogged_state": 4322
+    "classic_default_state": 5
   },
   "9438": {
     "bedrock_name": "minecraft:standing_sign",
-    "java_default_state": 4325,
-    "java_waterlogged_state": 4324
+    "classic_default_state": 5
   },
   "9439": {
     "bedrock_name": "minecraft:standing_sign",
-    "java_default_state": 4327,
-    "java_waterlogged_state": 4326
+    "classic_default_state": 5
   },
   "9440": {
     "bedrock_name": "minecraft:standing_sign",
-    "java_default_state": 4329,
-    "java_waterlogged_state": 4328
+    "classic_default_state": 5
   },
   "9441": {
     "bedrock_name": "minecraft:standing_sign",
-    "java_default_state": 4331,
-    "java_waterlogged_state": 4330
+    "classic_default_state": 5
   },
   "9442": {
     "bedrock_name": "minecraft:standing_sign",
-    "java_default_state": 4333,
-    "java_waterlogged_state": 4332
+    "classic_default_state": 5
   },
   "12277": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4335,
-    "java_waterlogged_state": 4334
+    "classic_default_state": 5
   },
   "12278": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4337,
-    "java_waterlogged_state": 4336
+    "classic_default_state": 5
   },
   "12279": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4339,
-    "java_waterlogged_state": 4338
+    "classic_default_state": 5
   },
   "12280": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4341,
-    "java_waterlogged_state": 4340
+    "classic_default_state": 5
   },
   "12281": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4343,
-    "java_waterlogged_state": 4342
+    "classic_default_state": 5
   },
   "12282": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4345,
-    "java_waterlogged_state": 4344
+    "classic_default_state": 5
   },
   "12283": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4347,
-    "java_waterlogged_state": 4346
+    "classic_default_state": 5
   },
   "12284": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4349,
-    "java_waterlogged_state": 4348
+    "classic_default_state": 5
   },
   "12285": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4351,
-    "java_waterlogged_state": 4350
+    "classic_default_state": 5
   },
   "12286": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4353,
-    "java_waterlogged_state": 4352
+    "classic_default_state": 5
   },
   "12287": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4355,
-    "java_waterlogged_state": 4354
+    "classic_default_state": 5
   },
   "12288": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4357,
-    "java_waterlogged_state": 4356
+    "classic_default_state": 5
   },
   "12289": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4359,
-    "java_waterlogged_state": 4358
+    "classic_default_state": 5
   },
   "12290": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4361,
-    "java_waterlogged_state": 4360
+    "classic_default_state": 5
   },
   "12291": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4363,
-    "java_waterlogged_state": 4362
+    "classic_default_state": 5
   },
   "12292": {
     "bedrock_name": "minecraft:spruce_standing_sign",
-    "java_default_state": 4365,
-    "java_waterlogged_state": 4364
+    "classic_default_state": 5
   },
   "13": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4367,
-    "java_waterlogged_state": 4366
+    "classic_default_state": 5
   },
   "14": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4369,
-    "java_waterlogged_state": 4368
+    "classic_default_state": 5
   },
   "15": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4371,
-    "java_waterlogged_state": 4370
+    "classic_default_state": 5
   },
   "16": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4373,
-    "java_waterlogged_state": 4372
+    "classic_default_state": 5
   },
   "17": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4375,
-    "java_waterlogged_state": 4374
+    "classic_default_state": 5
   },
   "18": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4377,
-    "java_waterlogged_state": 4376
+    "classic_default_state": 5
   },
   "19": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4379,
-    "java_waterlogged_state": 4378
+    "classic_default_state": 5
   },
   "20": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4381,
-    "java_waterlogged_state": 4380
+    "classic_default_state": 5
   },
   "21": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4383,
-    "java_waterlogged_state": 4382
+    "classic_default_state": 5
   },
   "22": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4385,
-    "java_waterlogged_state": 4384
+    "classic_default_state": 5
   },
   "23": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4387,
-    "java_waterlogged_state": 4386
+    "classic_default_state": 5
   },
   "24": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4389,
-    "java_waterlogged_state": 4388
+    "classic_default_state": 5
   },
   "25": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4391,
-    "java_waterlogged_state": 4390
+    "classic_default_state": 5
   },
   "26": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4393,
-    "java_waterlogged_state": 4392
+    "classic_default_state": 5
   },
   "27": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4395,
-    "java_waterlogged_state": 4394
+    "classic_default_state": 5
   },
   "28": {
     "bedrock_name": "minecraft:birch_standing_sign",
-    "java_default_state": 4397,
-    "java_waterlogged_state": 4396
+    "classic_default_state": 5
   },
   "11396": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4399,
-    "java_waterlogged_state": 4398
+    "classic_default_state": 5
   },
   "11397": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4401,
-    "java_waterlogged_state": 4400
+    "classic_default_state": 5
   },
   "11398": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4403,
-    "java_waterlogged_state": 4402
+    "classic_default_state": 5
   },
   "11399": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4405,
-    "java_waterlogged_state": 4404
+    "classic_default_state": 5
   },
   "11400": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4407,
-    "java_waterlogged_state": 4406
+    "classic_default_state": 5
   },
   "11401": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4409,
-    "java_waterlogged_state": 4408
+    "classic_default_state": 5
   },
   "11402": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4411,
-    "java_waterlogged_state": 4410
+    "classic_default_state": 5
   },
   "11403": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4413,
-    "java_waterlogged_state": 4412
+    "classic_default_state": 5
   },
   "11404": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4415,
-    "java_waterlogged_state": 4414
+    "classic_default_state": 5
   },
   "11405": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4417,
-    "java_waterlogged_state": 4416
+    "classic_default_state": 5
   },
   "11406": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4419,
-    "java_waterlogged_state": 4418
+    "classic_default_state": 5
   },
   "11407": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4421,
-    "java_waterlogged_state": 4420
+    "classic_default_state": 5
   },
   "11408": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4423,
-    "java_waterlogged_state": 4422
+    "classic_default_state": 5
   },
   "11409": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4425,
-    "java_waterlogged_state": 4424
+    "classic_default_state": 5
   },
   "11410": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4427,
-    "java_waterlogged_state": 4426
+    "classic_default_state": 5
   },
   "11411": {
     "bedrock_name": "minecraft:acacia_standing_sign",
-    "java_default_state": 4429,
-    "java_waterlogged_state": 4428
+    "classic_default_state": 5
   },
   "10113": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4431,
-    "java_waterlogged_state": 4430
+    "classic_default_state": 5
   },
   "10114": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4433,
-    "java_waterlogged_state": 4432
+    "classic_default_state": 5
   },
   "10115": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4435,
-    "java_waterlogged_state": 4434
+    "classic_default_state": 5
   },
   "10116": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4437,
-    "java_waterlogged_state": 4436
+    "classic_default_state": 5
   },
   "10117": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4439,
-    "java_waterlogged_state": 4438
+    "classic_default_state": 5
   },
   "10118": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4441,
-    "java_waterlogged_state": 4440
+    "classic_default_state": 5
   },
   "10119": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4443,
-    "java_waterlogged_state": 4442
+    "classic_default_state": 5
   },
   "10120": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4445,
-    "java_waterlogged_state": 4444
+    "classic_default_state": 5
   },
   "10121": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4447,
-    "java_waterlogged_state": 4446
+    "classic_default_state": 5
   },
   "10122": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4449,
-    "java_waterlogged_state": 4448
+    "classic_default_state": 5
   },
   "10123": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4451,
-    "java_waterlogged_state": 4450
+    "classic_default_state": 5
   },
   "10124": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4453,
-    "java_waterlogged_state": 4452
+    "classic_default_state": 5
   },
   "10125": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4455,
-    "java_waterlogged_state": 4454
+    "classic_default_state": 5
   },
   "10126": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4457,
-    "java_waterlogged_state": 4456
+    "classic_default_state": 5
   },
   "10127": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4459,
-    "java_waterlogged_state": 4458
+    "classic_default_state": 5
   },
   "10128": {
     "bedrock_name": "minecraft:cherry_standing_sign",
-    "java_default_state": 4461,
-    "java_waterlogged_state": 4460
+    "classic_default_state": 5
   },
   "11169": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4463,
-    "java_waterlogged_state": 4462
+    "classic_default_state": 5
   },
   "11170": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4465,
-    "java_waterlogged_state": 4464
+    "classic_default_state": 5
   },
   "11171": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4467,
-    "java_waterlogged_state": 4466
+    "classic_default_state": 5
   },
   "11172": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4469,
-    "java_waterlogged_state": 4468
+    "classic_default_state": 5
   },
   "11173": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4471,
-    "java_waterlogged_state": 4470
+    "classic_default_state": 5
   },
   "11174": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4473,
-    "java_waterlogged_state": 4472
+    "classic_default_state": 5
   },
   "11175": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4475,
-    "java_waterlogged_state": 4474
+    "classic_default_state": 5
   },
   "11176": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4477,
-    "java_waterlogged_state": 4476
+    "classic_default_state": 5
   },
   "11177": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4479,
-    "java_waterlogged_state": 4478
+    "classic_default_state": 5
   },
   "11178": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4481,
-    "java_waterlogged_state": 4480
+    "classic_default_state": 5
   },
   "11179": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4483,
-    "java_waterlogged_state": 4482
+    "classic_default_state": 5
   },
   "11180": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4485,
-    "java_waterlogged_state": 4484
+    "classic_default_state": 5
   },
   "11181": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4487,
-    "java_waterlogged_state": 4486
+    "classic_default_state": 5
   },
   "11182": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4489,
-    "java_waterlogged_state": 4488
+    "classic_default_state": 5
   },
   "11183": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4491,
-    "java_waterlogged_state": 4490
+    "classic_default_state": 5
   },
   "11184": {
     "bedrock_name": "minecraft:jungle_standing_sign",
-    "java_default_state": 4493,
-    "java_waterlogged_state": 4492
+    "classic_default_state": 5
   },
   "13029": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4495,
-    "java_waterlogged_state": 4494
+    "classic_default_state": 5
   },
   "13030": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4497,
-    "java_waterlogged_state": 4496
+    "classic_default_state": 5
   },
   "13031": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4499,
-    "java_waterlogged_state": 4498
+    "classic_default_state": 5
   },
   "13032": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4501,
-    "java_waterlogged_state": 4500
+    "classic_default_state": 5
   },
   "13033": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4503,
-    "java_waterlogged_state": 4502
+    "classic_default_state": 5
   },
   "13034": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4505,
-    "java_waterlogged_state": 4504
+    "classic_default_state": 5
   },
   "13035": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4507,
-    "java_waterlogged_state": 4506
+    "classic_default_state": 5
   },
   "13036": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4509,
-    "java_waterlogged_state": 4508
+    "classic_default_state": 5
   },
   "13037": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4511,
-    "java_waterlogged_state": 4510
+    "classic_default_state": 5
   },
   "13038": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4513,
-    "java_waterlogged_state": 4512
+    "classic_default_state": 5
   },
   "13039": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4515,
-    "java_waterlogged_state": 4514
+    "classic_default_state": 5
   },
   "13040": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4517,
-    "java_waterlogged_state": 4516
+    "classic_default_state": 5
   },
   "13041": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4519,
-    "java_waterlogged_state": 4518
+    "classic_default_state": 5
   },
   "13042": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4521,
-    "java_waterlogged_state": 4520
+    "classic_default_state": 5
   },
   "13043": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4523,
-    "java_waterlogged_state": 4522
+    "classic_default_state": 5
   },
   "13044": {
     "bedrock_name": "minecraft:darkoak_standing_sign",
-    "java_default_state": 4525,
-    "java_waterlogged_state": 4524
+    "classic_default_state": 5
   },
   "7016": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4527,
-    "java_waterlogged_state": 4526
+    "classic_default_state": 5
   },
   "7017": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4529,
-    "java_waterlogged_state": 4528
+    "classic_default_state": 5
   },
   "7018": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4531,
-    "java_waterlogged_state": 4530
+    "classic_default_state": 5
   },
   "7019": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4533,
-    "java_waterlogged_state": 4532
+    "classic_default_state": 5
   },
   "7020": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4535,
-    "java_waterlogged_state": 4534
+    "classic_default_state": 5
   },
   "7021": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4537,
-    "java_waterlogged_state": 4536
+    "classic_default_state": 5
   },
   "7022": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4539,
-    "java_waterlogged_state": 4538
+    "classic_default_state": 5
   },
   "7023": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4541,
-    "java_waterlogged_state": 4540
+    "classic_default_state": 5
   },
   "7024": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4543,
-    "java_waterlogged_state": 4542
+    "classic_default_state": 5
   },
   "7025": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4545,
-    "java_waterlogged_state": 4544
+    "classic_default_state": 5
   },
   "7026": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4547,
-    "java_waterlogged_state": 4546
+    "classic_default_state": 5
   },
   "7027": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4549,
-    "java_waterlogged_state": 4548
+    "classic_default_state": 5
   },
   "7028": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4551,
-    "java_waterlogged_state": 4550
+    "classic_default_state": 5
   },
   "7029": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4553,
-    "java_waterlogged_state": 4552
+    "classic_default_state": 5
   },
   "7030": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4555,
-    "java_waterlogged_state": 4554
+    "classic_default_state": 5
   },
   "7031": {
     "bedrock_name": "minecraft:mangrove_standing_sign",
-    "java_default_state": 4557,
-    "java_waterlogged_state": 4556
+    "classic_default_state": 5
   },
   "12878": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4559,
-    "java_waterlogged_state": 4558
+    "classic_default_state": 5
   },
   "12879": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4561,
-    "java_waterlogged_state": 4560
+    "classic_default_state": 5
   },
   "12880": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4563,
-    "java_waterlogged_state": 4562
+    "classic_default_state": 5
   },
   "12881": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4565,
-    "java_waterlogged_state": 4564
+    "classic_default_state": 5
   },
   "12882": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4567,
-    "java_waterlogged_state": 4566
+    "classic_default_state": 5
   },
   "12883": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4569,
-    "java_waterlogged_state": 4568
+    "classic_default_state": 5
   },
   "12884": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4571,
-    "java_waterlogged_state": 4570
+    "classic_default_state": 5
   },
   "12885": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4573,
-    "java_waterlogged_state": 4572
+    "classic_default_state": 5
   },
   "12886": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4575,
-    "java_waterlogged_state": 4574
+    "classic_default_state": 5
   },
   "12887": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4577,
-    "java_waterlogged_state": 4576
+    "classic_default_state": 5
   },
   "12888": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4579,
-    "java_waterlogged_state": 4578
+    "classic_default_state": 5
   },
   "12889": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4581,
-    "java_waterlogged_state": 4580
+    "classic_default_state": 5
   },
   "12890": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4583,
-    "java_waterlogged_state": 4582
+    "classic_default_state": 5
   },
   "12891": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4585,
-    "java_waterlogged_state": 4584
+    "classic_default_state": 5
   },
   "12892": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4587,
-    "java_waterlogged_state": 4586
+    "classic_default_state": 5
   },
   "12893": {
     "bedrock_name": "minecraft:bamboo_standing_sign",
-    "java_default_state": 4589,
-    "java_waterlogged_state": 4588
+    "classic_default_state": 5
   },
   "6138": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4590
+    "classic_default_state": 5
   },
   "6134": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4592
+    "classic_default_state": 5
   },
   "6154": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4594
+    "classic_default_state": 5
   },
   "6150": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4596
+    "classic_default_state": 5
   },
   "6130": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4598
+    "classic_default_state": 5
   },
   "6126": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4600
+    "classic_default_state": 5
   },
   "6146": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4602
+    "classic_default_state": 5
   },
   "6142": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4604
+    "classic_default_state": 5
   },
   "6136": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4606
+    "classic_default_state": 5
   },
   "6132": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4608
+    "classic_default_state": 5
   },
   "6152": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4610
+    "classic_default_state": 5
   },
   "6148": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4612
+    "classic_default_state": 5
   },
   "6128": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4614
+    "classic_default_state": 5
   },
   "6124": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4616
+    "classic_default_state": 5
   },
   "6144": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4618
+    "classic_default_state": 5
   },
   "6140": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4620
+    "classic_default_state": 5
   },
   "6137": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4622
+    "classic_default_state": 5
   },
   "6133": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4624
+    "classic_default_state": 5
   },
   "6153": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4626
+    "classic_default_state": 5
   },
   "6149": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4628
+    "classic_default_state": 5
   },
   "6129": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4630
+    "classic_default_state": 5
   },
   "6125": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4632
+    "classic_default_state": 5
   },
   "6145": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4634
+    "classic_default_state": 5
   },
   "6141": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4636
+    "classic_default_state": 5
   },
   "6135": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4638
+    "classic_default_state": 5
   },
   "6131": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4640
+    "classic_default_state": 5
   },
   "6151": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4642
+    "classic_default_state": 5
   },
   "6147": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4644
+    "classic_default_state": 5
   },
   "6127": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4646
+    "classic_default_state": 5
   },
   "6123": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4648
+    "classic_default_state": 5
   },
   "6143": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4650
+    "classic_default_state": 5
   },
   "6139": {
     "bedrock_name": "minecraft:wooden_door",
-    "java_default_state": 4652
+    "classic_default_state": 5
   },
   "14090": {
     "bedrock_name": "minecraft:ladder",
-    "java_default_state": 4654
+    "classic_default_state": 5
   },
   "14091": {
     "bedrock_name": "minecraft:ladder",
-    "java_default_state": 4654
+    "classic_default_state": 5
   },
   "14092": {
     "bedrock_name": "minecraft:ladder",
-    "java_default_state": 4655,
-    "java_waterlogged_state": 4654
+    "classic_default_state": 5
   },
   "14093": {
     "bedrock_name": "minecraft:ladder",
-    "java_default_state": 4657,
-    "java_waterlogged_state": 4656
+    "classic_default_state": 5
   },
   "14094": {
     "bedrock_name": "minecraft:ladder",
-    "java_default_state": 4659,
-    "java_waterlogged_state": 4658
+    "classic_default_state": 5
   },
   "14095": {
     "bedrock_name": "minecraft:ladder",
-    "java_default_state": 4661,
-    "java_waterlogged_state": 4660
+    "classic_default_state": 5
   },
   "6705": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4663,
-    "java_waterlogged_state": 4662
+    "classic_default_state": 39
   },
   "6706": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4665,
-    "java_waterlogged_state": 4664
+    "classic_default_state": 39
   },
   "6707": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4667,
-    "java_waterlogged_state": 4666
+    "classic_default_state": 39
   },
   "6708": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4669,
-    "java_waterlogged_state": 4668
+    "classic_default_state": 39
   },
   "6709": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4671,
-    "java_waterlogged_state": 4670
+    "classic_default_state": 39
   },
   "6710": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4673,
-    "java_waterlogged_state": 4672
+    "classic_default_state": 39
   },
   "6711": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4675,
-    "java_waterlogged_state": 4674
+    "classic_default_state": 39
   },
   "6712": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4677,
-    "java_waterlogged_state": 4676
+    "classic_default_state": 39
   },
   "6713": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4679,
-    "java_waterlogged_state": 4678
+    "classic_default_state": 39
   },
   "6714": {
     "bedrock_name": "minecraft:rail",
-    "java_default_state": 4681,
-    "java_waterlogged_state": 4680
+    "classic_default_state": 39
   },
   "6103": {
     "bedrock_name": "minecraft:stone_stairs",
-    "classic_default_state": 4
+    "classic_default_state": 1
   },
   "6099": {
     "bedrock_name": "minecraft:stone_stairs",
-    "classic_default_state": 4
+    "classic_default_state": 1
   },
   "6102": {
     "bedrock_name": "minecraft:stone_stairs",
-    "classic_default_state": 4
+    "classic_default_state": 1
   },
   "6098": {
     "bedrock_name": "minecraft:stone_stairs",
-    "classic_default_state": 4
+    "classic_default_state": 1
   },
   "6101": {
     "bedrock_name": "minecraft:stone_stairs",
-    "classic_default_state": 4
+    "classic_default_state": 1
   },
   "6097": {
     "bedrock_name": "minecraft:stone_stairs",
-    "classic_default_state": 4
+    "classic_default_state": 1
   },
   "6100": {
     "bedrock_name": "minecraft:stone_stairs",
-    "classic_default_state": 4
+    "classic_default_state": 1
   },
   "6096": {
     "bedrock_name": "minecraft:stone_stairs",
-    "classic_default_state": 4
+    "classic_default_state": 1
   },
   "8639": {
     "bedrock_name": "minecraft:wall_sign",
-    "java_default_state": 4762
+    "classic_default_state": 6
   },
   "8640": {
     "bedrock_name": "minecraft:wall_sign",
-    "java_default_state": 4762
+    "classic_default_state": 6
   },
   "8641": {
     "bedrock_name": "minecraft:wall_sign",
-    "java_default_state": 4763,
-    "java_waterlogged_state": 4762
+    "classic_default_state": 6
   },
   "8642": {
     "bedrock_name": "minecraft:wall_sign",
-    "java_default_state": 4765,
-    "java_waterlogged_state": 4764
+    "classic_default_state": 6
   },
   "8643": {
     "bedrock_name": "minecraft:wall_sign",
-    "java_default_state": 4767,
-    "java_waterlogged_state": 4766
+    "classic_default_state": 6
   },
   "8644": {
     "bedrock_name": "minecraft:wall_sign",
-    "java_default_state": 4769,
-    "java_waterlogged_state": 4768
+    "classic_default_state": 6
   },
   "13091": {
     "bedrock_name": "minecraft:spruce_wall_sign",
-    "java_default_state": 4770
-  },
-  "13092": {
-    "bedrock_name": "minecraft:spruce_wall_sign",
-    "java_default_state": 4770
-  },
-  "13093": {
-    "bedrock_name": "minecraft:spruce_wall_sign",
-    "java_default_state": 4771,
-    "java_waterlogged_state": 4770
-  },
-  "13094": {
-    "bedrock_name": "minecraft:spruce_wall_sign",
-    "java_default_state": 4773,
-    "java_waterlogged_state": 4772
-  },
-  "13095": {
-    "bedrock_name": "minecraft:spruce_wall_sign",
-    "java_default_state": 4775,
-    "java_waterlogged_state": 4774
-  },
-  "13096": {
-    "bedrock_name": "minecraft:spruce_wall_sign",
-    "java_default_state": 4777,
-    "java_waterlogged_state": 4776
+    "classic_default_state": 6
   },
   "12101": {
     "bedrock_name": "minecraft:birch_wall_sign",
-    "java_default_state": 4778
+    "classic_default_state": 6
   },
   "12102": {
     "bedrock_name": "minecraft:birch_wall_sign",
-    "java_default_state": 4778
+    "classic_default_state": 6
   },
   "12103": {
     "bedrock_name": "minecraft:birch_wall_sign",
-    "java_default_state": 4779,
-    "java_waterlogged_state": 4778
+    "classic_default_state": 6
   },
   "12104": {
     "bedrock_name": "minecraft:birch_wall_sign",
-    "java_default_state": 4781,
-    "java_waterlogged_state": 4780
+    "classic_default_state": 6
   },
   "12105": {
     "bedrock_name": "minecraft:birch_wall_sign",
-    "java_default_state": 4783,
-    "java_waterlogged_state": 4782
+    "classic_default_state": 6
   },
   "12106": {
     "bedrock_name": "minecraft:birch_wall_sign",
-    "java_default_state": 4785,
-    "java_waterlogged_state": 4784
+    "classic_default_state": 6
   },
   "6047": {
     "bedrock_name": "minecraft:acacia_wall_sign",
-    "java_default_state": 4786
+    "classic_default_state": 6
   },
   "6048": {
     "bedrock_name": "minecraft:acacia_wall_sign",
-    "java_default_state": 4786
+    "classic_default_state": 6
   },
   "6049": {
     "bedrock_name": "minecraft:acacia_wall_sign",
-    "java_default_state": 4787,
-    "java_waterlogged_state": 4786
+    "classic_default_state": 6
   },
   "6050": {
     "bedrock_name": "minecraft:acacia_wall_sign",
-    "java_default_state": 4789,
-    "java_waterlogged_state": 4788
+    "classic_default_state": 6
   },
   "6051": {
     "bedrock_name": "minecraft:acacia_wall_sign",
-    "java_default_state": 4791,
-    "java_waterlogged_state": 4790
+    "classic_default_state": 6
   },
   "6052": {
     "bedrock_name": "minecraft:acacia_wall_sign",
-    "java_default_state": 4793,
-    "java_waterlogged_state": 4792
+    "classic_default_state": 6
   },
   "13440": {
     "bedrock_name": "minecraft:cherry_wall_sign",
-    "java_default_state": 4794
+    "classic_default_state": 6
   },
   "13441": {
     "bedrock_name": "minecraft:cherry_wall_sign",
-    "java_default_state": 4794
+    "classic_default_state": 6
   },
   "13442": {
     "bedrock_name": "minecraft:cherry_wall_sign",
-    "java_default_state": 4795,
-    "java_waterlogged_state": 4794
+    "classic_default_state": 6
   },
   "13443": {
     "bedrock_name": "minecraft:cherry_wall_sign",
-    "java_default_state": 4797,
-    "java_waterlogged_state": 4796
+    "classic_default_state": 6
   },
   "13444": {
     "bedrock_name": "minecraft:cherry_wall_sign",
-    "java_default_state": 4799,
-    "java_waterlogged_state": 4798
+    "classic_default_state": 6
   },
   "13445": {
     "bedrock_name": "minecraft:cherry_wall_sign",
-    "java_default_state": 4801,
-    "java_waterlogged_state": 4800
+    "classic_default_state": 6
   },
   "7229": {
     "bedrock_name": "minecraft:jungle_wall_sign",
-    "java_default_state": 4802
+    "classic_default_state": 6
   },
   "7230": {
     "bedrock_name": "minecraft:jungle_wall_sign",
-    "java_default_state": 4802
+    "classic_default_state": 6
   },
   "7231": {
     "bedrock_name": "minecraft:jungle_wall_sign",
-    "java_default_state": 4803,
-    "java_waterlogged_state": 4802
+    "classic_default_state": 6
   },
   "7232": {
     "bedrock_name": "minecraft:jungle_wall_sign",
-    "java_default_state": 4805,
-    "java_waterlogged_state": 4804
+    "classic_default_state": 6
   },
   "7233": {
     "bedrock_name": "minecraft:jungle_wall_sign",
-    "java_default_state": 4807,
-    "java_waterlogged_state": 4806
+    "classic_default_state": 6
   },
   "7234": {
     "bedrock_name": "minecraft:jungle_wall_sign",
-    "java_default_state": 4809,
-    "java_waterlogged_state": 4808
+    "classic_default_state": 6
   },
   "9126": {
     "bedrock_name": "minecraft:darkoak_wall_sign",
-    "java_default_state": 4810
+    "classic_default_state": 6
   },
   "9127": {
     "bedrock_name": "minecraft:darkoak_wall_sign",
-    "java_default_state": 4810
+    "classic_default_state": 6
   },
   "9128": {
     "bedrock_name": "minecraft:darkoak_wall_sign",
-    "java_default_state": 4811,
-    "java_waterlogged_state": 4810
+    "classic_default_state": 6
   },
   "9129": {
     "bedrock_name": "minecraft:darkoak_wall_sign",
-    "java_default_state": 4813,
-    "java_waterlogged_state": 4812
+    "classic_default_state": 6
   },
   "9130": {
     "bedrock_name": "minecraft:darkoak_wall_sign",
-    "java_default_state": 4815,
-    "java_waterlogged_state": 4814
+    "classic_default_state": 6
   },
   "9131": {
     "bedrock_name": "minecraft:darkoak_wall_sign",
-    "java_default_state": 4817,
-    "java_waterlogged_state": 4816
+    "classic_default_state": 6
   },
   "9071": {
     "bedrock_name": "minecraft:mangrove_wall_sign",
-    "java_default_state": 4818
+    "classic_default_state": 6
   },
   "9072": {
     "bedrock_name": "minecraft:mangrove_wall_sign",
-    "java_default_state": 4818
+    "classic_default_state": 6
   },
   "9073": {
     "bedrock_name": "minecraft:mangrove_wall_sign",
-    "java_default_state": 4819,
-    "java_waterlogged_state": 4818
+    "classic_default_state": 6
   },
   "9074": {
     "bedrock_name": "minecraft:mangrove_wall_sign",
-    "java_default_state": 4821,
-    "java_waterlogged_state": 4820
+    "classic_default_state": 6
   },
   "9075": {
     "bedrock_name": "minecraft:mangrove_wall_sign",
-    "java_default_state": 4823,
-    "java_waterlogged_state": 4822
+    "classic_default_state": 6
   },
   "9076": {
     "bedrock_name": "minecraft:mangrove_wall_sign",
-    "java_default_state": 4825,
-    "java_waterlogged_state": 4824
+    "classic_default_state": 6
   },
   "12107": {
     "bedrock_name": "minecraft:bamboo_wall_sign",
-    "java_default_state": 4826
+    "classic_default_state": 6
   },
   "12108": {
     "bedrock_name": "minecraft:bamboo_wall_sign",
-    "java_default_state": 4826
+    "classic_default_state": 6
   },
   "12109": {
     "bedrock_name": "minecraft:bamboo_wall_sign",
-    "java_default_state": 4827,
-    "java_waterlogged_state": 4826
+    "classic_default_state": 6
   },
   "12110": {
     "bedrock_name": "minecraft:bamboo_wall_sign",
-    "java_default_state": 4829,
-    "java_waterlogged_state": 4828
+    "classic_default_state": 6
   },
   "12111": {
     "bedrock_name": "minecraft:bamboo_wall_sign",
-    "java_default_state": 4831,
-    "java_waterlogged_state": 4830
+    "classic_default_state": 6
   },
   "12112": {
     "bedrock_name": "minecraft:bamboo_wall_sign",
-    "java_default_state": 4833,
-    "java_waterlogged_state": 4832
+    "classic_default_state": 6
   },
   "8180": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8181": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8182": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8183": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8184": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8185": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8186": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8187": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8188": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8189": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8190": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8191": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8192": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8193": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8194": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8195": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8196": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8197": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8198": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8199": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8200": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8201": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8202": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8203": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8204": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8205": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8206": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8207": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8208": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8209": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8210": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8211": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8212": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8213": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8214": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8215": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8216": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8217": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8218": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8219": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8220": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8221": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8222": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8223": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8224": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8225": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8226": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8227": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8228": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8229": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8230": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8231": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8232": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8233": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8234": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8235": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8236": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8237": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8238": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8239": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8240": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8241": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8242": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8243": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8244": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8245": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8246": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8247": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8248": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8249": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8250": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8251": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8252": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8253": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8254": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8255": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8256": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8257": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8258": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8259": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8260": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8261": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8262": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8263": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8264": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8265": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8266": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8267": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8268": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8269": {
     "bedrock_name": "minecraft:oak_hanging_sign",
-    "java_default_state": 4834
+    "classic_default_state": 6
   },
   "8270": {
     "bedrock_name": "minecraft:oak_hanging_sign",
