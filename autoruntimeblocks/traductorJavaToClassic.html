@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Subir Archivo JSON</title>
+    </head>
+    <body>
+        <h1>Subir Archivo JSON</h1>
+        <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f9; }
+        .upload-container { border: 2px dashed #ccc; padding: 20px; text-align: center; background: white; }
+
+        #progress-container { width: 100%; background: #ddd; margin-top: 20px; display: none; }
+
+        #progress-bar { width: 0%; height: 20px; background: #4caf50; text-align: center; color: white; line-height: 20px; }
+
+        pre { background: #272822; color: #f8f8f2; padding: 15px; overflow: auto; border-radius: 5px; }
+</style>
+<div class="upload-container">
+    <h3>Subir Archivo JSON</h3>
+    <input type="file" id="jsonInput" accept=".json">
+</div>
+<div id="progress-container">
+   <div id="progress-bar">0%</div>
+</div>
+<script>
+const jsonInput = document.getElementById('jsonInput');
+const progressBar = document.getElementById('progress-bar');
+const progressContainer = document.getElementById('progress-container');
+const jsonOutput = document.getElementById('jsonOutput');
+let porciento = "%";
+jsonInput.addEventListener('change', function() {
+  const file = this.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  progressContainer.style.display = 'block';
+  progressBar.style.width = '0'+porciento;
+  progressBar.innerText = '0'+porciento;
+  reader.onprogress = function(e) {
+        if (e.lengthComputable) {
+            const percent = Math.round((e.loaded / e.total) * 100);
+            progressBar.style.width = percent + porciento;
+            progressBar.innerText = percent + porciento;
+        }
+  };
+  reader.onload = function(e) {
+        try {
+            const json = JSON.parse(e.target.result.replace(/"(\d+)"\s*:\s*\{/g, '"_$1": {'));
+          let zero = 0;
+          let uno = 1;
+          let dos = 2;
+          let cien = 100;
+          let classicState = "classic_default_state";
+          let classicubeState = "classic_default_state1";
+          let bedrockName = "bedrock_name";
+          let javaState = "java_default_state";
+          let javaWaterlog = "java_waterlogged_state";
+          let traductor = [
+            [zero, ["minecraft:snow_layer"]],
+            [uno, []],
+            [dos, []],
+            [5, ["minecraft:oak_hanging_sign", "minecraft:spruce_hanging_sign", "minecraft:birch_hanging_sign", "minecraft:acacia_hanging_sign", "minecraft:cherry_hanging_sign", "minecraft:jungle_hanging_sign", "minecraft:dark_oak_hanging_sign", "minecraft:crimson_hanging_sign", "minecraft:warped_hanging_sign", "minecraft:mangrove_hanging_sign", "minecraft:bamboo_hanging_sign"]],
+            [6, ["minecraft:reeds"]],
+            [13, ["minecraft:clay"]],
+            [16, ["minecraft:lit_redstone_ore", "minecraft:redstone_ore", "minecraft:lit_deepslate_redstone_ore", "minecraft:deepslate_redstone_ore"]],
+            [20, ["minecraft:ice", "minecraft:snow"]],
+            [24, ["minecraft:cactus"]],
+            [37, ["minecraft:lever", "minecraft:wooden_pressure_plate", "minecraft:spruce_pressure_plate", "minecraft:birch_pressure_plate", "minecraft:jungle_pressure_plate", "minecraft:acacia_pressure_plate", "minecraft:cherry_pressure_plate", "minecraft:dark_oak_pressure_plate", "minecraft:mangrove_pressure_plate", "minecraft:bamboo_pressure_plate"]],
+            [38, ["minecraft:redstone_torch", "minecraft:unlit_redstone_torch"]],
+            [39, ["minecraft:stone_pressure_plate", "minecraft:stone_button"]],
+            [42, ["minecraft:iron_door"]]
+          ];
+          let traductorCC = [
+            [53, ["minecraft:snow_layer"]],
+            [60, ["minecraft:ice", "minecraft:snow"]]
+          ];
+          let idsRuntimeBedrock = Object.keys(json);
+          let porcen100 = idsRuntimeBedrock.length;
+          for(let idRBnum = 0; idRBnum < porcen100; idRBnum++){
+            let idRB = idsRuntimeBedrock[idRBnum];
+            let jsonidRB = json[idRB];
+            /*if(jsonidRB[idRB][javaState]){
+              delete jsonidRB[idRB][javaState];
+            }*/
+            /*if(jsonidRB[idRB][javaWaterlog]){
+              delete jsonidRB[idRB][javaWaterlog];
+            }*/
+            for(let classicArray of traductor){
+              if(classicArray[uno].indexOf(jsonidRB[bedrockName]) < zero){
+                continue;
+              }
+              if(jsonidRB[javaState]){
+                delete jsonidRB[javaState];
+              }
+              if(jsonidRB[javaWaterlog]){
+                delete jsonidRB[javaWaterlog];
+              }
+              jsonidRB[classicState] = classicArray[zero];
+            }
+            for(let classicArray of traductorCC){
+                if(classicArray[uno].indexOf(jsonidRB[bedrockName]) < zero){
+                  continue;
+                }
+                jsonidRB[classicubeState] = classicArray[zero];
+            }
+            const porcen = (idRBnum / porcen100) * cien;
+            progressBar.innerText = porcen.toFixed(dos) + porciento;
+          }
+          let newjson = JSON.stringify(json, null, "\t").replace(/"_(\d+)"\s*:\s*\{/g, '"$1": {');
+          const blob = new Blob([newjson], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = "archivo_modificado.json"; // Nombre del archivo
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+           URL.revokeObjectURL(url);
+        } catch (error) {
+          alert(error);
+            progressBar.innerText = "Error: "+error+"El archivo no es un JSON válido.";
+        }
+  };
+  reader.readAsText(file);
+});
+</script>
+    </body>
+</html>
