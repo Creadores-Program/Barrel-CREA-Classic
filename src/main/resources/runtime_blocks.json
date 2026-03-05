@@ -3864,27 +3864,33 @@
 	},
 	"14090": {
 		"bedrock_name": "minecraft:ladder",
-		"classic_default_state": 5
+		"classic_default_state": 5,
+		"classic_default_state1": 51
 	},
 	"14091": {
 		"bedrock_name": "minecraft:ladder",
-		"classic_default_state": 5
+		"classic_default_state": 5,
+		"classic_default_state1": 51
 	},
 	"14092": {
 		"bedrock_name": "minecraft:ladder",
-		"classic_default_state": 5
+		"classic_default_state": 5,
+		"classic_default_state1": 51
 	},
 	"14093": {
 		"bedrock_name": "minecraft:ladder",
-		"classic_default_state": 5
+		"classic_default_state": 5,
+		"classic_default_state1": 51
 	},
 	"14094": {
 		"bedrock_name": "minecraft:ladder",
-		"classic_default_state": 5
+		"classic_default_state": 5,
+		"classic_default_state1": 51
 	},
 	"14095": {
 		"bedrock_name": "minecraft:ladder",
-		"classic_default_state": 5
+		"classic_default_state": 5,
+		"classic_default_state1": 51
 	},
 	"6705": {
 		"bedrock_name": "minecraft:rail",
@@ -22218,2117 +22224,1942 @@
 	},
 	"8645": {
 		"bedrock_name": "minecraft:jukebox",
-		"java_default_state": 5815
+		"classic_default_state": 5,
+		"classic_default_state1": 64
 	},
 	"9575": {
 		"bedrock_name": "minecraft:oak_fence",
-		"java_default_state": 5819,
-		"java_waterlogged_state": 5817
+		"classic_default_state": 5
 	},
 	"12268": {
 		"bedrock_name": "minecraft:netherrack",
-		"java_default_state": 5849
+		"classic_default_state": 4
 	},
 	"9660": {
 		"bedrock_name": "minecraft:soul_sand",
-		"java_default_state": 5850
+		"classic_default_state": 12
 	},
 	"9659": {
 		"bedrock_name": "minecraft:soul_soil",
-		"java_default_state": 5851
+		"classic_default_state": 12
 	},
 	"7200": {
 		"bedrock_name": "minecraft:basalt",
-		"java_default_state": 5852
+		"classic_default_state": 4
 	},
 	"7199": {
 		"bedrock_name": "minecraft:basalt",
-		"java_default_state": 5853
+		"classic_default_state": 4
 	},
 	"7201": {
 		"bedrock_name": "minecraft:basalt",
-		"java_default_state": 5854
+		"classic_default_state": 4
 	},
 	"30": {
 		"bedrock_name": "minecraft:polished_basalt",
-		"java_default_state": 5855
+		"classic_default_state": 1
 	},
 	"29": {
 		"bedrock_name": "minecraft:polished_basalt",
-		"java_default_state": 5856
+		"classic_default_state": 1
 	},
 	"31": {
 		"bedrock_name": "minecraft:polished_basalt",
-		"java_default_state": 5857
+		"classic_default_state": 1
 	},
 	"7965": {
 		"bedrock_name": "minecraft:soul_torch",
-		"java_default_state": 5858
+		"classic_default_state": 39
 	},
 	"7960": {
 		"bedrock_name": "minecraft:soul_torch",
-		"java_default_state": 5858
+		"classic_default_state": 39
 	},
 	"7964": {
 		"bedrock_name": "minecraft:soul_torch",
-		"java_default_state": 5859
+		"classic_default_state": 39
 	},
 	"7963": {
 		"bedrock_name": "minecraft:soul_torch",
-		"java_default_state": 5860
+		"classic_default_state": 39
 	},
 	"7962": {
 		"bedrock_name": "minecraft:soul_torch",
-		"java_default_state": 5861
+		"classic_default_state": 39
 	},
 	"7961": {
 		"bedrock_name": "minecraft:soul_torch",
-		"java_default_state": 5862
+		"classic_default_state": 39
 	},
 	"6669": {
 		"bedrock_name": "minecraft:glowstone",
-		"java_default_state": 5863
+		"classic_default_state": 23
 	},
 	"13521": {
 		"bedrock_name": "minecraft:portal",
-		"java_default_state": 5864
+		"classic_default_state": 9
 	},
 	"13520": {
 		"bedrock_name": "minecraft:portal",
-		"java_default_state": 5864
+		"classic_default_state": 9
 	},
 	"13522": {
 		"bedrock_name": "minecraft:portal",
-		"java_default_state": 5865
+		"classic_default_state": 9
 	},
 	"13077": {
 		"bedrock_name": "minecraft:carved_pumpkin",
-		"java_default_state": 5866
+		"classic_default_state": 22
 	},
 	"13075": {
 		"bedrock_name": "minecraft:carved_pumpkin",
-		"java_default_state": 5867
+		"classic_default_state": 22
 	},
 	"13076": {
 		"bedrock_name": "minecraft:carved_pumpkin",
-		"java_default_state": 5868
+		"classic_default_state": 22
 	},
 	"13078": {
 		"bedrock_name": "minecraft:carved_pumpkin",
-		"java_default_state": 5869
+		"classic_default_state": 22
 	},
 	"11889": {
 		"bedrock_name": "minecraft:lit_pumpkin",
-		"java_default_state": 5870
+		"classic_default_state": 22
 	},
 	"11887": {
 		"bedrock_name": "minecraft:lit_pumpkin",
-		"java_default_state": 5871
+		"classic_default_state": 22
 	},
 	"11888": {
 		"bedrock_name": "minecraft:lit_pumpkin",
-		"java_default_state": 5872
+		"classic_default_state": 22
 	},
 	"11890": {
 		"bedrock_name": "minecraft:lit_pumpkin",
-		"java_default_state": 5873
+		"classic_default_state": 22
 	},
 	"12403": {
 		"bedrock_name": "minecraft:cake",
-		"java_default_state": 5874
+		"classic_default_state": 44
 	},
 	"12404": {
 		"bedrock_name": "minecraft:cake",
-		"java_default_state": 5875
+		"classic_default_state": 44
 	},
 	"12405": {
 		"bedrock_name": "minecraft:cake",
-		"java_default_state": 5876
+		"classic_default_state": 44
 	},
 	"12406": {
 		"bedrock_name": "minecraft:cake",
-		"java_default_state": 5877
+		"classic_default_state": 44
 	},
 	"12407": {
 		"bedrock_name": "minecraft:cake",
-		"java_default_state": 5878
+		"classic_default_state": 44
 	},
 	"12408": {
 		"bedrock_name": "minecraft:cake",
-		"java_default_state": 5879
+		"classic_default_state": 44
 	},
 	"12409": {
 		"bedrock_name": "minecraft:cake",
-		"java_default_state": 5880
+		"classic_default_state": 44
 	},
 	"7421": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5881
+		"classic_default_state": 44
 	},
 	"9356": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5882
+		"classic_default_state": 44
 	},
 	"7419": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5885
+		"classic_default_state": 44
 	},
 	"9354": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5886
+		"classic_default_state": 44
 	},
 	"7420": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5889
+		"classic_default_state": 44
 	},
 	"9355": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5890
+		"classic_default_state": 44
 	},
 	"7422": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5893
+		"classic_default_state": 44
 	},
 	"9357": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5894
+		"classic_default_state": 44
 	},
 	"7425": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5897
+		"classic_default_state": 44
 	},
 	"9360": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5898
+		"classic_default_state": 44
 	},
 	"7423": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5901
+		"classic_default_state": 44
 	},
 	"9358": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5902
+		"classic_default_state": 44
 	},
 	"7424": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5905
+		"classic_default_state": 44
 	},
 	"9359": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5906
+		"classic_default_state": 44
 	},
 	"7426": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5909
+		"classic_default_state": 44
 	},
 	"9361": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5910
+		"classic_default_state": 44
 	},
 	"7429": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5913
+		"classic_default_state": 44
 	},
 	"9364": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5914
+		"classic_default_state": 44
 	},
 	"7427": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5917
+		"classic_default_state": 44
 	},
 	"9362": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5918
+		"classic_default_state": 44
 	},
 	"7428": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5921
+		"classic_default_state": 44
 	},
 	"9363": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5922
+		"classic_default_state": 44
 	},
 	"7430": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5925
+		"classic_default_state": 44
 	},
 	"9365": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5926
+		"classic_default_state": 44
 	},
 	"7433": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5929
+		"classic_default_state": 44
 	},
 	"9368": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5930
+		"classic_default_state": 44
 	},
 	"7431": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5933
+		"classic_default_state": 44
 	},
 	"9366": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5934
+		"classic_default_state": 44
 	},
 	"7432": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5937
+		"classic_default_state": 44
 	},
 	"9367": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5938
+		"classic_default_state": 44
 	},
 	"7434": {
 		"bedrock_name": "minecraft:powered_repeater",
-		"java_default_state": 5941
+		"classic_default_state": 44
 	},
 	"9369": {
 		"bedrock_name": "minecraft:unpowered_repeater",
-		"java_default_state": 5942
+		"classic_default_state": 44
 	},
 	"8618": {
 		"bedrock_name": "minecraft:white_stained_glass",
-		"java_default_state": 5945
+		"classic_default_state": 20
 	},
 	"7413": {
 		"bedrock_name": "minecraft:orange_stained_glass",
-		"java_default_state": 5946
+		"classic_default_state": 20
 	},
 	"12911": {
 		"bedrock_name": "minecraft:magenta_stained_glass",
-		"java_default_state": 5947
+		"classic_default_state": 20
 	},
 	"9616": {
 		"bedrock_name": "minecraft:light_blue_stained_glass",
-		"java_default_state": 5948
+		"classic_default_state": 20
 	},
 	"13293": {
 		"bedrock_name": "minecraft:yellow_stained_glass",
-		"java_default_state": 5949
+		"classic_default_state": 20
 	},
 	"129": {
 		"bedrock_name": "minecraft:lime_stained_glass",
-		"java_default_state": 5950
+		"classic_default_state": 20
 	},
 	"7166": {
 		"bedrock_name": "minecraft:pink_stained_glass",
-		"java_default_state": 5951
+		"classic_default_state": 20
 	},
 	"6105": {
 		"bedrock_name": "minecraft:gray_stained_glass",
-		"java_default_state": 5952
+		"classic_default_state": 20
 	},
 	"1191": {
 		"bedrock_name": "minecraft:light_gray_stained_glass",
-		"java_default_state": 5953
+		"classic_default_state": 20
 	},
 	"10582": {
 		"bedrock_name": "minecraft:cyan_stained_glass",
-		"java_default_state": 5954
+		"classic_default_state": 20
 	},
 	"2645": {
 		"bedrock_name": "minecraft:purple_stained_glass",
-		"java_default_state": 5955
+		"classic_default_state": 20
 	},
 	"9580": {
 		"bedrock_name": "minecraft:blue_stained_glass",
-		"java_default_state": 5956
+		"classic_default_state": 20
 	},
 	"1788": {
 		"bedrock_name": "minecraft:brown_stained_glass",
-		"java_default_state": 5957
+		"classic_default_state": 20
 	},
 	"7098": {
 		"bedrock_name": "minecraft:green_stained_glass",
-		"java_default_state": 5958
+		"classic_default_state": 20
 	},
 	"9037": {
 		"bedrock_name": "minecraft:red_stained_glass",
-		"java_default_state": 5959
+		"classic_default_state": 20
 	},
 	"10583": {
 		"bedrock_name": "minecraft:black_stained_glass",
-		"java_default_state": 5960
+		"classic_default_state": 20
 	},
 	"675": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5964,
-		"java_waterlogged_state": 5961
+		"classic_default_state": 5
 	},
 	"667": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5968,
-		"java_waterlogged_state": 5965
+		"classic_default_state": 5
 	},
 	"671": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5972,
-		"java_waterlogged_state": 5969
+		"classic_default_state": 5
 	},
 	"663": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5976,
-		"java_waterlogged_state": 5973
+		"classic_default_state": 5
 	},
 	"674": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5980,
-		"java_waterlogged_state": 5977
+		"classic_default_state": 5
 	},
 	"666": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5984,
-		"java_waterlogged_state": 5981
+		"classic_default_state": 5
 	},
 	"670": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5988,
-		"java_waterlogged_state": 5985
+		"classic_default_state": 5
 	},
 	"662": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5992,
-		"java_waterlogged_state": 5989
+		"classic_default_state": 5
 	},
 	"673": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 5996,
-		"java_waterlogged_state": 5993
+		"classic_default_state": 5
 	},
 	"665": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 6000,
-		"java_waterlogged_state": 5997
+		"classic_default_state": 5
 	},
 	"669": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 6004,
-		"java_waterlogged_state": 6001
+		"classic_default_state": 5
 	},
 	"661": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 6008,
-		"java_waterlogged_state": 6005
+		"classic_default_state": 5
 	},
 	"672": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 6012,
-		"java_waterlogged_state": 6009
+		"classic_default_state": 5
 	},
 	"664": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 6016,
-		"java_waterlogged_state": 6013
+		"classic_default_state": 5
 	},
 	"668": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 6020,
-		"java_waterlogged_state": 6017
+		"classic_default_state": 5
 	},
 	"660": {
 		"bedrock_name": "minecraft:trapdoor",
-		"java_default_state": 6024,
-		"java_waterlogged_state": 6021
+		"classic_default_state": 5
 	},
 	"11777": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6028,
-		"java_waterlogged_state": 6025
+		"classic_default_state": 5
 	},
 	"11769": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6032,
-		"java_waterlogged_state": 6029
+		"classic_default_state": 5
 	},
 	"11773": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6036,
-		"java_waterlogged_state": 6033
+		"classic_default_state": 5
 	},
 	"11765": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6040,
-		"java_waterlogged_state": 6037
+		"classic_default_state": 5
 	},
 	"11776": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6044,
-		"java_waterlogged_state": 6041
+		"classic_default_state": 5
 	},
 	"11768": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6048,
-		"java_waterlogged_state": 6045
+		"classic_default_state": 5
 	},
 	"11772": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6052,
-		"java_waterlogged_state": 6049
+		"classic_default_state": 5
 	},
 	"11764": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6056,
-		"java_waterlogged_state": 6053
+		"classic_default_state": 5
 	},
 	"11775": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6060,
-		"java_waterlogged_state": 6057
+		"classic_default_state": 5
 	},
 	"11767": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6064,
-		"java_waterlogged_state": 6061
+		"classic_default_state": 5
 	},
 	"11771": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6068,
-		"java_waterlogged_state": 6065
+		"classic_default_state": 5
 	},
 	"11763": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6072,
-		"java_waterlogged_state": 6069
+		"classic_default_state": 5
 	},
 	"11774": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6076,
-		"java_waterlogged_state": 6073
+		"classic_default_state": 5
 	},
 	"11766": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6080,
-		"java_waterlogged_state": 6077
+		"classic_default_state": 5
 	},
 	"11770": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6084,
-		"java_waterlogged_state": 6081
+		"classic_default_state": 5
 	},
 	"11762": {
 		"bedrock_name": "minecraft:spruce_trapdoor",
-		"java_default_state": 6088,
-		"java_waterlogged_state": 6085
+		"classic_default_state": 5
 	},
 	"11878": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6092,
-		"java_waterlogged_state": 6089
+		"classic_default_state": 5
 	},
 	"11870": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6096,
-		"java_waterlogged_state": 6093
+		"classic_default_state": 5
 	},
 	"11874": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6100,
-		"java_waterlogged_state": 6097
+		"classic_default_state": 5
 	},
 	"11866": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6104,
-		"java_waterlogged_state": 6101
+		"classic_default_state": 5
 	},
 	"11877": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6108,
-		"java_waterlogged_state": 6105
+		"classic_default_state": 5
 	},
 	"11869": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6112,
-		"java_waterlogged_state": 6109
+		"classic_default_state": 5
 	},
 	"11873": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6116,
-		"java_waterlogged_state": 6113
+		"classic_default_state": 5
 	},
 	"11865": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6120,
-		"java_waterlogged_state": 6117
+		"classic_default_state": 5
 	},
 	"11876": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6124,
-		"java_waterlogged_state": 6121
+		"classic_default_state": 5
 	},
 	"11868": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6128,
-		"java_waterlogged_state": 6125
+		"classic_default_state": 5
 	},
 	"11872": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6132,
-		"java_waterlogged_state": 6129
+		"classic_default_state": 5
 	},
 	"11864": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6136,
-		"java_waterlogged_state": 6133
+		"classic_default_state": 5
 	},
 	"11875": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6140,
-		"java_waterlogged_state": 6137
+		"classic_default_state": 5
 	},
 	"11867": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6144,
-		"java_waterlogged_state": 6141
+		"classic_default_state": 5
 	},
 	"11871": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6148,
-		"java_waterlogged_state": 6145
+		"classic_default_state": 5
 	},
 	"11863": {
 		"bedrock_name": "minecraft:birch_trapdoor",
-		"java_default_state": 6152,
-		"java_waterlogged_state": 6149
+		"classic_default_state": 5
 	},
 	"9186": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6156,
-		"java_waterlogged_state": 6153
+		"classic_default_state": 5
 	},
 	"9178": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6160,
-		"java_waterlogged_state": 6157
+		"classic_default_state": 5
 	},
 	"9182": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6164,
-		"java_waterlogged_state": 6161
+		"classic_default_state": 5
 	},
 	"9174": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6168,
-		"java_waterlogged_state": 6165
+		"classic_default_state": 5
 	},
 	"9185": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6172,
-		"java_waterlogged_state": 6169
+		"classic_default_state": 5
 	},
 	"9177": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6176,
-		"java_waterlogged_state": 6173
+		"classic_default_state": 5
 	},
 	"9181": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6180,
-		"java_waterlogged_state": 6177
+		"classic_default_state": 5
 	},
 	"9173": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6184,
-		"java_waterlogged_state": 6181
+		"classic_default_state": 5
 	},
 	"9184": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6188,
-		"java_waterlogged_state": 6185
+		"classic_default_state": 5
 	},
 	"9176": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6192,
-		"java_waterlogged_state": 6189
+		"classic_default_state": 5
 	},
 	"9180": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6196,
-		"java_waterlogged_state": 6193
+		"classic_default_state": 5
 	},
 	"9172": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6200,
-		"java_waterlogged_state": 6197
+		"classic_default_state": 5
 	},
 	"9183": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6204,
-		"java_waterlogged_state": 6201
+		"classic_default_state": 5
 	},
 	"9175": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6208,
-		"java_waterlogged_state": 6205
+		"classic_default_state": 5
 	},
 	"9179": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6212,
-		"java_waterlogged_state": 6209
+		"classic_default_state": 5
 	},
 	"9171": {
 		"bedrock_name": "minecraft:jungle_trapdoor",
-		"java_default_state": 6216,
-		"java_waterlogged_state": 6213
+		"classic_default_state": 5
 	},
 	"9426": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6220,
-		"java_waterlogged_state": 6217
+		"classic_default_state": 5
 	},
 	"9418": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6224,
-		"java_waterlogged_state": 6221
+		"classic_default_state": 5
 	},
 	"9422": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6228,
-		"java_waterlogged_state": 6225
+		"classic_default_state": 5
 	},
 	"9414": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6232,
-		"java_waterlogged_state": 6229
+		"classic_default_state": 5
 	},
 	"9425": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6236,
-		"java_waterlogged_state": 6233
+		"classic_default_state": 5
 	},
 	"9417": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6240,
-		"java_waterlogged_state": 6237
+		"classic_default_state": 5
 	},
 	"9421": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6244,
-		"java_waterlogged_state": 6241
+		"classic_default_state": 5
 	},
 	"9413": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6248,
-		"java_waterlogged_state": 6245
+		"classic_default_state": 5
 	},
 	"9424": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6252,
-		"java_waterlogged_state": 6249
+		"classic_default_state": 5
 	},
 	"9416": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6256,
-		"java_waterlogged_state": 6253
+		"classic_default_state": 5
 	},
 	"9420": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6260,
-		"java_waterlogged_state": 6257
+		"classic_default_state": 5
 	},
 	"9412": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6264,
-		"java_waterlogged_state": 6261
+		"classic_default_state": 5
 	},
 	"9423": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6268,
-		"java_waterlogged_state": 6265
+		"classic_default_state": 5
 	},
 	"9415": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6272,
-		"java_waterlogged_state": 6269
+		"classic_default_state": 5
 	},
 	"9419": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6276,
-		"java_waterlogged_state": 6273
+		"classic_default_state": 5
 	},
 	"9411": {
 		"bedrock_name": "minecraft:acacia_trapdoor",
-		"java_default_state": 6280,
-		"java_waterlogged_state": 6277
+		"classic_default_state": 5
 	},
 	"2392": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6284,
-		"java_waterlogged_state": 6281
+		"classic_default_state": 5
 	},
 	"2384": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6288,
-		"java_waterlogged_state": 6285
+		"classic_default_state": 5
 	},
 	"2388": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6292,
-		"java_waterlogged_state": 6289
+		"classic_default_state": 5
 	},
 	"2380": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6296,
-		"java_waterlogged_state": 6293
+		"classic_default_state": 5
 	},
 	"2391": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6300,
-		"java_waterlogged_state": 6297
+		"classic_default_state": 5
 	},
 	"2383": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6304,
-		"java_waterlogged_state": 6301
+		"classic_default_state": 5
 	},
 	"2387": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6308,
-		"java_waterlogged_state": 6305
+		"classic_default_state": 5
 	},
 	"2379": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6312,
-		"java_waterlogged_state": 6309
+		"classic_default_state": 5
 	},
 	"2390": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6316,
-		"java_waterlogged_state": 6313
+		"classic_default_state": 5
 	},
 	"2382": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6320,
-		"java_waterlogged_state": 6317
+		"classic_default_state": 5
 	},
 	"2386": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6324,
-		"java_waterlogged_state": 6321
+		"classic_default_state": 5
 	},
 	"2378": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6328,
-		"java_waterlogged_state": 6325
+		"classic_default_state": 5
 	},
 	"2389": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6332,
-		"java_waterlogged_state": 6329
+		"classic_default_state": 5
 	},
 	"2381": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6336,
-		"java_waterlogged_state": 6333
+		"classic_default_state": 5
 	},
 	"2385": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6340,
-		"java_waterlogged_state": 6337
+		"classic_default_state": 5
 	},
 	"2377": {
 		"bedrock_name": "minecraft:cherry_trapdoor",
-		"java_default_state": 6344,
-		"java_waterlogged_state": 6341
+		"classic_default_state": 5
 	},
 	"13217": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6348,
-		"java_waterlogged_state": 6345
+		"classic_default_state": 5
 	},
 	"13209": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6352,
-		"java_waterlogged_state": 6349
+		"classic_default_state": 5
 	},
 	"13213": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6356,
-		"java_waterlogged_state": 6353
+		"classic_default_state": 5
 	},
 	"13205": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6360,
-		"java_waterlogged_state": 6357
+		"classic_default_state": 5
 	},
 	"13216": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6364,
-		"java_waterlogged_state": 6361
+		"classic_default_state": 5
 	},
 	"13208": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6368,
-		"java_waterlogged_state": 6365
+		"classic_default_state": 5
 	},
 	"13212": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6372,
-		"java_waterlogged_state": 6369
+		"classic_default_state": 5
 	},
 	"13204": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6376,
-		"java_waterlogged_state": 6373
+		"classic_default_state": 5
 	},
 	"13215": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6380,
-		"java_waterlogged_state": 6377
+		"classic_default_state": 5
 	},
 	"13207": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6384,
-		"java_waterlogged_state": 6381
+		"classic_default_state": 5
 	},
 	"13211": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6388,
-		"java_waterlogged_state": 6385
+		"classic_default_state": 5
 	},
 	"13203": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6392,
-		"java_waterlogged_state": 6389
+		"classic_default_state": 5
 	},
 	"13214": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6396,
-		"java_waterlogged_state": 6393
+		"classic_default_state": 5
 	},
 	"13206": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6400,
-		"java_waterlogged_state": 6397
+		"classic_default_state": 5
 	},
 	"13210": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6404,
-		"java_waterlogged_state": 6401
+		"classic_default_state": 5
 	},
 	"13202": {
 		"bedrock_name": "minecraft:dark_oak_trapdoor",
-		"java_default_state": 6408,
-		"java_waterlogged_state": 6405
+		"classic_default_state": 5
 	},
 	"7361": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6412,
-		"java_waterlogged_state": 6409
+		"classic_default_state": 5
 	},
 	"7353": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6416,
-		"java_waterlogged_state": 6413
+		"classic_default_state": 5
 	},
 	"7357": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6420,
-		"java_waterlogged_state": 6417
+		"classic_default_state": 5
 	},
 	"7349": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6424,
-		"java_waterlogged_state": 6421
+		"classic_default_state": 5
 	},
 	"7360": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6428,
-		"java_waterlogged_state": 6425
+		"classic_default_state": 5
 	},
 	"7352": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6432,
-		"java_waterlogged_state": 6429
+		"classic_default_state": 5
 	},
 	"7356": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6436,
-		"java_waterlogged_state": 6433
+		"classic_default_state": 5
 	},
 	"7348": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6440,
-		"java_waterlogged_state": 6437
+		"classic_default_state": 5
 	},
 	"7359": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6444,
-		"java_waterlogged_state": 6441
+		"classic_default_state": 5
 	},
 	"7351": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6448,
-		"java_waterlogged_state": 6445
+		"classic_default_state": 5
 	},
 	"7355": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6452,
-		"java_waterlogged_state": 6449
+		"classic_default_state": 5
 	},
 	"7347": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6456,
-		"java_waterlogged_state": 6453
+		"classic_default_state": 5
 	},
 	"7358": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6460,
-		"java_waterlogged_state": 6457
+		"classic_default_state": 5
 	},
 	"7350": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6464,
-		"java_waterlogged_state": 6461
+		"classic_default_state": 5
 	},
 	"7354": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6468,
-		"java_waterlogged_state": 6465
+		"classic_default_state": 5
 	},
 	"7346": {
 		"bedrock_name": "minecraft:mangrove_trapdoor",
-		"java_default_state": 6472,
-		"java_waterlogged_state": 6469
+		"classic_default_state": 5
 	},
 	"9069": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6476,
-		"java_waterlogged_state": 6473
+		"classic_default_state": 5
 	},
 	"9061": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6480,
-		"java_waterlogged_state": 6477
+		"classic_default_state": 5
 	},
 	"9065": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6484,
-		"java_waterlogged_state": 6481
+		"classic_default_state": 5
 	},
 	"9057": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6488,
-		"java_waterlogged_state": 6485
+		"classic_default_state": 5
 	},
 	"9068": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6492,
-		"java_waterlogged_state": 6489
+		"classic_default_state": 5
 	},
 	"9060": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6496,
-		"java_waterlogged_state": 6493
+		"classic_default_state": 5
 	},
 	"9064": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6500,
-		"java_waterlogged_state": 6497
+		"classic_default_state": 5
 	},
 	"9056": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6504,
-		"java_waterlogged_state": 6501
+		"classic_default_state": 5
 	},
 	"9067": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6508,
-		"java_waterlogged_state": 6505
+		"classic_default_state": 5
 	},
 	"9059": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6512,
-		"java_waterlogged_state": 6509
+		"classic_default_state": 5
 	},
 	"9063": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6516,
-		"java_waterlogged_state": 6513
+		"classic_default_state": 5
 	},
 	"9055": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6520,
-		"java_waterlogged_state": 6517
+		"classic_default_state": 5
 	},
 	"9066": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6524,
-		"java_waterlogged_state": 6521
+		"classic_default_state": 5
 	},
 	"9058": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6528,
-		"java_waterlogged_state": 6525
+		"classic_default_state": 5
 	},
 	"9062": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6532,
-		"java_waterlogged_state": 6529
+		"classic_default_state": 5
 	},
 	"9054": {
 		"bedrock_name": "minecraft:bamboo_trapdoor",
-		"java_default_state": 6536,
-		"java_waterlogged_state": 6533
+		"classic_default_state": 5
 	},
 	"11757": {
 		"bedrock_name": "minecraft:stonebrick",
-		"java_default_state": 6537
+		"classic_default_state": 4,
+		"classic_default_state1": 65
 	},
 	"11761": {
 		"bedrock_name": "minecraft:stonebrick",
-		"java_default_state": 6537
+		"classic_default_state": 4,
+		"classic_default_state1": 65
 	},
 	"11758": {
 		"bedrock_name": "minecraft:stonebrick",
-		"java_default_state": 6538
+		"classic_default_state": 4,
+		"classic_default_state1": 65
 	},
 	"11759": {
 		"bedrock_name": "minecraft:stonebrick",
-		"java_default_state": 6539
+		"classic_default_state": 4,
+		"classic_default_state1": 65
 	},
 	"11760": {
 		"bedrock_name": "minecraft:stonebrick",
-		"java_default_state": 6540
+		"classic_default_state": 4,
+		"classic_default_state1": 65
 	},
 	"744": {
 		"bedrock_name": "minecraft:packed_mud",
-		"java_default_state": 6541
+		"classic_default_state": 1
 	},
 	"12100": {
 		"bedrock_name": "minecraft:mud_bricks",
-		"java_default_state": 6542
+		"classic_default_state": 4,
+		"classic_default_state1": 65
 	},
 	"6930": {
 		"bedrock_name": "minecraft:monster_egg",
-		"java_default_state": 6543
+		"classic_default_state": 0
 	},
 	"6931": {
 		"bedrock_name": "minecraft:monster_egg",
-		"java_default_state": 6544
+		"classic_default_state": 0
 	},
 	"6932": {
 		"bedrock_name": "minecraft:monster_egg",
-		"java_default_state": 6545
+		"classic_default_state": 0
 	},
 	"6933": {
 		"bedrock_name": "minecraft:monster_egg",
-		"java_default_state": 6546
+		"classic_default_state": 0
 	},
 	"6934": {
 		"bedrock_name": "minecraft:monster_egg",
-		"java_default_state": 6547
+		"classic_default_state": 0
 	},
 	"6935": {
 		"bedrock_name": "minecraft:monster_egg",
-		"java_default_state": 6548
+		"classic_default_state": 0
 	},
 	"13062": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6549
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13058": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6549
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13059": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6549
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13060": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6549
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13061": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6549
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13063": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6549
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13051": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6586
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13057": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6590
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13054": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6594
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13049": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6601
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13050": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6602
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13055": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6605
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13056": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6606
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13052": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6609
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13053": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6610
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"13048": {
 		"bedrock_name": "minecraft:brown_mushroom_block",
-		"java_default_state": 6612
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"5993": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6613
+		"classic_default_state": 21
 	},
 	"5989": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6613
+		"classic_default_state": 21
 	},
 	"5990": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6613
+		"classic_default_state": 21
 	},
 	"5991": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6613
+		"classic_default_state": 21
 	},
 	"5992": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6613
+		"classic_default_state": 21
 	},
 	"5982": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6650
+		"classic_default_state": 21
 	},
 	"5988": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6654
+		"classic_default_state": 21
 	},
 	"5985": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6658
+		"classic_default_state": 21
 	},
 	"5980": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6665
+		"classic_default_state": 21
 	},
 	"5981": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6666
+		"classic_default_state": 21
 	},
 	"5986": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6669
+		"classic_default_state": 21
 	},
 	"5987": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6670
+		"classic_default_state": 21
 	},
 	"5983": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6673
+		"classic_default_state": 21
 	},
 	"5984": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6674
+		"classic_default_state": 21
 	},
 	"5979": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6676
+		"classic_default_state": 21
 	},
 	"5994": {
 		"bedrock_name": "minecraft:red_mushroom_block",
-		"java_default_state": 6677
+		"classic_default_state": 21
 	},
 	"8174": {
 		"bedrock_name": "minecraft:iron_bars",
-		"java_default_state": 6743,
-		"java_waterlogged_state": 6741
+		"classic_default_state": 42
 	},
 	"12392": {
 		"bedrock_name": "minecraft:chain",
-		"java_default_state": 6774,
-		"java_waterlogged_state": 6773
+		"classic_default_state": 42
 	},
 	"12391": {
 		"bedrock_name": "minecraft:chain",
-		"java_default_state": 6776,
-		"java_waterlogged_state": 6775
+		"classic_default_state": 42
 	},
 	"12393": {
 		"bedrock_name": "minecraft:chain",
-		"java_default_state": 6778,
-		"java_waterlogged_state": 6777
+		"classic_default_state": 42
 	},
 	"9023": {
 		"bedrock_name": "minecraft:glass_pane",
-		"java_default_state": 6781,
-		"java_waterlogged_state": 6779
+		"classic_default_state": 20
 	},
 	"7446": {
 		"bedrock_name": "minecraft:pumpkin",
-		"java_default_state": 6811
+		"classic_default_state": 22
 	},
 	"7444": {
 		"bedrock_name": "minecraft:pumpkin",
-		"java_default_state": 6811
+		"classic_default_state": 22
 	},
 	"7445": {
 		"bedrock_name": "minecraft:pumpkin",
-		"java_default_state": 6811
+		"classic_default_state": 22
 	},
 	"7447": {
 		"bedrock_name": "minecraft:pumpkin",
-		"java_default_state": 6811
+		"classic_default_state": 22
 	},
 	"1153": {
 		"bedrock_name": "minecraft:melon_block",
-		"java_default_state": 6812
+		"classic_default_state": 24
 	},
 	"11464": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11449": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11450": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11451": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11452": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11453": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11454": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11455": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11456": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11457": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11458": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11459": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11460": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11461": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11462": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11463": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11465": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11466": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11467": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11468": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11469": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11470": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11471": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11473": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11474": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11475": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11476": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11477": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11478": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11479": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11481": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11482": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11483": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11484": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11485": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11486": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11487": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6813
+		"classic_default_state": 6
 	},
 	"11472": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6814
+		"classic_default_state": 6
 	},
 	"11480": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6815
+		"classic_default_state": 6
 	},
 	"11488": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6816
+		"classic_default_state": 6
 	},
 	"8588": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8573": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8574": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8575": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8576": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8577": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8578": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8579": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8580": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8581": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8582": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8583": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8584": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8585": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8586": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8587": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8589": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8590": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8591": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8592": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8593": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8594": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8595": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8597": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8598": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8599": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8600": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8601": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8602": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8603": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8605": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8606": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8607": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8608": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8609": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8610": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8611": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6817
+		"classic_default_state": 6
 	},
 	"8596": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6818
+		"classic_default_state": 6
 	},
 	"8604": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6819
+		"classic_default_state": 6
 	},
 	"8612": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6820
+		"classic_default_state": 6
 	},
 	"11441": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6821
+		"classic_default_state": 6
 	},
 	"11442": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6822
+		"classic_default_state": 6
 	},
 	"11443": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6823
+		"classic_default_state": 6
 	},
 	"11444": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6824
+		"classic_default_state": 6
 	},
 	"11445": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6825
+		"classic_default_state": 6
 	},
 	"11446": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6826
+		"classic_default_state": 6
 	},
 	"11447": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6827
+		"classic_default_state": 6
 	},
 	"11448": {
 		"bedrock_name": "minecraft:pumpkin_stem",
-		"java_default_state": 6828
+		"classic_default_state": 6
 	},
 	"8565": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6829
+		"classic_default_state": 6
 	},
 	"8566": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6830
+		"classic_default_state": 6
 	},
 	"8567": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6831
+		"classic_default_state": 6
 	},
 	"8568": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6832
+		"classic_default_state": 6
 	},
 	"8569": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6833
+		"classic_default_state": 6
 	},
 	"8570": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6834
+		"classic_default_state": 6
 	},
 	"8571": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6835
+		"classic_default_state": 6
 	},
 	"8572": {
 		"bedrock_name": "minecraft:melon_stem",
-		"java_default_state": 6836
+		"classic_default_state": 6
 	},
 	"2376": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6837
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2374": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6838
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2375": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6841
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2373": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6842
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2372": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6845
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2370": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6846
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2371": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6849
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2369": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6850
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2368": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6853
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2366": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6854
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2367": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6857
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2365": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6858
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2364": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6861
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2362": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6862
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2363": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6865
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"2361": {
 		"bedrock_name": "minecraft:vine",
-		"java_default_state": 6866
+		"classic_default_state": 6,
+		"classic_default_state1": 51
 	},
 	"9507": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6871,
-		"java_waterlogged_state": 6869
+		"classic_default_state": 40
 	},
 	"9499": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6872,
-		"java_waterlogged_state": 6870
+		"classic_default_state": 40
 	},
 	"9505": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6875,
-		"java_waterlogged_state": 6873
+		"classic_default_state": 40
 	},
 	"9497": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6876,
-		"java_waterlogged_state": 6874
+		"classic_default_state": 40
 	},
 	"9503": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6879,
-		"java_waterlogged_state": 6877
+		"classic_default_state": 40
 	},
 	"9495": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6880,
-		"java_waterlogged_state": 6878
+		"classic_default_state": 40
 	},
 	"9501": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6883,
-		"java_waterlogged_state": 6881
+		"classic_default_state": 40
 	},
 	"9493": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6884,
-		"java_waterlogged_state": 6882
+		"classic_default_state": 40
 	},
 	"9491": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6887,
-		"java_waterlogged_state": 6885
+		"classic_default_state": 40
 	},
 	"9483": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6888,
-		"java_waterlogged_state": 6886
+		"classic_default_state": 40
 	},
 	"9489": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6891,
-		"java_waterlogged_state": 6889
+		"classic_default_state": 40
 	},
 	"9481": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6892,
-		"java_waterlogged_state": 6890
+		"classic_default_state": 40
 	},
 	"9487": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6895,
-		"java_waterlogged_state": 6893
+		"classic_default_state": 40
 	},
 	"9479": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6896,
-		"java_waterlogged_state": 6894
+		"classic_default_state": 40
 	},
 	"9485": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6899,
-		"java_waterlogged_state": 6897
+		"classic_default_state": 40
 	},
 	"9477": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6900,
-		"java_waterlogged_state": 6898
+		"classic_default_state": 40
 	},
 	"9475": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6903,
-		"java_waterlogged_state": 6901
+		"classic_default_state": 40
 	},
 	"9467": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6904,
-		"java_waterlogged_state": 6902
+		"classic_default_state": 40
 	},
 	"9473": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6907,
-		"java_waterlogged_state": 6905
+		"classic_default_state": 40
 	},
 	"9465": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6908,
-		"java_waterlogged_state": 6906
+		"classic_default_state": 40
 	},
 	"9471": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6911,
-		"java_waterlogged_state": 6909
+		"classic_default_state": 40
 	},
 	"9463": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6912,
-		"java_waterlogged_state": 6910
+		"classic_default_state": 40
 	},
 	"9469": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6915,
-		"java_waterlogged_state": 6913
+		"classic_default_state": 40
 	},
 	"9461": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6916,
-		"java_waterlogged_state": 6914
+		"classic_default_state": 40
 	},
 	"9459": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6919,
-		"java_waterlogged_state": 6917
+		"classic_default_state": 40
 	},
 	"9451": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6920,
-		"java_waterlogged_state": 6918
+		"classic_default_state": 40
 	},
 	"9457": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6923,
-		"java_waterlogged_state": 6921
+		"classic_default_state": 40
 	},
 	"9449": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6924,
-		"java_waterlogged_state": 6922
+		"classic_default_state": 40
 	},
 	"9455": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6927,
-		"java_waterlogged_state": 6925
+		"classic_default_state": 40
 	},
 	"9447": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6928,
-		"java_waterlogged_state": 6926
+		"classic_default_state": 40
 	},
 	"9453": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6931,
-		"java_waterlogged_state": 6929
+		"classic_default_state": 40
 	},
 	"9445": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6932,
-		"java_waterlogged_state": 6930
+		"classic_default_state": 40
 	},
 	"9506": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6935,
-		"java_waterlogged_state": 6933
+		"classic_default_state": 40
 	},
 	"9498": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6936,
-		"java_waterlogged_state": 6934
+		"classic_default_state": 40
 	},
 	"9504": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6939,
-		"java_waterlogged_state": 6937
+		"classic_default_state": 40
 	},
 	"9496": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6940,
-		"java_waterlogged_state": 6938
+		"classic_default_state": 40
 	},
 	"9502": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6943,
-		"java_waterlogged_state": 6941
+		"classic_default_state": 40
 	},
 	"9494": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6944,
-		"java_waterlogged_state": 6942
+		"classic_default_state": 40
 	},
 	"9500": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6947,
-		"java_waterlogged_state": 6945
+		"classic_default_state": 40
 	},
 	"9492": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6948,
-		"java_waterlogged_state": 6946
+		"classic_default_state": 40
 	},
 	"9490": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6951,
-		"java_waterlogged_state": 6949
+		"classic_default_state": 40
 	},
 	"9482": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6952,
-		"java_waterlogged_state": 6950
+		"classic_default_state": 40
 	},
 	"9488": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6955,
-		"java_waterlogged_state": 6953
+		"classic_default_state": 40
 	},
 	"9480": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6956,
-		"java_waterlogged_state": 6954
+		"classic_default_state": 40
 	},
 	"9486": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6959,
-		"java_waterlogged_state": 6957
+		"classic_default_state": 40
 	},
 	"9478": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6960,
-		"java_waterlogged_state": 6958
+		"classic_default_state": 40
 	},
 	"9484": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6963,
-		"java_waterlogged_state": 6961
+		"classic_default_state": 40
 	},
 	"9476": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6964,
-		"java_waterlogged_state": 6962
+		"classic_default_state": 40
 	},
 	"9474": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6967,
-		"java_waterlogged_state": 6965
+		"classic_default_state": 40
 	},
 	"9466": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6968,
-		"java_waterlogged_state": 6966
+		"classic_default_state": 40
 	},
 	"9472": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6971,
-		"java_waterlogged_state": 6969
+		"classic_default_state": 40
 	},
 	"9464": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6972,
-		"java_waterlogged_state": 6970
+		"classic_default_state": 40
 	},
 	"9470": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6975,
-		"java_waterlogged_state": 6973
+		"classic_default_state": 40
 	},
 	"9462": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6976,
-		"java_waterlogged_state": 6974
+		"classic_default_state": 40
 	},
 	"9468": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6979,
-		"java_waterlogged_state": 6977
+		"classic_default_state": 40
 	},
 	"9460": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6980,
-		"java_waterlogged_state": 6978
+		"classic_default_state": 40
 	},
 	"9458": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6983,
-		"java_waterlogged_state": 6981
+		"classic_default_state": 40
 	},
 	"9450": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6984,
-		"java_waterlogged_state": 6982
+		"classic_default_state": 40
 	},
 	"9456": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6987,
-		"java_waterlogged_state": 6985
+		"classic_default_state": 40
 	},
 	"9448": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6988,
-		"java_waterlogged_state": 6986
+		"classic_default_state": 40
 	},
 	"9454": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6991,
-		"java_waterlogged_state": 6989
+		"classic_default_state": 40
 	},
 	"9446": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6992,
-		"java_waterlogged_state": 6990
+		"classic_default_state": 40
 	},
 	"9452": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6995,
-		"java_waterlogged_state": 6993
+		"classic_default_state": 40
 	},
 	"9444": {
 		"bedrock_name": "minecraft:glow_lichen",
-		"java_default_state": 6996,
-		"java_waterlogged_state": 6994
+		"classic_default_state": 40
 	},
 	"102": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 6997
+		"classic_default_state": 5
 	},
 	"98": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 6999
+		"classic_default_state": 5
 	},
 	"94": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7001
+		"classic_default_state": 5
 	},
 	"90": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7003
+		"classic_default_state": 5
 	},
 	"100": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7005
+		"classic_default_state": 5
 	},
 	"96": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7007
+		"classic_default_state": 5
 	},
 	"92": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7009
+		"classic_default_state": 5
 	},
 	"88": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7011
+		"classic_default_state": 5
 	},
 	"101": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7013
+		"classic_default_state": 5
 	},
 	"97": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7015
+		"classic_default_state": 5
 	},
 	"93": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7017
+		"classic_default_state": 5
 	},
 	"89": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7019
+		"classic_default_state": 5
 	},
 	"103": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7021
+		"classic_default_state": 5
 	},
 	"99": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7023
+		"classic_default_state": 5
 	},
 	"95": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7025
+		"classic_default_state": 5
 	},
 	"91": {
 		"bedrock_name": "minecraft:fence_gate",
-		"java_default_state": 7027
+		"classic_default_state": 5
 	},
 	"11730": {
 		"bedrock_name": "minecraft:brick_stairs",
