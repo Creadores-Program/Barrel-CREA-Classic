@@ -1,6 +1,5 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
@@ -39,8 +38,6 @@ public class StartGamePacket implements BedrockPacketTranslator {
         if (!packet.isBlockNetworkIdsHashed()) {
             player.getBedrockClientSession().getPeer().getCodecHelper().setBlockDefinitions(ProxyServer.getInstance().getBlockDefinitions());
         }
-
-        player.getClassicSession().send(new ServerLevelInitializePacket());
     }
 
     @Override
