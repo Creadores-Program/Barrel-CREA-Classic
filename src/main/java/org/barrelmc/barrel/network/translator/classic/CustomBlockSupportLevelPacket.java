@@ -6,6 +6,7 @@ import com.github.steveice10.packetlib.packet.Packet;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientCustomBlockSupportLevelPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerCustomBlockSupportLevelPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 public class CustomBlockSupportLevelPacket implements ClassicPacketTranslator{
     @Override
@@ -14,6 +15,7 @@ public class CustomBlockSupportLevelPacket implements ClassicPacketTranslator{
         player.setCustomBlocksLevel(packet.getSupportLevel());
         player.getClassicSession().send(new ServerCustomBlockSupportLevelPacket(1));
         player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
+        player.getClassicSession().send(new ServerLevelInitializePacket());
         player.startSendingPing();
     }
 }
