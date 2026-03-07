@@ -204,6 +204,8 @@ public class Player extends Vector3 {
     @Getter
     private List<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entitysSpawned = new ObjectArrayList<>();
 
+    private final int MAXLENMSG = 64;
+
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
         this.packetTranslatorManager = new PacketTranslatorManager(this);
         this.classicSession = classicSession;
@@ -384,10 +386,6 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message, int playerId){
-        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(9), this.extensionsClassic)){
-            this.classicSession.send(new ServerChatPacket(playerId, message.replace("§", "&")));
-            return;
-        }
         String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), 63);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
