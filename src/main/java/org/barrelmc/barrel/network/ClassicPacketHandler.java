@@ -10,6 +10,7 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtInfoPack
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
 import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.PacketReceivedEvent;
@@ -49,6 +50,8 @@ public class ClassicPacketHandler extends SessionAdapter {
                     player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
                     player.getClassicSession().send(new ServerLevelInitializePacket());
                     player.startSendingPing();
+                    player.sendWorld();
+                    player.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
                 //}
             }
         } else {

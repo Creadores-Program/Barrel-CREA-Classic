@@ -14,6 +14,7 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPingPacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 //import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.packetlib.Session;
 import io.netty.bootstrap.Bootstrap;
@@ -56,6 +57,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.ConcurrentHashMap;
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.util.zip.GZIPOutputStream;
 
 public class Player extends Vector3 {
 
@@ -115,7 +120,7 @@ public class Player extends Vector3 {
 
     @Setter
     @Getter
-    private boolean isImmobile = false;
+    private boolean isImmobile = true;
 
     @Setter
     @Getter
@@ -427,6 +432,38 @@ public class Player extends Vector3 {
     @Override
     public void setPosition(double x, double y, double z) {
         super.setPosition(x, y, z);
+    }
+
+    public void sendWorld(){
+        byte[] compressedMap = new byte[0];
+        try{
+            compressedMap = compressMap(this.mapClassic);
+        }catch(IOException ex){
+            ex.printStackTrace();
+            return;
+        }
+        int offset = 0;
+        while(offset < compressedMap.length){
+            int length = Math.min(1024, compressedMap.length - offset);
+            byte[] chunk = new byte[length];
+            System.arraycopy(compressedMap, offset, chunk, 0, length);
+            offset += length;
+            int percent = (int) ((100L * offset) / compressedMap.length);
+            player.getClassicSession().send(new ServerLevelDataPacket(chunk, percent));
+        }
+    }
+
+    private byte[] compressMap(byte[] mapData) throws IOException {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        DataOutputStream dos = new DataOutputStream(baos);
+        dos.writeInt(mapData.length);
+        dos.flush();
+        ByteArrayOutputStream gzippedBase = new ByteArrayOutputStream();
+        try (GZIPOutputStream gos = new GZIPOutputStream(gzippedBase)) {
+            gos.write(mapData);
+            gos.finish();
+        }
+        return baos.toByteArray();
     }
 }
 

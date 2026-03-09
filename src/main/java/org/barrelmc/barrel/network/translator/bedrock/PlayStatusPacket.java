@@ -1,6 +1,6 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
@@ -15,10 +15,6 @@ import org.cloudburstmc.protocol.bedrock.data.AuthoritativeMovementMode;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 import org.cloudburstmc.protocol.bedrock.packet.SetLocalPlayerAsInitializedPacket;
 import org.cloudburstmc.protocol.bedrock.packet.TickSyncPacket;
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.util.zip.GZIPOutputStream;
 
 public class PlayStatusPacket implements BedrockPacketTranslator {
 
@@ -40,24 +36,11 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
             if (player.getStartGamePacketCache().getAuthoritativeMovementMode() == AuthoritativeMovementMode.SERVER) {
                 player.startSendingPlayerInput();
             }
-
-            byte[] compressedMap = new byte[0];
-            try{
-                compressedMap = compressMap(player.mapClassic);
-            }catch(IOException ex){
-                ex.printStackTrace();
-            }
-            int offset = 0;
-            while(offset < compressedMap.length){
-                int length = Math.min(1024, compressedMap.length - offset);
-                byte[] chunk = new byte[length];
-                System.arraycopy(compressedMap, offset, chunk, 0, length);
-                offset += length;
-                int percent = (int) ((100L * offset) / compressedMap.length);
-                player.getClassicSession().send(new ServerLevelDataPacket(chunk, percent));
-            }
+            player.getClassicSession().send(new ServerLevelInitializePacket());
+            player.sendWorld();
             player.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
             player.setStatusWorld(StatusWorld.PLAYING);
+            player.setImmobile(false);
             SetLocalPlayerAsInitializedPacket setLocalPlayerAsInitializedPacket = new SetLocalPlayerAsInitializedPacket();
             setLocalPlayerAsInitializedPacket.setRuntimeEntityId(player.getRuntimeEntityId());
             player.getBedrockClientSession().sendPacket(setLocalPlayerAsInitializedPacket);
@@ -73,17 +56,5 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
             }
             player.startForceSpawn();
         }
-    }
-    public byte[] compressMap(byte[] mapData) throws IOException {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        DataOutputStream dos = new DataOutputStream(baos);
-        dos.writeInt(mapData.length);
-        dos.flush();
-        ByteArrayOutputStream gzippedBase = new ByteArrayOutputStream();
-        try (GZIPOutputStream gos = new GZIPOutputStream(gzippedBase)) {
-            gos.write(mapData);
-            gos.finish();
-        }
-        return baos.toByteArray();
     }
 }
