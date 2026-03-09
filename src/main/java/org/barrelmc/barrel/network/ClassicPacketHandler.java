@@ -40,16 +40,16 @@ public class ClassicPacketHandler extends SessionAdapter {
                 ClientIdentificationPacket loginPacket = (ClientIdentificationPacket) packet;
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
-                if(loginPacket.isCPE()){
+                /*if(loginPacket.isCPE()){
                     player.getClassicSession().send(new ServerExtInfoPacket("Barrel Crea Classic", ((short) ProxyServer.getInstance().getExtDatapacks().size())));
                     for(ServerExtEntryPacket extS : ProxyServer.getInstance().getExtDatapacks()){
                         player.getClassicSession().send(extS);
                     }
-                }else{
+                }else{*/
                     player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
                     player.getClassicSession().send(new ServerLevelInitializePacket());
                     player.startSendingPing();
-                }
+                //}
             }
         } else {
             player.getPacketTranslatorManager().translate(packet);
