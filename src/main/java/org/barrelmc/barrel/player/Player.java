@@ -449,7 +449,7 @@ public class Player extends Vector3 {
             System.arraycopy(compressedMap, offset, chunk, 0, length);
             offset += length;
             int percent = (int) ((100L * offset) / compressedMap.length);
-            player.getClassicSession().send(new ServerLevelDataPacket(chunk, percent));
+            this.getClassicSession().send(new ServerLevelDataPacket(chunk, percent));
         }
     }
 
