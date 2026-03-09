@@ -458,10 +458,10 @@ public class Player extends Vector3 {
         DataOutputStream dos = new DataOutputStream(baos);
         dos.writeInt(mapData.length);
         dos.flush();
-        ByteArrayOutputStream gzippedBase = new ByteArrayOutputStream();
-        try (GZIPOutputStream gos = new GZIPOutputStream(gzippedBase)) {
+        try (GZIPOutputStream gos = new GZIPOutputStream(baos)) {
             gos.write(mapData);
             gos.finish();
+            gos.flush();
         }
         return baos.toByteArray();
     }
