@@ -455,9 +455,6 @@ public class Player extends Vector3 {
 
     private byte[] compressMap(byte[] mapData) throws IOException {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        DataOutputStream dos = new DataOutputStream(baos);
-        dos.writeInt(mapData.length);
-        dos.flush();
         try (GZIPOutputStream gos = new GZIPOutputStream(baos)) {
             gos.write(mapData);
             gos.finish();
