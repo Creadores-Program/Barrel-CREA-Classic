@@ -45,7 +45,7 @@ public class Utils {
                     int width = image.getWidth();
                     int height = image.getHeight();
                     int[] pixels = new int[width * height];
-                    image.getRGB(0, 0, width, height, pixels, 0 width);
+                    image.getRGB(0, 0, width, height, pixels, 0, width);
                     for(int y = 0; y < height; y++){
                         for(int x = 0; x < width; x++){
                             int p = pixels[y * width + x];
