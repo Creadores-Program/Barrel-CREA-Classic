@@ -120,7 +120,7 @@ public class Player extends Vector3 {
 
     @Setter
     @Getter
-    private boolean isImmobile = true;
+    private boolean isImmobile = false;
 
     @Setter
     @Getter
