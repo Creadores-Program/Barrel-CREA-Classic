@@ -20,7 +20,7 @@ public class PositionRotationPacket implements ClassicPacketTranslator{
       if (player.isImmobile()) {
           float classicX = Utils.mapCoords(((float) player.getX()), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX()));
           float classicY = (float) player.getY();
-          float classicZ = Utils.mapCoords((player.getZ()), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()));
+          float classicZ = Utils.mapCoords(((float) player.getZ()), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()));
           player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, ((float) player.yaw), ((float) player.pitch)));
           return;
       }
