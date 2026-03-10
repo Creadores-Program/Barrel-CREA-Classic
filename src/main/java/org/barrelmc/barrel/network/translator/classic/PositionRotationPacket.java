@@ -1,6 +1,7 @@
 package org.barrelmc.barrel.network.translator.classic;
 import org.barrelmc.barrel.network.translator.interfaces.ClassicPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.player.StatusWorld;
 import org.barrelmc.barrel.utils.Utils;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.protocol.bedrock.data.AuthoritativeMovementMode;
@@ -12,9 +13,15 @@ import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 public class PositionRotationPacket implements ClassicPacketTranslator{
   @Override
     public void translate(Packet pk, Player player) {
+      if(player.getStatusWorld() == StatusWorld.LOGIN){
+        return;
+      }
       ClientPositionRotationPacket packet = (ClientPositionRotationPacket) pk;
       if (player.isImmobile()) {
-          player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, ((float) player.x), ((float) player.y), ((float) player.z), ((float) player.yaw), ((float) player.pitch)));
+          float classicX = Utils.mapCoords(((float) player.getX()), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX()));
+          float classicY = (float) player.getY();
+          float classicZ = Utils.mapCoords((player.getZ()), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()));
+          player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, ((float) player.yaw), ((float) player.pitch)));
           return;
       }
       player.setOldPosition(player.getVector3f());
