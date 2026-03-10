@@ -40,7 +40,6 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
             player.sendWorld();
             player.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
             player.setStatusWorld(StatusWorld.PLAYING);
-            player.setImmobile(false);
             SetLocalPlayerAsInitializedPacket setLocalPlayerAsInitializedPacket = new SetLocalPlayerAsInitializedPacket();
             setLocalPlayerAsInitializedPacket.setRuntimeEntityId(player.getRuntimeEntityId());
             player.getBedrockClientSession().sendPacket(setLocalPlayerAsInitializedPacket);
