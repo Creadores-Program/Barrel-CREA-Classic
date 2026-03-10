@@ -4,6 +4,9 @@ import java.security.SignatureException;
 import java.util.List;
 import java.util.Base64;
 import java.io.IOException;
+import java.io.ByteArrayInputStream;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -35,7 +38,25 @@ public class Utils {
                 ResponseBody body = response.body();
                 if (body != null) {
                     byte[] imageBytes = body.bytes();
-                    return Base64.getEncoder().encodeToString(imageBytes);
+                    BufferedImage image = ImageIO.read(new ByteArrayInputStream(imageBytes));
+                    int targetWidth = 64;
+                    int targetHeight = 64;
+                    byte[] rgba = new byte[targetWidth * targetHeight * 4];
+                    int width = image.getWidth();
+                    int height = image.getHeight();
+                    int[] pixels = new int[width * height];
+                    image.getRGB(0, 0, width, height, pixels, 0 width);
+                    for(int y = 0; y < height; y++){
+                        for(int x = 0; x < width; x++){
+                            int p = pixels[y * width + x];
+                            int index = (y * targetWidth + x) * 4;
+                            rgba[index] = (byte) ((p >> 16) & 0xFF);
+                            rgba[index + 1] = (byte) ((p >> 8) & 0xFF);
+                            rgba[index + 2] = (byte) (p & 0xFF);
+                            rgba[index + 3] = (byte) ((p >> 24) & 0xFF);
+                        }
+                    }
+                    return Base64.getEncoder().encodeToString(rgba);
                 }
             }
             return ProxyServer.getInstance().getDefaultSkinData();
