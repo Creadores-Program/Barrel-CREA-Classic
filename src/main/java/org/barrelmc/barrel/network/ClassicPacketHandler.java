@@ -38,6 +38,7 @@ public class ClassicPacketHandler extends SessionAdapter {
         //System.out.println("Received Java " + packet.toString());
         if (this.player == null) {
             if (packet instanceof ClientIdentificationPacket) {
+                session.connect(true);
                 ClientIdentificationPacket loginPacket = (ClientIdentificationPacket) packet;
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
