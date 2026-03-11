@@ -1,7 +1,5 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
@@ -36,9 +34,7 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
             if (player.getStartGamePacketCache().getAuthoritativeMovementMode() == AuthoritativeMovementMode.SERVER) {
                 player.startSendingPlayerInput();
             }
-            player.getClassicSession().send(new ServerLevelInitializePacket());
-            player.sendWorld();
-            player.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
+            new Thread(player::sendWorld).start();
             player.setStatusWorld(StatusWorld.PLAYING);
             SetLocalPlayerAsInitializedPacket setLocalPlayerAsInitializedPacket = new SetLocalPlayerAsInitializedPacket();
             setLocalPlayerAsInitializedPacket.setRuntimeEntityId(player.getRuntimeEntityId());
