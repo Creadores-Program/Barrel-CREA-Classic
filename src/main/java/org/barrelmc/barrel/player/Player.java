@@ -15,6 +15,7 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerPingPacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
 //import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.packetlib.Session;
 import io.netty.bootstrap.Bootstrap;
@@ -104,7 +105,7 @@ public class Player extends Vector3 {
     private String traslateAd = "false";
 
     private boolean tickPlayerInputStarted = false;
-    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(4);
+    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(3);
 
     @Setter
     @Getter
@@ -450,7 +451,13 @@ public class Player extends Vector3 {
             offset += length;
             int percent = (int) ((100L * offset) / compressedMap.length);
             this.getClassicSession().send(new ServerLevelDataPacket(chunk, percent));
+            try{
+                Thread.sleep(10);
+            }catch(InterruptedException ex){
+                Thread.currentThread().interrupt();
+            }
         }
+        this.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
     }
 
     private byte[] compressMap(byte[] mapData) throws IOException {
@@ -469,7 +476,7 @@ public class Player extends Vector3 {
 class PlayerPingThread implements Runnable{
     public Player player;
     public void run(){
-        if(player.getClassicSession().isConnected() && player.getClassicSession().getChannel().isActive()){
+        if(player.getClassicSession().isConnected()){
             player.getClassicSession().send(new ServerPingPacket());
         }
     }
