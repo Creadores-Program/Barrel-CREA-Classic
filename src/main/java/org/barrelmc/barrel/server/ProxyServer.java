@@ -31,6 +31,7 @@ import org.cloudburstmc.nbt.NbtType;
 import org.cloudburstmc.nbt.NbtUtils;
 import org.cloudburstmc.protocol.bedrock.codec.BedrockCodec;
 import org.cloudburstmc.protocol.bedrock.codec.v662.Bedrock_v662;
+import org.cloudburstmc.protocol.bedrock.data.EncodingSettings;
 import org.yaml.snakeyaml.Yaml;
 import org.barrelmc.barrel.utils.Logger;
 import org.barrelmc.barrel.utils.nukkit.TextFormat;
@@ -102,6 +103,7 @@ public class ProxyServer {
         }
         loadBlockDefinitions();
         loadDefaultSkin();
+        bedrockPacketCodec.setEncodingSettings(EncodingSettings.UNLIMITED);
         startServer();
     }
 
