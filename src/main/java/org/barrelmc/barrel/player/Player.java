@@ -220,7 +220,7 @@ public class Player extends Vector3 {
     public void startSendingPing(){
         PlayerPingThread playerPingThread = new PlayerPingThread();
         playerPingThread.player = this;
-        playerInputExecutor.scheduleAtFixedRate(playerPingThread, 0, 2, TimeUnit.SECONDS);
+        playerInputExecutor.scheduleAtFixedRate(playerPingThread, 0, 4, TimeUnit.SECONDS);
     }
 
     public void startForceSpawn(){

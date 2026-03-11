@@ -10,6 +10,6 @@ public class NetworkSettingsPacket implements BedrockPacketTranslator {
         org.cloudburstmc.protocol.bedrock.packet.NetworkSettingsPacket packet = (org.cloudburstmc.protocol.bedrock.packet.NetworkSettingsPacket) pk;
         player.getBedrockClientSession().setCompression(packet.getCompressionAlgorithm());
 
-        player.getBedrockClientSession().sendPacketImmediately(player.getLoginPacket());
+        player.getBedrockClientSession().sendPacket(player.getLoginPacket());
     }
 }
