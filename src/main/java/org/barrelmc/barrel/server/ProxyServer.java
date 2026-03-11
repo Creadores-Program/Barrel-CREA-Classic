@@ -59,7 +59,7 @@ public class ProxyServer {
         BedrockCodecHelper codec = new BedrockCodecHelper_v575(Bedrock_v662.ENTITY_DATA, Bedrock_v662.GAME_RULE_TYPES, Bedrock_v662.ITEM_STACK_REQUEST_TYPES, Bedrock_v662.CONTAINER_SLOT_TYPES, Bedrock_v662.PLAYER_ABILITIES, Bedrock_v662.TEXT_PROCESSING_ORIGINS);
         codec.setEncodingSettings(EncodingSettings.CLIENT);
         return codec;
-    });
+    }).build();
 
     @Getter
     private final Path dataPath;
