@@ -104,7 +104,7 @@ public class Player extends Vector3 {
     private String traslateAd = "false";
 
     private boolean tickPlayerInputStarted = false;
-    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(3);
+    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(4);
 
     @Setter
     @Getter
@@ -469,7 +469,7 @@ public class Player extends Vector3 {
 class PlayerPingThread implements Runnable{
     public Player player;
     public void run(){
-        if(player.getClassicSession().isConnected()){
+        if(player.getClassicSession().isConnected() && player.getClassicSession().getChannel().isActive()){
             player.getClassicSession().send(new ServerPingPacket());
         }
     }
