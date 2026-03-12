@@ -15,6 +15,7 @@ import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.PacketReceivedEvent;
 import com.github.steveice10.packetlib.event.session.PacketSentEvent;
+import com.github.steveice10.packetlib.event.session.DisconnectingEvent;
 import com.github.steveice10.packetlib.event.session.SessionAdapter;
 import com.github.steveice10.packetlib.packet.Packet;
 import org.barrelmc.barrel.player.Player;
@@ -32,10 +33,18 @@ public class ClassicPacketHandler extends SessionAdapter {
     }
 
     @Override
+    public void disconnecting(DisconnectingEvent event){
+        if(event.getCause() == null){
+            return;
+        }
+        ProxyServer.getInstance().getLogger().error("An error occurred!", event.getCause());
+    }
+
+    @Override
     public void packetReceived(PacketReceivedEvent event) {
         Session session = event.getSession();
         Packet packet = event.getPacket();
-        //System.out.println("Received Java " + packet.toString());
+        //System.out.println("Received Classic " + packet.toString());
         if (this.player == null) {
             if (packet instanceof ClientIdentificationPacket) {
                 ClientIdentificationPacket loginPacket = (ClientIdentificationPacket) packet;
