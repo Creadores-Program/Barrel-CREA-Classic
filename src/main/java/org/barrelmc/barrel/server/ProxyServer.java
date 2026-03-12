@@ -31,7 +31,7 @@ import org.cloudburstmc.nbt.NbtType;
 import org.cloudburstmc.nbt.NbtUtils;
 import org.cloudburstmc.protocol.bedrock.codec.BedrockCodec;
 import org.cloudburstmc.protocol.bedrock.codec.BedrockCodecHelper;
-import org.cloudburstmc.protocol.bedrock.codec.v575.BedrockCodecHelper_v575;
+import org.cloudburstmc.protocol.bedrock.codec.BaseBedrockCodecHelper;
 import org.cloudburstmc.protocol.bedrock.codec.v662.Bedrock_v662;
 import org.cloudburstmc.protocol.bedrock.data.EncodingSettings;
 import org.yaml.snakeyaml.Yaml;
@@ -56,9 +56,9 @@ public class ProxyServer {
     private final Map<String, Player> bedrockPlayers = new ConcurrentHashMap<>();
     @Getter
     private final BedrockCodec bedrockPacketCodec = Bedrock_v662.CODEC.toBuilder().helper(()->{ 
-        BedrockCodecHelper codec = new BedrockCodecHelper_v575(Bedrock_v662.ENTITY_DATA, Bedrock_v662.GAME_RULE_TYPES, Bedrock_v662.ITEM_STACK_REQUEST_TYPES, Bedrock_v662.CONTAINER_SLOT_TYPES, Bedrock_v662.PLAYER_ABILITIES, Bedrock_v662.TEXT_PROCESSING_ORIGINS);
+        BaseBedrockCodecHelper codec = (BaseBedrockCodecHelper) Bedrock_v662.CODEC.createHelper();
         codec.setEncodingSettings(EncodingSettings.CLIENT);
-        return codec;
+        return (BedrockCodecHelper) codec;
     }).build();
 
     @Getter
