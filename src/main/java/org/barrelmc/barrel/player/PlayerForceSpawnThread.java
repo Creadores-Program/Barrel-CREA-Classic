@@ -8,7 +8,6 @@ import org.cloudburstmc.math.vector.Vector3i;
 import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
 import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 
 public class PlayerForceSpawnThread implements Runnable{
@@ -22,8 +21,7 @@ public class PlayerForceSpawnThread implements Runnable{
             forceSpawn = true;
             return;
         }
-        player.sendWorld();
-        player.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
+        new Thread(player::sendWorld).start();
         if(player.getStatusWorld() == StatusWorld.CHANGE_DIMENSION){
             PlayerActionPacket playerActionPacket = new PlayerActionPacket();
             playerActionPacket.setAction(PlayerActionType.DIMENSION_CHANGE_SUCCESS);
