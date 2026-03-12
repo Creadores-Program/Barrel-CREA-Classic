@@ -10,6 +10,7 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtInfoPack
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
+import com.github.steveice10.mc.classic.protocol.ClassicConstants;
 import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.PacketReceivedEvent;
@@ -37,8 +38,8 @@ public class ClassicPacketHandler extends SessionAdapter {
         //System.out.println("Received Java " + packet.toString());
         if (this.player == null) {
             if (packet instanceof ClientIdentificationPacket) {
-                session.connect(true);
                 ClientIdentificationPacket loginPacket = (ClientIdentificationPacket) packet;
+                session.setFlag(ClassicConstants.USERNAME_KEY, packet.getUsername());
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
                 /*if(loginPacket.isCPE()){
@@ -47,7 +48,7 @@ public class ClassicPacketHandler extends SessionAdapter {
                         player.getClassicSession().send(extS);
                     }
                 }else{*/
-                    player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
+                    player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), "Connect to Bedrock Server", UserType.NOT_OP));
                     player.getClassicSession().send(new ServerLevelInitializePacket());
                     player.startSendingPing();
                 //}
