@@ -198,10 +198,9 @@ public class ProxyServer {
                 String serverUrl = server.getGlobalFlag(ClassicConstants.SERVER_URL_KEY);
                 getLogger().info("Server is public at: " + serverUrl);
             }).start();
-        }else{
-            getLogger().info("BarrelProxy " + TextFormat.GREEN.getAnsiCode() + "CREA " + TextFormat.AQUA.getAnsiCode() + "Classic" + TextFormat.RESET.getAnsiCode() + " is running on [" + this.config.getBindAddress() + ":" + this.config.getPort() + "]");
-            getLogger().info("Done!");
         }
+        getLogger().info("BarrelProxy " + TextFormat.GREEN.getAnsiCode() + "CREA " + TextFormat.AQUA.getAnsiCode() + "Classic" + TextFormat.RESET.getAnsiCode() + " is running on [" + this.config.getBindAddress() + ":" + this.config.getPort() + "]");
+        getLogger().info("Done!");
     }
 
     public Player getPlayerByName(String username) {
