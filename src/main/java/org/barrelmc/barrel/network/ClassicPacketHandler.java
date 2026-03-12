@@ -39,7 +39,7 @@ public class ClassicPacketHandler extends SessionAdapter {
         if (this.player == null) {
             if (packet instanceof ClientIdentificationPacket) {
                 ClientIdentificationPacket loginPacket = (ClientIdentificationPacket) packet;
-                session.setFlag(ClassicConstants.USERNAME_KEY, packet.getUsername());
+                session.setFlag(ClassicConstants.USERNAME_KEY, loginPacket.getUsername());
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
                 /*if(loginPacket.isCPE()){
