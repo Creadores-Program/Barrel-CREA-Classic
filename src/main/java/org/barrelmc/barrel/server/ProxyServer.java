@@ -189,8 +189,19 @@ public class ProxyServer {
         });
         getLogger().info("Binding to " + this.config.getBindAddress() + " on port " + this.config.getPort());
         server.bind();
-        getLogger().info("BarrelProxy " + TextFormat.GREEN.getAnsiCode() + "CREA " + TextFormat.AQUA.getAnsiCode() + "Classic" + TextFormat.RESET.getAnsiCode() + " is running on [" + this.config.getBindAddress() + ":" + this.config.getPort() + "]");
-        getLogger().info("Done!");
+        if(this.config.getPremiumPlayerClassic()){
+            getLogger().info("Waiting for Heartbeat URL...");
+            new Thread(()->{
+                while(!server.hasGlobalFlag(ClassicConstants.SERVER_URL_KEY)) {
+                    try { Thread.sleep(250); } catch(InterruptedException e) {}
+                }
+                String serverUrl = server.getGlobalFlag(ClassicConstants.SERVER_URL_KEY);
+                getLogger().info("Server is public at: " + serverUrl);
+            }).start();
+        }else{
+            getLogger().info("BarrelProxy " + TextFormat.GREEN.getAnsiCode() + "CREA " + TextFormat.AQUA.getAnsiCode() + "Classic" + TextFormat.RESET.getAnsiCode() + " is running on [" + this.config.getBindAddress() + ":" + this.config.getPort() + "]");
+            getLogger().info("Done!");
+        }
     }
 
     public Player getPlayerByName(String username) {
