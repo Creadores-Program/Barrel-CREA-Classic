@@ -61,6 +61,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.zip.GZIPOutputStream;
 
 public class Player extends Vector3 {
@@ -246,7 +247,7 @@ public class Player extends Vector3 {
     private void offlineLogin(ClientIdentificationPacket classicLoginPacket) {
         this.xuid = "";
         this.username = this.classicUsername = classicLoginPacket.getUsername();
-        this.UUID = java.util.UUID.nameUUIDFromBytes("CC"+this.classicUsername).toString();
+        this.UUID = java.util.UUID.nameUUIDFromBytes(("CC"+this.classicUsername).getBytes(StandardCharsets.UTF_8)).toString();
         Config config = ProxyServer.getInstance().getConfig();
         InetSocketAddress bedrockAddress = new InetSocketAddress(config.getBedrockAddress(), config.getBedrockPort());
         try {
