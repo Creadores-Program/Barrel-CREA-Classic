@@ -11,7 +11,7 @@ import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 public class SetSpawnPositionPacket implements BedrockPacketTranslator {
     @Override
     public void translate(BedrockPacket pk, Player player) {
-        if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(14), player.getExtensionsClassic())){
+        if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(13), player.getExtensionsClassic())){
           return;
         }
         org.cloudburstmc.protocol.bedrock.packet.SetSpawnPositionPacket packet = (org.cloudburstmc.protocol.bedrock.packet.SetSpawnPositionPacket) pk;

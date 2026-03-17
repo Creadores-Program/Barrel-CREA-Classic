@@ -92,10 +92,9 @@ public class ProxyServer {
         add(new ServerExtEntryPacket(1, ExtNames.LONGERMESSAGES));//9
         add(new ServerExtEntryPacket(1, ExtNames.BULKBLOCKUPDATE));//10
         add(new ServerExtEntryPacket(1, ExtNames.PLAYERCLICK));//11
-        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYPOSITIONS));//12
-        add(new ServerExtEntryPacket(1, ExtNames.INSTANTMOTD));//13
-        add(new ServerExtEntryPacket(1, ExtNames.SETSPAWNPOINT));//14
-        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYTELEPORT));//15
+        add(new ServerExtEntryPacket(1, ExtNames.INSTANTMOTD));//12
+        add(new ServerExtEntryPacket(1, ExtNames.SETSPAWNPOINT));//13
+        add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYTELEPORT));//14
     }};
 
     public ProxyServer(String dataPath) {
