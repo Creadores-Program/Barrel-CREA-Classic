@@ -4,6 +4,7 @@ import com.github.steveice10.packetlib.packet.Packet;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerCustomBlockSupportLevelPacket;
 import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 import org.barrelmc.barrel.network.translator.interfaces.ClassicPacketTranslator;
 import org.barrelmc.barrel.player.Player;
@@ -23,6 +24,8 @@ public class ExtEntryPacket implements ClassicPacketTranslator {
             player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
             player.getClassicSession().send(new ServerLevelInitializePacket());
             player.startSendingPing();
+            return;
         }
+        player.getClassicSession().send(new ServerCustomBlockSupportLevelPacket(1));
     }
 }
