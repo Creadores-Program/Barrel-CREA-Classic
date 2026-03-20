@@ -12,7 +12,7 @@ public class CustomBlockSupportLevelPacket implements ClassicPacketTranslator{
     public void translate(Packet pk, Player player) {
         ClientCustomBlockSupportLevelPacket packet = (ClientCustomBlockSupportLevelPacket) pk;
         player.setCustomBlocksLevel(packet.getSupportLevel());
-        player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
+        player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), "Connect to Bedrock Server", UserType.NOT_OP));
         player.getClassicSession().send(new ServerLevelInitializePacket());
         player.startSendingPing();
     }
