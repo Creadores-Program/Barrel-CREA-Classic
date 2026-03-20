@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Base64;
 import java.io.IOException;
 import java.io.ByteArrayInputStream;
+import java.text.Normalizer;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import okhttp3.OkHttpClient;
@@ -63,6 +64,25 @@ public class Utils {
         } catch (IOException | IllegalArgumentException e) {
             return ProxyServer.getInstance().getDefaultSkinData();
         }
+    }
+
+    public static String sanitizeText(String text){
+        if(text == null){
+            return "";
+        }
+        String normalized = Normalizer.normalize(text, Normalizer.Form.NFD);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < normalized.length(); i++) {
+            char c = normalized.charAt(i);
+            if (Character.getType(c) != Character.NON_SPACING_MARK) {
+                if (c >= 32 && c <= 126) {
+                    sb.append(c);
+                } else if (c == 'ñ' || c == 'Ñ') {
+                    sb.append(c == 'ñ' ? 'n' : 'N');
+                }
+            }
+        }
+        return sb.toString();
     }
 
     public static int mapCoords(int val, int minOrig, int maxOrig, int minDest, int maxDest){

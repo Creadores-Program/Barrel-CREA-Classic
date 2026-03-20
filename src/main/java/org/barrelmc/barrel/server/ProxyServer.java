@@ -95,6 +95,7 @@ public class ProxyServer {
         add(new ServerExtEntryPacket(1, ExtNames.INSTANTMOTD));//12
         add(new ServerExtEntryPacket(1, ExtNames.SETSPAWNPOINT));//13
         add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYTELEPORT));//14
+        add(new ServerExtEntryPacket(1, ExtNames.FULLCP437));//15
     }};
 
     public ProxyServer(String dataPath) {

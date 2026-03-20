@@ -393,7 +393,10 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message, int playerId){
-        String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), 63);
+        if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(15), this.extensionsClassic)){
+            message = Utils.sanitizeText(message);
+        }
+        String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), 64);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;
