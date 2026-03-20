@@ -9,7 +9,7 @@ public class BiomeDefinitionListPacket implements BedrockPacketTranslator {
     @Override
     public void translate(BedrockPacket pk, Player player) {
         RequestChunkRadiusPacket chunkRadiusPacket = new RequestChunkRadiusPacket();
-        chunkRadiusPacket.setRadius(16);
+        chunkRadiusPacket.setRadius(18);
         player.getBedrockClientSession().sendPacketImmediately(chunkRadiusPacket);
     }
 }
