@@ -24,8 +24,14 @@ public class PositionRotationPacket implements ClassicPacketTranslator{
           player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, ((float) player.yaw), ((float) player.pitch)));
           return;
       }
+      float bedrockX = Utils.mapCoords(packet.getX(), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX()), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()));
+      float bedrockZ = Utils.mapCoords(packet.getZ(), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()));
+      if(player.getPosition().getX() == bedrockX && player.getPosition().getY() == packet.getY() && player.getPosition().getZ() == bedrockZ && player.getYaw() == packet.getYaw() && player.getPitch() == packet.getPitch()){
+        return;
+      }
       player.setOldPosition(player.getVector3f());
-      player.setPosition(Utils.mapCoords(packet.getX(), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX()), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX())), packet.getY(), Utils.mapCoords(packet.getZ(), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ())));
+      player.setPosition(bedrockX, packet.getY(), bedrockZ);
+      player.setRotation(packet.getYaw(), packet.getPitch());
       if (player.getStartGamePacketCache().getAuthoritativeMovementMode() == AuthoritativeMovementMode.CLIENT) {
         MovePlayerPacket movePlayerPacket = new MovePlayerPacket();
         movePlayerPacket.setRuntimeEntityId(player.getRuntimeEntityId());
