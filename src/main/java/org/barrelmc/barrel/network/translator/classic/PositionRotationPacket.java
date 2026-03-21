@@ -26,19 +26,21 @@ public class PositionRotationPacket implements ClassicPacketTranslator{
       }
       float bedrockX = Utils.mapCoords(packet.getX(), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX()), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()));
       float bedrockZ = Utils.mapCoords(packet.getZ(), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()));
-      if(player.getPosition().getX() == bedrockX && player.getPosition().getY() == packet.getY() && player.getPosition().getZ() == bedrockZ && player.getYaw() == packet.getYaw() && player.getPitch() == packet.getPitch()){
+      Vector3f pos = player.getVector3f();
+      if(pos.getX() == bedrockX && pos.getY() == packet.getY() && pos.getZ() == bedrockZ && player.getYaw() == packet.getYaw() && player.getPitch() == packet.getPitch()){
         return;
       }
-      player.setOldPosition(player.getVector3f());
+      player.setOldPosition(pos);
       player.setPosition(bedrockX, packet.getY(), bedrockZ);
       player.setRotation(packet.getYaw(), packet.getPitch());
       if (player.getStartGamePacketCache().getAuthoritativeMovementMode() == AuthoritativeMovementMode.CLIENT) {
         MovePlayerPacket movePlayerPacket = new MovePlayerPacket();
         movePlayerPacket.setRuntimeEntityId(player.getRuntimeEntityId());
-        movePlayerPacket.setPosition(player.getVector3f());
+        Vector3f npos = player.getVector3f();
+        movePlayerPacket.setPosition(npos);
         movePlayerPacket.setRotation(Vector3f.from(player.getPitch(), player.getYaw(), player.getYaw()));
         movePlayerPacket.setMode(MovePlayerPacket.Mode.NORMAL);
-        movePlayerPacket.setOnGround(player.getOldPosition().getY() == player.getVector3f().getY());
+        movePlayerPacket.setOnGround(player.getOldPosition().getY() == npos.getY());
         movePlayerPacket.setRidingRuntimeEntityId(0);
         movePlayerPacket.setTeleportationCause(MovePlayerPacket.TeleportationCause.UNKNOWN);
         movePlayerPacket.setEntityType(0);
