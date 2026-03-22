@@ -7,11 +7,7 @@ import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
 import org.cloudburstmc.math.vector.Vector3f;
-import org.cloudburstmc.protocol.bedrock.data.entity.EntityDataTypes;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
-
-import java.util.EnumSet;
-import java.util.UUID;
 
 public class AddPlayerPacket implements BedrockPacketTranslator {
 

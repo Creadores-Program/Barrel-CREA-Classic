@@ -7,7 +7,6 @@ import org.barrelmc.barrel.utils.Utils;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.protocol.bedrock.data.Ability;
 import org.cloudburstmc.protocol.bedrock.data.AbilityLayer;
-import org.cloudburstmc.protocol.bedrock.data.GameType;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
 import java.util.Set;

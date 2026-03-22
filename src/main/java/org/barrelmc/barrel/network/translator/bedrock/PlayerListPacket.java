@@ -8,10 +8,6 @@ import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
-import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.UUID;
-
 public class PlayerListPacket implements BedrockPacketTranslator {
 
     @Override

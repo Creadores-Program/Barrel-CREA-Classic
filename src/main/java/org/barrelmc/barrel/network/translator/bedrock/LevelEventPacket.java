@@ -3,9 +3,9 @@ package org.barrelmc.barrel.network.translator.bedrock;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvSetWeatherTypePacket;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.player.StatusWorld;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
-import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.protocol.bedrock.data.LevelEvent;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
@@ -21,10 +21,18 @@ public class LevelEventPacket implements BedrockPacketTranslator {
         switch((LevelEvent) packet.getType()){
             case START_RAINING:
             case START_THUNDERSTORM:
+                if(player.getStatusWorld() == StatusWorld.LOGIN){
+                    player.getCpePacketsQueue().add(new ServerEnvSetWeatherTypePacket(1));
+                    return;
+                }
                 player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(1));
                 break;
             case STOP_RAINING:
             case STOP_THUNDERSTORM:
+                if(player.getStatusWorld() == StatusWorld.LOGIN){
+                    player.getCpePacketsQueue().add(new ServerEnvSetWeatherTypePacket(0));
+                    return;
+                }
                 player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(0));
                 break;
         }

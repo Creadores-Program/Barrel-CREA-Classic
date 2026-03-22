@@ -21,10 +21,7 @@ import org.cloudburstmc.protocol.common.util.VarInts;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.BitSet;
-import java.util.Collections;
 
 public class LevelChunkPacket implements BedrockPacketTranslator {
 

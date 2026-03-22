@@ -3,6 +3,7 @@ package org.barrelmc.barrel.network.translator.bedrock;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetSpawnpointPacket;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
+import org.barrelmc.barrel.player.StatusWorld;
 import org.barrelmc.barrel.utils.Utils;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.math.vector.Vector3i;
@@ -19,6 +20,9 @@ public class SetSpawnPositionPacket implements BedrockPacketTranslator {
         int classicX = Utils.mapCoords(pos.getX(), player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX());
         int classicY = pos.getY();
         int classicZ = Utils.mapCoords(pos.getZ(), player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ());
+        if(player.getStatusWorld() == StatusWorld.LOGIN){
+            player.getCpePacketsQueue().add(new ServerSetSpawnpointPacket(classicX, classicY, classicZ, ((int) player.yaw), ((int) player.pitch)));
+        }
         player.getClassicSession().send(new ServerSetSpawnpointPacket(classicX, classicY, classicZ, ((int) player.yaw), ((int) player.pitch)));
     }
 }

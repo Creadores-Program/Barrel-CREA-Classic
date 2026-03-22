@@ -16,6 +16,7 @@ import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificat
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
+import com.github.steveice10.packetlib.packet.Packet;
 //import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.packetlib.Session;
 import io.netty.bootstrap.Bootstrap;
@@ -181,6 +182,9 @@ public class Player extends Vector3 {
     @Getter
     @Setter
     private StatusWorld statusWorld = StatusWorld.LOGIN;
+
+    @Getter
+    private List<Packet> cpePacketsQueue = new ObjectArrayList<>();
 
     @Getter
     private PlayerForceSpawnThread playerForceSpawnThread;

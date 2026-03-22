@@ -2,6 +2,7 @@ package org.barrelmc.barrel.network.translator.bedrock;
 
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
+import com.github.steveice10.packetlib.packet.Packet;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.player.StatusWorld;
@@ -46,6 +47,11 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
             float classicY = pos.getY();
             float classicZ = Utils.mapCoords(pos.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()));
             player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, rotation.getX(), rotation.getY()));
+            if(player.getCpePacketsQueue().size() > 0){
+                for(Packet pkq : player.getCpePacketsQueue()){
+                    player.getClassicSession().send(pkq);
+                }
+            }
             if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
                 player.sendMessage("GameMod: " + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
             }
