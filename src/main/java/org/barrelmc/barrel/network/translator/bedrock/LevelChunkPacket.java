@@ -125,7 +125,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         continue;
                     }
                     for (int y = 0; y < 16; y++) {
-                        int worldY = (sectionIndex << 4) + y;
+                        int worldY = ((sectionIndex << 4) + y) - 64;
                         if(player.getMaxPosBedrock().getY() < worldY || player.getMinPosBedrock().getY() > worldY){
                             continue;
                         }
