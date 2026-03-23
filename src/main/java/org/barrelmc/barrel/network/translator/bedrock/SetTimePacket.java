@@ -2,7 +2,6 @@ package org.barrelmc.barrel.network.translator.bedrock;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
-import org.barrelmc.barrel.player.StatusWorld;
 import org.barrelmc.barrel.utils.Utils;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
@@ -44,17 +43,7 @@ public class SetTimePacket implements BedrockPacketTranslator {
       color4 = new ServerEnvColorsPacket(4, lerp(255, 50, timep), lerp(120, 50, timep), lerp(50, 80, timep));
     }
 
-    if(player.getStatusWorld() == StatusWorld.LOGIN){
-      player.getCpePacketsQueue().add(color1);
-      player.getCpePacketsQueue().add(color2);
-      player.getCpePacketsQueue().add(color3);
-      player.getCpePacketsQueue().add(color4);
-      return;
-    }
-    player.getClassicSession().send(color1);
-    player.getClassicSession().send(color2);
-    player.getClassicSession().send(color3);
-    player.getClassicSession().send(color4);
+    player.getEnvCpe().updateAmbient(color1, color2, color3, color4);
   }
   private int lerp(int start, int end, int time){
     return Math.round(start + (end - start) * time);

@@ -106,6 +106,9 @@ public class Player extends Vector3 {
     @Getter
     private String traslateAd = "false";
 
+    @Getter
+    private EnvCPE envCpe = null;
+
     private boolean tickPlayerInputStarted = false;
     private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(3);
 
@@ -218,6 +221,7 @@ public class Player extends Vector3 {
     private final int MAXLENMSG = 64;
 
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
+        this.envCpe = new EnvCPE(this);
         this.packetTranslatorManager = new PacketTranslatorManager(this);
         this.classicSession = classicSession;
         this.offlineLogin(loginPacket);
@@ -400,7 +404,7 @@ public class Player extends Vector3 {
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(15), this.extensionsClassic)){
             message = Utils.sanitizeText(message);
         }
-        String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), 64);
+        String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), MAXLENMSG);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;

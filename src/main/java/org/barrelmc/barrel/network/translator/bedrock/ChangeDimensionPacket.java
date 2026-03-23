@@ -22,38 +22,26 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
         switch(packet.getDimension()){
             case 0://Overworld
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
-                    player.getClassicSession().send(new ServerEnvColorsPacket(0, 153, 204, 255));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(1, 255, 255, 255));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(2, 153, 204, 255));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(3, 153, 153, 153));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(4, 255, 255, 255));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(5, 255, 255, 255));
+                    player.getEnvCpe().updateAmbient(new ServerEnvColorsPacket(0, 153, 204, 255), new ServerEnvColorsPacket(2, 153, 204, 255), new ServerEnvColorsPacket(3, 153, 153, 153), new ServerEnvColorsPacket(4, 255, 255, 255));
+                    player.getEnvCpe().updateDimention(new ServerEnvColorsPacket(1, 255, 255, 255), new ServerEnvColorsPacket(5, 255, 255, 255));
                 }
                 break;
             case 1://Nether
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
-                    player.getClassicSession().send(new ServerEnvColorsPacket(0, 30, 5, 5));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(1, 0, 0, 0));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(2, 50, 10, 10));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(3, 80, 40, 40));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(4, 180, 50, 40));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(5, 40, 10, 10));
+                    player.getEnvCpe().updateAmbient(new ServerEnvColorsPacket(0, 30, 5, 5), new ServerEnvColorsPacket(2, 50, 10, 10), new ServerEnvColorsPacket(3, 80, 40, 40), new ServerEnvColorsPacket(4, 180, 50, 40));
+                    player.getEnvCpe().updateDimention(new ServerEnvColorsPacket(1, 0, 0, 0), new ServerEnvColorsPacket(5, 40, 10, 10));
                 }
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(5), player.getExtensionsClassic())){
-                    player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(0));
+                    player.getEnvCpe().setWeather(new ServerEnvSetWeatherTypePacket(0));
                 }
                 break;
             case 2://End
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
-                    player.getClassicSession().send(new ServerEnvColorsPacket(0, 10, 10, 15));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(1, 0, 0, 0));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(2, 20, 10, 25));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(3, 60, 55, 70));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(4, 200, 190, 150));
-                    player.getClassicSession().send(new ServerEnvColorsPacket(5, 5, 5, 10));
+                    player.getEnvCpe().updateAmbient(new ServerEnvColorsPacket(0, 10, 10, 15), new ServerEnvColorsPacket(2, 20, 10, 25), new ServerEnvColorsPacket(3, 60, 55, 70), new ServerEnvColorsPacket(4, 200, 190, 150));
+                    player.getEnvCpe().updateDimention(new ServerEnvColorsPacket(1, 0, 0, 0), new ServerEnvColorsPacket(5, 5, 5, 10));
                 }
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(5), player.getExtensionsClassic())){
-                    player.getClassicSession().send(new ServerEnvSetWeatherTypePacket(0));
+                    player.getEnvCpe().setWeather(new ServerEnvSetWeatherTypePacket(0));
                 }
                 break;
         }
