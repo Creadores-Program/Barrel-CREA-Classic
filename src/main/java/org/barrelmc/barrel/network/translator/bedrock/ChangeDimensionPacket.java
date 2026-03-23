@@ -19,6 +19,10 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
         org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket packet = (org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket) pk;
         player.setMaxPosBedrock(Vector3i.from(((int) Math.round(packet.getPosition().getX() + 127)), 255, ((int) Math.round(packet.getPosition().getZ() + 127))));
         player.setMinPosBedrock(Vector3i.from(((int) Math.round(packet.getPosition().getX() + -128)), 0, ((int) Math.round(packet.getPosition().getZ() + -128))));
+        player.getEntitysSpawned().clear();
+        player.getEntitysUnspawn().clear();
+        player.getPlayersSpawned().clear();
+        player.getPlayersUnspawn().clear();
         switch(packet.getDimension()){
             case 0://Overworld
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){

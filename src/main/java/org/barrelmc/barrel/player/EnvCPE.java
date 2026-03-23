@@ -3,6 +3,7 @@ package org.barrelmc.barrel.player;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvSetWeatherTypePacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetSpawnpointPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerHackControlPacket;
 import com.github.steveice10.packetlib.packet.Packet;
 import org.barrelmc.barrel.utils.Utils;
 import org.barrelmc.barrel.server.ProxyServer;
@@ -18,6 +19,8 @@ public class EnvCPE {
     private ServerEnvSetWeatherTypePacket weather;
 
     private ServerSetSpawnpointPacket spawnPoint;
+
+    private ServerHackControlPacket hackControl;
     
     private Player player;
 
@@ -49,6 +52,10 @@ public class EnvCPE {
         this.weather = weather;
         this.sendPacket(weather);
     }
+    public void setHacks(ServerHackControlPacket hackControl){
+        this.hackControl = hackControl;
+        this.sendPacket(hackControl);
+    }
     public void updateAll(){
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic()) && this.color1 != null && this.color2 != null && this.color3 != null && this.color4 != null){
             this.sendPacket(this.color1);
@@ -65,6 +72,9 @@ public class EnvCPE {
         }
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(5), player.getExtensionsClassic()) && this.weather != null){
             this.sendPacket(this.weather);
+        }
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(6), player.getExtensionsClassic()) && this.hackControl != null){
+            this.sendPacket(this.hackControl);
         }
     }
     private void sendPacket(Packet pk){

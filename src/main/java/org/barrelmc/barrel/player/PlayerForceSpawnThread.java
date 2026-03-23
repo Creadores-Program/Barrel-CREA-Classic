@@ -42,5 +42,11 @@ public class PlayerForceSpawnThread implements Runnable{
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
             player.sendMessage("GameMod: " + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
         }
+        if(player.getPlayersSpawned().size() > 0){
+            
+        }
+        if(player.getPlayersUnspawn().size() > 0){}
+        if(player.getEntitysSpawned().size() > 0){}
+        if(player.getEntitysUnspawn().size() > 0){}
     }
 }

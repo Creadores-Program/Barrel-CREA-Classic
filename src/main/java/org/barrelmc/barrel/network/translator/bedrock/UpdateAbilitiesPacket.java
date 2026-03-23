@@ -8,6 +8,7 @@ import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.protocol.bedrock.data.Ability;
 import org.cloudburstmc.protocol.bedrock.data.AbilityLayer;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
+import org.cloudburstmc.protocol.bedrock.packet.RequestAbilityPacket;
 
 import java.util.Set;
 
@@ -21,7 +22,15 @@ public class UpdateAbilitiesPacket implements BedrockPacketTranslator {
                 if (abilityLayer.getLayerType() == AbilityLayer.Type.BASE) {
                     Set<Ability> abilityValues = abilityLayer.getAbilityValues();
                     if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(6), player.getExtensionsClassic())){
-                        player.getClassicSession().send(new ServerHackControlPacket(abilityValues.contains(Ability.MAY_FLY), abilityValues.contains(Ability.NO_CLIP), abilityValues.contains(Ability.WALK_SPEED), false, true, ((short) 40)));
+                        player.getEnvCpe().setHacks(new ServerHackControlPacket(abilityValues.contains(Ability.MAY_FLY), abilityValues.contains(Ability.NO_CLIP), abilityValues.contains(Ability.WALK_SPEED), false, true, ((short) 40)));
+                        if(abilityValues.contains(Ability.MAY_FLY)){
+                            RequestAbilityPacket requestAbilityPacket = new RequestAbilityPacket();
+                            requestAbilityPacket.setAbility(Ability.FLYING);
+                            requestAbilityPacket.setType(Ability.Type.BOOLEAN);
+                            requestAbilityPacket.setBoolValue(true);
+                            requestAbilityPacket.setFloatValue(0.0f);
+                            player.getBedrockClientSession().sendPacket(requestAbilityPacket);
+                        }
                     }
                 }
             }
