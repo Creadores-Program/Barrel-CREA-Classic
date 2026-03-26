@@ -26,6 +26,8 @@ public class LevelEventPacket implements BedrockPacketTranslator {
             case STOP_THUNDERSTORM:
                 player.getEnvCpe().setWeather(new ServerEnvSetWeatherTypePacket(0));
                 break;
+            default:
+                break;
         }
     }
 }

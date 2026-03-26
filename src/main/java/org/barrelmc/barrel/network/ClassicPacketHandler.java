@@ -21,8 +21,6 @@ import com.github.steveice10.packetlib.packet.Packet;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
 
-import java.util.UUID;
-
 public class ClassicPacketHandler extends SessionAdapter {
 
     private Player player = null;

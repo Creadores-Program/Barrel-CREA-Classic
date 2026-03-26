@@ -8,12 +8,10 @@ package org.barrelmc.barrel.player;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
-import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPingPacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
 import com.github.steveice10.packetlib.packet.Packet;
@@ -45,20 +43,17 @@ import org.cloudburstmc.protocol.bedrock.packet.LoginPacket;
 import org.cloudburstmc.protocol.bedrock.packet.PlayerAuthInputPacket;
 import org.cloudburstmc.protocol.bedrock.packet.RequestNetworkSettingsPacket;
 import org.cloudburstmc.protocol.bedrock.packet.StartGamePacket;
-import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
 import org.cloudburstmc.protocol.bedrock.util.EncryptionUtils;
 
 import java.net.InetSocketAddress;
 import java.security.*;
 import java.security.interfaces.ECPrivateKey;
 import java.security.interfaces.ECPublicKey;
-import java.security.spec.ECGenParameterSpec;
 import java.time.Instant;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.ConcurrentHashMap;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -76,7 +71,6 @@ public class Player extends Vector3 {
     @Getter
     private final PacketTranslatorManager packetTranslatorManager;
 
-    private String accessToken = null;
     @Getter
     private ECPublicKey publicKey;
     @Getter
