@@ -15,10 +15,10 @@ public class SetBlockPacket implements ClassicPacketTranslator{
   public void translate(Packet pk, Player player) {
     ClientSetBlockPacket packet = (ClientSetBlockPacket) pk;
     if(player.getGameMode() != GameType.CREATIVE || packet.getMode() == SetBlockMode.CREATED){
-      player.getClassicSession().send(new ServerSetBlockPacket(packet.getX(), packet.getY(), packet.getZ(), ((int) player.mapClassic[(packet.getY() * 256 + packet.getZ()) * 256 + packet.getX()])));
+      player.getClassicSession().send(new ServerSetBlockPacket(packet.getX(), packet.getY(), packet.getZ(), ((int) player.getMapClassic().get((packet.getY() * Player.WORLDLEN + packet.getZ()) * Player.WORLDLEN + packet.getX()))));
       return;
     }
-    player.mapClassic[(packet.getY() * 256 + packet.getZ()) * 256 + packet.getX()] = 0;
+    player.getMapClassic().put((packet.getY() * Player.WORLDLEN + packet.getZ()) * Player.WORLDLEN + packet.getX(), (byte) 0);
     PlayerActionPacket playerActionPacket = new PlayerActionPacket();
     playerActionPacket.setAction(PlayerActionType.DIMENSION_CHANGE_REQUEST_OR_CREATIVE_DESTROY_BLOCK);
     int bedrockX = Utils.mapCoords(packet.getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX(), player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX());

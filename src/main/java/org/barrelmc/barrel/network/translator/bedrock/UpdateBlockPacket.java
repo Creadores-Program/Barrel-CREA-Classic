@@ -23,7 +23,7 @@ public class UpdateBlockPacket implements BedrockPacketTranslator {
             int classicX = Utils.mapCoords(pos.getX(), player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX());
             int classicY = pos.getY();
             int classicZ = Utils.mapCoords(pos.getZ(), player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ());
-            player.mapClassic[(classicY * 256 + classicZ) * 256 + classicX] = (byte) blockState;
+            player.getMapClassic().put((classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX, (byte) blockState);
             player.getClassicSession().send(new ServerSetBlockPacket(classicX, classicY, classicZ, blockState));
         }
     }
