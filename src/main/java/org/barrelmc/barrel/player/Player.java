@@ -452,7 +452,7 @@ public class Player extends Vector3 {
         byte[] compressedMap = new byte[0];
         try{
             ByteBuffer copyW = this.mapClassic.duplicate();
-            copyW.flip();
+            copyW.clear();
             byte[] tempW = new byte[WORLDTOTALLEN];
             copyW.get(tempW);
             compressedMap = compressMap(tempW);

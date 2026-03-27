@@ -147,7 +147,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         } else if (classicStateId == 8 || classicStateId == 9) { // water
                             int layer0 = (int) player.getMapClassic().get((classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX);
                             if (layer0 == 0) {
-                                if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.getMapClassic().get((classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX)) != classicStateId){
+                                if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.getMapClassic().get(classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX) != classicStateId){
                                     player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                     player.getClassicSession().send(new ServerLevelInitializePacket());
                                 }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
