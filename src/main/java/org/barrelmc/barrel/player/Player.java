@@ -404,7 +404,7 @@ public class Player extends Vector3 {
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(15), this.extensionsClassic)){
             message = Utils.sanitizeText(message);
         }
-        String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), MAXLENMSG);
+        String[] messagesClassic = Utils.splitStringL(message.replace('§', '&'), MAXLENMSG);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;
@@ -432,7 +432,7 @@ public class Player extends Vector3 {
             this.channel.disconnect();
             this.channel.parent().disconnect();
         }
-        this.classicSession.disconnect(reason.replace("§", "&"));
+        this.classicSession.disconnect(reason.replace('§', '&'));
         ProxyServer.getInstance().removeBedrockPlayer(classicUsername);
         this.mapClassic = null;
         ProxyServer.getInstance().getLogger().info(classicUsername + " disconnected: " + reason);

@@ -19,7 +19,7 @@ public class PlayerListPacket implements BedrockPacketTranslator {
         switch (packet.getAction()) {
             case ADD: {
                 for (org.cloudburstmc.protocol.bedrock.packet.PlayerListPacket.Entry entry : packet.getEntries()) {
-                    player.getClassicSession().send(new ServerExtAddPlayerNamePacket(((short) entry.getEntityId()), String.valueOf(entry.getName()).replace("§", "&"), String.valueOf(entry.getName()).replace("§", "&"), "Bedrock", 0));
+                    player.getClassicSession().send(new ServerExtAddPlayerNamePacket(((short) entry.getEntityId()), String.valueOf(entry.getName()).replace('§', '&'), String.valueOf(entry.getName()).replace('§', '&'), "Bedrock", 0));
                 }
                 break;
             }
