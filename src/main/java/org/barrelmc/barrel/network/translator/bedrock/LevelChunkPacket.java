@@ -135,25 +135,26 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         int classicX = Utils.mapCoords(worldX, player.getMinPosBedrock().getX(), player.getMaxPosBedrock().getX(), player.getMinPosClassic().getX(), player.getMaxPosClassic().getX());
                         int classicY = worldY;
                         int classicZ = Utils.mapCoords(worldZ, player.getMinPosBedrock().getZ(), player.getMaxPosBedrock().getZ(), player.getMinPosClassic().getZ(), player.getMaxPosClassic().getZ());
+                        int indexClassic = (classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX;
 
                         if (storageReadIndex == 0) {
-                            if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.getMapClassic().get((classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX)) != classicStateId){
+                            if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.getMapClassic().get(indexClassic)) != classicStateId){
                                 player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                 player.getClassicSession().send(new ServerLevelInitializePacket());
                             }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
                                 player.getPlayerForceSpawnThread().forceSpawn = false;
                             }
-                            player.getMapClassic().put((classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX, (byte) classicStateId);
+                            player.getMapClassic().put(indexClassic, (byte) classicStateId);
                         } else if (classicStateId == 8 || classicStateId == 9) { // water
-                            int layer0 = (int) player.getMapClassic().get((classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX);
+                            int layer0 = (int) player.getMapClassic().get(indexClassic);
                             if (layer0 == 0) {
-                                if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.getMapClassic().get(classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX) != classicStateId){
+                                if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.getMapClassic().get(indexClassic)) != classicStateId){
                                     player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                     player.getClassicSession().send(new ServerLevelInitializePacket());
                                 }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
                                     player.getPlayerForceSpawnThread().forceSpawn = false;
                                 }
-                                player.getMapClassic().put((classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX, (byte) classicStateId);
+                                player.getMapClassic().put(indexClassic, (byte) classicStateId);
                             }
                             
                         }
