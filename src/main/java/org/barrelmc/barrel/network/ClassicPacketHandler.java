@@ -47,6 +47,7 @@ public class ClassicPacketHandler extends SessionAdapter {
             if (packet instanceof ClientIdentificationPacket) {
                 ClientIdentificationPacket loginPacket = (ClientIdentificationPacket) packet;
                 session.setFlag(ClassicConstants.USERNAME_KEY, loginPacket.getUsername());
+                ProxyServer.getInstance().getLogger().info(session.getFlag(ClassicConstants.USERNAME_KEY) + " logged in");
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
                 if(loginPacket.isCPE()){
