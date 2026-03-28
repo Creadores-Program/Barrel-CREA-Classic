@@ -19,6 +19,7 @@ import org.cloudburstmc.nbt.util.stream.NetworkDataInputStream;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 import org.cloudburstmc.protocol.common.util.VarInts;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetBlockPacket;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -138,9 +139,11 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         int indexClassic = (classicY * Player.WORLDLEN + classicZ) * Player.WORLDLEN + classicX;
 
                         if (storageReadIndex == 0) {
-                            if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.getMapClassic().get(indexClassic)) != classicStateId){
+                            if(player.getStatusWorld() == StatusWorld.PLAYING && player.isImmobile() && ((int) player.getMapClassic().get(indexClassic)) != classicStateId){
                                 player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                 player.getClassicSession().send(new ServerLevelInitializePacket());
+                            }else if(player.getStatusWorld() == StatusWorld.PLAYING){
+                                player.getClassicSession().send(new ServerSetBlockPacket(classicX, classicY, classicZ, classicStateId));
                             }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
                                 player.getPlayerForceSpawnThread().forceSpawn = false;
                             }
@@ -148,9 +151,11 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         } else if (classicStateId == 8 || classicStateId == 9) { // water
                             int layer0 = (int) player.getMapClassic().get(indexClassic);
                             if (layer0 == 0) {
-                                if(player.getStatusWorld() == StatusWorld.PLAYING && ((int) player.getMapClassic().get(indexClassic)) != classicStateId){
+                                if(player.getStatusWorld() == StatusWorld.PLAYING && player.isImmobile() && ((int) player.getMapClassic().get(indexClassic)) != classicStateId){
                                     player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                     player.getClassicSession().send(new ServerLevelInitializePacket());
+                                }else if(player.getStatusWorld() == StatusWorld.PLAYING){
+                                    player.getClassicSession().send(new ServerSetBlockPacket(classicX, classicY, classicZ, classicStateId));
                                 }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
                                     player.getPlayerForceSpawnThread().forceSpawn = false;
                                 }
