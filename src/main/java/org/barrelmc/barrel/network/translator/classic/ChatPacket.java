@@ -34,6 +34,7 @@ public class ChatPacket implements ClassicPacketTranslator {
 
         textPacket.setType(TextPacket.Type.CHAT);
         textPacket.setNeedsTranslation(false);
+        player.msgPlayer = player.msgPlayer.replace('&', '§').replace('%', '§');
         textPacket.setSourceName(player.msgPlayer);
         textPacket.setMessage(player.msgPlayer);
         textPacket.setXuid("");

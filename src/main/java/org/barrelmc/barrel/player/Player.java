@@ -57,6 +57,7 @@ import java.util.concurrent.TimeUnit;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.zip.GZIPOutputStream;
 
@@ -158,7 +159,12 @@ public class Player extends Vector3 {
     @Getter
     private List<ClientExtEntryPacket> extensionsClassic = new ObjectArrayList<>();
 
-    public byte[] mapClassic = new byte[256 * 256 * 256];
+    public static final int WORLDLEN = 256;
+
+    private static final int WORLDTOTALLEN = WORLDLEN * WORLDLEN * WORLDLEN;
+
+    @Getter
+    private ByteBuffer mapClassic = ByteBuffer.allocateDirect(WORLDTOTALLEN);
 
     @Getter
     @Setter
@@ -212,7 +218,7 @@ public class Player extends Vector3 {
     @Getter
     private List<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entitysSpawned = new ObjectArrayList<>();
 
-    private final int MAXLENMSG = 64;
+    private static final int MAXLENMSG = 64;
 
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
         this.envCpe = new EnvCPE(this);
@@ -398,7 +404,7 @@ public class Player extends Vector3 {
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(15), this.extensionsClassic)){
             message = Utils.sanitizeText(message);
         }
-        String[] messagesClassic = Utils.splitStringL(message.replace("§", "&"), MAXLENMSG);
+        String[] messagesClassic = Utils.splitStringL(message.replace('§', '&'), MAXLENMSG);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;
@@ -426,8 +432,9 @@ public class Player extends Vector3 {
             this.channel.disconnect();
             this.channel.parent().disconnect();
         }
-        this.classicSession.disconnect(reason.replace("§", "&"));
+        this.classicSession.disconnect(reason.replace('§', '&'));
         ProxyServer.getInstance().removeBedrockPlayer(classicUsername);
+        this.mapClassic = null;
         ProxyServer.getInstance().getLogger().info(classicUsername + " disconnected: " + reason);
     }
 
@@ -444,7 +451,11 @@ public class Player extends Vector3 {
     public void sendWorld(){
         byte[] compressedMap = new byte[0];
         try{
-            compressedMap = compressMap(this.mapClassic);
+            ByteBuffer copyW = this.mapClassic.duplicate();
+            copyW.clear();
+            byte[] tempW = new byte[WORLDTOTALLEN];
+            copyW.get(tempW);
+            compressedMap = compressMap(tempW);
         }catch(IOException ex){
             ex.printStackTrace();
             return;
