@@ -78,8 +78,7 @@ public class EnvCPE {
         }
     }
     private void sendPacket(Packet pk){
-        if(player.getStatusWorld() == StatusWorld.LOGIN){
-            player.getCpePacketsQueue().add(pk);
+        if(player.getStatusWorld() == StatusWorld.LOGIN || player.getStatusWorld() == StatusWorld.PREPARING){
             return;
         }
         player.getClassicSession().send(pk);

@@ -14,7 +14,6 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerPingPacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
-import com.github.steveice10.packetlib.packet.Packet;
 //import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.packetlib.Session;
 import io.netty.bootstrap.Bootstrap;
@@ -51,6 +50,7 @@ import java.security.interfaces.ECPrivateKey;
 import java.security.interfaces.ECPublicKey;
 import java.time.Instant;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -58,6 +58,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.Channels;
+import java.nio.channels.WritableByteChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.zip.GZIPOutputStream;
 
@@ -106,6 +108,9 @@ public class Player extends Vector3 {
 
     private boolean tickPlayerInputStarted = false;
     private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(3);
+    
+    @Getter
+    private final ExecutorService worldThread = Executors.newCachedThreadPool();
 
     @Setter
     @Getter
@@ -185,9 +190,6 @@ public class Player extends Vector3 {
     @Getter
     @Setter
     private StatusWorld statusWorld = StatusWorld.LOGIN;
-
-    @Getter
-    private List<Packet> cpePacketsQueue = new ObjectArrayList<>();
 
     @Getter
     private PlayerForceSpawnThread playerForceSpawnThread;
@@ -424,6 +426,7 @@ public class Player extends Vector3 {
 
     public void disconnect(String reason) {
         playerInputExecutor.shutdown();
+        worldThread.shutdown();
         try {
             this.bedrockClientSession.disconnect();
         } catch (Throwable ignored) {
@@ -453,9 +456,7 @@ public class Player extends Vector3 {
         try{
             ByteBuffer copyW = this.mapClassic.duplicate();
             copyW.clear();
-            byte[] tempW = new byte[WORLDTOTALLEN];
-            copyW.get(tempW);
-            compressedMap = compressMap(tempW);
+            compressedMap = compressMap(copyW);
         }catch(IOException ex){
             ex.printStackTrace();
             return;
@@ -477,12 +478,14 @@ public class Player extends Vector3 {
         this.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
     }
 
-    private byte[] compressMap(byte[] mapData) throws IOException {
+    private byte[] compressMap(ByteBuffer mapData) throws IOException {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try (GZIPOutputStream gos = new GZIPOutputStream(baos)) {
             DataOutputStream dos = new DataOutputStream(gos);
-            dos.writeInt(mapData.length);
-            dos.write(mapData);
+            dos.writeInt(WORLDTOTALLEN);
+            dos.flush();
+            WritableByteChannel channel = Channels.newChannel(dos);
+            channel.write(mapData);
             dos.flush();
             gos.finish();
         }

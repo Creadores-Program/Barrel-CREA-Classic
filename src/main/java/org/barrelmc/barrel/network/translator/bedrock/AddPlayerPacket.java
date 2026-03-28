@@ -15,6 +15,9 @@ public class AddPlayerPacket implements BedrockPacketTranslator {
     public void translate(BedrockPacket pk, Player player) {
         org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket packet = (org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket) pk;
 
+        if(packet.getRuntimeEntityId() == player.getRuntimeEntityId()){
+            return;
+        }
         Vector3f position = packet.getPosition();
         Vector3f rotation = packet.getRotation();
         if(position.getX() > player.getMaxPosBedrock().getX() || position.getX() < player.getMinPosBedrock().getX() || position.getZ() > player.getMaxPosBedrock().getZ() || position.getZ() < player.getMinPosBedrock().getZ()){
