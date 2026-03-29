@@ -18,10 +18,6 @@ public class PlayStatusPacket implements BedrockPacketTranslator {
         org.cloudburstmc.protocol.bedrock.packet.PlayStatusPacket packet = (org.cloudburstmc.protocol.bedrock.packet.PlayStatusPacket) pk;
 
         if (packet.getStatus() == org.cloudburstmc.protocol.bedrock.packet.PlayStatusPacket.Status.PLAYER_SPAWN) {
-            TickSyncPacket tickSyncPacket = new TickSyncPacket();
-            tickSyncPacket.setRequestTimestamp(0);
-            tickSyncPacket.setResponseTimestamp(0);
-            player.getBedrockClientSession().sendPacketImmediately(tickSyncPacket);
             player.setStatusWorld(StatusWorld.PREPARING);
 
             player.startForceSpawn();

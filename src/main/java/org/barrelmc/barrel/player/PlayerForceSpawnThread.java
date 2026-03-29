@@ -7,6 +7,7 @@ import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.math.vector.Vector3i;
 import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
 import org.cloudburstmc.protocol.bedrock.packet.SetLocalPlayerAsInitializedPacket;
+import org.cloudburstmc.protocol.bedrock.packet.TickSyncPacket;
 import org.cloudburstmc.protocol.bedrock.data.AuthoritativeMovementMode;
 import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
@@ -34,12 +35,17 @@ public class PlayerForceSpawnThread implements Runnable{
             player.getBedrockClientSession().sendPacket(playerActionPacket);
         }
         if(player.getStatusWorld() == StatusWorld.PREPARING){
+            TickSyncPacket tickSyncPacket = new TickSyncPacket();
+            tickSyncPacket.setRequestTimestamp(0);
+            tickSyncPacket.setResponseTimestamp(0);
+            player.getBedrockClientSession().sendPacketImmediately(tickSyncPacket);
             if (player.getStartGamePacketCache().getAuthoritativeMovementMode() == AuthoritativeMovementMode.SERVER) {
                 player.startSendingPlayerInput();
             }
             SetLocalPlayerAsInitializedPacket setLocalPlayerAsInitializedPacket = new SetLocalPlayerAsInitializedPacket();
             setLocalPlayerAsInitializedPacket.setRuntimeEntityId(player.getRuntimeEntityId());
             player.getBedrockClientSession().sendPacket(setLocalPlayerAsInitializedPacket);
+            player.startLevelChunkProcess();
         }
         player.setStatusWorld(StatusWorld.PLAYING);
         Vector3f pos = player.getLastServerPosition();

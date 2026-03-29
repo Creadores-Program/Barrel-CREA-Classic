@@ -19,7 +19,6 @@ import org.cloudburstmc.nbt.util.stream.NetworkDataInputStream;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 import org.cloudburstmc.protocol.common.util.VarInts;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetBlockPacket;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -143,7 +142,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                                 player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                 player.getClassicSession().send(new ServerLevelInitializePacket());
                             }else if(player.getStatusWorld() == StatusWorld.PLAYING){
-                                player.getClassicSession().send(new ServerSetBlockPacket(classicX, classicY, classicZ, classicStateId));
+                                player.getLevelChunkProcess().add(classicStateId, classicX, classicY, classicZ, indexClassic);
                             }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
                                 player.getPlayerForceSpawnThread().forceSpawn = false;
                             }
@@ -155,7 +154,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                                     player.setStatusWorld(StatusWorld.BUILD_WORLD);
                                     player.getClassicSession().send(new ServerLevelInitializePacket());
                                 }else if(player.getStatusWorld() == StatusWorld.PLAYING){
-                                    player.getClassicSession().send(new ServerSetBlockPacket(classicX, classicY, classicZ, classicStateId));
+                                    player.getLevelChunkProcess().add(classicStateId, classicX, classicY, classicZ, indexClassic);
                                 }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
                                     player.getPlayerForceSpawnThread().forceSpawn = false;
                                 }

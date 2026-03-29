@@ -107,7 +107,7 @@ public class Player extends Vector3 {
     private EnvCPE envCpe = null;
 
     private boolean tickPlayerInputStarted = false;
-    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(3);
+    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(4);
     
     @Getter
     private final ExecutorService worldThread = Executors.newCachedThreadPool();
@@ -197,6 +197,9 @@ public class Player extends Vector3 {
     public String msgPlayer = "";
 
     @Getter
+    private LevelChunkProcess levelChunkProcess;
+
+    @Getter
     @Setter
     private int dimension = 0;
 
@@ -240,6 +243,14 @@ public class Player extends Vector3 {
         playerForceSpawnThread.player = this;
         playerInputExecutor.scheduleAtFixedRate(playerForceSpawnThread, 0, 800, TimeUnit.MILLISECONDS);
     }
+    public void startLevelChunkProcess(){
+        this.levelChunkProcess = new LevelChunkProcess();
+        levelChunkProcess.player = this;
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(10), extensionsClassic)){
+            levelChunkProcess.supportBU = true;
+        }
+        playerInputExecutor.scheduleAtFixedRate(levelChunkProcess, 0, 800, TimeUnit.MILLISECONDS);
+    }
 
     public void startSendingPlayerInput() {
         if (!tickPlayerInputStarted) {
@@ -252,7 +263,6 @@ public class Player extends Vector3 {
             playerInputExecutor.scheduleAtFixedRate(playerAuthInputThread, 0, 50, TimeUnit.MILLISECONDS);
         }
     }
-
     
     private void offlineLogin(ClientIdentificationPacket classicLoginPacket) {
         this.xuid = "";

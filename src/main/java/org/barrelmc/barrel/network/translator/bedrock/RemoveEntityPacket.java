@@ -14,7 +14,7 @@ public class RemoveEntityPacket implements BedrockPacketTranslator {
     public void translate(BedrockPacket pk, Player player) {
         org.cloudburstmc.protocol.bedrock.packet.RemoveEntityPacket packet = (org.cloudburstmc.protocol.bedrock.packet.RemoveEntityPacket) pk;
         int[] runtimeEntityId = {-1};
-        Optional<AddEntityPacket> entity1 = player.getEntitysUnspawn().stream().filter(entity -> entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
+        Optional<AddEntityPacket> entity1 = player.getEntitysUnspawn().stream().filter(entity -> entity != null && entity.getUniqueEntityId() == packet.getUniqueEntityId()).findFirst();
         entity1.ifPresent(entity -> {
             runtimeEntityId[0] = (int) entity.getRuntimeEntityId();
             player.getEntitysUnspawn().remove(entity);
