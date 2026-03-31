@@ -20,11 +20,18 @@ public class LevelChunkProcess implements Runnable {
 
     public void run(){
         try {
-            if(player.getStatusWorld() != StatusWorld.PLAYING){
+            if(player.getStatusWorld() != StatusWorld.PLAYING || blocksL.size() < 1){
                 return;
             }
             if(change){
                 change = false;
+                return;
+            }
+            if(blocksL.size() == 1){
+                synchronized(blocksL){
+                    Data block = blocksL.get(0);
+                    player.send(new ServerSetBlockPacket(block.x, block.y, block.z, (int) block.block));
+                }
                 return;
             }
             send();
