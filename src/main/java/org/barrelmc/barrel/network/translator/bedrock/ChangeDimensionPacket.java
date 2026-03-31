@@ -1,11 +1,16 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 
+import java.util.Map;
+
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
+import org.barrelmc.barrel.player.Entity;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.player.StatusWorld;
 import org.barrelmc.barrel.utils.Utils;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.math.vector.Vector3i;
+
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerDespawnPlayerPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvSetWeatherTypePacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
@@ -19,10 +24,13 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
         org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket packet = (org.cloudburstmc.protocol.bedrock.packet.ChangeDimensionPacket) pk;
         player.setMaxPosBedrock(Vector3i.from(((int) Math.round(packet.getPosition().getX() + 127)), 255, ((int) Math.round(packet.getPosition().getZ() + 127))));
         player.setMinPosBedrock(Vector3i.from(((int) Math.round(packet.getPosition().getX() + -128)), 0, ((int) Math.round(packet.getPosition().getZ() + -128))));
-        player.getEntitysSpawned().clear();
+        Map<Long, Entity> entitysSpawned = player.getEntitysSpawned();
+        for(Entity entity : entitysSpawned.values()){
+            player.getClassicSession().send(new ServerDespawnPlayerPacket((int) entity.rEId));
+        }
+        entitysSpawned.clear();
         player.getEntitysUnspawn().clear();
-        player.getPlayersSpawned().clear();
-        player.getPlayersUnspawn().clear();
+        player.getEntitysIndex().clear();
         switch(packet.getDimension()){
             case 0://Overworld
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){

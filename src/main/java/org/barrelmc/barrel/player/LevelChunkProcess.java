@@ -36,9 +36,11 @@ public class LevelChunkProcess implements Runnable {
         if(!change){
             change = true;
         }
-        blocksL.add(new Data(b, x, y, z, in));
-        if(blocksL.size() >= Player.WORLDLEN){
-            send();
+        synchronized(blocksL){
+            blocksL.add(new Data(b, x, y, z, in));
+            if(blocksL.size() >= Player.WORLDLEN){
+                send();
+            }
         }
     }
     private void send(){

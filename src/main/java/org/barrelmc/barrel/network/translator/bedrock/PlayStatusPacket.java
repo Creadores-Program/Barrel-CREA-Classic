@@ -4,7 +4,6 @@ import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.player.StatusWorld;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
-import org.cloudburstmc.protocol.bedrock.packet.TickSyncPacket;
 
 public class PlayStatusPacket implements BedrockPacketTranslator {
 

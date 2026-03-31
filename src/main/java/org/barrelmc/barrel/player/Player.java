@@ -50,6 +50,7 @@ import java.security.interfaces.ECPrivateKey;
 import java.security.interfaces.ECPublicKey;
 import java.time.Instant;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -212,16 +213,13 @@ public class Player extends Vector3 {
     private int extSize = 0;
 
     @Getter
-    private List<org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket> playersUnspawn = new ObjectArrayList<>();
+    private Map<Long, Entity> entitysUnspawn = new ConcurrentHashMap<>();
 
     @Getter
-    private List<org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket> playersSpawned = new ObjectArrayList<>();
+    private Map<Long, Entity> entitysSpawned = new ConcurrentHashMap<>();
 
     @Getter
-    private List<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entitysUnspawn = new ObjectArrayList<>();
-
-    @Getter
-    private List<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entitysSpawned = new ObjectArrayList<>();
+    private Map<Long, Long> entitysIndex = new ConcurrentHashMap<>();
 
     private static final int MAXLENMSG = 64;
 
