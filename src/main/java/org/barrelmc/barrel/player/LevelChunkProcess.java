@@ -30,7 +30,7 @@ public class LevelChunkProcess implements Runnable {
             if(blocksL.size() == 1){
                 synchronized(blocksL){
                     Data block = blocksL.get(0);
-                    player.send(new ServerSetBlockPacket(block.x, block.y, block.z, (int) block.block));
+                    player.getClassicSession().send(new ServerSetBlockPacket(block.x, block.y, block.z, (int) block.block));
                 }
                 return;
             }
