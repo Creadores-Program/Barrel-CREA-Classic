@@ -19,8 +19,6 @@ import java.util.zip.GZIPInputStream;
 
 public class FileManager {
 
-    public static JsonParser jsonParser = new JsonParser();
-
     public static String getFileContents(String path) {
         try {
             return new String(Files.readAllBytes(Paths.get(path)));
@@ -69,7 +67,7 @@ public class FileManager {
         }
 
         try {
-            return jsonParser.parse(getFileContents(inputStream)).getAsJsonObject();
+            return JsonParser.parseString(getFileContents(inputStream)).getAsJsonObject();
         } catch (Exception e) {
             System.out.println("Failed to read \"" + resourceName + "\": " + e.getMessage());
             return null;

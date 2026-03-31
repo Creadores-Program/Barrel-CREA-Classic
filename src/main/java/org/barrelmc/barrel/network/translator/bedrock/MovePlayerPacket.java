@@ -7,6 +7,7 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRot
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
+import org.barrelmc.barrel.player.Entity;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.player.StatusWorld;
 import org.barrelmc.barrel.server.ProxyServer;
@@ -14,8 +15,6 @@ import org.barrelmc.barrel.utils.Utils;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.math.vector.Vector3i;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
-import org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket;
-import java.util.Optional;
 
 public class MovePlayerPacket implements BedrockPacketTranslator {
 
@@ -36,25 +35,23 @@ public class MovePlayerPacket implements BedrockPacketTranslator {
             player.setLastServerPosition(position);
             player.setLastServerRotation(rotation.toVector2());
         } else {
+            long targetUniqueId = player.getEntitysIndex().get(packet.getRuntimeEntityId());
+            Entity foundEntity = null;
             if(position.getX() > player.getMaxPosBedrock().getX() || position.getX() < player.getMinPosBedrock().getX() || position.getZ() > player.getMaxPosBedrock().getZ() || position.getZ() < player.getMinPosBedrock().getZ()){
-                Optional<AddPlayerPacket> entityop = player.getPlayersSpawned().stream().filter(entity -> entity.getRuntimeEntityId() == packet.getRuntimeEntityId()).findFirst();
-                entityop.ifPresent(entity -> {
-                    player.getClassicSession().send(new ServerDespawnPlayerPacket((int) packet.getRuntimeEntityId()));
-                    player.getPlayersSpawned().remove(entity);
-                    player.getPlayersUnspawn().add(entity);
-                });
+                if((foundEntity = player.getEntitysSpawned().remove(targetUniqueId)) != null){
+                    player.getEntitysUnspawn().put(targetUniqueId, foundEntity);
+                    player.getClassicSession().send(new ServerDespawnPlayerPacket((int) foundEntity.rEId));
+                }
                 return;
             }
-            Optional<AddPlayerPacket> entityop1 = player.getPlayersUnspawn().stream().filter(entity -> entity.getRuntimeEntityId() == packet.getRuntimeEntityId()).findFirst();
-            entityop1.ifPresent(entity -> {
-                player.getPlayersUnspawn().remove(entity);
-                player.getPlayersSpawned().add(entity);
+            if((foundEntity = player.getEntitysUnspawn().remove(targetUniqueId)) != null){
+                player.getEntitysSpawned().put(targetUniqueId, foundEntity);
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(2), player.getExtensionsClassic())){
-                    player.getClassicSession().send(new ServerExtAddEntity2Packet(((int) packet.getRuntimeEntityId()), entity.getUsername(), entity.getUsername(), Utils.mapCoords(((short) position.getX()), ((short) player.getMinPosBedrock().getX()), ((short) player.getMaxPosBedrock().getX()), ((short) player.getMinPosClassic().getX()), ((short) player.getMaxPosClassic().getX())), ((short) position.getY()), Utils.mapCoords(((short) position.getZ()), ((short) player.getMinPosBedrock().getZ()), ((short) player.getMaxPosBedrock().getZ()), ((short) player.getMinPosClassic().getZ()), ((short) player.getMaxPosClassic().getZ())), ((int) rotation.getX()), ((int) rotation.getY())));
-                    return;
+                    player.getClassicSession().send(new ServerExtAddEntity2Packet(((int) foundEntity.rEId), foundEntity.name, foundEntity.name, Utils.mapCoords(((short) position.getX()), ((short) player.getMinPosBedrock().getX()), ((short) player.getMaxPosBedrock().getX()), ((short) player.getMinPosClassic().getX()), ((short) player.getMaxPosClassic().getX())), ((short) position.getY()), Utils.mapCoords(((short) position.getZ()), ((short) player.getMinPosBedrock().getZ()), ((short) player.getMaxPosBedrock().getZ()), ((short) player.getMinPosClassic().getZ()), ((short) player.getMaxPosClassic().getZ())), ((int) rotation.getX()), ((int) rotation.getY())));
+                }else{
+                    player.getClassicSession().send(new ServerSpawnPlayerPacket(((int) foundEntity.rEId), foundEntity.name, Utils.mapCoords(position.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX())), position.getY(), Utils.mapCoords(position.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ())), rotation.getX(), rotation.getY()));
                 }
-                player.getClassicSession().send(new ServerSpawnPlayerPacket(((int) packet.getRuntimeEntityId()), entity.getUsername(), Utils.mapCoords(position.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX())), position.getY(), Utils.mapCoords(position.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ())), rotation.getX(), rotation.getY()));
-            });
+            }
             player.getClassicSession().send(new ServerPositionRotationPacket(((int) packet.getRuntimeEntityId()), Utils.mapCoords(position.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX())), position.getY(), Utils.mapCoords(position.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ())), rotation.getX(), rotation.getY()));
         }
     }

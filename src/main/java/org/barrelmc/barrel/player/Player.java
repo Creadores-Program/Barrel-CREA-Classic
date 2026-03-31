@@ -14,7 +14,6 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerPingPacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
-import com.github.steveice10.packetlib.packet.Packet;
 //import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.packetlib.Session;
 import io.netty.bootstrap.Bootstrap;
@@ -51,6 +50,8 @@ import java.security.interfaces.ECPrivateKey;
 import java.security.interfaces.ECPublicKey;
 import java.time.Instant;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -58,6 +59,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.Channels;
+import java.nio.channels.WritableByteChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.zip.GZIPOutputStream;
 
@@ -105,7 +108,10 @@ public class Player extends Vector3 {
     private EnvCPE envCpe = null;
 
     private boolean tickPlayerInputStarted = false;
-    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(3);
+    private final ScheduledExecutorService playerInputExecutor = Executors.newScheduledThreadPool(4);
+    
+    @Getter
+    private final ExecutorService worldThread = Executors.newCachedThreadPool();
 
     @Setter
     @Getter
@@ -187,12 +193,12 @@ public class Player extends Vector3 {
     private StatusWorld statusWorld = StatusWorld.LOGIN;
 
     @Getter
-    private List<Packet> cpePacketsQueue = new ObjectArrayList<>();
-
-    @Getter
     private PlayerForceSpawnThread playerForceSpawnThread;
 
     public String msgPlayer = "";
+
+    @Getter
+    private LevelChunkProcess levelChunkProcess;
 
     @Getter
     @Setter
@@ -207,16 +213,13 @@ public class Player extends Vector3 {
     private int extSize = 0;
 
     @Getter
-    private List<org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket> playersUnspawn = new ObjectArrayList<>();
+    private Map<Long, Entity> entitysUnspawn = new ConcurrentHashMap<>();
 
     @Getter
-    private List<org.cloudburstmc.protocol.bedrock.packet.AddPlayerPacket> playersSpawned = new ObjectArrayList<>();
+    private Map<Long, Entity> entitysSpawned = new ConcurrentHashMap<>();
 
     @Getter
-    private List<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entitysUnspawn = new ObjectArrayList<>();
-
-    @Getter
-    private List<org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket> entitysSpawned = new ObjectArrayList<>();
+    private Map<Long, Long> entitysIndex = new ConcurrentHashMap<>();
 
     private static final int MAXLENMSG = 64;
 
@@ -238,6 +241,14 @@ public class Player extends Vector3 {
         playerForceSpawnThread.player = this;
         playerInputExecutor.scheduleAtFixedRate(playerForceSpawnThread, 0, 800, TimeUnit.MILLISECONDS);
     }
+    public void startLevelChunkProcess(){
+        this.levelChunkProcess = new LevelChunkProcess();
+        levelChunkProcess.player = this;
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(10), extensionsClassic)){
+            levelChunkProcess.supportBU = true;
+        }
+        playerInputExecutor.scheduleAtFixedRate(levelChunkProcess, 0, 800, TimeUnit.MILLISECONDS);
+    }
 
     public void startSendingPlayerInput() {
         if (!tickPlayerInputStarted) {
@@ -250,7 +261,6 @@ public class Player extends Vector3 {
             playerInputExecutor.scheduleAtFixedRate(playerAuthInputThread, 0, 50, TimeUnit.MILLISECONDS);
         }
     }
-
     
     private void offlineLogin(ClientIdentificationPacket classicLoginPacket) {
         this.xuid = "";
@@ -424,6 +434,7 @@ public class Player extends Vector3 {
 
     public void disconnect(String reason) {
         playerInputExecutor.shutdown();
+        worldThread.shutdown();
         try {
             this.bedrockClientSession.disconnect();
         } catch (Throwable ignored) {
@@ -453,9 +464,7 @@ public class Player extends Vector3 {
         try{
             ByteBuffer copyW = this.mapClassic.duplicate();
             copyW.clear();
-            byte[] tempW = new byte[WORLDTOTALLEN];
-            copyW.get(tempW);
-            compressedMap = compressMap(tempW);
+            compressedMap = compressMap(copyW);
         }catch(IOException ex){
             ex.printStackTrace();
             return;
@@ -477,12 +486,14 @@ public class Player extends Vector3 {
         this.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
     }
 
-    private byte[] compressMap(byte[] mapData) throws IOException {
+    private byte[] compressMap(ByteBuffer mapData) throws IOException {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try (GZIPOutputStream gos = new GZIPOutputStream(baos)) {
             DataOutputStream dos = new DataOutputStream(gos);
-            dos.writeInt(mapData.length);
-            dos.write(mapData);
+            dos.writeInt(WORLDTOTALLEN);
+            dos.flush();
+            WritableByteChannel channel = Channels.newChannel(dos);
+            channel.write(mapData);
             dos.flush();
             gos.finish();
         }
