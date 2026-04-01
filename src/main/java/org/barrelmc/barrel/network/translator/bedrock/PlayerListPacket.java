@@ -21,9 +21,6 @@ public class PlayerListPacket implements BedrockPacketTranslator {
             case ADD: {
                 for (org.cloudburstmc.protocol.bedrock.packet.PlayerListPacket.Entry entry : packet.getEntries()) {
                     long entityRId = entry.getEntityId();
-                    if(entityRId == player.getRuntimeEntityId() || entry.getUuid().toString() == player.getUUID()){
-                        continue;
-                    }
                     String name = String.valueOf(entry.getName()).replace(TextFormat.ESCAPE, TextFormat.ESCAPE_CLASSIC_SERVER);
                     player.getClassicSession().send(new ServerExtAddPlayerNamePacket(((short) entityRId), name, name, "Bedrock", 0));
                 }
@@ -32,9 +29,6 @@ public class PlayerListPacket implements BedrockPacketTranslator {
             case REMOVE: {
                 for (org.cloudburstmc.protocol.bedrock.packet.PlayerListPacket.Entry entry : packet.getEntries()) {
                     long entityRId = entry.getEntityId();
-                    if(entityRId == player.getRuntimeEntityId() || entry.getUuid().toString() == player.getUUID()){
-                        continue;
-                    }
                     player.getClassicSession().send(new ServerExtRemovePlayerNamePacket(((short) entityRId)));
                 }
                 break;

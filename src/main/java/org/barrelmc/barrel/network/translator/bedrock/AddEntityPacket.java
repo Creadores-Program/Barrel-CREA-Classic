@@ -8,20 +8,25 @@ import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.player.Entity;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
-
 import org.barrelmc.barrel.network.converter.EntityConverter;
+
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.math.vector.Vector2f;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
+import org.cloudburstmc.protocol.bedrock.data.entity.EntityDataTypes;
 
 public class AddEntityPacket implements BedrockPacketTranslator{
     @Override
     public void translate(BedrockPacket pk, Player player) {
         org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket packet = (org.cloudburstmc.protocol.bedrock.packet.AddEntityPacket) pk;
 
+        if(packet.getRuntimeEntityId() == player.getRuntimeEntityId()){
+            return;
+        }
+
         Vector3f position = packet.getPosition();
         Vector2f rotation = packet.getRotation();
-        String name = "";
+        String name = (packet.getMetadata().getString(EntityDataTypes.NAME) != null) ? packet.getMetadata().getString(EntityDataTypes.NAME) : "";
         long runid = packet.getRuntimeEntityId();
         long uniid = packet.getUniqueEntityId();
         String classicType = EntityConverter.bedrockRuntimeToClassicStateId(packet.getEntityType(), packet.getIdentifier());
