@@ -403,7 +403,7 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message) {
-        if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic) != null){
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
             this.sendMessage(message, PlayerIds.CHAT);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
@@ -425,7 +425,7 @@ public class Player extends Vector3 {
     }
     
     public void sendTip(String message) {
-        if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic) != null){
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
             this.sendMessage(message, PlayerIds.BOTTOMRIGHT3);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);

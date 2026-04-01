@@ -10,13 +10,13 @@ public class SetTitlePacket implements BedrockPacketTranslator {
     public void translate(BedrockPacket pk, Player player) {
       org.cloudburstmc.protocol.bedrock.packet.SetTitlePacket packet = (org.cloudburstmc.protocol.bedrock.packet.SetTitlePacket) pk;
       int idMsg = PlayerIds.CONSOLE;
-      if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic()) != null){
+      if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
           idMsg = PlayerIds.CHAT;
       }
       switch(packet.getType()){
         case TITLE_JSON:
         case TITLE: {
-          if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic()) != null){
+          if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
             idMsg = PlayerIds.ANNOUNCEMENT;
           }
           break;
@@ -24,15 +24,13 @@ public class SetTitlePacket implements BedrockPacketTranslator {
         case SUBTITLE_JSON:
         case SUBTITLE: {
           if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
-            idMsg = PlayerIds.SMALLANNOUNCEMENT;
-          }else if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic()) != null){
             idMsg = PlayerIds.ANNOUNCEMENT;
           }
           break;
         }
         case ACTIONBAR_JSON:
         case ACTIONBAR: {
-          if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic()) != null){
+          if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
             idMsg = PlayerIds.BOTTOMRIGHT3;
           }
           break;

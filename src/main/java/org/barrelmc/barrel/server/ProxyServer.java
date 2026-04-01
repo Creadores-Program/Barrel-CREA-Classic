@@ -86,7 +86,7 @@ public class ProxyServer {
         add(new ServerExtEntryPacket(1, ExtNames.ENVWEATHERTYPE));//5
         add(new ServerExtEntryPacket(1, ExtNames.HACKCONTROL));//6
         add(new ServerExtEntryPacket(1, ExtNames.EMOTEFIX));//7
-        add(new ServerExtEntryPacket(2, ExtNames.MESSAGETYPES));//8
+        add(new ServerExtEntryPacket(1, ExtNames.MESSAGETYPES));//8
         add(new ServerExtEntryPacket(1, ExtNames.LONGERMESSAGES));//9
         add(new ServerExtEntryPacket(1, ExtNames.BULKBLOCKUPDATE));//10
         add(new ServerExtEntryPacket(1, ExtNames.PLAYERCLICK));//11
