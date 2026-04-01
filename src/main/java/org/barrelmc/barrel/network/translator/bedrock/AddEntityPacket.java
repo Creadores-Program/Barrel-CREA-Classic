@@ -26,7 +26,7 @@ public class AddEntityPacket implements BedrockPacketTranslator{
 
         Vector3f position = packet.getPosition();
         Vector2f rotation = packet.getRotation();
-        String name = (packet.getMetadata().getString(EntityDataTypes.NAME) != null) ? packet.getMetadata().getString(EntityDataTypes.NAME) : "";
+        String name = (packet.getMetadata().get(EntityDataTypes.NAME) != null) ? packet.getMetadata().get(EntityDataTypes.NAME).toString() : "";
         long runid = packet.getRuntimeEntityId();
         long uniid = packet.getUniqueEntityId();
         String classicType = EntityConverter.bedrockRuntimeToClassicStateId(packet.getEntityType(), packet.getIdentifier());
