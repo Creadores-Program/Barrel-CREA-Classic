@@ -7,15 +7,15 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetBlockPac
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientSetBlockPacket;
 import com.github.steveice10.mc.classic.protocol.data.game.SetBlockMode;
 import org.cloudburstmc.protocol.bedrock.data.GameType;
-import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import org.cloudburstmc.protocol.bedrock.data.PlayerAuthInputData;
 import org.cloudburstmc.protocol.bedrock.data.AuthoritativeMovementMode;
 import org.cloudburstmc.protocol.bedrock.data.inventory.transaction.ItemUseTransaction;
 import org.cloudburstmc.protocol.bedrock.data.inventory.ItemData;
-import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
 import org.cloudburstmc.math.vector.Vector3i;
 import org.cloudburstmc.math.vector.Vector3f;
 public class SetBlockPacket implements ClassicPacketTranslator{
+
+  private static final int ACTION_BREAK_BLOCK = 2;
   @Override
   public void translate(Packet pk, Player player) {
     ClientSetBlockPacket packet = (ClientSetBlockPacket) pk;
