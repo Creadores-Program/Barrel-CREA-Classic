@@ -5,6 +5,7 @@ import com.github.steveice10.mc.classic.protocol.packet.client.ClientChatPacket;
 import org.barrelmc.barrel.network.translator.interfaces.ClassicPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
+import org.barrelmc.barrel.utils.nukkit.TextFormat;
 import org.cloudburstmc.protocol.bedrock.packet.TextPacket;
 import org.cloudburstmc.protocol.bedrock.packet.CommandRequestPacket;
 import org.cloudburstmc.protocol.bedrock.data.command.CommandOriginType;
@@ -34,7 +35,7 @@ public class ChatPacket implements ClassicPacketTranslator {
 
         textPacket.setType(TextPacket.Type.CHAT);
         textPacket.setNeedsTranslation(false);
-        player.msgPlayer = player.msgPlayer.replace('&', '§').replace('%', '§');
+        player.msgPlayer = player.msgPlayer.replace(TextFormat.ESCAPE_CLASSIC_SERVER, TextFormat.ESCAPE).replace(TextFormat.ESCAPE_CLASSIC_CLIENT, TextFormat.ESCAPE);
         textPacket.setSourceName(player.msgPlayer);
         textPacket.setMessage(player.msgPlayer);
         textPacket.setXuid("");

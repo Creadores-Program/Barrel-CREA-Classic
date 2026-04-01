@@ -29,6 +29,7 @@ import org.barrelmc.barrel.network.BedrockBatchHandler;
 import org.barrelmc.barrel.network.translator.PacketTranslatorManager;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
+import org.barrelmc.barrel.utils.nukkit.TextFormat;
 import org.cloudburstmc.math.vector.Vector2f;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.math.vector.Vector3i;
@@ -414,7 +415,7 @@ public class Player extends Vector3 {
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(15), this.extensionsClassic)){
             message = Utils.sanitizeText(message);
         }
-        String[] messagesClassic = Utils.splitStringL(message.replace('§', '&'), MAXLENMSG);
+        String[] messagesClassic = Utils.splitStringL(message.replace(TextFormat.ESCAPE, TextFormat.ESCAPE_CLASSIC_SERVER), MAXLENMSG);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;
@@ -443,7 +444,7 @@ public class Player extends Vector3 {
             this.channel.disconnect();
             this.channel.parent().disconnect();
         }
-        this.classicSession.disconnect(reason.replace('§', '&'));
+        this.classicSession.disconnect(reason.replace(TextFormat.ESCAPE, TextFormat.ESCAPE_CLASSIC_SERVER));
         ProxyServer.getInstance().removeBedrockPlayer(classicUsername);
         this.mapClassic = null;
         ProxyServer.getInstance().getLogger().info(classicUsername + " disconnected: " + reason);

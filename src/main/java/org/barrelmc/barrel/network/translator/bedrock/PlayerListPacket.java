@@ -6,6 +6,7 @@ import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
+import org.barrelmc.barrel.utils.nukkit.TextFormat;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
 public class PlayerListPacket implements BedrockPacketTranslator {
@@ -23,7 +24,7 @@ public class PlayerListPacket implements BedrockPacketTranslator {
                     if(entityRId == player.getRuntimeEntityId() || entry.getUuid().toString() == player.getUUID()){
                         continue;
                     }
-                    String name = String.valueOf(entry.getName()).replace('§', '&');
+                    String name = String.valueOf(entry.getName()).replace(TextFormat.ESCAPE, TextFormat.ESCAPE_CLASSIC_SERVER);
                     player.getClassicSession().send(new ServerExtAddPlayerNamePacket(((short) entityRId), name, name, "Bedrock", 0));
                 }
                 break;

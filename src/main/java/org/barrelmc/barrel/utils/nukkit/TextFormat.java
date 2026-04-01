@@ -44,6 +44,10 @@ public enum TextFormat {
 
     private final String ansiCode;
 
+    public static final char ESCAPE = '\u00A7';
+    public static final char ESCAPE_CLASSIC_SERVER = '&';
+    public static final char ESCAPE_CLASSIC_CLIENT = '%';
+
     TextFormat(String ansiCode) {
         this.ansiCode = ansiCode;
     }
