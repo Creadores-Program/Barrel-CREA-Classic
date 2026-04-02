@@ -18,6 +18,7 @@ import org.barrelmc.barrel.server.ProxyServer;
 
 public class Utils {
     private static final OkHttpClient CLIENT = new OkHttpClient();
+    private static final String CLASSICUBE_SKIN_API = "https://cdn.classicube.net/skin/";
 
     public static byte[] toByteArray(long value) {
         byte[] result = new byte[8];
@@ -30,7 +31,7 @@ public class Utils {
     }
 
     public static String usernameToSkinData(String username){
-        String url = "https://cdn.classicube.net/skin/"+username+".png";
+        String url = CLASSICUBE_SKIN_API+username+".png";
         Request request = new Request.Builder()
             .url(url)
             .build();
