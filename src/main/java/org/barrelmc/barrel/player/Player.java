@@ -170,6 +170,8 @@ public class Player extends Vector3 {
 
     private static final int WORLDTOTALLEN = WORLDLEN * WORLDLEN * WORLDLEN;
 
+    public static final String GAMEMODE_STR = TextFormat.ESCAPE_CLASSIC_SERVER+"aGameMode: ";
+
     @Getter
     private ByteBuffer mapClassic = ByteBuffer.allocateDirect(WORLDTOTALLEN);
 
