@@ -18,7 +18,7 @@ public class TextPacket implements BedrockPacketTranslator {
                 break;
             }
             case TRANSLATION: {
-                if(player.isTraslateAd()){
+                if(!player.isTraslateAd()){
                     player.setTraslateAd(true);
                     player.sendMessage(msgInfo);
                 }
