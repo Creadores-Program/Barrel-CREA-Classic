@@ -25,6 +25,8 @@ public class ClassicPacketHandler extends SessionAdapter {
 
     private Player player = null;
 
+    private static final String serverSoftware = "Barrel Crea Classic";
+
     @Override
     public void packetSent(PacketSentEvent event) {
         //System.out.println("Sent Java " + event.getPacket().toString());
@@ -51,12 +53,12 @@ public class ClassicPacketHandler extends SessionAdapter {
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
                 if(loginPacket.isCPE()){
-                    player.getClassicSession().send(new ServerExtInfoPacket("Barrel Crea Classic", ((short) ProxyServer.getInstance().getExtDatapacks().size())));
+                    player.getClassicSession().send(new ServerExtInfoPacket(serverSoftware, ((short) ProxyServer.getInstance().getExtDatapacks().size())));
                     for(ServerExtEntryPacket extS : ProxyServer.getInstance().getExtDatapacks()){
                         player.getClassicSession().send(extS);
                     }
                 }else{
-                    player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), "Connect to Bedrock Server", UserType.NOT_OP));
+                    player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getSubMotd(), UserType.NOT_OP));
                     player.getClassicSession().send(new ServerLevelInitializePacket());
                     player.startSendingPing();
                 }

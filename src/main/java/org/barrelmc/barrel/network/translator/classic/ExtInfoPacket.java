@@ -15,7 +15,7 @@ public class ExtInfoPacket implements ClassicPacketTranslator {
         ClientExtInfoPacket packet = (ClientExtInfoPacket) pk;
         player.setExtSize((int) packet.getExtensionCount());
         if(player.getExtSize() < 1){
-            player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
+            player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getSubMotd(), UserType.NOT_OP));
             player.startSendingPing();
         }
     }
