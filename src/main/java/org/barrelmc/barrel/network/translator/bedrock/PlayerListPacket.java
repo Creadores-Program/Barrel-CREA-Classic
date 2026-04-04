@@ -11,6 +11,7 @@ import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
 public class PlayerListPacket implements BedrockPacketTranslator {
 
+    private static final String rolUser = "Bedrock";
     @Override
     public void translate(BedrockPacket pk, Player player) {
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(2), player.getExtensionsClassic())){
@@ -21,8 +22,8 @@ public class PlayerListPacket implements BedrockPacketTranslator {
             case ADD: {
                 for (org.cloudburstmc.protocol.bedrock.packet.PlayerListPacket.Entry entry : packet.getEntries()) {
                     long entityRId = entry.getEntityId();
-                    String name = String.valueOf(entry.getName()).replace(TextFormat.ESCAPE, TextFormat.ESCAPE_CLASSIC_SERVER);
-                    player.getClassicSession().send(new ServerExtAddPlayerNamePacket(((short) entityRId), name, name, "Bedrock", 0));
+                    String name = TextFormat.colorizeToCc(String.valueOf(entry.getName()));
+                    player.getClassicSession().send(new ServerExtAddPlayerNamePacket(((short) entityRId), name, name, rolUser, 0));
                 }
                 break;
             }

@@ -15,6 +15,7 @@ import okhttp3.ResponseBody;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 import org.barrelmc.barrel.server.ProxyServer;
+import org.barrelmc.barrel.utils.nukkit.TextFormat;
 
 public class Utils {
     private static final OkHttpClient CLIENT = new OkHttpClient();
@@ -69,7 +70,7 @@ public class Utils {
 
     public static String sanitizeText(String text){
         if(text == null){
-            return "";
+            return TextFormat.VOID_STR;
         }
         String normalized = Normalizer.normalize(text, Normalizer.Form.NFD);
         StringBuilder sb = new StringBuilder();

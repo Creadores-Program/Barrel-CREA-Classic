@@ -5,6 +5,7 @@ import org.barrelmc.barrel.player.Player;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
 public class TextPacket implements BedrockPacketTranslator {
+    private static final String msgInfo = "&cChat translation not implemented! Force language on &cMinecraft bedrock server";
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
@@ -17,9 +18,9 @@ public class TextPacket implements BedrockPacketTranslator {
                 break;
             }
             case TRANSLATION: {
-                if(player.getTraslateAd() != "true"){
-                    player.setTraslateAd("true");
-                    player.sendMessage("&cChat translation not implemented! Force language on Minecraft bedrock server");
+                if(player.isTraslateAd()){
+                    player.setTraslateAd(true);
+                    player.sendMessage(msgInfo);
                 }
             }
             default: {
