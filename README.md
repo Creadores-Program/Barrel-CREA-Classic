@@ -1,6 +1,6 @@
 # Barrel CREA Classic
 
-![Barrel CREA Classic Logo](./_fae2ed51-1be3-4750-b95b-de9fd286b4df.jpeg)
+![Barrel CREA Classic Logo](./.github/images/banner.png)
 
 **A proxy to connect to Minecraft: Bedrock Edition servers with Minecraft: Classic/ClassiCube.**
 
