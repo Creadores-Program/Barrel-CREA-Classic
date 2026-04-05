@@ -61,6 +61,6 @@ public class Vector3 {
     }
 
     public Vector3f getVector3f() {
-        return Vector3f.from(this.x, this.y + 1.62, this.z);
+        return Vector3f.from(this.x, this.y, this.z);
     }
 }
