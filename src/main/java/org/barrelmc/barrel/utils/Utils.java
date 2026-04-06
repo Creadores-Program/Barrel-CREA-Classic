@@ -20,6 +20,7 @@ import org.barrelmc.barrel.utils.nukkit.TextFormat;
 public class Utils {
     private static final OkHttpClient CLIENT = new OkHttpClient();
     private static final String CLASSICUBE_SKIN_API = "https://cdn.classicube.net/skin/";
+    public static final float FIX_YAW = 180.0f;
 
     public static byte[] toByteArray(long value) {
         byte[] result = new byte[8];
