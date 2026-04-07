@@ -1,6 +1,6 @@
 # Barrel CREA Classic
 
-![Barrel CREA Classic Logo](https://raw.githubusercontent.com/Trollhunters501/Barrel-CREA-Edition/main/_fae2ed51-1be3-4750-b95b-de9fd286b4df.jpeg)
+![Barrel CREA Classic Logo](./.github/images/banner.png)
 
 **A proxy to connect to Minecraft: Bedrock Edition servers with Minecraft: Classic/ClassiCube.**
 
@@ -8,15 +8,39 @@
 
 - Java 11
 - Minecraft: Classic 0.30 Or ClassiCube
-- Bedrock Edition server v1.20.70 Or [NukkitPM1E](https://github.com/PetteriM1/NukkitPetteriM1Edition) Or [NukkitMOT](https://github.com/MemoriesOfTime/Nukkit-MOT) Or a multiversion server that supports v1.20.70 of Minecraft Bedrock
+- **Supported Bedrock Servers:**
+  - Bedrock Edition v1.20.70 (Vanilla)
+  - [NukkitPM1E](https://github.com/PetteriM1/NukkitPetteriM1Edition) *(Note: Only works with **Anvil** world format)*
+  - [NukkitMOT](https://github.com/MemoriesOfTime/Nukkit-MOT)
+  - [MySoft (0.15.x - 1.21.x)](https://github.com/Dr1xyDev/MySoft-0.15.x-1.21.x)
+  - [Submarine MultiCore](https://github.com/Dr1xyDev/SubmarineMultiCore)
+  - [Pocketmine-MP 5 MV](https://github.com/vapebw/Pocketmine-5-MV)
+  - Any multiversion server with support for Minecraft Bedrock v1.20.70.
+
+> **Note:** Some cores may require additional configuration or specific plugins to ensure full compatibility with proxy packet translation.
+> 
 
 ## Need implemented
 
 - Inventory
+- Forms
+- Lang
+- Bossbars
+- Scoreboard
+- Xbox account
+- Dead screen
+- Entities Bugs
 - And More...
 
+## ⚠️ Important: Speed Control & Hacks
+To ensure a smooth experience and prevent being kicked by Bedrock anti-cheat systems, configure your ClassiCube client with these settings:
+
+* **Hack Speed Control:** Set to **x1.3** (Maximum safe value for Bedrock synchronization).
+* **Anti-Cheat Tip:** Values higher than 1.3 may trigger "SpeedHack" detections on the Bedrock side, causing rubberbanding or kicks.
+
+
 ## Installation
-Paste the .zip file of the latest version into the server's home directory and then unzip the file and edit the config.yml file to put the correct information for your server and your preferences!
+Paste the .jar file of the latest version into the server's home directory and edit the config.yml file to put the correct information for your server and your preferences!
 
 ## Credits
 

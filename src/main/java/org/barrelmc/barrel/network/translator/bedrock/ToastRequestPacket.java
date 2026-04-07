@@ -9,7 +9,7 @@ public class ToastRequestPacket implements BedrockPacketTranslator {
   @Override
   public void translate(BedrockPacket pk, Player player) {
     org.cloudburstmc.protocol.bedrock.packet.ToastRequestPacket packet = (org.cloudburstmc.protocol.bedrock.packet.ToastRequestPacket) pk;
-    if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic()) != null){
+    if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
       player.sendMessage(packet.getTitle(), PlayerIds.BOTTOMRIGHT2);
       player.sendMessage(packet.getContent(), PlayerIds.BOTTOMRIGHT1);
       return;

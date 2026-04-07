@@ -11,6 +11,7 @@ import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPingPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetClickDistancePacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
@@ -29,6 +30,7 @@ import org.barrelmc.barrel.network.BedrockBatchHandler;
 import org.barrelmc.barrel.network.translator.PacketTranslatorManager;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
+import org.barrelmc.barrel.utils.nukkit.TextFormat;
 import org.cloudburstmc.math.vector.Vector2f;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.math.vector.Vector3i;
@@ -102,7 +104,7 @@ public class Player extends Vector3 {
 
     @Setter
     @Getter
-    private String traslateAd = "false";
+    private boolean traslateAd = false;
 
     @Getter
     private EnvCPE envCpe = null;
@@ -169,6 +171,14 @@ public class Player extends Vector3 {
 
     private static final int WORLDTOTALLEN = WORLDLEN * WORLDLEN * WORLDLEN;
 
+    public static final String GAMEMODE_STR = TextFormat.GREEN_CC+"GameMode: ";
+
+    private static final ServerLevelFinalizePacket FINALIZE_WORLD_PK = new ServerLevelFinalizePacket(256, 256, 256);
+
+    public static final ServerSetClickDistancePacket REACH_SURVIVAL = new ServerSetClickDistancePacket((short) 160);
+
+    public static final ServerSetClickDistancePacket REACH_CREATIVE = new ServerSetClickDistancePacket((short) 224);
+
     @Getter
     private ByteBuffer mapClassic = ByteBuffer.allocateDirect(WORLDTOTALLEN);
 
@@ -195,7 +205,7 @@ public class Player extends Vector3 {
     @Getter
     private PlayerForceSpawnThread playerForceSpawnThread;
 
-    public String msgPlayer = "";
+    public String msgPlayer = TextFormat.VOID_STR;
 
     @Getter
     private LevelChunkProcess levelChunkProcess;
@@ -263,7 +273,7 @@ public class Player extends Vector3 {
     }
     
     private void offlineLogin(ClientIdentificationPacket classicLoginPacket) {
-        this.xuid = "";
+        this.xuid = TextFormat.VOID_STR;
         this.username = this.classicUsername = classicLoginPacket.getUsername();
         this.UUID = java.util.UUID.nameUUIDFromBytes(("CC"+this.classicUsername).getBytes(StandardCharsets.UTF_8)).toString();
         Config config = ProxyServer.getInstance().getConfig();
@@ -340,9 +350,9 @@ public class Player extends Vector3 {
         JSONObject skinData = new JSONObject();
 
         skinData.put("AnimatedImageData", new JSONArray());
-        skinData.put("ArmSize", "");
-        skinData.put("CapeData", "");
-        skinData.put("CapeId", "");
+        skinData.put("ArmSize", TextFormat.VOID_STR);
+        skinData.put("CapeData", TextFormat.VOID_STR);
+        skinData.put("CapeId", TextFormat.VOID_STR);
         skinData.put("PlayFabId", java.util.UUID.randomUUID().toString());
         skinData.put("CapeImageHeight", 0);
         skinData.put("CapeImageWidth", 0);
@@ -360,12 +370,12 @@ public class Player extends Vector3 {
         skinData.put("PersonaPieces", new JSONArray());
         skinData.put("PersonaSkin", false);
         skinData.put("PieceTintColors", new JSONArray());
-        skinData.put("PlatformOfflineId", "");
-        skinData.put("PlatformOnlineId", "");
+        skinData.put("PlatformOfflineId", TextFormat.VOID_STR);
+        skinData.put("PlatformOnlineId", TextFormat.VOID_STR);
         skinData.put("PremiumSkin", false);
         skinData.put("SelfSignedId", this.UUID);
         skinData.put("ServerAddress", ProxyServer.getInstance().getConfig().getBedrockAddress() + ":" + ProxyServer.getInstance().getConfig().getBedrockPort());
-        skinData.put("SkinAnimationData", "");
+        skinData.put("SkinAnimationData", TextFormat.VOID_STR);
         skinData.put("SkinColor", "#0");
         skinData.put("SkinData", Utils.usernameToSkinData(this.classicUsername));
         skinData.put("SkinGeometryData", Base64.getEncoder().encodeToString(ProxyServer.getInstance().getDefaultSkinGeometry().getBytes()));
@@ -403,7 +413,7 @@ public class Player extends Vector3 {
     }
 
     public void sendMessage(String message) {
-        if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic) != null){
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
             this.sendMessage(message, PlayerIds.CHAT);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
@@ -414,7 +424,7 @@ public class Player extends Vector3 {
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(15), this.extensionsClassic)){
             message = Utils.sanitizeText(message);
         }
-        String[] messagesClassic = Utils.splitStringL(message.replace('§', '&'), MAXLENMSG);
+        String[] messagesClassic = Utils.splitStringL(TextFormat.colorizeToCc(message), MAXLENMSG);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;
@@ -425,7 +435,7 @@ public class Player extends Vector3 {
     }
     
     public void sendTip(String message) {
-        if(Utils.getExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic) != null){
+        if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
             this.sendMessage(message, PlayerIds.BOTTOMRIGHT3);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
@@ -443,7 +453,7 @@ public class Player extends Vector3 {
             this.channel.disconnect();
             this.channel.parent().disconnect();
         }
-        this.classicSession.disconnect(reason.replace('§', '&'));
+        this.classicSession.disconnect(TextFormat.colorizeToCc(reason));
         ProxyServer.getInstance().removeBedrockPlayer(classicUsername);
         this.mapClassic = null;
         ProxyServer.getInstance().getLogger().info(classicUsername + " disconnected: " + reason);
@@ -483,7 +493,7 @@ public class Player extends Vector3 {
                 Thread.currentThread().interrupt();
             }
         }
-        this.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
+        this.getClassicSession().send(FINALIZE_WORLD_PK);
     }
 
     private byte[] compressMap(ByteBuffer mapData) throws IOException {

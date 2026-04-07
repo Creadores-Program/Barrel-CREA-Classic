@@ -5,6 +5,7 @@ import com.github.steveice10.mc.classic.protocol.packet.client.ClientChatPacket;
 import org.barrelmc.barrel.network.translator.interfaces.ClassicPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
+import org.barrelmc.barrel.utils.nukkit.TextFormat;
 import org.cloudburstmc.protocol.bedrock.packet.TextPacket;
 import org.cloudburstmc.protocol.bedrock.packet.CommandRequestPacket;
 import org.cloudburstmc.protocol.bedrock.data.command.CommandOriginType;
@@ -20,13 +21,13 @@ public class ChatPacket implements ClassicPacketTranslator {
         if(chatPacket.getUnused() == 1){
             return;
         }
-        if(player.msgPlayer.startsWith("/")){
+        if(player.msgPlayer.startsWith(TextFormat.COMMAND_CLIENT)){
             CommandRequestPacket commandPacket = new CommandRequestPacket();
             commandPacket.setVersion(ProxyServer.getInstance().getBedrockPacketCodec().getProtocolVersion());
-            commandPacket.setCommand("?"+player.msgPlayer.substring(1));
+            commandPacket.setCommand(TextFormat.COMMAND_SERVER + player.msgPlayer.substring(1));
             CommandOriginData Cod = new CommandOriginData(CommandOriginType.PLAYER, UUID.fromString(player.getUUID()), player.getUUID(), 0);
             commandPacket.setCommandOriginData(Cod);
-            player.msgPlayer = "";
+            player.msgPlayer = TextFormat.VOID_STR;
             player.getBedrockClientSession().sendPacket(commandPacket);
             return;
         }
@@ -34,12 +35,12 @@ public class ChatPacket implements ClassicPacketTranslator {
 
         textPacket.setType(TextPacket.Type.CHAT);
         textPacket.setNeedsTranslation(false);
-        player.msgPlayer = player.msgPlayer.replace('&', '§').replace('%', '§');
+        player.msgPlayer = TextFormat.colorizeToMc(player.msgPlayer);
         textPacket.setSourceName(player.msgPlayer);
         textPacket.setMessage(player.msgPlayer);
-        textPacket.setXuid("");
-        textPacket.setPlatformChatId("");
-        player.msgPlayer = "";
+        textPacket.setXuid(TextFormat.VOID_STR);
+        textPacket.setPlatformChatId(TextFormat.VOID_STR);
+        player.msgPlayer = TextFormat.VOID_STR;
         player.getBedrockClientSession().sendPacket(textPacket);
     }
 }

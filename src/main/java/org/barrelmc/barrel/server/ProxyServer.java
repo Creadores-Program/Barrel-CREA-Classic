@@ -77,6 +77,9 @@ public class ProxyServer {
     private Logger logger;
 
     @Getter
+    private String subMotd = "Connect to Bedrock Server maxspeed=1.4 -push jumps=1 -respawn";
+
+    @Getter
     private List<ServerExtEntryPacket> extDatapacks = new ObjectArrayList<>(){{
         add(new ServerExtEntryPacket(1, ExtNames.CLICKDISTANCE));//0
         add(new ServerExtEntryPacket(1, ExtNames.CUSTOMBLOCKS));//1
@@ -86,7 +89,7 @@ public class ProxyServer {
         add(new ServerExtEntryPacket(1, ExtNames.ENVWEATHERTYPE));//5
         add(new ServerExtEntryPacket(1, ExtNames.HACKCONTROL));//6
         add(new ServerExtEntryPacket(1, ExtNames.EMOTEFIX));//7
-        add(new ServerExtEntryPacket(2, ExtNames.MESSAGETYPES));//8
+        add(new ServerExtEntryPacket(1, ExtNames.MESSAGETYPES));//8
         add(new ServerExtEntryPacket(1, ExtNames.LONGERMESSAGES));//9
         add(new ServerExtEntryPacket(1, ExtNames.BULKBLOCKUPDATE));//10
         add(new ServerExtEntryPacket(1, ExtNames.PLAYERCLICK));//11

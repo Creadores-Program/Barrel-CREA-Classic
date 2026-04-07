@@ -1,62 +1,48 @@
 package org.barrelmc.barrel.network.converter;
 
+import java.util.Map;
+import static java.util.Map.entry;
+import java.util.concurrent.ConcurrentHashMap;
+
 import com.github.steveice10.mc.classic.protocol.data.game.EntityIds;
 public class EntityConverter{
+  private static final Map<String, int[]> ENTITYSIDSTR = new ConcurrentHashMap<>(Map.ofEntries(
+    entry(EntityIds.CHICKEN, new int[]{ 10, 122, 132, 30 }),
+    entry(EntityIds.CREEPER, new int[]{ 33 }),
+    entry(EntityIds.CROCODILE, new int[]{ 14, 121 }),
+    entry(EntityIds.PIG, new int[]{ 12 }),
+    entry(EntityIds.SHEEP, new int[]{ 13 }),
+    entry(EntityIds.SKELETON, new int[]{ 34, 46, 48, 52 }),
+    entry(EntityIds.SPIDER, new int[]{ 35 }),
+    entry(EntityIds.ZOMBIE, new int[]{ 32, 36, 44, 47, 116, 123, 127, 110 }),
+    entry(EntityIds.CHIBI, new int[]{ 105, 39, 55, 134 }),
+    entry("46", new int[]{ 65 }),
+    entry(EntityIds.HEAD, new int[]{ 91, 89 })
+  ));
+  private static final String gravelB = "gravel";
+  private static final String[] gravelSand = new String[]{ "13", "12" };
+  private static final String prefixB = ":";
   public static String bedrockRuntimeToClassicStateId(int entityType, String identifier){
     String name = identifier;
-    if (identifier.contains(":")) {
-      name = identifier.substring(identifier.indexOf(":") + 1);
+    if (identifier.contains(prefixB)) {
+      name = identifier.substring(identifier.indexOf(prefixB) + 1);
     }
-
-    switch(entityType){
-      case 10:
-      case 122:
-      case 132:
-      case 30:
-        return EntityIds.CHICKEN;
-      case 33:
-        return EntityIds.CREEPER;
-      case 14:
-      case 121:
-        return EntityIds.CROCODILE;
-      case 12:
-        return EntityIds.PIG;
-      case 13:
-        return EntityIds.SHEEP;
-      case 34:
-      case 46:
-      case 48:
-      case 52:
-        return EntityIds.SKELETON;
-      case 35:
-        return EntityIds.SPIDER;
-      case 32:
-      case 36:
-      case 44:
-      case 47:
-      case 116:
-      case 123:
-      case 127:
-      case 110:
-        return EntityIds.ZOMBIE;
-      case 105:
-      case 39:
-      case 55:
-      case 134:
-        return EntityIds.CHIBI;
-      case 63:
-        return name;
-      case 65:
-        return "46";
-      case 66:
-        if(name.contains("gravel")){
-          return "13";
-        }else{
-          return "12";
+    if(entityType == 63){
+      return name;
+    }else if(entityType == 66){
+      if(name.contains(gravelB)){
+        return gravelSand[0];
+      }else{
+        return gravelSand[1];
+      }
+    }
+    for(Map.Entry<String, int[]> classicIdEntry : ENTITYSIDSTR.entrySet()){
+      int[] value = classicIdEntry.getValue();
+      for(int num : value){
+        if(entityType == num){
+          return classicIdEntry.getKey();
         }
-      case 91:
-      case 89:
-        return EntityIds.HEAD;
+      }
     }
     if(name.contains(EntityIds.CHICKEN)){
       return EntityIds.CHICKEN;

@@ -9,6 +9,7 @@ import org.cloudburstmc.protocol.bedrock.packet.PlayerActionPacket;
 import org.cloudburstmc.protocol.bedrock.packet.SetLocalPlayerAsInitializedPacket;
 import org.cloudburstmc.protocol.bedrock.packet.TickSyncPacket;
 import org.cloudburstmc.protocol.bedrock.data.AuthoritativeMovementMode;
+import org.cloudburstmc.protocol.bedrock.data.GameType;
 import org.cloudburstmc.protocol.bedrock.data.PlayerActionType;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
@@ -33,6 +34,11 @@ public class PlayerForceSpawnThread implements Runnable{
             playerActionPacket.setFace(0);
             playerActionPacket.setRuntimeEntityId(player.getRuntimeEntityId());
             player.getBedrockClientSession().sendPacket(playerActionPacket);
+            if(player.getGameMode() == GameType.SURVIVAL || player.getGameMode() == GameType.ADVENTURE || player.getGameMode() == GameType.DEFAULT){
+                player.getClassicSession().send(Player.REACH_SURVIVAL);
+            }else{
+                player.getClassicSession().send(Player.REACH_CREATIVE);
+            }
         }
         if(player.getStatusWorld() == StatusWorld.PREPARING){
             TickSyncPacket tickSyncPacket = new TickSyncPacket();
@@ -53,10 +59,11 @@ public class PlayerForceSpawnThread implements Runnable{
         float classicX = Utils.mapCoords(pos.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX()));
         float classicY = pos.getY();
         float classicZ = Utils.mapCoords(pos.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ()));
-        player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, rotation.getX(), rotation.getY()));
+        float yawClassic = rotation.getY() + Utils.FIX_YAW;
+        player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, yawClassic, rotation.getX()));
         player.getEnvCpe().updateAll();
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
-            player.sendMessage("GameMod: " + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.BOTTOMRIGHT1);
+            player.sendMessage(Player.GAMEMODE_STR + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.STATUS1);
         }
     }
 }

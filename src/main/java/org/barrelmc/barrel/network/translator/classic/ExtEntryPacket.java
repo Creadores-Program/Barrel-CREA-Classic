@@ -3,7 +3,6 @@ package org.barrelmc.barrel.network.translator.classic;
 import com.github.steveice10.packetlib.packet.Packet;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerCustomBlockSupportLevelPacket;
 import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 
@@ -27,8 +26,8 @@ public class ExtEntryPacket implements ClassicPacketTranslator {
             return;
         }
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(1), player.getExtensionsClassic())){
-            player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getConfig().getMotd(), UserType.NOT_OP));
-            player.getClassicSession().send(new ServerLevelInitializePacket());
+            player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getSubMotd(), UserType.NOT_OP));
+            player.getClassicSession().send(Utils.INITCCWORPK);
             player.startSendingPing();
             return;
         }

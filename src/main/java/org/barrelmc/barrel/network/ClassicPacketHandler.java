@@ -9,7 +9,6 @@ import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificat
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtInfoPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import com.github.steveice10.mc.classic.protocol.ClassicConstants;
 import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 import com.github.steveice10.packetlib.Session;
@@ -20,10 +19,13 @@ import com.github.steveice10.packetlib.event.session.SessionAdapter;
 import com.github.steveice10.packetlib.packet.Packet;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
+import org.barrelmc.barrel.utils.Utils;
 
 public class ClassicPacketHandler extends SessionAdapter {
 
     private Player player = null;
+
+    private static final String serverSoftware = "Barrel Crea Classic";
 
     @Override
     public void packetSent(PacketSentEvent event) {
@@ -51,13 +53,13 @@ public class ClassicPacketHandler extends SessionAdapter {
                 new Player(loginPacket, session);
                 this.player = ProxyServer.getInstance().getPlayerByName(loginPacket.getUsername());
                 if(loginPacket.isCPE()){
-                    player.getClassicSession().send(new ServerExtInfoPacket("Barrel Crea Classic", ((short) ProxyServer.getInstance().getExtDatapacks().size())));
+                    player.getClassicSession().send(new ServerExtInfoPacket(serverSoftware, ((short) ProxyServer.getInstance().getExtDatapacks().size())));
                     for(ServerExtEntryPacket extS : ProxyServer.getInstance().getExtDatapacks()){
                         player.getClassicSession().send(extS);
                     }
                 }else{
-                    player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), "Connect to Bedrock Server", UserType.NOT_OP));
-                    player.getClassicSession().send(new ServerLevelInitializePacket());
+                    player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getSubMotd(), UserType.NOT_OP));
+                    player.getClassicSession().send(Utils.INITCCWORPK);
                     player.startSendingPing();
                 }
             }

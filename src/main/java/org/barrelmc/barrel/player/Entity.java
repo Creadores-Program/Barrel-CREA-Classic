@@ -16,7 +16,7 @@ public class Entity {
         this.x = pos.getX();
         this.y = pos.getY();
         this.z = pos.getZ();
-        this.yaw = rot.getX();
-        this.pitch = rot.getY();
+        this.yaw = rot.getY();
+        this.pitch = rot.getX();
     }
 }

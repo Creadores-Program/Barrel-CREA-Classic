@@ -14,10 +14,16 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
+
 import org.barrelmc.barrel.server.ProxyServer;
+import org.barrelmc.barrel.utils.nukkit.TextFormat;
 
 public class Utils {
     private static final OkHttpClient CLIENT = new OkHttpClient();
+    private static final String CLASSICUBE_SKIN_API = "https://cdn.classicube.net/skin/";
+    public static final float FIX_YAW = 180.0f;
+    public static final ServerLevelInitializePacket INITCCWORPK = new ServerLevelInitializePacket();
 
     public static byte[] toByteArray(long value) {
         byte[] result = new byte[8];
@@ -30,7 +36,7 @@ public class Utils {
     }
 
     public static String usernameToSkinData(String username){
-        String url = "https://cdn.classicube.net/skin/"+username+".png";
+        String url = CLASSICUBE_SKIN_API+username+".png";
         Request request = new Request.Builder()
             .url(url)
             .build();
@@ -68,7 +74,7 @@ public class Utils {
 
     public static String sanitizeText(String text){
         if(text == null){
-            return "";
+            return TextFormat.VOID_STR;
         }
         String normalized = Normalizer.normalize(text, Normalizer.Form.NFD);
         StringBuilder sb = new StringBuilder();
