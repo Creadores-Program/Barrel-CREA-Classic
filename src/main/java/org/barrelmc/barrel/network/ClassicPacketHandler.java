@@ -9,7 +9,6 @@ import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificat
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtInfoPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerIdentificationPacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import com.github.steveice10.mc.classic.protocol.ClassicConstants;
 import com.github.steveice10.mc.classic.protocol.data.game.UserType;
 import com.github.steveice10.packetlib.Session;
@@ -20,6 +19,7 @@ import com.github.steveice10.packetlib.event.session.SessionAdapter;
 import com.github.steveice10.packetlib.packet.Packet;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
+import org.barrelmc.barrel.utils.Utils;
 
 public class ClassicPacketHandler extends SessionAdapter {
 
@@ -59,7 +59,7 @@ public class ClassicPacketHandler extends SessionAdapter {
                     }
                 }else{
                     player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getSubMotd(), UserType.NOT_OP));
-                    player.getClassicSession().send(new ServerLevelInitializePacket());
+                    player.getClassicSession().send(Utils.INITCCWORPK);
                     player.startSendingPing();
                 }
             }

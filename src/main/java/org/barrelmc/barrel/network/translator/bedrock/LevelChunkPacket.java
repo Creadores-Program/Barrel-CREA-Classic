@@ -18,7 +18,6 @@ import org.cloudburstmc.nbt.NbtMapBuilder;
 import org.cloudburstmc.nbt.util.stream.NetworkDataInputStream;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 import org.cloudburstmc.protocol.common.util.VarInts;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -140,7 +139,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                         if (storageReadIndex == 0) {
                             if(player.getStatusWorld() == StatusWorld.PLAYING && player.isImmobile() && ((int) player.getMapClassic().get(indexClassic)) != classicStateId){
                                 player.setStatusWorld(StatusWorld.BUILD_WORLD);
-                                player.getClassicSession().send(new ServerLevelInitializePacket());
+                                player.getClassicSession().send(Utils.INITCCWORPK);
                             }else if(player.getStatusWorld() == StatusWorld.PLAYING){
                                 player.getLevelChunkProcess().add(classicStateId, classicX, classicY, classicZ, indexClassic);
                             }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){
@@ -152,7 +151,7 @@ public class LevelChunkPacket implements BedrockPacketTranslator {
                             if (layer0 == 0) {
                                 if(player.getStatusWorld() == StatusWorld.PLAYING && player.isImmobile() && ((int) player.getMapClassic().get(indexClassic)) != classicStateId){
                                     player.setStatusWorld(StatusWorld.BUILD_WORLD);
-                                    player.getClassicSession().send(new ServerLevelInitializePacket());
+                                    player.getClassicSession().send(Utils.INITCCWORPK);
                                 }else if(player.getStatusWorld() == StatusWorld.PLAYING){
                                     player.getLevelChunkProcess().add(classicStateId, classicX, classicY, classicZ, indexClassic);
                                 }else if(player.getStatusWorld() != StatusWorld.LOGIN && player.getPlayerForceSpawnThread().forceSpawn){

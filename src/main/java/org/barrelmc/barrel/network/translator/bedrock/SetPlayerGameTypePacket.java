@@ -14,6 +14,11 @@ public class SetPlayerGameTypePacket implements BedrockPacketTranslator {
     public void translate(BedrockPacket pk, Player player) {
         org.cloudburstmc.protocol.bedrock.packet.SetPlayerGameTypePacket packet = (org.cloudburstmc.protocol.bedrock.packet.SetPlayerGameTypePacket) pk;
         player.setGameMode(GameType.from(packet.getGamemode()));
+        if(player.getGameMode() == GameType.SURVIVAL || player.getGameMode() == GameType.ADVENTURE || player.getGameMode() == GameType.DEFAULT){
+            player.getClassicSession().send(Player.REACH_SURVIVAL);
+        }else{
+            player.getClassicSession().send(Player.REACH_CREATIVE);
+        }
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
             player.sendMessage(Player.GAMEMODE_STR + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.STATUS1);
         }

@@ -12,11 +12,35 @@ import org.cloudburstmc.math.vector.Vector3i;
 
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerDespawnPlayerPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvColorsPacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerEnvSetWeatherTypePacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
 public class ChangeDimensionPacket implements BedrockPacketTranslator {
+    private static final ServerEnvColorsPacket[] OVERWORLD_COLORS = {
+        new ServerEnvColorsPacket(0, 153, 204, 255),
+        new ServerEnvColorsPacket(2, 153, 204, 255),
+        new ServerEnvColorsPacket(3, 153, 153, 153),
+        new ServerEnvColorsPacket(4, 255, 255, 255),
+        new ServerEnvColorsPacket(1, 255, 255, 255),
+        new ServerEnvColorsPacket(5, 255, 255, 255)
+    };
+
+    private static final ServerEnvColorsPacket[] NETHER_COLORS = {
+        new ServerEnvColorsPacket(0, 30, 5, 5),
+        new ServerEnvColorsPacket(2, 50, 10, 10),
+        new ServerEnvColorsPacket(3, 80, 40, 40),
+        new ServerEnvColorsPacket(4, 180, 50, 40),
+        new ServerEnvColorsPacket(1, 0, 0, 0),
+        new ServerEnvColorsPacket(5, 40, 10, 10)
+    };
+
+    private static final ServerEnvColorsPacket[] END_COLORS = {
+        new ServerEnvColorsPacket(0, 10, 10, 15),
+        new ServerEnvColorsPacket(2, 20, 10, 25),
+        new ServerEnvColorsPacket(3, 60, 55, 70),
+        new ServerEnvColorsPacket(4, 200, 190, 150),
+        new ServerEnvColorsPacket(1, 0, 0, 0),
+        new ServerEnvColorsPacket(5, 5, 5, 10)
+    };
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
@@ -34,30 +58,30 @@ public class ChangeDimensionPacket implements BedrockPacketTranslator {
         switch(packet.getDimension()){
             case 0://Overworld
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
-                    player.getEnvCpe().updateAmbient(new ServerEnvColorsPacket(0, 153, 204, 255), new ServerEnvColorsPacket(2, 153, 204, 255), new ServerEnvColorsPacket(3, 153, 153, 153), new ServerEnvColorsPacket(4, 255, 255, 255));
-                    player.getEnvCpe().updateDimention(new ServerEnvColorsPacket(1, 255, 255, 255), new ServerEnvColorsPacket(5, 255, 255, 255));
+                    player.getEnvCpe().updateAmbient(OVERWORLD_COLORS[0], OVERWORLD_COLORS[1], OVERWORLD_COLORS[2], OVERWORLD_COLORS[3]);
+                    player.getEnvCpe().updateDimention(OVERWORLD_COLORS[4], OVERWORLD_COLORS[5]);
                 }
                 break;
             case 1://Nether
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
-                    player.getEnvCpe().updateAmbient(new ServerEnvColorsPacket(0, 30, 5, 5), new ServerEnvColorsPacket(2, 50, 10, 10), new ServerEnvColorsPacket(3, 80, 40, 40), new ServerEnvColorsPacket(4, 180, 50, 40));
-                    player.getEnvCpe().updateDimention(new ServerEnvColorsPacket(1, 0, 0, 0), new ServerEnvColorsPacket(5, 40, 10, 10));
+                    player.getEnvCpe().updateAmbient(NETHER_COLORS[0], NETHER_COLORS[1], NETHER_COLORS[2], NETHER_COLORS[3]);
+                    player.getEnvCpe().updateDimention(NETHER_COLORS[4], NETHER_COLORS[5]);
                 }
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(5), player.getExtensionsClassic())){
-                    player.getEnvCpe().setWeather(new ServerEnvSetWeatherTypePacket(0));
+                    player.getEnvCpe().setWeather(LevelEventPacket.CLEAR);
                 }
                 break;
             case 2://End
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(3), player.getExtensionsClassic())){
-                    player.getEnvCpe().updateAmbient(new ServerEnvColorsPacket(0, 10, 10, 15), new ServerEnvColorsPacket(2, 20, 10, 25), new ServerEnvColorsPacket(3, 60, 55, 70), new ServerEnvColorsPacket(4, 200, 190, 150));
-                    player.getEnvCpe().updateDimention(new ServerEnvColorsPacket(1, 0, 0, 0), new ServerEnvColorsPacket(5, 5, 5, 10));
+                    player.getEnvCpe().updateAmbient(END_COLORS[0], END_COLORS[1], END_COLORS[2], END_COLORS[3]);
+                    player.getEnvCpe().updateDimention(END_COLORS[4], END_COLORS[5]);
                 }
                 if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(5), player.getExtensionsClassic())){
-                    player.getEnvCpe().setWeather(new ServerEnvSetWeatherTypePacket(0));
+                    player.getEnvCpe().setWeather(LevelEventPacket.CLEAR);
                 }
                 break;
         }
-        player.getClassicSession().send(new ServerLevelInitializePacket());
+        player.getClassicSession().send(Utils.INITCCWORPK);
         player.setOldPosition(player.getVector3f());
         player.setPosition(packet.getPosition());
         player.setLastServerPosition(packet.getPosition());

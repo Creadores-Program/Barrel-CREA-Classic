@@ -4,7 +4,6 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerDespawnPlay
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtAddEntity2Packet;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerSpawnPlayerPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPositionRotationPacket;
-import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelInitializePacket;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Entity;
@@ -26,7 +25,7 @@ public class MovePlayerPacket implements BedrockPacketTranslator {
 
         if (packet.getRuntimeEntityId() == player.getRuntimeEntityId()) {
             if(position.getX() > player.getMaxPosBedrock().getX() || position.getX() < player.getMinPosBedrock().getX() || position.getZ() > player.getMaxPosBedrock().getZ() || position.getZ() < player.getMinPosBedrock().getZ()){
-                player.getClassicSession().send(new ServerLevelInitializePacket());
+                player.getClassicSession().send(Utils.INITCCWORPK);
                 player.setStatusWorld(StatusWorld.BUILD_WORLD);
                 player.setMaxPosBedrock(Vector3i.from(((int) Math.round(position.getX() + 127)), 255, ((int) Math.round(position.getZ() + 127))));
                 player.setMinPosBedrock(Vector3i.from(((int) Math.round(position.getX() + -128)), 0, ((int) Math.round(position.getZ() + -128))));

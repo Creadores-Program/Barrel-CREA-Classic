@@ -11,6 +11,7 @@ import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientExtEntryPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerChatPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerPingPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetClickDistancePacket;
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
@@ -171,6 +172,12 @@ public class Player extends Vector3 {
     private static final int WORLDTOTALLEN = WORLDLEN * WORLDLEN * WORLDLEN;
 
     public static final String GAMEMODE_STR = TextFormat.GREEN_CC+"GameMode: ";
+
+    private static final ServerLevelFinalizePacket FINALIZE_WORLD_PK = new ServerLevelFinalizePacket(256, 256, 256);
+
+    public static final ServerSetClickDistancePacket REACH_SURVIVAL = new ServerSetClickDistancePacket((short) 160);
+
+    public static final ServerSetClickDistancePacket REACH_CREATIVE = new ServerSetClickDistancePacket((short) 224);
 
     @Getter
     private ByteBuffer mapClassic = ByteBuffer.allocateDirect(WORLDTOTALLEN);
@@ -486,7 +493,7 @@ public class Player extends Vector3 {
                 Thread.currentThread().interrupt();
             }
         }
-        this.getClassicSession().send(new ServerLevelFinalizePacket(256, 256, 256));
+        this.getClassicSession().send(FINALIZE_WORLD_PK);
     }
 
     private byte[] compressMap(ByteBuffer mapData) throws IOException {

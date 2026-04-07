@@ -9,6 +9,8 @@ import org.cloudburstmc.protocol.bedrock.data.LevelEvent;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
 public class LevelEventPacket implements BedrockPacketTranslator {
+    private static final ServerEnvSetWeatherTypePacket RAIN = new ServerEnvSetWeatherTypePacket(1);
+    public static final ServerEnvSetWeatherTypePacket CLEAR = new ServerEnvSetWeatherTypePacket(0);
 
     @Override
     public void translate(BedrockPacket pk, Player player) {
@@ -20,11 +22,11 @@ public class LevelEventPacket implements BedrockPacketTranslator {
         switch((LevelEvent) packet.getType()){
             case START_RAINING:
             case START_THUNDERSTORM:
-                player.getEnvCpe().setWeather(new ServerEnvSetWeatherTypePacket(1));
+                player.getEnvCpe().setWeather(RAIN);
                 break;
             case STOP_RAINING:
             case STOP_THUNDERSTORM:
-                player.getEnvCpe().setWeather(new ServerEnvSetWeatherTypePacket(0));
+                player.getEnvCpe().setWeather(CLEAR);
                 break;
             default:
                 break;

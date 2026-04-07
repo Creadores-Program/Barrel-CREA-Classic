@@ -1,4 +1,5 @@
 package org.barrelmc.barrel.network.translator.classic;
+import org.cloudburstmc.protocol.bedrock.packet.AnimatePacket;
 import org.cloudburstmc.protocol.bedrock.packet.InteractPacket;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.barrelmc.barrel.player.Player;
@@ -9,7 +10,14 @@ public class PlayerClickPacket implements ClassicPacketTranslator{
     @Override
     public void translate(Packet pk, Player player){
         ClientPlayerClickPacket packet = (ClientPlayerClickPacket) pk;
-        if(packet.getAction() == 1 || packet.getButton() == 2 || packet.getTargetEntityID() < 0){
+        if(packet.getAction() == 1 || packet.getButton() == 2){
+            return;
+        }
+        AnimatePacket anim = new AnimatePacket();
+        anim.setAction(AnimatePacket.Action.SWING_ARM);
+        anim.setRuntimeEntityId(player.getRuntimeEntityId());
+        player.getBedrockClientSession().sendPacket(anim);
+        if(packet.getTargetEntityID() < 0){
             return;
         }
         InteractPacket bedrockpacket = new InteractPacket();
