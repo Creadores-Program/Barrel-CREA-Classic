@@ -179,6 +179,8 @@ public class Player extends Vector3 {
 
     public static final ServerSetClickDistancePacket REACH_CREATIVE = new ServerSetClickDistancePacket((short) 224);
 
+    private static final String disconTransDerect = "disconnectionScreen.";
+
     @Getter
     private ByteBuffer mapClassic = ByteBuffer.allocateDirect(WORLDTOTALLEN);
 
@@ -452,6 +454,9 @@ public class Player extends Vector3 {
         if (this.channel.isOpen()) {
             this.channel.disconnect();
             this.channel.parent().disconnect();
+        }
+        if(reason.contains(disconTransDerect)){
+            reason = ProxyServer.getInstance().getLangManager().translate(reason, null);
         }
         this.classicSession.disconnect(TextFormat.colorizeToCc(reason));
         ProxyServer.getInstance().removeBedrockPlayer(classicUsername);
