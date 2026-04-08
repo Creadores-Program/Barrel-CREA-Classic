@@ -24,12 +24,12 @@
 
 - Inventory
 - Forms
-- Lang
 - Bossbars
 - Scoreboard
 - Xbox account
 - Dead screen
 - Entities Bugs
+- LevelDB world format
 - And More...
 
 ## ⚠️ Important: Speed Control & Hacks

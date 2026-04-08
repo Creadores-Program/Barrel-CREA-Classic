@@ -80,6 +80,9 @@ public class ProxyServer {
     private String subMotd = "Connect to Bedrock Server maxspeed=1.4 -push jumps=1 -respawn";
 
     @Getter
+    private final LanguageManager langManager;
+
+    @Getter
     private List<ServerExtEntryPacket> extDatapacks = new ObjectArrayList<>(){{
         add(new ServerExtEntryPacket(1, ExtNames.CLICKDISTANCE));//0
         add(new ServerExtEntryPacket(1, ExtNames.CUSTOMBLOCKS));//1
@@ -108,6 +111,7 @@ public class ProxyServer {
             this.getLogger().emergency("Config file not found! Terminating...");
             System.exit(1);
         }
+        this.langManager = new LanguageManager();
         loadBlockDefinitions();
         loadDefaultSkin();
         startServer();
