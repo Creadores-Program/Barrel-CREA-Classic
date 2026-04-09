@@ -161,10 +161,6 @@ public class Player extends Vector3 {
     private int hotbarSlot = 0;
 
     @Getter
-    @Setter
-    private String language = "en-US";
-
-    @Getter
     private List<ClientExtEntryPacket> extensionsClassic = new ObjectArrayList<>();
 
     public static final int WORLDLEN = 256;
@@ -314,19 +310,19 @@ public class Player extends Vector3 {
         String publicKeyBase64 = Base64.getEncoder().encodeToString(this.publicKey.getEncoded());
 
         JSONObject chain = new JSONObject();
-        chain.put("exp", Instant.now().getEpochSecond() + TimeUnit.HOURS.toSeconds(6));
-        chain.put("identityPublicKey", publicKeyBase64);
-        chain.put("nbf", Instant.now().getEpochSecond() - TimeUnit.HOURS.toSeconds(6));
+        chain.put(LoginDataConstants.EXP, Instant.now().getEpochSecond() + TimeUnit.HOURS.toSeconds(6));
+        chain.put(LoginDataConstants.IDENTITYPUBLICKEY, publicKeyBase64);
+        chain.put(LoginDataConstants.NBF, Instant.now().getEpochSecond() - TimeUnit.HOURS.toSeconds(6));
 
         JSONObject extraData = new JSONObject();
-        extraData.put("identity", this.UUID);
-        extraData.put("XUID", this.xuid);
-        extraData.put("displayName", this.username);
-        chain.put("extraData", extraData);
+        extraData.put(LoginDataConstants.IDENTITY, this.UUID);
+        extraData.put(LoginDataConstants.XUID, this.xuid);
+        extraData.put(LoginDataConstants.DISPLAYNAME, this.username);
+        chain.put(LoginDataConstants.EXTRADATA, extraData);
 
         JSONObject jwtHeader = new JSONObject();
-        jwtHeader.put("alg", "ES384");
-        jwtHeader.put("x5u", publicKeyBase64);
+        jwtHeader.put(LoginDataConstants.ALG, LoginDataConstants.ALG_VAL);
+        jwtHeader.put(LoginDataConstants.X5U, publicKeyBase64);
 
         String jwt = generateJwt(jwtHeader, chain);
 
@@ -346,52 +342,52 @@ public class Player extends Vector3 {
         String publicKeyBase64 = Base64.getEncoder().encodeToString(this.publicKey.getEncoded());
 
         JSONObject jwtHeader = new JSONObject();
-        jwtHeader.put("alg", "ES384");
-        jwtHeader.put("x5u", publicKeyBase64);
+        jwtHeader.put(LoginDataConstants.ALG, LoginDataConstants.ALG_VAL);
+        jwtHeader.put(LoginDataConstants.X5U, publicKeyBase64);
 
         JSONObject skinData = new JSONObject();
 
-        skinData.put("AnimatedImageData", new JSONArray());
-        skinData.put("ArmSize", TextFormat.VOID_STR);
-        skinData.put("CapeData", TextFormat.VOID_STR);
-        skinData.put("CapeId", TextFormat.VOID_STR);
-        skinData.put("PlayFabId", java.util.UUID.randomUUID().toString());
-        skinData.put("CapeImageHeight", 0);
-        skinData.put("CapeImageWidth", 0);
-        skinData.put("CapeOnClassicSkin", false);
-        skinData.put("ClientRandomId", new Random().nextLong());
-        skinData.put("CompatibleWithClientSideChunkGen", false);
-        skinData.put("CurrentInputMode", 1);
-        skinData.put("DefaultInputMode", 1);
-        skinData.put("DeviceId", java.util.UUID.randomUUID().toString());
-        skinData.put("DeviceModel", "Barrel CREA Classic");
-        skinData.put("DeviceOS", 7);
-        skinData.put("GameVersion", ProxyServer.getInstance().getBedrockPacketCodec().getMinecraftVersion());
-        skinData.put("GuiScale", 0);
-        skinData.put("LanguageCode", this.language);
-        skinData.put("PersonaPieces", new JSONArray());
-        skinData.put("PersonaSkin", false);
-        skinData.put("PieceTintColors", new JSONArray());
-        skinData.put("PlatformOfflineId", TextFormat.VOID_STR);
-        skinData.put("PlatformOnlineId", TextFormat.VOID_STR);
-        skinData.put("PremiumSkin", false);
-        skinData.put("SelfSignedId", this.UUID);
-        skinData.put("ServerAddress", ProxyServer.getInstance().getConfig().getBedrockAddress() + ":" + ProxyServer.getInstance().getConfig().getBedrockPort());
-        skinData.put("SkinAnimationData", TextFormat.VOID_STR);
-        skinData.put("SkinColor", "#0");
-        skinData.put("SkinData", Utils.usernameToSkinData(this.classicUsername));
-        skinData.put("SkinGeometryData", Base64.getEncoder().encodeToString(ProxyServer.getInstance().getDefaultSkinGeometry().getBytes()));
-        skinData.put("SkinId", this.UUID + ".Custom");
-        skinData.put("SkinImageHeight", 64);
-        skinData.put("SkinImageWidth", 64);
-        skinData.put("SkinResourcePatch", "ewogICAiZ2VvbWV0cnkiIDogewogICAgICAiZGVmYXVsdCIgOiAiZ2VvbWV0cnkuaHVtYW5vaWQuY3VzdG9tIgogICB9Cn0K");
-        skinData.put("ThirdPartyName", this.username);
-        skinData.put("ThirdPartyNameOnly", false);
-        skinData.put("UIProfile", 0);
-        skinData.put("IsEditorMode", 0);
-        skinData.put("TrustedSkin", 1);
-        skinData.put("SkinGeometryDataEngineVersion", Base64.getEncoder().encodeToString(ProxyServer.getInstance().getBedrockPacketCodec().getMinecraftVersion().getBytes()));
-        skinData.put("OverrideSkin", false);
+        skinData.put(LoginDataConstants.ANIMATEDIMAGEDATA, new JSONArray());
+        skinData.put(LoginDataConstants.ARMSIZE, TextFormat.VOID_STR);
+        skinData.put(LoginDataConstants.CAPEDATA, TextFormat.VOID_STR);
+        skinData.put(LoginDataConstants.CAPEID, TextFormat.VOID_STR);
+        skinData.put(LoginDataConstants.PLAY_FAB_ID, java.util.UUID.randomUUID().toString());
+        skinData.put(LoginDataConstants.CAPE_HEIGHT, 0);
+        skinData.put(LoginDataConstants.CAPE_WIDTH, 0);
+        skinData.put(LoginDataConstants.CAPE_ON_CLASSIC, false);
+        skinData.put(LoginDataConstants.CLIENT_RANDOM_ID, new Random().nextLong());
+        skinData.put(LoginDataConstants.CHUNK_GEN, false);
+        skinData.put(LoginDataConstants.CURRENT_INPUT, 1);
+        skinData.put(LoginDataConstants.DEFAULT_INPUT, 1);
+        skinData.put(LoginDataConstants.DEVICE_ID, java.util.UUID.randomUUID().toString());
+        skinData.put(LoginDataConstants.DEVICE_MODEL, LoginDataConstants.DEVICE_MODEL_VAL);
+        skinData.put(LoginDataConstants.DEVICE_OS, 7);
+        skinData.put(LoginDataConstants.GAME_VERSION, ProxyServer.getInstance().getBedrockPacketCodec().getMinecraftVersion());
+        skinData.put(LoginDataConstants.GUI_SCALE, 0);
+        skinData.put(LoginDataConstants.LANG_CODE, LoginDataConstants.LANG_CODE_VAL);
+        skinData.put(LoginDataConstants.PERSONA_PIECES, LoginDataConstants.VOID_JSON_ARRAY);
+        skinData.put(LoginDataConstants.PERSONA_SKIN, false);
+        skinData.put(LoginDataConstants.PIECE_TINTS, LoginDataConstants.VOID_JSON_ARRAY);
+        skinData.put(LoginDataConstants.PLATFORM_OFFLINE_ID, TextFormat.VOID_STR);
+        skinData.put(LoginDataConstants.PLATFORM_ONLINE_ID, TextFormat.VOID_STR);
+        skinData.put(LoginDataConstants.PREMIUM_SKIN, false);
+        skinData.put(LoginDataConstants.SELF_SIGNED_ID, this.UUID);
+        skinData.put(LoginDataConstants.SERVER_ADDRESS, LoginDataConstants.SERVER_ADDRESS_VAL);
+        skinData.put(LoginDataConstants.SKIN_ANIM_DATA, TextFormat.VOID_STR);
+        skinData.put(LoginDataConstants.SKIN_COLOR, LoginDataConstants.SKIN_COLOR_VAL);
+        skinData.put(LoginDataConstants.SKIN_DATA, Utils.usernameToSkinData(this.classicUsername));
+        skinData.put(LoginDataConstants.SKIN_GEOM_DATA, Base64.getEncoder().encodeToString(ProxyServer.getInstance().getDefaultSkinGeometry().getBytes()));
+        skinData.put(LoginDataConstants.SKIN_ID, this.UUID + ".Custom");
+        skinData.put(LoginDataConstants.SKIN_HEIGHT, 64);
+        skinData.put(LoginDataConstants.SKIN_WIDTH, 64);
+        skinData.put(LoginDataConstants.SKIN_RESOURCE_PATCH, LoginDataConstants.SKIN_RESOURCE_PATCH_VAL);
+        skinData.put(LoginDataConstants.THIRD_PARTY_NAME, this.username);
+        skinData.put(LoginDataConstants.THIRD_PARTY_ONLY, false);
+        skinData.put(LoginDataConstants.UI_PROFILE, 0);
+        skinData.put(LoginDataConstants.IS_EDITOR, 0);
+        skinData.put(LoginDataConstants.TRUSTED_SKIN, 1);
+        skinData.put(LoginDataConstants.SKIN_GEOM_ENGINE_VER, Base64.getEncoder().encodeToString(ProxyServer.getInstance().getBedrockPacketCodec().getMinecraftVersion().getBytes()));
+        skinData.put(LoginDataConstants.OVERRIDE_SKIN, false);
 
         return generateJwt(jwtHeader, skinData);
     }

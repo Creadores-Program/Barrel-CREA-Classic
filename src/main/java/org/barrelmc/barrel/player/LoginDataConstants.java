@@ -1,0 +1,64 @@
+package org.barrelmc.barrel.player;
+
+import com.alibaba.fastjson2.JSONArray;
+
+public final class LoginDataConstants {
+    public static final String EXP = "exp";
+    public static final String IDENTITYPUBLICKEY = "identityPublicKey";
+    public static final String NBF = "nbf";
+    public static final String IDENTITY = "identity";
+    public static final String XUID = "XUID";
+    public static final String DISPLAYNAME = "displayName";
+    public static final String EXTRADATA = "extraData";
+    public static final String ALG = "alg";
+    public static final String ALG_VAL = "ES384";
+    public static final String X5U = "x5u";
+    public static final String ANIMATEDIMAGEDATA = "AnimatedImageData";
+    public static final String ARMSIZE = "ArmSize";
+    public static final String CAPEDATA = "CapeData";
+    public static final String CAPEID = "CapeId";
+    public static final String PLAY_FAB_ID = "PlayFabId";
+    public static final String CAPE_HEIGHT = "CapeImageHeight";
+    public static final String CAPE_WIDTH = "CapeImageWidth";
+    public static final String CAPE_ON_CLASSIC = "CapeOnClassicSkin";
+    public static final String CLIENT_RANDOM_ID = "ClientRandomId";
+    public static final String CHUNK_GEN = "CompatibleWithClientSideChunkGen";
+    public static final String CURRENT_INPUT = "CurrentInputMode";
+    public static final String DEFAULT_INPUT = "DefaultInputMode";
+    public static final String DEVICE_ID = "DeviceId";
+    public static final String DEVICE_MODEL = "DeviceModel";
+    public static final String DEVICE_MODEL_VAL = "Barrel CREA Classic";
+    public static final String DEVICE_OS = "DeviceOS";
+    public static final String GAME_VERSION = "GameVersion";
+    public static final String GUI_SCALE = "GuiScale";
+    public static final String LANG_CODE = "LanguageCode";
+    public static final String LANG_CODE_VAL = "en-US";
+    public static final String PERSONA_PIECES = "PersonaPieces";
+    public static final String PERSONA_SKIN = "PersonaSkin";
+    public static final String PIECE_TINTS = "PieceTintColors";
+    public static final String PLATFORM_OFFLINE_ID = "PlatformOfflineId";
+    public static final String PLATFORM_ONLINE_ID = "PlatformOnlineId";
+    public static final String PREMIUM_SKIN = "PremiumSkin";
+    public static final String SELF_SIGNED_ID = "SelfSignedId";
+    public static final String SERVER_ADDRESS = "ServerAddress";
+    public static String SERVER_ADDRESS_VAL;
+    public static final String SKIN_ANIM_DATA = "SkinAnimationData";
+    public static final String SKIN_COLOR = "SkinColor";
+    public static final String SKIN_COLOR_VAL = "#0";
+    public static final String SKIN_DATA = "SkinData";
+    public static final String SKIN_GEOM_DATA = "SkinGeometryData";
+    public static final String SKIN_ID = "SkinId";
+    public static final String SKIN_HEIGHT = "SkinImageHeight";
+    public static final String SKIN_WIDTH = "SkinImageWidth";
+    public static final String SKIN_RESOURCE_PATCH = "SkinResourcePatch";
+    public static final String SKIN_RESOURCE_PATCH_VAL = "ewogICAiZ2VvbWV0cnkiIDogewogICAgICAiZGVmYXVsdCIgOiAiZ2VvbWV0cnkuaHVtYW5vaWQuY3VzdG9tIgogICB9Cn0K";
+    public static final String THIRD_PARTY_NAME = "ThirdPartyName";
+    public static final String THIRD_PARTY_ONLY = "ThirdPartyNameOnly";
+    public static final String UI_PROFILE = "UIProfile";
+    public static final String IS_EDITOR = "IsEditorMode";
+    public static final String TRUSTED_SKIN = "TrustedSkin";
+    public static final String SKIN_GEOM_ENGINE_VER = "SkinGeometryDataEngineVersion";
+    public static final String OVERRIDE_SKIN = "OverrideSkin";
+    public static final JSONArray VOID_JSON_ARRAY = new JSONArray();
+    private LoginDataConstants(){}
+}
