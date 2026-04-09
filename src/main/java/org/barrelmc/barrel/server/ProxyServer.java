@@ -21,6 +21,7 @@ import com.github.steveice10.packetlib.event.server.SessionRemovedEvent;
 import lombok.Getter;
 import org.barrelmc.barrel.config.Config;
 import org.barrelmc.barrel.network.ClassicPacketHandler;
+import org.barrelmc.barrel.player.LoginDataConstants;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.utils.FileManager;
 import org.barrelmc.barrel.utils.NbtBlockDefinitionRegistry;
@@ -114,6 +115,7 @@ public class ProxyServer {
         this.langManager = new LanguageManager();
         loadBlockDefinitions();
         loadDefaultSkin();
+        LoginDataConstants.SERVER_ADDRESS_VAL = this.config.getBedrockAddress() + ":" + this.config.getBedrockPort();
         startServer();
     }
 
