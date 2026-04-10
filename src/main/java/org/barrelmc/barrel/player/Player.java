@@ -167,8 +167,6 @@ public class Player extends Vector3 {
 
     private static final int WORLDTOTALLEN = WORLDLEN * WORLDLEN * WORLDLEN;
 
-    public static final String GAMEMODE_STR = TextFormat.GREEN_CC+"GameMode: ";
-
     private static final ServerLevelFinalizePacket FINALIZE_WORLD_PK = new ServerLevelFinalizePacket(256, 256, 256);
 
     public static final ServerSetClickDistancePacket REACH_SURVIVAL = new ServerSetClickDistancePacket((short) 160);
@@ -231,6 +229,19 @@ public class Player extends Vector3 {
 
     private static final int MAXLENMSG = 64;
 
+    private static final String CCP = "CC";
+
+    public static final EnumMap<GameType, ServerChatPacket> GAMEMODE_CC = new EnumMap<>(GameType.class);
+
+    static{
+        String gmstr = TextFormat.GREEN_CC+"GameMode: ";
+        GAMEMODE_CC.put(GameType.SURVIVAL, new ServerChatPacket(PlayerIds.STATUS1, gmstr + "Survival"));
+        GAMEMODE_CC.put(GameType.CREATIVE, new ServerChatPacket(PlayerIds.STATUS1, gmstr + "Creative"));
+        GAMEMODE_CC.put(GameType.ADVENTURE, new ServerChatPacket(PlayerIds.STATUS1, gmstr + "Adventure"));
+        GAMEMODE_CC.put(GameType.SPECTATOR, new ServerChatPacket(PlayerIds.STATUS1, gmstr + "Spectator"));
+        GAMEMODE_CC.put(GameType.DEFAULT, GAMEMODE_CC.get(GameType.SURVIVAL));
+    }
+
     public Player(ClientIdentificationPacket loginPacket, Session classicSession) {
         this.envCpe = new EnvCPE(this);
         this.packetTranslatorManager = new PacketTranslatorManager(this);
@@ -273,7 +284,7 @@ public class Player extends Vector3 {
     private void offlineLogin(ClientIdentificationPacket classicLoginPacket) {
         this.xuid = TextFormat.VOID_STR;
         this.username = this.classicUsername = classicLoginPacket.getUsername();
-        this.UUID = java.util.UUID.nameUUIDFromBytes(("CC"+this.classicUsername).getBytes(StandardCharsets.UTF_8)).toString();
+        this.UUID = java.util.UUID.nameUUIDFromBytes((CCP+this.classicUsername).getBytes(StandardCharsets.UTF_8)).toString();
         Config config = ProxyServer.getInstance().getConfig();
         InetSocketAddress bedrockAddress = new InetSocketAddress(config.getBedrockAddress(), config.getBedrockPort());
         try {
