@@ -6,7 +6,6 @@ import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
 import org.cloudburstmc.protocol.bedrock.data.GameType;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
-import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
 
 public class SetPlayerGameTypePacket implements BedrockPacketTranslator {
 
@@ -20,7 +19,7 @@ public class SetPlayerGameTypePacket implements BedrockPacketTranslator {
             player.getClassicSession().send(Player.REACH_CREATIVE);
         }
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
-            player.sendMessage(Player.GAMEMODE_STR + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.STATUS1);
+            player.getClassicSession().send(Player.GAMEMODE_CC.get(player.getGameMode()));
         }
     }
 }

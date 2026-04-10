@@ -63,7 +63,7 @@ public class PlayerForceSpawnThread implements Runnable{
         player.getClassicSession().send(new ServerPositionRotationPacket(PlayerIds.SELF, classicX, classicY, classicZ, yawClassic, rotation.getX()));
         player.getEnvCpe().updateAll();
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
-            player.sendMessage(Player.GAMEMODE_STR + player.getGameMode().name().substring(0, 1).toUpperCase() + player.getGameMode().name().substring(1).toLowerCase(), PlayerIds.STATUS1);
+            player.getClassicSession().send(Player.GAMEMODE_CC.get(player.getGameMode()));
         }
     }
 }
