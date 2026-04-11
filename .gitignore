@@ -35,3 +35,9 @@ bin/
 build/
 /bin1/
 java/build/**
+
+# Tests
+tests/
+
+# Vscode Config
+.vscode/

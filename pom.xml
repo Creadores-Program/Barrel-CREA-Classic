@@ -36,6 +36,13 @@
                 <artifactId>kotlin-stdlib-jdk8</artifactId>
                 <version>1.9.10</version>
             </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-bom</artifactId>
+                <version>4.2.12.Final</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -50,6 +57,12 @@
             <groupId>com.github.Creadores-Program</groupId>
             <artifactId>ClassicProtocolLib</artifactId>
             <version>-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.netty</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -110,7 +123,16 @@
                         <filter>
                             <artifact>*:*</artifact>
                             <excludes>
+                                <exclude>META-INF/MANIFEST.MF</exclude>
                                 <exclude>META-INF/versions/</exclude>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                                <exclude>META-INF/io.netty.versions.properties</exclude>
+                                <exclude>META-INF/maven/**</exclude>
+                                <exclude>META-INF/module-info.class</exclude>
+                                <exclude>META-INF/*.kotlin_module</exclude>
+                                <exclude>module-info.class</exclude>
                             </excludes>
                         </filter>
                     </filters>
