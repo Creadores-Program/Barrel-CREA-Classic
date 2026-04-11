@@ -47,27 +47,27 @@ public enum TextFormat {
     public static final char ESCAPE = '\u00A7';
     public static final char ESCAPE_CLASSIC_SERVER = '&';
     public static final char ESCAPE_CLASSIC_CLIENT = '%';
-    public static final String MATERIAL_QUARTZ_MC = ESCAPE + "h";
-    public static final String WHITE_CC = ESCAPE_CLASSIC_SERVER + "f";
-    public static final String MATERIAL_IRON_MC = ESCAPE + "i";
-    public static final String MATERIAL_NETHERITE_MC = ESCAPE + "j";
-    public static final String GRAY_CC = ESCAPE_CLASSIC_SERVER + "7";
-    public static final String MATERIAL_REDSTONE_MC = ESCAPE + "m";
-    public static final String DARK_RED_CC = ESCAPE_CLASSIC_SERVER + "4";
-    public static final String MATERIAL_COPPER_MC = ESCAPE + "n";
-    public static final String GOLD_CC = ESCAPE_CLASSIC_SERVER + "6";
-    public static final String MATERIAL_GOLD_MC = ESCAPE + "p";
-    public static final String YELLOW_CC = ESCAPE_CLASSIC_SERVER + "e";
-    public static final String MATERIAL_EMERALD_MC = ESCAPE + "q";
-    public static final String DARK_GREEN_CC = ESCAPE_CLASSIC_SERVER + "2";
-    public static final String MATERIAL_DIAMOND_MC = ESCAPE + "s";
-    public static final String AQUA_CC = ESCAPE_CLASSIC_SERVER + "b";
-    public static final String MATERIAL_LAPIS_MC = ESCAPE + "t";
-    public static final String BLUE_CC = ESCAPE_CLASSIC_SERVER + "9";
-    public static final String MATERIAL_AMETHYST_MC = ESCAPE + "u";
-    public static final String LIGHT_PURPLE_CC = ESCAPE_CLASSIC_SERVER + "d";
-    public static final String MATERIAL_RESIN_MC = ESCAPE + "v";
-    public static final String MINECOIN_GOLD = ESCAPE + "g";
+    public static final char MATERIAL_QUARTZ_MC = 'h';
+    public static final char WHITE_CC = 'f';
+    public static final char MATERIAL_IRON_MC = 'i';
+    public static final char MATERIAL_NETHERITE_MC = 'j';
+    public static final char GRAY_CC = '7';
+    public static final char MATERIAL_REDSTONE_MC = 'm';
+    public static final char DARK_RED_CC = '4';
+    public static final char MATERIAL_COPPER_MC = 'n';
+    public static final char GOLD_CC = '6';
+    public static final char MATERIAL_GOLD_MC = 'p';
+    public static final char YELLOW_CC = 'e';
+    public static final char MATERIAL_EMERALD_MC = 'q';
+    public static final char DARK_GREEN_CC = '2';
+    public static final char MATERIAL_DIAMOND_MC = 's';
+    public static final char AQUA_CC = 'b';
+    public static final char MATERIAL_LAPIS_MC = 't';
+    public static final char BLUE_CC = '9';
+    public static final char MATERIAL_AMETHYST_MC = 'u';
+    public static final char LIGHT_PURPLE_CC = 'd';
+    public static final char MATERIAL_RESIN_MC = 'v';
+    public static final char MINECOIN_GOLD = 'g';
     public static final String GREEN_CC = ESCAPE_CLASSIC_SERVER + "a";
     public static final String VOID_STR = "";
     public static final String COMMAND_CLIENT = "/";
@@ -93,25 +93,47 @@ public enum TextFormat {
         return new String(b);
     }
     public static String colorizeToCc(String textToTranslate){
-        char[] b = textToTranslate
-            .replace(MATERIAL_QUARTZ_MC, WHITE_CC)
-            .replace(MATERIAL_IRON_MC, WHITE_CC)
-            .replace(MATERIAL_NETHERITE_MC, GRAY_CC)
-            .replace(MATERIAL_REDSTONE_MC, DARK_RED_CC)
-            .replace(MATERIAL_COPPER_MC, GOLD_CC)
-            .replace(MATERIAL_GOLD_MC, YELLOW_CC)
-            .replace(MATERIAL_EMERALD_MC, DARK_GREEN_CC)
-            .replace(MATERIAL_DIAMOND_MC, AQUA_CC)
-            .replace(MATERIAL_LAPIS_MC, BLUE_CC)
-            .replace(MATERIAL_AMETHYST_MC, LIGHT_PURPLE_CC)
-            .replace(MATERIAL_RESIN_MC, GOLD_CC)
-            .replace(MINECOIN_GOLD, YELLOW_CC)
-            .toCharArray();
+        char[] b = textToTranslate.toCharArray();
         for (int i = 0; i < b.length - 1; i++) {
             int x = i + 1;
             if (b[i] == ESCAPE && colorsMc.indexOf(b[x]) > -1) {
                 b[i] = TextFormat.ESCAPE_CLASSIC_SERVER;
-                b[x] = Character.toLowerCase(b[x]);
+                char color = Character.toLowerCase(b[x]);
+                switch(color){
+                    case MATERIAL_QUARTZ_MC:
+                    case MATERIAL_IRON_MC:
+                        color = WHITE_CC;
+                        break;
+                    case MATERIAL_NETHERITE_MC:
+                        color = GRAY_CC;
+                        break;
+                    case MATERIAL_REDSTONE_MC:
+                        color = DARK_RED_CC;
+                        break;
+                    case MATERIAL_COPPER_MC:
+                    case MATERIAL_RESIN_MC:
+                        color = GOLD_CC;
+                        break;
+                    case MATERIAL_GOLD_MC:
+                    case MINECOIN_GOLD:
+                        color = YELLOW_CC;
+                        break;
+                    case MATERIAL_EMERALD_MC:
+                        color = DARK_GREEN_CC;
+                        break;
+                    case MATERIAL_DIAMOND_MC:
+                        color = AQUA_CC;
+                        break;
+                    case MATERIAL_LAPIS_MC:
+                        color = BLUE_CC;
+                        break;
+                    case MATERIAL_AMETHYST_MC:
+                        color = LIGHT_PURPLE_CC;
+                        break;
+                    default:
+                        break;
+                }
+                b[x] = color;
             }
         }
         return new String(b);

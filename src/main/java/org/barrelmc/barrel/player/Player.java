@@ -173,6 +173,14 @@ public class Player extends Vector3 {
 
     public static final ServerSetClickDistancePacket REACH_CREATIVE = new ServerSetClickDistancePacket((short) 224);
 
+    private static final ServerChatPacket CLEAR_TIP_PK = new ServerChatPacket(PlayerIds.BOTTOMRIGHT3, TextFormat.VOID_STR);
+
+    private static final ServerChatPacket CLEAR_TITLE_PK = new ServerChatPacket(PlayerIds.ANNOUNCEMENT, TextFormat.VOID_STR);
+
+    private static final ServerChatPacket CLEAR_TOAST_PK1 = new ServerChatPacket(PlayerIds.BOTTOMRIGHT1, TextFormat.VOID_STR);
+
+    private static final ServerChatPacket CLEAR_TOAST_PK2 = new ServerChatPacket(PlayerIds.BOTTOMRIGHT2, TextFormat.VOID_STR);
+
     private static final String disconTransDerect = "disconnectionScreen.";
 
     @Getter
@@ -446,9 +454,23 @@ public class Player extends Vector3 {
     public void sendTip(String message) {
         if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), this.extensionsClassic)){
             this.sendMessage(message, PlayerIds.BOTTOMRIGHT3);
+            ProxyServer.getInstance().getScheduler().schedule(this::clearTip, 3, TimeUnit.SECONDS);
         }else{
             this.sendMessage(message, PlayerIds.CONSOLE);
         }
+    }
+
+    private void clearTip(){
+        this.classicSession.send(CLEAR_TIP_PK);
+    }
+
+    public void clearTitle(){
+        this.classicSession.send(CLEAR_TITLE_PK);
+    }
+
+    public void clearToast(){
+        this.classicSession.send(CLEAR_TOAST_PK1);
+        this.classicSession.send(CLEAR_TOAST_PK2);
     }
 
     public void disconnect(String reason) {

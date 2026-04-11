@@ -1,5 +1,8 @@
 package org.barrelmc.barrel.network.translator.bedrock;
 import com.github.steveice10.mc.classic.protocol.data.game.PlayerIds;
+
+import java.util.concurrent.TimeUnit;
+
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.utils.Utils;
@@ -10,8 +13,9 @@ public class ToastRequestPacket implements BedrockPacketTranslator {
   public void translate(BedrockPacket pk, Player player) {
     org.cloudburstmc.protocol.bedrock.packet.ToastRequestPacket packet = (org.cloudburstmc.protocol.bedrock.packet.ToastRequestPacket) pk;
     if(Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(8), player.getExtensionsClassic())){
-      player.sendMessage(packet.getTitle(), PlayerIds.BOTTOMRIGHT2);
-      player.sendMessage(packet.getContent(), PlayerIds.BOTTOMRIGHT1);
+      player.sendMessage(packet.getTitle(), PlayerIds.BOTTOMRIGHT1);
+      player.sendMessage(packet.getContent(), PlayerIds.BOTTOMRIGHT2);
+      ProxyServer.getInstance().getScheduler().schedule(player::clearToast, 5, TimeUnit.SECONDS);
       return;
     }
     player.sendMessage(packet.getTitle() + "\n" + packet.getContent());

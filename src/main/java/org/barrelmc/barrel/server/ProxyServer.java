@@ -46,6 +46,8 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 public class ProxyServer {
 
@@ -84,6 +86,9 @@ public class ProxyServer {
     private final LanguageManager langManager;
 
     @Getter
+    private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+
+    @Getter
     private List<ServerExtEntryPacket> extDatapacks = new ObjectArrayList<>(){{
         add(new ServerExtEntryPacket(1, ExtNames.CLICKDISTANCE));//0
         add(new ServerExtEntryPacket(1, ExtNames.CUSTOMBLOCKS));//1
@@ -101,11 +106,12 @@ public class ProxyServer {
         add(new ServerExtEntryPacket(1, ExtNames.SETSPAWNPOINT));//13
         add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYTELEPORT));//14
         add(new ServerExtEntryPacket(1, ExtNames.FULLCP437));//15
+        add(new ServerExtEntryPacket(2, ExtNames.MESSAGETYPES));//16
     }};
 
     public ProxyServer(String dataPath) {
         instance = this;
-        this.logger = new Logger(TextFormat.GOLD.getAnsiCode()+"BarrelMC");
+        this.logger = new Logger(TextFormat.LIGHT_PURPLE.getAnsiCode()+"BarrelMC");
         this.getLogger().info("Barrel Classic 0.1.0 Starting...");
         this.dataPath = Paths.get(dataPath);
         if (!initConfig()) {
