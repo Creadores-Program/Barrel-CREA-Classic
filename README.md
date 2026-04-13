@@ -24,7 +24,6 @@
 
 - Inventory
 - Forms
-- Bossbars
 - Scoreboard
 - Xbox account
 - Dead screen
