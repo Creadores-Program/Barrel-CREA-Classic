@@ -15,7 +15,6 @@ import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetClickDis
 import com.github.steveice10.mc.classic.protocol.packet.client.ClientIdentificationPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelDataPacket;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerLevelFinalizePacket;
-//import com.github.steveice10.mc.protocol.packet.ingame.clientbound.level.ClientboundSetChunkCacheCenterPacket;
 import com.github.steveice10.packetlib.Session;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -181,6 +180,8 @@ public class Player extends Vector3 {
 
     private static final ServerChatPacket CLEAR_TOAST_PK2 = new ServerChatPacket(PlayerIds.BOTTOMRIGHT2, TextFormat.VOID_STR);
 
+    private static final ServerChatPacket CLEAR_BOSS_PK = new ServerChatPacket(PlayerIds.STATUS2, TextFormat.VOID_STR);
+
     private static final String disconTransDerect = "disconnectionScreen.";
 
     @Getter
@@ -234,6 +235,14 @@ public class Player extends Vector3 {
 
     @Getter
     private Map<Long, Long> entitysIndex = new ConcurrentHashMap<>();
+
+    @Getter
+    @Setter
+    private long bossbarId;
+
+    @Getter
+    @Setter
+    private String bossbarTitle;
 
     private static final int MAXLENMSG = 64;
 
@@ -471,6 +480,9 @@ public class Player extends Vector3 {
     public void clearToast(){
         this.classicSession.send(CLEAR_TOAST_PK1);
         this.classicSession.send(CLEAR_TOAST_PK2);
+    }
+    public void clearBoss(){
+        this.classicSession.send(CLEAR_BOSS_PK);
     }
 
     public void disconnect(String reason) {

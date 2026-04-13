@@ -118,11 +118,11 @@ public class Utils {
 
     public static String lengthCutter(String bedrockName, int length) {
         if (bedrockName == null) {
-            return "null";
+            return TextFormat.VOID_STR;
         }
 
         if (bedrockName.length() > length) {
-            return bedrockName.substring(0, length);
+            return bedrockName.substring(0, Math.min(bedrockName.length(), length));
         } else {
             return bedrockName;
         }
@@ -172,7 +172,7 @@ public class Utils {
     }
 
     public static String[] splitStringL(String str, int size){
-        return str.split("(?<=\\G.{" + size + "})");
+        return str.split("(?<=\\G[\\s\\S]{" + size + "})");
     }
 
     public static byte[] DERToJOSE(byte[] derSignature, Utils.AlgorithmType algorithmType) throws SignatureException {
