@@ -15,6 +15,7 @@ public class CustomBlockSupportLevelPacket implements ClassicPacketTranslator{
         player.setCustomBlocksLevel(packet.getSupportLevel());
         player.getClassicSession().send(new ServerIdentificationPacket(ProxyServer.getInstance().getConfig().getMotd(), ProxyServer.getInstance().getSubMotd(), UserType.NOT_OP));
         player.getClassicSession().send(Utils.INITCCWORPK);
+        player.sendColors();
         player.startSendingPing();
     }
 }

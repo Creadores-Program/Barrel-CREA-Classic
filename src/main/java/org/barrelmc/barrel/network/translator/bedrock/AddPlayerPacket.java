@@ -7,6 +7,7 @@ import org.barrelmc.barrel.player.Entity;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.barrelmc.barrel.utils.Utils;
+import org.barrelmc.barrel.utils.nukkit.TextFormat;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 
@@ -21,7 +22,7 @@ public class AddPlayerPacket implements BedrockPacketTranslator {
         }
         Vector3f position = packet.getPosition();
         Vector3f rotation = packet.getRotation();
-        String name = packet.getUsername();
+        String name = TextFormat.colorizeToCc(packet.getUsername(), Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), this.extensionsClassic));
         long runId = packet.getRuntimeEntityId();
         long uniId = packet.getUniqueEntityId();
         Entity classicEntity = new Entity(name, runId, name, position, rotation.toVector2());

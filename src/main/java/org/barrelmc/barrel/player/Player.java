@@ -450,9 +450,9 @@ public class Player extends Vector3 {
 
     public void sendMessage(String message, int playerId){
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(15), this.extensionsClassic)){
-            message = Utils.sanitizeText(message);
+            message = Utils.sanitizeText(TextFormat.colorizeToCc(message, Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), this.extensionsClassic)));
         }
-        String[] messagesClassic = Utils.splitStringL(TextFormat.colorizeToCc(message), MAXLENMSG);
+        String[] messagesClassic = Utils.splitStringL(message, MAXLENMSG);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;
@@ -489,6 +489,11 @@ public class Player extends Vector3 {
     public void clearScore(){
         this.classicSession.send(CLEAR_SCORE_PK);
     }
+    public void sendColors(){
+        for(ServerSetTextColorPacket color : ProxyServer.getInstance().getColorsMC()){
+            this.classicSession.send(color);
+        }
+    }
 
     public void disconnect(String reason) {
         playerInputExecutor.shutdown();
@@ -504,7 +509,7 @@ public class Player extends Vector3 {
         if(reason.contains(disconTransDerect)){
             reason = ProxyServer.getInstance().getLangManager().translate(reason, null);
         }
-        this.classicSession.disconnect(TextFormat.colorizeToCc(reason));
+        this.classicSession.disconnect(TextFormat.colorizeToCc(reason, Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), this.extensionsClassic)));
         ProxyServer.getInstance().removeBedrockPlayer(classicUsername);
         this.mapClassic = null;
         ProxyServer.getInstance().getLogger().info(classicUsername + " disconnected: " + reason);

@@ -22,7 +22,7 @@ public class PlayerListPacket implements BedrockPacketTranslator {
             case ADD: {
                 for (org.cloudburstmc.protocol.bedrock.packet.PlayerListPacket.Entry entry : packet.getEntries()) {
                     long entityRId = entry.getEntityId();
-                    String name = TextFormat.colorizeToCc(String.valueOf(entry.getName()));
+                    String name = TextFormat.colorizeToCc(String.valueOf(entry.getName()), Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), this.extensionsClassic));
                     player.getClassicSession().send(new ServerExtAddPlayerNamePacket(((short) entityRId), name, name, rolUser, 0));
                 }
                 break;

@@ -92,13 +92,17 @@ public enum TextFormat {
         }
         return new String(b);
     }
-    public static String colorizeToCc(String textToTranslate){
+    public static String colorizeToCc(String textToTranslate, boolean noTranslateColor){
         char[] b = textToTranslate.toCharArray();
         for (int i = 0; i < b.length - 1; i++) {
             int x = i + 1;
             if (b[i] == ESCAPE && colorsMc.indexOf(b[x]) > -1) {
                 b[i] = TextFormat.ESCAPE_CLASSIC_SERVER;
                 char color = Character.toLowerCase(b[x]);
+                if(noTranslateColor){
+                    b[x] = color;
+                    continue;
+                }
                 switch(color){
                     case MATERIAL_QUARTZ_MC:
                     case MATERIAL_IRON_MC:

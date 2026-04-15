@@ -12,6 +12,7 @@ import com.github.steveice10.mc.classic.protocol.ClassicProtocol;
 import com.github.steveice10.mc.classic.protocol.VerifyUsersListener;
 import com.github.steveice10.mc.classic.protocol.data.game.ExtNames;
 import com.github.steveice10.mc.classic.protocol.packet.server.ServerExtEntryPacket;
+import com.github.steveice10.mc.classic.protocol.packet.server.ServerSetTextColorPacket;
 import com.github.steveice10.packetlib.Server;
 import com.github.steveice10.packetlib.tcp.classic.TcpSessionFactory;
 import com.github.steveice10.packetlib.event.server.ServerAdapter;
@@ -107,6 +108,23 @@ public class ProxyServer {
         add(new ServerExtEntryPacket(1, ExtNames.EXTENTITYTELEPORT));//14
         add(new ServerExtEntryPacket(1, ExtNames.FULLCP437));//15
         add(new ServerExtEntryPacket(2, ExtNames.MESSAGETYPES));//16
+        add(new ServerExtEntryPacket(1, ExtNames.TEXTCOLORS));//17
+    }};
+
+    @Getter
+    private List<ServerSetTextColorPacket> colorsMC = new ObjectArrayList<>(){{
+        add(new ServerSetTextColorPacket(221, 214, 5, 255, TextFormat.MINECOIN_GOLD));//Minecoin Gold
+        add(new ServerSetTextColorPacket(227, 212, 209, 255, TextFormat.MATERIAL_QUARTZ_MC));//Material Quartz
+        add(new ServerSetTextColorPacket(206, 202, 202, 255, TextFormat.MATERIAL_IRON_MC));//Material Iron
+        add(new ServerSetTextColorPacket(68, 58, 59, 255, TextFormat.MATERIAL_NETHERITE_MC));//Material Netherite
+        add(new ServerSetTextColorPacket(151, 22, 7, 255, TextFormat.MATERIAL_REDSTONE_MC));//Material Redstone
+        add(new ServerSetTextColorPacket(180, 104, 77, 255, TextFormat.MATERIAL_COPPER_MC));//Material Copper
+        add(new ServerSetTextColorPacket(222, 177, 45, 255, TextFormat.MATERIAL_GOLD_MC));//Material Gold
+        add(new ServerSetTextColorPacket(17, 160, 54, 255, TextFormat.MATERIAL_EMERALD_MC));//Material Emerald
+        add(new ServerSetTextColorPacket(44, 186, 168, 255, TextFormat.MATERIAL_DIAMOND_MC));//Material Diamond
+        add(new ServerSetTextColorPacket(33, 73, 123, 255, TextFormat.MATERIAL_LAPIS_MC));//Material Lapis
+        add(new ServerSetTextColorPacket(154, 92, 168, 255, TextFormat.MATERIAL_AMETHYST_MC));//Material Amethyst
+        add(new ServerSetTextColorPacket(234, 113, 19, 255, TextFormat.MATERIAL_RESIN_MC));//Material Resin
     }};
 
     public ProxyServer(String dataPath) {
