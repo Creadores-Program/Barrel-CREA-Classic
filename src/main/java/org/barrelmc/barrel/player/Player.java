@@ -95,7 +95,7 @@ public class Player extends Vector3 {
 
     @Setter
     @Getter
-    private int scoreSortorder;
+    private String scoreId;
 
     @Setter
     @Getter
@@ -181,6 +181,8 @@ public class Player extends Vector3 {
     private static final ServerChatPacket CLEAR_TOAST_PK2 = new ServerChatPacket(PlayerIds.BOTTOMRIGHT2, TextFormat.VOID_STR);
 
     private static final ServerChatPacket CLEAR_BOSS_PK = new ServerChatPacket(PlayerIds.STATUS2, TextFormat.VOID_STR);
+
+    private static final ServerChatPacket CLEAR_SCORE_PK = new ServerChatPacket(PlayerIds.STATUS3, TextFormat.VOID_STR);
 
     private static final String disconTransDerect = "disconnectionScreen.";
 
@@ -483,6 +485,9 @@ public class Player extends Vector3 {
     }
     public void clearBoss(){
         this.classicSession.send(CLEAR_BOSS_PK);
+    }
+    public void clearScore(){
+        this.classicSession.send(CLEAR_SCORE_PK);
     }
 
     public void disconnect(String reason) {

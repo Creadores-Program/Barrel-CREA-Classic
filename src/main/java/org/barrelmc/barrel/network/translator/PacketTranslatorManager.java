@@ -87,6 +87,8 @@ public class PacketTranslatorManager {
         bedrockTranslators.put(BiomeDefinitionListPacket.class, new org.barrelmc.barrel.network.translator.bedrock.BiomeDefinitionListPacket());
         bedrockTranslators.put(SetTimePacket.class, new org.barrelmc.barrel.network.translator.bedrock.SetTimePacket());
         bedrockTranslators.put(BossEventPacket.class, new org.barrelmc.barrel.network.translator.bedrock.BossEventPacket());
+        bedrockTranslators.put(SetDisplayObjectivePacket.class, new org.barrelmc.barrel.network.translator.bedrock.SetDisplayObjectivePacket());
+        bedrockTranslators.put(RemoveObjectivePacket.class, new org.barrelmc.barrel.network.translator.bedrock.RemoveObjectivePacket());
         
         // Classic packets
         classicTranslators.put(ClientChatPacket.class, new ChatPacket());

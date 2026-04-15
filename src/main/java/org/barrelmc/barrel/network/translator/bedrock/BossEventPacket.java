@@ -33,7 +33,7 @@ public class BossEventPacket implements BedrockPacketTranslator {
             return;
         }
         if(player.getBossbarTitle() == null || !player.getBossbarTitle().equals(rawTitle)){
-            player.setBossbarTitle(TextFormat.colorizeToCc(Utils.lengthCutter(rawTitle, 55)));
+            player.setBossbarTitle(Utils.lengthCutter(rawTitle, 55));
             rawTitle = player.getBossbarTitle();
         }
         String title = COLOR + rawTitle + PREFIX + ((int) packet.getHealthPercentage()) + POR;

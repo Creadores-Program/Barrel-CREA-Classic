@@ -44,7 +44,7 @@ public class SetTitlePacket implements BedrockPacketTranslator {
         default:
           return;
       }
-      player.sendMessage(TextFormat.colorizeToCc(packet.getText()), idMsg);
+      player.sendMessage(packet.getText(), idMsg);
       if(idMsg != PlayerIds.CONSOLE){
         ProxyServer.getInstance().getScheduler().schedule(player::clearTitle, 5, TimeUnit.SECONDS);
       }
