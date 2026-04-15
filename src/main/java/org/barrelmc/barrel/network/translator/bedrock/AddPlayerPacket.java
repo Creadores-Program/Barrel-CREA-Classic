@@ -22,7 +22,7 @@ public class AddPlayerPacket implements BedrockPacketTranslator {
         }
         Vector3f position = packet.getPosition();
         Vector3f rotation = packet.getRotation();
-        String name = TextFormat.colorizeToCc(packet.getUsername(), Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), this.extensionsClassic));
+        String name = TextFormat.colorizeToCc(packet.getUsername(), Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), player.getExtensionsClassic()));
         long runId = packet.getRuntimeEntityId();
         long uniId = packet.getUniqueEntityId();
         Entity classicEntity = new Entity(name, runId, name, position, rotation.toVector2());
