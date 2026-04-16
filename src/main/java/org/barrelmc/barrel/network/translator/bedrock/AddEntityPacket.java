@@ -27,7 +27,7 @@ public class AddEntityPacket implements BedrockPacketTranslator{
 
         Vector3f position = packet.getPosition();
         Vector2f rotation = packet.getRotation();
-        String name = (packet.getMetadata().get(EntityDataTypes.NAME) != null) ? packet.getMetadata().get(EntityDataTypes.NAME).toString() : TextFormat.VOID_STR;
+        String name = TextFormat.colorizeToCc((packet.getMetadata().get(EntityDataTypes.NAME) != null) ? packet.getMetadata().get(EntityDataTypes.NAME).toString() : TextFormat.VOID_STR, Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), player.getExtensionsClassic()));
         long runid = packet.getRuntimeEntityId();
         long uniid = packet.getUniqueEntityId();
         String classicType = EntityConverter.bedrockRuntimeToClassicStateId(packet.getEntityType(), packet.getIdentifier());
