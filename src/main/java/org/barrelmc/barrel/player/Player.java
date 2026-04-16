@@ -451,9 +451,9 @@ public class Player extends Vector3 {
 
     public void sendMessage(String message, int playerId){
         if(!Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(15), this.extensionsClassic)){
-            message = Utils.sanitizeText(TextFormat.colorizeToCc(message, Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), this.extensionsClassic)));
+            message = Utils.sanitizeText(message);
         }
-        String[] messagesClassic = Utils.splitStringL(message, MAXLENMSG);
+        String[] messagesClassic = Utils.splitStringL(TextFormat.colorizeToCc(message, Utils.containsExt(ProxyServer.getInstance().getExtDatapacks().get(17), this.extensionsClassic)), MAXLENMSG);
         if(messagesClassic.length < 2){
             this.classicSession.send(new ServerChatPacket(playerId, messagesClassic[0]));
             return;
