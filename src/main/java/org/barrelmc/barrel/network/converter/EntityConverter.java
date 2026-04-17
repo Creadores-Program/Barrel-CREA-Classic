@@ -6,6 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.github.steveice10.mc.classic.protocol.data.game.EntityIds;
 public class EntityConverter{
+  private static final String[] gravelSand = new String[]{ "13", "12" };
   private static final Map<String, int[]> ENTITYSIDSTR = new ConcurrentHashMap<>(Map.ofEntries(
     entry(EntityIds.CHICKEN, new int[]{ 10, 122, 132, 30 }),
     entry(EntityIds.CREEPER, new int[]{ 33 }),
@@ -16,11 +17,18 @@ public class EntityConverter{
     entry(EntityIds.SPIDER, new int[]{ 35 }),
     entry(EntityIds.ZOMBIE, new int[]{ 32, 36, 44, 47, 116, 123, 127, 110 }),
     entry(EntityIds.CHIBI, new int[]{ 105, 39, 55, 134 }),
-    entry("46", new int[]{ 65 }),
+    entry("0", new int[]{ 64, 69, 68, 70, 72, 73, 77, 80, 87 }),
+    entry(gravelSand[1], new int[]{ 76 }),
+    entry("46", new int[]{ 65, 93, 103 }),
+    entry("30", new int[]{ 71, 79 }),
+    entry("36", new int[]{ 81, 107 }),
+    entry("5", new int[]{ 82, 83, 90 }),
+    entry("42", new int[]{ 84, 96, 97, 98, 99, 100 }),
+    entry("21", new int[]{ 85, 94 }),
+    entry("9", new int[]{ 86, 95, 101, 102, 106 }),
     entry(EntityIds.HEAD, new int[]{ 91, 89 })
   ));
   private static final String gravelB = "gravel";
-  private static final String[] gravelSand = new String[]{ "13", "12" };
   private static final String prefixB = ":";
   public static String bedrockRuntimeToClassicStateId(int entityType, String identifier){
     String name = identifier;
