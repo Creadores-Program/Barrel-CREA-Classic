@@ -43,5 +43,13 @@ public class MoveEntityAbsolutePacket implements BedrockPacketTranslator {
             }
         }
         player.getClassicSession().send(new ServerPositionRotationPacket(((int) packet.getRuntimeEntityId()), Utils.mapCoords(position.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX())), position.getY(), Utils.mapCoords(position.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ())), yawClassic, rotation.getX()));
+        updateEntity(foundEntity, position, rotation, yawClassic);
+    }
+    private void updateEntity(Entity entity, Vector3f position, Vector3f rotation, float classicYaw){
+        entity.x = position.getX();
+        entity.y = position.getY();
+        entity.z = position.getZ();
+        entity.yaw = classicYaw;
+        entity.pitch = rotation.getX();
     }
 }
