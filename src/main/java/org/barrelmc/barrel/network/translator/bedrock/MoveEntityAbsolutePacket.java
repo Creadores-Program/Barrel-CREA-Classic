@@ -18,6 +18,9 @@ public class MoveEntityAbsolutePacket implements BedrockPacketTranslator {
     @Override
     public void translate(BedrockPacket pk, Player player) {
         org.cloudburstmc.protocol.bedrock.packet.MoveEntityAbsolutePacket packet = (org.cloudburstmc.protocol.bedrock.packet.MoveEntityAbsolutePacket) pk;
+        if(player.getEntitysIndex().get(packet.getRuntimeEntityId()) == null){
+            return;
+        }
         Vector3f position = packet.getPosition(), rotation = packet.getRotation();
 
         long targetUniqueId = player.getEntitysIndex().get(packet.getRuntimeEntityId());
@@ -43,6 +46,9 @@ public class MoveEntityAbsolutePacket implements BedrockPacketTranslator {
             }
         }
         player.getClassicSession().send(new ServerPositionRotationPacket(((int) packet.getRuntimeEntityId()), Utils.mapCoords(position.getX(), ((float) player.getMinPosBedrock().getX()), ((float) player.getMaxPosBedrock().getX()), ((float) player.getMinPosClassic().getX()), ((float) player.getMaxPosClassic().getX())), position.getY(), Utils.mapCoords(position.getZ(), ((float) player.getMinPosBedrock().getZ()), ((float) player.getMaxPosBedrock().getZ()), ((float) player.getMinPosClassic().getZ()), ((float) player.getMaxPosClassic().getZ())), yawClassic, rotation.getX()));
+        if(foundEntity == null){
+            foundEntity = player.getEntitysSpawned().get(targetUniqueId);
+        }
         updateEntity(foundEntity, position, rotation, yawClassic);
     }
     private void updateEntity(Entity entity, Vector3f position, Vector3f rotation, float classicYaw){
