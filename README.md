@@ -24,7 +24,6 @@
 
 - Inventory
 - Forms
-- TextColor Ext CPE
 - Xbox account
 - Dead screen
 - Entities Bugs
