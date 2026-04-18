@@ -25,7 +25,7 @@ public class PlayerClickPacket implements ClassicPacketTranslator{
         InventoryTransactionPacket bepk = new InventoryTransactionPacket();
         bepk.setTransactionType(InventoryTransactionType.ITEM_USE_ON_ENTITY);
         bepk.setRuntimeEntityId((long) packet.getTargetEntityID());
-        bepk.setActionType(packet.getButton() == 0 ? 1 : 0);
+        bepk.setActionType(packet.getButton());
         Vector3f pos = player.getVector3f();
         bepk.setPlayerPosition(pos);
         bepk.setHotbarSlot(player.getHotbarSlot());

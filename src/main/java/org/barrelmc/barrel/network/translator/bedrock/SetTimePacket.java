@@ -19,30 +19,35 @@ public class SetTimePacket implements BedrockPacketTranslator {
     ServerEnvColorsPacket color2 = null;
     ServerEnvColorsPacket color3 = null;
     ServerEnvColorsPacket color4 = null;
+    // 1. MAÑANA (Luz total) - Antes era tu bloque de 6000-12000
     if(time < 6000){
       f = time / 6000.0f;
-      color1 = new ServerEnvColorsPacket(0, lerp(2, 255, f), lerp(2, 180, f), lerp(10, 100, f));
-      color2 = new ServerEnvColorsPacket(2, lerp(2, 200, f), lerp(2, 150, f), lerp(5, 100, f));
-      color3 = new ServerEnvColorsPacket(3, lerp(20, 100, f), lerp(20, 100, f), lerp(30, 120, f));
-      color4 = new ServerEnvColorsPacket(4, lerp(50, 255, f), lerp(50, 200, f), lerp(80, 150, f));
-    }else if(time < 12000){
-      f = (time - 6000) / 6000.0f;
       color1 = new ServerEnvColorsPacket(0, lerp(255, 153, f), lerp(180, 204, f), lerp(100, 255, f));
       color2 = new ServerEnvColorsPacket(2, lerp(200, 153, f), lerp(150, 204, f), lerp(100, 255, f));
       color3 = new ServerEnvColorsPacket(3, lerp(100, 160, f), lerp(100, 160, f), lerp(120, 160, f));
       color4 = new ServerEnvColorsPacket(4, 255, lerp(200, 255, f), lerp(150, 255, f));
-    }else if(time < 18000){
-      f = (time - 12000) / 6000.0f;
+
+      // 2. TARDE (Hacia el atardecer) - Antes era tu bloque de 12000-18000
+    } else if(time < 12000){
+      f = (time - 6000) / 6000.0f;
       color1 = new ServerEnvColorsPacket(0, lerp(153, 255, f), lerp(204, 100, f), lerp(255, 50, f));
       color2 = new ServerEnvColorsPacket(2, lerp(153, 150, f), lerp(204, 50, f), lerp(255, 20, f));
       color3 = new ServerEnvColorsPacket(3, lerp(160, 80, f), lerp(160, 60, f), lerp(160, 60, f));
       color4 = new ServerEnvColorsPacket(4, 255, lerp(255, 120, f), lerp(255, 50, f));
-    }else{
-      f = (time - 18000) / 6000.0f;
+      // 3. ANOCHECER (A oscuridad) - Antes era tu bloque ELSE
+    } else if(time < 18000){
+      f = (time - 12000) / 6000.0f;
       color1 = new ServerEnvColorsPacket(0, lerp(255, 2, f), lerp(100, 2, f), lerp(50, 10, f));
       color2 = new ServerEnvColorsPacket(2, lerp(150, 2, f), lerp(50, 2, f), lerp(20, 5, f));
       color3 = new ServerEnvColorsPacket(3, lerp(80, 20, f), lerp(60, 20, f), lerp(60, 30, f));
       color4 = new ServerEnvColorsPacket(4, lerp(255, 50, f), lerp(120, 50, f), lerp(50, 80, f));
+      // 4. MADRUGADA (Hacia el amanecer) - Antes era tu bloque de 0-6000
+    } else {
+      f = (time - 18000) / 6000.0f;
+      color1 = new ServerEnvColorsPacket(0, lerp(2, 255, f), lerp(2, 180, f), lerp(10, 100, f));
+      color2 = new ServerEnvColorsPacket(2, lerp(2, 200, f), lerp(2, 150, f), lerp(5, 100, f));
+      color3 = new ServerEnvColorsPacket(3, lerp(20, 100, f), lerp(20, 100, f), lerp(30, 120, f));
+      color4 = new ServerEnvColorsPacket(4, lerp(50, 255, f), lerp(50, 200, f), lerp(80, 150, f));
     }
 
     player.getEnvCpe().updateAmbient(color1, color2, color3, color4);
