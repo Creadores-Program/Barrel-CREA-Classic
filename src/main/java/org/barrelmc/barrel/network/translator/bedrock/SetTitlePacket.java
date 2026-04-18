@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 import org.barrelmc.barrel.network.translator.interfaces.BedrockPacketTranslator;
 import org.barrelmc.barrel.player.Player;
 import org.barrelmc.barrel.utils.Utils;
-import org.barrelmc.barrel.utils.nukkit.TextFormat;
 import org.barrelmc.barrel.server.ProxyServer;
 import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 public class SetTitlePacket implements BedrockPacketTranslator {
