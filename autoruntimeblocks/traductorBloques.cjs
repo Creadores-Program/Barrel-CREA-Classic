@@ -2,7 +2,9 @@ let esjs = require('@es-js/core');
 let fs = require('fs').promises;
 async function execute(){
     let esjsData = await fs.readFile('./traductorBloques.esjs', 'utf-8');
-    let codeJs = esjs.compile(esjsData);
+    let codeJs = esjs.compile(esjsData, {
+        compiler: 'esbabel'
+    });
     eval(codeJs);
 }
 try{

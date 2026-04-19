@@ -2,9 +2,9 @@ const fs = require("fs").promises;
 asincrono funcion traducirBloques() {
     mut porciento = '%';
     mut ruta = "../src/main/resources/runtime_blocks.json";
-    console/*consola*/.info("Leyendo Archivo...");
+    consola.info("Leyendo Archivo...");
     mut datos = esperar fs.readFile(ruta, 'utf-8');
-    mut json = JSON./*analizar*/parse(datos./*reemplazar*/replace(/"(\d+)"\s*:\s*\{/g, '"_$1": {'));
+    mut json = JSON.analizar(datos.reemplazar(/"(\d+)"\s*:\s*\{/g, '"_$1": {'));
     mut estadoClassico = "classic_default_state";
     mut estadoClassicube = "classic_default_state1";
     mut nombreBedrock = "bedrock_name";
@@ -44,13 +44,13 @@ asincrono funcion traducirBloques() {
         [64, ["minecraft:jukebox"]],
         [65, ["minecraft:stonebrick", "minecraft:mud_bricks"]]
     ];
-    mut idsBedrock = /*Objeto.claves*/Object.keys(json);
-    mut porciento100 = idsBedrock.length/*longitud*/;
+    mut idsBedrock = Object.claves(json);
+    mut porciento100 = idsBedrock.longitud;
     para (mut idRBnum = 0; idRBnum < porciento100; idRBnum++) {
         mut idRB = idsBedrock[idRBnum];
         mut jsonidRB = json[idRB];
         para (mut listaClasica de traductor) {
-            si(listaClasica[1]./*indiceDe*/indexOf(jsonidRB[nombreBedrock]) < 0){
+            si(listaClasica[1].indiceDe(jsonidRB[nombreBedrock]) < 0){
                 continuar;
             }
             si(jsonidRB[estadoJava]){
@@ -62,16 +62,16 @@ asincrono funcion traducirBloques() {
             jsonidRB[estadoClassico] = listaClasica[0];
         }
         para (const listaCC de traductorCC) {
-            si(listaCC[1]./*indiceDe*/indexOf(jsonidRB[nombreBedrock]) < 0){
+            si(listaCC[1].indiceDe(jsonidRB[nombreBedrock]) < 0){
                 continuar;
             }
             jsonidRB[estadoClassicube] = listaCC[0];
         }
         mut porcientoPro = (idRBnum / porciento100) * 100;
-        console/*consola*/.info(porcientoPro./*fijarDecimales*/toFixed(2) + porciento);
+        consola.info(porcientoPro.fijarDecimales(2) + porciento);
     }
-    mut jsonNuevo = JSON./*aTexto*/stringify(json, nulo, "\t")./*reemplazar*/replace(/"_(\d+)"\s*:\s*\{/g, '"$1": {');
+    mut jsonNuevo = JSON./*aTexto*/stringify(json, nulo, "\t").reemplazar(/"_(\d+)"\s*:\s*\{/g, '"$1": {');
     esperar fs.writeFile(ruta, jsonNuevo);
-    console/*consola*/.info("Bloques Traducidos con Exito!");
+    consola.info("Bloques Traducidos con Exito!");
 }
 traducirBloques();
