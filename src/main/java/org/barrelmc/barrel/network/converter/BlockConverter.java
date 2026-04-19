@@ -21,17 +21,19 @@ public class BlockConverter {
         JsonObject jsonObject = FileManager.getJsonObjectFromResource("runtime_blocks.json");
 
         assert jsonObject != null;
+        String classicState = "classic_default_state";
+        String classicubeState = "classic_default_state1";
 
         for (Map.Entry<String, JsonElement> entry : jsonObject.entrySet()) {
             Integer bedrockRuntimeId = Integer.valueOf(entry.getKey());
             JsonObject blockEntry = entry.getValue().getAsJsonObject();
-            if(!blockEntry.has("classic_default_state")){
+            if(!blockEntry.has(classicState)){
                 continue;
             }
-            Integer classicStateId = blockEntry.get("classic_default_state").getAsInt();
+            Integer classicStateId = blockEntry.get(classicState).getAsInt();
 
-            if(blockEntry.has("classic_default_state1")){
-                Integer classicStateId1 = blockEntry.get("classic_default_state1").getAsInt();
+            if(blockEntry.has(classicubeState)){
+                Integer classicStateId1 = blockEntry.get(classicubeState).getAsInt();
                 BEDROCK_BLOCK_RUNTIME_TO_CLASSIC1_BLOCK_STATE.put(bedrockRuntimeId, classicStateId1);
             }
 

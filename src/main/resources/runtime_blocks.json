@@ -24275,80 +24275,79 @@
 	},
 	"6071": {
 		"bedrock_name": "minecraft:mycelium",
-		"java_default_state": 7270
+		"classic_default_state": 2
 	},
 	"2618": {
 		"bedrock_name": "minecraft:waterlily",
-		"java_default_state": 7271
+		"classic_default_state": 0
 	},
 	"12972": {
 		"bedrock_name": "minecraft:nether_brick",
-		"java_default_state": 7272
+		"classic_default_state": 45
 	},
 	"7099": {
 		"bedrock_name": "minecraft:nether_brick_fence",
-		"java_default_state": 7275,
-		"java_waterlogged_state": 7273
+		"classic_default_state": 45
 	},
 	"125": {
 		"bedrock_name": "minecraft:nether_brick_stairs",
-		"classic_default_state": 1,
+		"classic_default_state": 45,
 		"classic_default_state1": 65
 	},
 	"121": {
 		"bedrock_name": "minecraft:nether_brick_stairs",
-		"classic_default_state": 1,
+		"classic_default_state": 45,
 		"classic_default_state1": 65
 	},
 	"124": {
 		"bedrock_name": "minecraft:nether_brick_stairs",
-		"classic_default_state": 1,
+		"classic_default_state": 45,
 		"classic_default_state1": 65
 	},
 	"120": {
 		"bedrock_name": "minecraft:nether_brick_stairs",
-		"classic_default_state": 1,
+		"classic_default_state": 45,
 		"classic_default_state1": 65
 	},
 	"123": {
 		"bedrock_name": "minecraft:nether_brick_stairs",
-		"classic_default_state": 1,
+		"classic_default_state": 45,
 		"classic_default_state1": 65
 	},
 	"119": {
 		"bedrock_name": "minecraft:nether_brick_stairs",
-		"classic_default_state": 1,
+		"classic_default_state": 45,
 		"classic_default_state1": 65
 	},
 	"122": {
 		"bedrock_name": "minecraft:nether_brick_stairs",
-		"classic_default_state": 1,
+		"classic_default_state": 45,
 		"classic_default_state1": 65
 	},
 	"118": {
 		"bedrock_name": "minecraft:nether_brick_stairs",
-		"classic_default_state": 1,
+		"classic_default_state": 45,
 		"classic_default_state1": 65
 	},
 	"13467": {
 		"bedrock_name": "minecraft:nether_wart",
-		"java_default_state": 7385
+		"classic_default_state": 40
 	},
 	"13468": {
 		"bedrock_name": "minecraft:nether_wart",
-		"java_default_state": 7386
+		"classic_default_state": 40
 	},
 	"13469": {
 		"bedrock_name": "minecraft:nether_wart",
-		"java_default_state": 7387
+		"classic_default_state": 40
 	},
 	"13470": {
 		"bedrock_name": "minecraft:nether_wart",
-		"java_default_state": 7388
+		"classic_default_state": 40
 	},
 	"11933": {
 		"bedrock_name": "minecraft:enchanting_table",
-		"java_default_state": 7389
+		"classic_default_state": 28
 	},
 	"13258": {
 		"bedrock_name": "minecraft:brewing_stand",

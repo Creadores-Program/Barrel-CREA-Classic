@@ -41,3 +41,8 @@ tests/
 
 # Vscode Config
 .vscode/
+
+#Node.js
+autoruntimeblocks/node_modules/
+autoruntimeblocks/package.json
+autoruntimeblocks/package-lock.json
