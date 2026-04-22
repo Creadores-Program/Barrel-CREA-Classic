@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.github.steveice10.mc.classic.protocol.data.game.EntityIds;
 public class EntityConverter{
-  private static final String[] gravelSand = new String[]{ "13", "12" };
+  private static final String[] gravelSand = new String[]{ "13", "12", "42" };
   private static final Map<String, int[]> ENTITYSIDSTR = new ConcurrentHashMap<>(Map.ofEntries(
     entry(EntityIds.CHICKEN, new int[]{ 10, 122, 132, 30 }),
     entry(EntityIds.CREEPER, new int[]{ 33 }),
@@ -29,6 +29,7 @@ public class EntityConverter{
     entry(EntityIds.HEAD, new int[]{ 91, 89 })
   ));
   private static final String gravelB = "gravel";
+  private static final String anvilB = "anvil";
   private static final String prefixB = ":";
   public static String bedrockRuntimeToClassicStateId(int entityType, String identifier){
     String name = identifier;
@@ -40,6 +41,8 @@ public class EntityConverter{
     }else if(entityType == 66){
       if(name.contains(gravelB)){
         return gravelSand[0];
+      }else if(name.contains(anvilB)){
+        return gravelSand[2];
       }else{
         return gravelSand[1];
       }
