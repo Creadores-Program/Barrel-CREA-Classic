@@ -30905,383 +30905,404 @@
 	},
 	"6069": {
 		"bedrock_name": "minecraft:undyed_shulker_box",
-		"java_default_state": 12562
+		"classic_default_state": 30
 	},
 	"1118": {
 		"bedrock_name": "minecraft:white_shulker_box",
-		"java_default_state": 12568
+		"classic_default_state": 36
 	},
 	"11371": {
 		"bedrock_name": "minecraft:orange_shulker_box",
-		"java_default_state": 12574
+		"classic_default_state": 22
 	},
 	"742": {
 		"bedrock_name": "minecraft:magenta_shulker_box",
-		"java_default_state": 12580
+		"classic_default_state": 32
 	},
 	"12189": {
 		"bedrock_name": "minecraft:light_blue_shulker_box",
-		"java_default_state": 12586
+		"classic_default_state": 28
 	},
 	"126": {
 		"bedrock_name": "minecraft:yellow_shulker_box",
-		"java_default_state": 12592
+		"classic_default_state": 23
 	},
 	"1052": {
 		"bedrock_name": "minecraft:lime_shulker_box",
-		"java_default_state": 12598
+		"classic_default_state": 24
 	},
 	"7226": {
 		"bedrock_name": "minecraft:pink_shulker_box",
-		"java_default_state": 12604
+		"classic_default_state": 33,
+		"classic_default_state1": 55
 	},
 	"9136": {
 		"bedrock_name": "minecraft:gray_shulker_box",
-		"java_default_state": 12610
+		"classic_default_state": 34
 	},
 	"10564": {
 		"bedrock_name": "minecraft:light_gray_shulker_box",
-		"java_default_state": 12616
+		"classic_default_state": 35
 	},
 	"12256": {
 		"bedrock_name": "minecraft:cyan_shulker_box",
-		"java_default_state": 12622
+		"classic_default_state": 27
 	},
 	"13074": {
 		"bedrock_name": "minecraft:purple_shulker_box",
-		"java_default_state": 12628
+		"classic_default_state": 31
 	},
 	"11420": {
 		"bedrock_name": "minecraft:blue_shulker_box",
-		"java_default_state": 12634
+		"classic_default_state": 29,
+		"classic_default_state1": 58
 	},
 	"12098": {
 		"bedrock_name": "minecraft:brown_shulker_box",
-		"java_default_state": 12640
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"11688": {
 		"bedrock_name": "minecraft:green_shulker_box",
-		"java_default_state": 12646
+		"classic_default_state": 25
 	},
 	"7287": {
 		"bedrock_name": "minecraft:red_shulker_box",
-		"java_default_state": 12652
+		"classic_default_state": 21
 	},
 	"11158": {
 		"bedrock_name": "minecraft:black_shulker_box",
-		"java_default_state": 12658
+		"classic_default_state": 34
 	},
 	"9399": {
 		"bedrock_name": "minecraft:white_glazed_terracotta",
-		"java_default_state": 12664
+		"classic_default_state": 36
 	},
 	"9397": {
 		"bedrock_name": "minecraft:white_glazed_terracotta",
-		"java_default_state": 12664
+		"classic_default_state": 36
 	},
 	"9398": {
 		"bedrock_name": "minecraft:white_glazed_terracotta",
-		"java_default_state": 12664
+		"classic_default_state": 36
 	},
 	"9400": {
 		"bedrock_name": "minecraft:white_glazed_terracotta",
-		"java_default_state": 12665
+		"classic_default_state": 36
 	},
 	"9401": {
 		"bedrock_name": "minecraft:white_glazed_terracotta",
-		"java_default_state": 12666
+		"classic_default_state": 36
 	},
 	"9402": {
 		"bedrock_name": "minecraft:white_glazed_terracotta",
-		"java_default_state": 12667
+		"classic_default_state": 36
 	},
 	"2612": {
 		"bedrock_name": "minecraft:orange_glazed_terracotta",
-		"java_default_state": 12668
+		"classic_default_state": 22
 	},
 	"2610": {
 		"bedrock_name": "minecraft:orange_glazed_terracotta",
-		"java_default_state": 12668
+		"classic_default_state": 22
 	},
 	"2611": {
 		"bedrock_name": "minecraft:orange_glazed_terracotta",
-		"java_default_state": 12668
+		"classic_default_state": 22
 	},
 	"2613": {
 		"bedrock_name": "minecraft:orange_glazed_terracotta",
-		"java_default_state": 12669
+		"classic_default_state": 22
 	},
 	"2614": {
 		"bedrock_name": "minecraft:orange_glazed_terracotta",
-		"java_default_state": 12670
+		"classic_default_state": 22
 	},
 	"2615": {
 		"bedrock_name": "minecraft:orange_glazed_terracotta",
-		"java_default_state": 12671
+		"classic_default_state": 22
 	},
 	"2442": {
 		"bedrock_name": "minecraft:magenta_glazed_terracotta",
-		"java_default_state": 12672
+		"classic_default_state": 32
 	},
 	"2440": {
 		"bedrock_name": "minecraft:magenta_glazed_terracotta",
-		"java_default_state": 12672
+		"classic_default_state": 32
 	},
 	"2441": {
 		"bedrock_name": "minecraft:magenta_glazed_terracotta",
-		"java_default_state": 12672
+		"classic_default_state": 32
 	},
 	"2443": {
 		"bedrock_name": "minecraft:magenta_glazed_terracotta",
-		"java_default_state": 12673
+		"classic_default_state": 32
 	},
 	"2444": {
 		"bedrock_name": "minecraft:magenta_glazed_terracotta",
-		"java_default_state": 12674
+		"classic_default_state": 32
 	},
 	"2445": {
 		"bedrock_name": "minecraft:magenta_glazed_terracotta",
-		"java_default_state": 12675
+		"classic_default_state": 32
 	},
 	"9296": {
 		"bedrock_name": "minecraft:light_blue_glazed_terracotta",
-		"java_default_state": 12676
+		"classic_default_state": 28
 	},
 	"9294": {
 		"bedrock_name": "minecraft:light_blue_glazed_terracotta",
-		"java_default_state": 12676
+		"classic_default_state": 28
 	},
 	"9295": {
 		"bedrock_name": "minecraft:light_blue_glazed_terracotta",
-		"java_default_state": 12676
+		"classic_default_state": 28
 	},
 	"9297": {
 		"bedrock_name": "minecraft:light_blue_glazed_terracotta",
-		"java_default_state": 12677
+		"classic_default_state": 28
 	},
 	"9298": {
 		"bedrock_name": "minecraft:light_blue_glazed_terracotta",
-		"java_default_state": 12678
+		"classic_default_state": 28
 	},
 	"9299": {
 		"bedrock_name": "minecraft:light_blue_glazed_terracotta",
-		"java_default_state": 12679
+		"classic_default_state": 28
 	},
 	"2398": {
 		"bedrock_name": "minecraft:yellow_glazed_terracotta",
-		"java_default_state": 12680
+		"classic_default_state": 23
 	},
 	"2396": {
 		"bedrock_name": "minecraft:yellow_glazed_terracotta",
-		"java_default_state": 12680
+		"classic_default_state": 23
 	},
 	"2397": {
 		"bedrock_name": "minecraft:yellow_glazed_terracotta",
-		"java_default_state": 12680
+		"classic_default_state": 23
 	},
 	"2399": {
 		"bedrock_name": "minecraft:yellow_glazed_terracotta",
-		"java_default_state": 12681
+		"classic_default_state": 23
 	},
 	"2400": {
 		"bedrock_name": "minecraft:yellow_glazed_terracotta",
-		"java_default_state": 12682
+		"classic_default_state": 23
 	},
 	"2401": {
 		"bedrock_name": "minecraft:yellow_glazed_terracotta",
-		"java_default_state": 12683
+		"classic_default_state": 23
 	},
 	"656": {
 		"bedrock_name": "minecraft:lime_glazed_terracotta",
-		"java_default_state": 12684
+		"classic_default_state": 24
 	},
 	"654": {
 		"bedrock_name": "minecraft:lime_glazed_terracotta",
-		"java_default_state": 12684
+		"classic_default_state": 24
 	},
 	"655": {
 		"bedrock_name": "minecraft:lime_glazed_terracotta",
-		"java_default_state": 12684
+		"classic_default_state": 24
 	},
 	"657": {
 		"bedrock_name": "minecraft:lime_glazed_terracotta",
-		"java_default_state": 12685
+		"classic_default_state": 24
 	},
 	"658": {
 		"bedrock_name": "minecraft:lime_glazed_terracotta",
-		"java_default_state": 12686
+		"classic_default_state": 24
 	},
 	"659": {
 		"bedrock_name": "minecraft:lime_glazed_terracotta",
-		"java_default_state": 12687
+		"classic_default_state": 24
 	},
 	"11751": {
 		"bedrock_name": "minecraft:pink_glazed_terracotta",
-		"java_default_state": 12688
+		"classic_default_state": 33,
+		"classic_default_state1": 55
 	},
 	"11749": {
 		"bedrock_name": "minecraft:pink_glazed_terracotta",
-		"java_default_state": 12688
+		"classic_default_state": 33,
+		"classic_default_state1": 55
 	},
 	"11750": {
 		"bedrock_name": "minecraft:pink_glazed_terracotta",
-		"java_default_state": 12688
+		"classic_default_state": 33,
+		"classic_default_state1": 55
 	},
 	"11752": {
 		"bedrock_name": "minecraft:pink_glazed_terracotta",
-		"java_default_state": 12689
+		"classic_default_state": 33,
+		"classic_default_state1": 55
 	},
 	"11753": {
 		"bedrock_name": "minecraft:pink_glazed_terracotta",
-		"java_default_state": 12690
+		"classic_default_state": 33,
+		"classic_default_state1": 55
 	},
 	"11754": {
 		"bedrock_name": "minecraft:pink_glazed_terracotta",
-		"java_default_state": 12691
+		"classic_default_state": 33,
+		"classic_default_state1": 55
 	},
 	"14079": {
 		"bedrock_name": "minecraft:gray_glazed_terracotta",
-		"java_default_state": 12692
+		"classic_default_state": 34
 	},
 	"14077": {
 		"bedrock_name": "minecraft:gray_glazed_terracotta",
-		"java_default_state": 12692
+		"classic_default_state": 34
 	},
 	"14078": {
 		"bedrock_name": "minecraft:gray_glazed_terracotta",
-		"java_default_state": 12692
+		"classic_default_state": 34
 	},
 	"14080": {
 		"bedrock_name": "minecraft:gray_glazed_terracotta",
-		"java_default_state": 12693
+		"classic_default_state": 34
 	},
 	"14081": {
 		"bedrock_name": "minecraft:gray_glazed_terracotta",
-		"java_default_state": 12694
+		"classic_default_state": 34
 	},
 	"14082": {
 		"bedrock_name": "minecraft:gray_glazed_terracotta",
-		"java_default_state": 12695
+		"classic_default_state": 34
 	},
 	"5509": {
 		"bedrock_name": "minecraft:silver_glazed_terracotta",
-		"java_default_state": 12696
+		"classic_default_state": 35
 	},
 	"5507": {
 		"bedrock_name": "minecraft:silver_glazed_terracotta",
-		"java_default_state": 12696
+		"classic_default_state": 35
 	},
 	"5508": {
 		"bedrock_name": "minecraft:silver_glazed_terracotta",
-		"java_default_state": 12696
+		"classic_default_state": 35
 	},
 	"5510": {
 		"bedrock_name": "minecraft:silver_glazed_terracotta",
-		"java_default_state": 12697
+		"classic_default_state": 35
 	},
 	"5511": {
 		"bedrock_name": "minecraft:silver_glazed_terracotta",
-		"java_default_state": 12698
+		"classic_default_state": 35
 	},
 	"5512": {
 		"bedrock_name": "minecraft:silver_glazed_terracotta",
-		"java_default_state": 12699
+		"classic_default_state": 35
 	},
 	"9147": {
 		"bedrock_name": "minecraft:cyan_glazed_terracotta",
-		"java_default_state": 12700
+		"classic_default_state": 27
 	},
 	"9145": {
 		"bedrock_name": "minecraft:cyan_glazed_terracotta",
-		"java_default_state": 12700
+		"classic_default_state": 27
 	},
 	"9146": {
 		"bedrock_name": "minecraft:cyan_glazed_terracotta",
-		"java_default_state": 12700
+		"classic_default_state": 27
 	},
 	"9148": {
 		"bedrock_name": "minecraft:cyan_glazed_terracotta",
-		"java_default_state": 12701
+		"classic_default_state": 27
 	},
 	"9149": {
 		"bedrock_name": "minecraft:cyan_glazed_terracotta",
-		"java_default_state": 12702
+		"classic_default_state": 27
 	},
 	"9150": {
 		"bedrock_name": "minecraft:cyan_glazed_terracotta",
-		"java_default_state": 12703
+		"classic_default_state": 27
 	},
 	"12238": {
 		"bedrock_name": "minecraft:purple_glazed_terracotta",
-		"java_default_state": 12704
+		"classic_default_state": 31
 	},
 	"12236": {
 		"bedrock_name": "minecraft:purple_glazed_terracotta",
-		"java_default_state": 12704
+		"classic_default_state": 31
 	},
 	"12237": {
 		"bedrock_name": "minecraft:purple_glazed_terracotta",
-		"java_default_state": 12704
+		"classic_default_state": 31
 	},
 	"12239": {
 		"bedrock_name": "minecraft:purple_glazed_terracotta",
-		"java_default_state": 12705
+		"classic_default_state": 31
 	},
 	"12240": {
 		"bedrock_name": "minecraft:purple_glazed_terracotta",
-		"java_default_state": 12706
+		"classic_default_state": 31
 	},
 	"12241": {
 		"bedrock_name": "minecraft:purple_glazed_terracotta",
-		"java_default_state": 12707
+		"classic_default_state": 31
 	},
 	"9290": {
 		"bedrock_name": "minecraft:blue_glazed_terracotta",
-		"java_default_state": 12708
+		"classic_default_state": 29,
+		"classic_default_state1": 58
 	},
 	"9288": {
 		"bedrock_name": "minecraft:blue_glazed_terracotta",
-		"java_default_state": 12708
+		"classic_default_state": 29,
+		"classic_default_state1": 58
 	},
 	"9289": {
 		"bedrock_name": "minecraft:blue_glazed_terracotta",
-		"java_default_state": 12708
+		"classic_default_state": 29,
+		"classic_default_state1": 58
 	},
 	"9291": {
 		"bedrock_name": "minecraft:blue_glazed_terracotta",
-		"java_default_state": 12709
+		"classic_default_state": 29,
+		"classic_default_state1": 58
 	},
 	"9292": {
 		"bedrock_name": "minecraft:blue_glazed_terracotta",
-		"java_default_state": 12710
+		"classic_default_state": 29,
+		"classic_default_state1": 58
 	},
 	"9293": {
 		"bedrock_name": "minecraft:blue_glazed_terracotta",
-		"java_default_state": 12711
+		"classic_default_state": 29,
+		"classic_default_state1": 58
 	},
 	"5911": {
 		"bedrock_name": "minecraft:brown_glazed_terracotta",
-		"java_default_state": 12712
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"5909": {
 		"bedrock_name": "minecraft:brown_glazed_terracotta",
-		"java_default_state": 12712
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"5910": {
 		"bedrock_name": "minecraft:brown_glazed_terracotta",
-		"java_default_state": 12712
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"5912": {
 		"bedrock_name": "minecraft:brown_glazed_terracotta",
-		"java_default_state": 12713
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"5913": {
 		"bedrock_name": "minecraft:brown_glazed_terracotta",
-		"java_default_state": 12714
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"5914": {
 		"bedrock_name": "minecraft:brown_glazed_terracotta",
-		"java_default_state": 12715
+		"classic_default_state": 3,
+		"classic_default_state1": 57
 	},
 	"11823": {
 		"bedrock_name": "minecraft:green_glazed_terracotta",
@@ -55676,1749 +55697,1745 @@
 	},
 	"7448": {
 		"bedrock_name": "minecraft:deepslate_tiles",
-		"java_default_state": 25729
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7976": {
 		"bedrock_name": "minecraft:deepslate_tile_stairs",
-		"java_default_state": 25731,
-		"java_waterlogged_state": 25730
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7972": {
 		"bedrock_name": "minecraft:deepslate_tile_stairs",
-		"java_default_state": 25741,
-		"java_waterlogged_state": 25740
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7975": {
 		"bedrock_name": "minecraft:deepslate_tile_stairs",
-		"java_default_state": 25751,
-		"java_waterlogged_state": 25750
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7971": {
 		"bedrock_name": "minecraft:deepslate_tile_stairs",
-		"java_default_state": 25761,
-		"java_waterlogged_state": 25760
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7974": {
 		"bedrock_name": "minecraft:deepslate_tile_stairs",
-		"java_default_state": 25771,
-		"java_waterlogged_state": 25770
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7970": {
 		"bedrock_name": "minecraft:deepslate_tile_stairs",
-		"java_default_state": 25781,
-		"java_waterlogged_state": 25780
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7973": {
 		"bedrock_name": "minecraft:deepslate_tile_stairs",
-		"java_default_state": 25791,
-		"java_waterlogged_state": 25790
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7969": {
 		"bedrock_name": "minecraft:deepslate_tile_stairs",
-		"java_default_state": 25801,
-		"java_waterlogged_state": 25800
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"7103": {
 		"bedrock_name": "minecraft:deepslate_tile_slab",
-		"java_default_state": 25811,
-		"java_waterlogged_state": 25810
+		"classic_default_state": 44
 	},
 	"7102": {
 		"bedrock_name": "minecraft:deepslate_tile_slab",
-		"java_default_state": 25813,
-		"java_waterlogged_state": 25812
+		"classic_default_state": 44
 	},
 	"1116": {
 		"bedrock_name": "minecraft:deepslate_tile_double_slab",
-		"java_default_state": 25814
+		"classic_default_state": 43
 	},
 	"1115": {
 		"bedrock_name": "minecraft:deepslate_tile_double_slab",
-		"java_default_state": 25815,
-		"java_waterlogged_state": 25814
+		"classic_default_state": 43
 	},
 	"8862": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25819,
-		"java_waterlogged_state": 25816
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8916": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25820,
-		"java_waterlogged_state": 25817
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8970": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25821,
-		"java_waterlogged_state": 25818
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8861": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25825,
-		"java_waterlogged_state": 25822
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8915": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25826,
-		"java_waterlogged_state": 25823
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8969": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25827,
-		"java_waterlogged_state": 25824
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8880": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25831,
-		"java_waterlogged_state": 25828
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8934": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25832,
-		"java_waterlogged_state": 25829
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8988": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25833,
-		"java_waterlogged_state": 25830
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8879": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25837,
-		"java_waterlogged_state": 25834
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8933": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25838,
-		"java_waterlogged_state": 25835
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8987": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25839,
-		"java_waterlogged_state": 25836
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8898": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25843,
-		"java_waterlogged_state": 25840
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8952": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25844,
-		"java_waterlogged_state": 25841
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9006": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25845,
-		"java_waterlogged_state": 25842
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8897": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25849,
-		"java_waterlogged_state": 25846
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8951": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25850,
-		"java_waterlogged_state": 25847
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9005": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25851,
-		"java_waterlogged_state": 25848
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8864": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25855,
-		"java_waterlogged_state": 25852
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8918": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25856,
-		"java_waterlogged_state": 25853
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8972": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25857,
-		"java_waterlogged_state": 25854
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8863": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25861,
-		"java_waterlogged_state": 25858
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8917": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25862,
-		"java_waterlogged_state": 25859
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8971": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25863,
-		"java_waterlogged_state": 25860
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8882": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25867,
-		"java_waterlogged_state": 25864
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8936": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25868,
-		"java_waterlogged_state": 25865
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8990": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25869,
-		"java_waterlogged_state": 25866
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8881": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25873,
-		"java_waterlogged_state": 25870
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8935": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25874,
-		"java_waterlogged_state": 25871
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8989": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25875,
-		"java_waterlogged_state": 25872
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8900": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25879,
-		"java_waterlogged_state": 25876
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8954": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25880,
-		"java_waterlogged_state": 25877
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9008": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25881,
-		"java_waterlogged_state": 25878
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8899": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25885,
-		"java_waterlogged_state": 25882
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8953": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25886,
-		"java_waterlogged_state": 25883
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9007": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25887,
-		"java_waterlogged_state": 25884
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8866": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25891,
-		"java_waterlogged_state": 25888
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8920": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25892,
-		"java_waterlogged_state": 25889
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8974": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25893,
-		"java_waterlogged_state": 25890
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8865": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25897,
-		"java_waterlogged_state": 25894
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8919": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25898,
-		"java_waterlogged_state": 25895
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8973": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25899,
-		"java_waterlogged_state": 25896
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8884": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25903,
-		"java_waterlogged_state": 25900
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8938": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25904,
-		"java_waterlogged_state": 25901
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8992": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25905,
-		"java_waterlogged_state": 25902
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8883": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25909,
-		"java_waterlogged_state": 25906
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8937": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25910,
-		"java_waterlogged_state": 25907
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8991": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25911,
-		"java_waterlogged_state": 25908
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8902": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25915,
-		"java_waterlogged_state": 25912
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8956": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25916,
-		"java_waterlogged_state": 25913
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9010": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25917,
-		"java_waterlogged_state": 25914
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8901": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25921,
-		"java_waterlogged_state": 25918
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8955": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25922,
-		"java_waterlogged_state": 25919
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9009": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25923,
-		"java_waterlogged_state": 25920
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8868": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25927,
-		"java_waterlogged_state": 25924
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8922": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25928,
-		"java_waterlogged_state": 25925
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8976": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25929,
-		"java_waterlogged_state": 25926
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8867": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25933,
-		"java_waterlogged_state": 25930
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8921": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25934,
-		"java_waterlogged_state": 25931
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8975": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25935,
-		"java_waterlogged_state": 25932
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8886": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25939,
-		"java_waterlogged_state": 25936
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8940": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25940,
-		"java_waterlogged_state": 25937
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8994": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25941,
-		"java_waterlogged_state": 25938
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8885": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25945,
-		"java_waterlogged_state": 25942
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8939": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25946,
-		"java_waterlogged_state": 25943
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8993": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25947,
-		"java_waterlogged_state": 25944
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8904": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25951,
-		"java_waterlogged_state": 25948
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8958": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25952,
-		"java_waterlogged_state": 25949
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9012": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25953,
-		"java_waterlogged_state": 25950
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8903": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25957,
-		"java_waterlogged_state": 25954
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8957": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25958,
-		"java_waterlogged_state": 25955
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9011": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25959,
-		"java_waterlogged_state": 25956
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8870": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25963,
-		"java_waterlogged_state": 25960
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8924": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25964,
-		"java_waterlogged_state": 25961
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8978": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25965,
-		"java_waterlogged_state": 25962
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8869": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25969,
-		"java_waterlogged_state": 25966
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8923": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25970,
-		"java_waterlogged_state": 25967
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8977": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25971,
-		"java_waterlogged_state": 25968
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8888": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25975,
-		"java_waterlogged_state": 25972
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8942": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25976,
-		"java_waterlogged_state": 25973
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8996": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25977,
-		"java_waterlogged_state": 25974
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8887": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25981,
-		"java_waterlogged_state": 25978
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8941": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25982,
-		"java_waterlogged_state": 25979
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8995": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25983,
-		"java_waterlogged_state": 25980
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8906": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25987,
-		"java_waterlogged_state": 25984
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8960": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25988,
-		"java_waterlogged_state": 25985
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9014": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25989,
-		"java_waterlogged_state": 25986
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8905": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25993,
-		"java_waterlogged_state": 25990
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8959": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25994,
-		"java_waterlogged_state": 25991
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9013": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25995,
-		"java_waterlogged_state": 25992
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8872": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 25999,
-		"java_waterlogged_state": 25996
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8926": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26000,
-		"java_waterlogged_state": 25997
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8980": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26001,
-		"java_waterlogged_state": 25998
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8871": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26005,
-		"java_waterlogged_state": 26002
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8925": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26006,
-		"java_waterlogged_state": 26003
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8979": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26007,
-		"java_waterlogged_state": 26004
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8890": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26011,
-		"java_waterlogged_state": 26008
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8944": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26012,
-		"java_waterlogged_state": 26009
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8998": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26013,
-		"java_waterlogged_state": 26010
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8889": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26017,
-		"java_waterlogged_state": 26014
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8943": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26018,
-		"java_waterlogged_state": 26015
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8997": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26019,
-		"java_waterlogged_state": 26016
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8908": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26023,
-		"java_waterlogged_state": 26020
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8962": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26024,
-		"java_waterlogged_state": 26021
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9016": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26025,
-		"java_waterlogged_state": 26022
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8907": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26029,
-		"java_waterlogged_state": 26026
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8961": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26030,
-		"java_waterlogged_state": 26027
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9015": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26031,
-		"java_waterlogged_state": 26028
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8874": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26035,
-		"java_waterlogged_state": 26032
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8928": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26036,
-		"java_waterlogged_state": 26033
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8982": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26037,
-		"java_waterlogged_state": 26034
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8873": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26041,
-		"java_waterlogged_state": 26038
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8927": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26042,
-		"java_waterlogged_state": 26039
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8981": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26043,
-		"java_waterlogged_state": 26040
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8892": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26047,
-		"java_waterlogged_state": 26044
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8946": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26048,
-		"java_waterlogged_state": 26045
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9000": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26049,
-		"java_waterlogged_state": 26046
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8891": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26053,
-		"java_waterlogged_state": 26050
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8945": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26054,
-		"java_waterlogged_state": 26051
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8999": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26055,
-		"java_waterlogged_state": 26052
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8910": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26059,
-		"java_waterlogged_state": 26056
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8964": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26060,
-		"java_waterlogged_state": 26057
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9018": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26061,
-		"java_waterlogged_state": 26058
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8909": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26065,
-		"java_waterlogged_state": 26062
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8963": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26066,
-		"java_waterlogged_state": 26063
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9017": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26067,
-		"java_waterlogged_state": 26064
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8876": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26071,
-		"java_waterlogged_state": 26068
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8930": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26072,
-		"java_waterlogged_state": 26069
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8984": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26073,
-		"java_waterlogged_state": 26070
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8875": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26077,
-		"java_waterlogged_state": 26074
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8929": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26078,
-		"java_waterlogged_state": 26075
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8983": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26079,
-		"java_waterlogged_state": 26076
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8894": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26083,
-		"java_waterlogged_state": 26080
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8948": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26084,
-		"java_waterlogged_state": 26081
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9002": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26085,
-		"java_waterlogged_state": 26082
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8893": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26089,
-		"java_waterlogged_state": 26086
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8947": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26090,
-		"java_waterlogged_state": 26087
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9001": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26091,
-		"java_waterlogged_state": 26088
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8912": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26095,
-		"java_waterlogged_state": 26092
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8966": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26096,
-		"java_waterlogged_state": 26093
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9020": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26097,
-		"java_waterlogged_state": 26094
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8911": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26101,
-		"java_waterlogged_state": 26098
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8965": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26102,
-		"java_waterlogged_state": 26099
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9019": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26103,
-		"java_waterlogged_state": 26100
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8878": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26107,
-		"java_waterlogged_state": 26104
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8932": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26108,
-		"java_waterlogged_state": 26105
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8986": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26109,
-		"java_waterlogged_state": 26106
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8877": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26113,
-		"java_waterlogged_state": 26110
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8931": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26114,
-		"java_waterlogged_state": 26111
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8985": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26115,
-		"java_waterlogged_state": 26112
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8896": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26119,
-		"java_waterlogged_state": 26116
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8950": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26120,
-		"java_waterlogged_state": 26117
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9004": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26121,
-		"java_waterlogged_state": 26118
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8895": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26125,
-		"java_waterlogged_state": 26122
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8949": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26126,
-		"java_waterlogged_state": 26123
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9003": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26127,
-		"java_waterlogged_state": 26124
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8914": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26131,
-		"java_waterlogged_state": 26128
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8968": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26132,
-		"java_waterlogged_state": 26129
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9022": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26133,
-		"java_waterlogged_state": 26130
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8913": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26137,
-		"java_waterlogged_state": 26134
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"8967": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26138,
-		"java_waterlogged_state": 26135
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9021": {
 		"bedrock_name": "minecraft:deepslate_tile_wall",
-		"java_default_state": 26139,
-		"java_waterlogged_state": 26136
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9287": {
 		"bedrock_name": "minecraft:deepslate_bricks",
-		"java_default_state": 26140
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"13127": {
 		"bedrock_name": "minecraft:deepslate_brick_stairs",
-		"java_default_state": 26142,
-		"java_waterlogged_state": 26141
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"13123": {
 		"bedrock_name": "minecraft:deepslate_brick_stairs",
-		"java_default_state": 26152,
-		"java_waterlogged_state": 26151
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"13126": {
 		"bedrock_name": "minecraft:deepslate_brick_stairs",
-		"java_default_state": 26162,
-		"java_waterlogged_state": 26161
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"13122": {
 		"bedrock_name": "minecraft:deepslate_brick_stairs",
-		"java_default_state": 26172,
-		"java_waterlogged_state": 26171
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"13125": {
 		"bedrock_name": "minecraft:deepslate_brick_stairs",
-		"java_default_state": 26182,
-		"java_waterlogged_state": 26181
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"13121": {
 		"bedrock_name": "minecraft:deepslate_brick_stairs",
-		"java_default_state": 26192,
-		"java_waterlogged_state": 26191
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"13124": {
 		"bedrock_name": "minecraft:deepslate_brick_stairs",
-		"java_default_state": 26202,
-		"java_waterlogged_state": 26201
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"13120": {
 		"bedrock_name": "minecraft:deepslate_brick_stairs",
-		"java_default_state": 26212,
-		"java_waterlogged_state": 26211
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"6108": {
 		"bedrock_name": "minecraft:deepslate_brick_slab",
-		"java_default_state": 26222,
-		"java_waterlogged_state": 26221
+		"classic_default_state": 44
 	},
 	"6107": {
 		"bedrock_name": "minecraft:deepslate_brick_slab",
-		"java_default_state": 26224,
-		"java_waterlogged_state": 26223
+		"classic_default_state": 44
 	},
 	"4932": {
 		"bedrock_name": "minecraft:deepslate_brick_double_slab",
-		"java_default_state": 26225
+		"classic_default_state": 43
 	},
 	"4931": {
 		"bedrock_name": "minecraft:deepslate_brick_double_slab",
-		"java_default_state": 26226,
-		"java_waterlogged_state": 26225
+		"classic_default_state": 43
 	},
 	"1197": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26230,
-		"java_waterlogged_state": 26227
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1251": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26231,
-		"java_waterlogged_state": 26228
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1305": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26232,
-		"java_waterlogged_state": 26229
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1196": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26236,
-		"java_waterlogged_state": 26233
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1250": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26237,
-		"java_waterlogged_state": 26234
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1304": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26238,
-		"java_waterlogged_state": 26235
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1215": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26242,
-		"java_waterlogged_state": 26239
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1269": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26243,
-		"java_waterlogged_state": 26240
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1323": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26244,
-		"java_waterlogged_state": 26241
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1214": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26248,
-		"java_waterlogged_state": 26245
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1268": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26249,
-		"java_waterlogged_state": 26246
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1322": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26250,
-		"java_waterlogged_state": 26247
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1233": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26254,
-		"java_waterlogged_state": 26251
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1287": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26255,
-		"java_waterlogged_state": 26252
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1341": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26256,
-		"java_waterlogged_state": 26253
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1232": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26260,
-		"java_waterlogged_state": 26257
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1286": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26261,
-		"java_waterlogged_state": 26258
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1340": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26262,
-		"java_waterlogged_state": 26259
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1199": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26266,
-		"java_waterlogged_state": 26263
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1253": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26267,
-		"java_waterlogged_state": 26264
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1307": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26268,
-		"java_waterlogged_state": 26265
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1198": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26272,
-		"java_waterlogged_state": 26269
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1252": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26273,
-		"java_waterlogged_state": 26270
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1306": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26274,
-		"java_waterlogged_state": 26271
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1217": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26278,
-		"java_waterlogged_state": 26275
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1271": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26279,
-		"java_waterlogged_state": 26276
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1325": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26280,
-		"java_waterlogged_state": 26277
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1216": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26284,
-		"java_waterlogged_state": 26281
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1270": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26285,
-		"java_waterlogged_state": 26282
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1324": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26286,
-		"java_waterlogged_state": 26283
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1235": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26290,
-		"java_waterlogged_state": 26287
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1289": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26291,
-		"java_waterlogged_state": 26288
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1343": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26292,
-		"java_waterlogged_state": 26289
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1234": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26296,
-		"java_waterlogged_state": 26293
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1288": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26297,
-		"java_waterlogged_state": 26294
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1342": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26298,
-		"java_waterlogged_state": 26295
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1201": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26302,
-		"java_waterlogged_state": 26299
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1255": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26303,
-		"java_waterlogged_state": 26300
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1309": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26304,
-		"java_waterlogged_state": 26301
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1200": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26308,
-		"java_waterlogged_state": 26305
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1254": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26309,
-		"java_waterlogged_state": 26306
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1308": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26310,
-		"java_waterlogged_state": 26307
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1219": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26314,
-		"java_waterlogged_state": 26311
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1273": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26315,
-		"java_waterlogged_state": 26312
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1327": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26316,
-		"java_waterlogged_state": 26313
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1218": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26320,
-		"java_waterlogged_state": 26317
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1272": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26321,
-		"java_waterlogged_state": 26318
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1326": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26322,
-		"java_waterlogged_state": 26319
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1237": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26326,
-		"java_waterlogged_state": 26323
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1291": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26327,
-		"java_waterlogged_state": 26324
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1345": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26328,
-		"java_waterlogged_state": 26325
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1236": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26332,
-		"java_waterlogged_state": 26329
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1290": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26333,
-		"java_waterlogged_state": 26330
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1344": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26334,
-		"java_waterlogged_state": 26331
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1203": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26338,
-		"java_waterlogged_state": 26335
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1257": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26339,
-		"java_waterlogged_state": 26336
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1311": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26340,
-		"java_waterlogged_state": 26337
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1202": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26344,
-		"java_waterlogged_state": 26341
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1256": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26345,
-		"java_waterlogged_state": 26342
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1310": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26346,
-		"java_waterlogged_state": 26343
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1221": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26350,
-		"java_waterlogged_state": 26347
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1275": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26351,
-		"java_waterlogged_state": 26348
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1329": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26352,
-		"java_waterlogged_state": 26349
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1220": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26356,
-		"java_waterlogged_state": 26353
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1274": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26357,
-		"java_waterlogged_state": 26354
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1328": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26358,
-		"java_waterlogged_state": 26355
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1239": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26362,
-		"java_waterlogged_state": 26359
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1293": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26363,
-		"java_waterlogged_state": 26360
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1347": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26364,
-		"java_waterlogged_state": 26361
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1238": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26368,
-		"java_waterlogged_state": 26365
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1292": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26369,
-		"java_waterlogged_state": 26366
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1346": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26370,
-		"java_waterlogged_state": 26367
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1205": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26374,
-		"java_waterlogged_state": 26371
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1259": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26375,
-		"java_waterlogged_state": 26372
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1313": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26376,
-		"java_waterlogged_state": 26373
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1204": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26380,
-		"java_waterlogged_state": 26377
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1258": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26381,
-		"java_waterlogged_state": 26378
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1312": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26382,
-		"java_waterlogged_state": 26379
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1223": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26386,
-		"java_waterlogged_state": 26383
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1277": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26387,
-		"java_waterlogged_state": 26384
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1331": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26388,
-		"java_waterlogged_state": 26385
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1222": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26392,
-		"java_waterlogged_state": 26389
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1276": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26393,
-		"java_waterlogged_state": 26390
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1330": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26394,
-		"java_waterlogged_state": 26391
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1241": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26398,
-		"java_waterlogged_state": 26395
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1295": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26399,
-		"java_waterlogged_state": 26396
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1349": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26400,
-		"java_waterlogged_state": 26397
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1240": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26404,
-		"java_waterlogged_state": 26401
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1294": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26405,
-		"java_waterlogged_state": 26402
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1348": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26406,
-		"java_waterlogged_state": 26403
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1207": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26410,
-		"java_waterlogged_state": 26407
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1261": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26411,
-		"java_waterlogged_state": 26408
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1315": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26412,
-		"java_waterlogged_state": 26409
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1206": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26416,
-		"java_waterlogged_state": 26413
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1260": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26417,
-		"java_waterlogged_state": 26414
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1314": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26418,
-		"java_waterlogged_state": 26415
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1225": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26422,
-		"java_waterlogged_state": 26419
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1279": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26423,
-		"java_waterlogged_state": 26420
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1333": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26424,
-		"java_waterlogged_state": 26421
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1224": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26428,
-		"java_waterlogged_state": 26425
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1278": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26429,
-		"java_waterlogged_state": 26426
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1332": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26430,
-		"java_waterlogged_state": 26427
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1243": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26434,
-		"java_waterlogged_state": 26431
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1297": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26435,
-		"java_waterlogged_state": 26432
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1351": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26436,
-		"java_waterlogged_state": 26433
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1242": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26440,
-		"java_waterlogged_state": 26437
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1296": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26441,
-		"java_waterlogged_state": 26438
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1350": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26442,
-		"java_waterlogged_state": 26439
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1209": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26446,
-		"java_waterlogged_state": 26443
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1263": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26447,
-		"java_waterlogged_state": 26444
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1317": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26448,
-		"java_waterlogged_state": 26445
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1208": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26452,
-		"java_waterlogged_state": 26449
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1262": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26453,
-		"java_waterlogged_state": 26450
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1316": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26454,
-		"java_waterlogged_state": 26451
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1227": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26458,
-		"java_waterlogged_state": 26455
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1281": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26459,
-		"java_waterlogged_state": 26456
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1335": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26460,
-		"java_waterlogged_state": 26457
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1226": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26464,
-		"java_waterlogged_state": 26461
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1280": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26465,
-		"java_waterlogged_state": 26462
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1334": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26466,
-		"java_waterlogged_state": 26463
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1245": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26470,
-		"java_waterlogged_state": 26467
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1299": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26471,
-		"java_waterlogged_state": 26468
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1353": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26472,
-		"java_waterlogged_state": 26469
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1244": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26476,
-		"java_waterlogged_state": 26473
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1298": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26477,
-		"java_waterlogged_state": 26474
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1352": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26478,
-		"java_waterlogged_state": 26475
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1211": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26482,
-		"java_waterlogged_state": 26479
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1265": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26483,
-		"java_waterlogged_state": 26480
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1319": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26484,
-		"java_waterlogged_state": 26481
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1210": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26488,
-		"java_waterlogged_state": 26485
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1264": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26489,
-		"java_waterlogged_state": 26486
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1318": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26490,
-		"java_waterlogged_state": 26487
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1229": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26494,
-		"java_waterlogged_state": 26491
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1283": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26495,
-		"java_waterlogged_state": 26492
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1337": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26496,
-		"java_waterlogged_state": 26493
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1228": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26500,
-		"java_waterlogged_state": 26497
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1282": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26501,
-		"java_waterlogged_state": 26498
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1336": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26502,
-		"java_waterlogged_state": 26499
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1247": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26506,
-		"java_waterlogged_state": 26503
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1301": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26507,
-		"java_waterlogged_state": 26504
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1355": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26508,
-		"java_waterlogged_state": 26505
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1246": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26512,
-		"java_waterlogged_state": 26509
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1300": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26513,
-		"java_waterlogged_state": 26510
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1354": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26514,
-		"java_waterlogged_state": 26511
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1213": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26518,
-		"java_waterlogged_state": 26515
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1267": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26519,
-		"java_waterlogged_state": 26516
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1321": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26520,
-		"java_waterlogged_state": 26517
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1212": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26524,
-		"java_waterlogged_state": 26521
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1266": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26525,
-		"java_waterlogged_state": 26522
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1320": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26526,
-		"java_waterlogged_state": 26523
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1231": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26530,
-		"java_waterlogged_state": 26527
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1285": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26531,
-		"java_waterlogged_state": 26528
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1339": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26532,
-		"java_waterlogged_state": 26529
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1230": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26536,
-		"java_waterlogged_state": 26533
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1284": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26537,
-		"java_waterlogged_state": 26534
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1338": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26538,
-		"java_waterlogged_state": 26535
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1249": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26542,
-		"java_waterlogged_state": 26539
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1303": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26543,
-		"java_waterlogged_state": 26540
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1357": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26544,
-		"java_waterlogged_state": 26541
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1248": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26548,
-		"java_waterlogged_state": 26545
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1302": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26549,
-		"java_waterlogged_state": 26546
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"1356": {
 		"bedrock_name": "minecraft:deepslate_brick_wall",
-		"java_default_state": 26550,
-		"java_waterlogged_state": 26547
+		"classic_default_state": 1,
+		"classic_default_state1": 65
 	},
 	"9024": {
 		"bedrock_name": "minecraft:chiseled_deepslate",
@@ -57526,194 +57543,194 @@
 	},
 	"13595": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26590
+		"classic_default_state": 5
 	},
 	"13583": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26591
+		"classic_default_state": 5
 	},
 	"13596": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26592
+		"classic_default_state": 5
 	},
 	"13584": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26593
+		"classic_default_state": 5
 	},
 	"13597": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26594
+		"classic_default_state": 5
 	},
 	"13585": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26595
+		"classic_default_state": 5
 	},
 	"13598": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26596
+		"classic_default_state": 5
 	},
 	"13586": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26597
+		"classic_default_state": 5
 	},
 	"13599": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26598
+		"classic_default_state": 5
 	},
 	"13587": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26599
+		"classic_default_state": 5
 	},
 	"13600": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26600
+		"classic_default_state": 5
 	},
 	"13588": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26601
+		"classic_default_state": 5
 	},
 	"13601": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26602
+		"classic_default_state": 5
 	},
 	"13589": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26603
+		"classic_default_state": 5
 	},
 	"13602": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26604
+		"classic_default_state": 5
 	},
 	"13590": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26605
+		"classic_default_state": 5
 	},
 	"13603": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26606
+		"classic_default_state": 5
 	},
 	"13591": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26607
+		"classic_default_state": 5
 	},
 	"13604": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26608
+		"classic_default_state": 5
 	},
 	"13592": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26609
+		"classic_default_state": 5
 	},
 	"13605": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26610
+		"classic_default_state": 5
 	},
 	"13593": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26611
+		"classic_default_state": 5
 	},
 	"13606": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26612
+		"classic_default_state": 5
 	},
 	"13594": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26613
+		"classic_default_state": 5
 	},
 	"13571": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26614
+		"classic_default_state": 5
 	},
 	"13559": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26615
+		"classic_default_state": 5
 	},
 	"13572": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26616
+		"classic_default_state": 5
 	},
 	"13560": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26617
+		"classic_default_state": 5
 	},
 	"13573": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26618
+		"classic_default_state": 5
 	},
 	"13561": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26619
+		"classic_default_state": 5
 	},
 	"13574": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26620
+		"classic_default_state": 5
 	},
 	"13562": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26621
+		"classic_default_state": 5
 	},
 	"13575": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26622
+		"classic_default_state": 5
 	},
 	"13563": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26623
+		"classic_default_state": 5
 	},
 	"13576": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26624
+		"classic_default_state": 5
 	},
 	"13564": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26625
+		"classic_default_state": 5
 	},
 	"13577": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26626
+		"classic_default_state": 5
 	},
 	"13565": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26627
+		"classic_default_state": 5
 	},
 	"13578": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26628
+		"classic_default_state": 5
 	},
 	"13566": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26629
+		"classic_default_state": 5
 	},
 	"13579": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26630
+		"classic_default_state": 5
 	},
 	"13567": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26631
+		"classic_default_state": 5
 	},
 	"13580": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26632
+		"classic_default_state": 5
 	},
 	"13568": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26633
+		"classic_default_state": 5
 	},
 	"13581": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26634
+		"classic_default_state": 5
 	},
 	"13569": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26635
+		"classic_default_state": 5
 	},
 	"13582": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26636
+		"classic_default_state": 5
 	},
 	"13570": {
 		"bedrock_name": "minecraft:crafter",
-		"java_default_state": 26637
+		"classic_default_state": 5
 	}
 }
