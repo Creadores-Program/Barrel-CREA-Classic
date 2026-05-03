@@ -15,6 +15,7 @@
   - [MySoft (0.15.x - 1.21.x)](https://github.com/Dr1xyDev/MySoft-0.15.x-1.21.x)
   - [Submarine MultiCore](https://github.com/Dr1xyDev/SubmarineMultiCore)
   - [Pocketmine-MP 5 MV](https://github.com/vapebw/Pocketmine-5-MV)
+  - [Ouranos](https://github.com/Blackjack200/Ouranos) *(Extends compatibility to legacy versions **1.12 - 1.26.x+**)*
   - Any multiversion server with support for Minecraft Bedrock v1.20.70.
 
 > **Note:** Some cores may require additional configuration or specific plugins to ensure full compatibility with proxy packet translation.
