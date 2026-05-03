@@ -31743,8 +31743,7 @@
 	},
 	"12946": {
 		"bedrock_name": "minecraft:dead_bubble_coral",
-		"java_default_state": 12818,
-		"java_waterlogged_state": 12817
+		"classic_default_state": 6
 	},
 	"11425": {
 		"bedrock_name": "minecraft:dead_fire_coral",
